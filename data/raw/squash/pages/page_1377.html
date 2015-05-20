@@ -1,0 +1,363 @@
+ 
+	
+		
+		
+		
+	
+
+
+  
+
+  <script>
+    function setCookie(name, value, expires, path, domain, secure) {
+      var curCookie = name + "=" + escape(value) +
+          ((expires) ? "; expires=" + expires.toGMTString() : "") +
+          ((path) ? "; path=" + path : "") +
+          ((domain) ? "; domain=" + domain : "") +
+          ((secure) ? "; secure" : "");
+      document.cookie = curCookie;
+    }
+    function getCookie(name) {
+      var dc = document.cookie;
+      var prefix = name + "=";
+      var begin = dc.indexOf("; " + prefix);
+      if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+      } else
+        begin += 2;
+      var end = document.cookie.indexOf(";", begin);
+      if (end == -1)
+        end = dc.length;
+      return unescape(dc.substring(begin + prefix.length, end));
+    }
+    function checkfreebie(returnpage,site){
+      var now = new Date();
+      now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+      testValue=Math.floor(1000*Math.random());
+      setCookie("cookiecheck",testValue,now,"","."+site,"");
+      if (testValue!=getCookie('cookiecheck')){
+        window.location='http://newyorkmills.forumcomm.com/index.cfm?return_page=/article.cfm?Article%5FID%3D287';
+      }
+  }  
+    checkfreebie('/article.cfm?Article%5FID%3D287','newyorkmills.com');
+  </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/insidepages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>NewYorkMills.com, The Herald Online -</title>
+<!-- InstanceEndEditable --><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function displayWindow(theURL,winName,width,height,features) { //v3.1
+// Made by Eddie Traversa modified from Macromedia Code
+// http://nirvana.media3.net/
+    var window_width = width;
+    var window_height = height;
+    var newfeatures= features;
+    var window_top = (screen.height-window_height)/2;
+    var window_left = (screen.width-window_width)/2;
+    newWindow=window.open(''+ theURL + '',''+ winName + '','width=' + window_width + ',height=' + window_height + ',top=' + window_top + ',left=' + window_left + ',features=' + newfeatures + '');
+    newWindow.focus();
+}
+//-->
+</script>
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('graphics/index/nav_news_over.gif','graphics/index/nav_sports_over.gif','graphics/index/nav_announce_over.gif','graphics/index/nav_classifieds_over.gif','graphics/index/nav_yellowpages_over.gif','graphics/index/nav_aboutus_over.gif','graphics/index/nav_contactus_over.gif','graphics/template/nav_archives_over.gif','graphics/template/nav_community_over.gif','graphics/template/nav_resorts_over.gif','graphics/template/nav_realestate_over.gif','graphics/template/nav_advertise_over.gif','graphics/template/nav_locallinks_over.gif','graphics/template/nav_weather_over.gif','graphics/template/nav_subscribe_over.gif','graphics/template/nav_calendar_over.gif')">
+<br>
+<table width="780" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="378"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="48%" class="n"><form method="post" action="biresults.cfm" name="form1">Search the Herald<br>
+		<input name="keyword" type="text" id="keyword" size="15">
+          <input name="section" type="hidden" id="section" value="all">
+          <input name="imageField" type="image" src="graphics/template/button_go.gif" width="25" height="17" border="0">
+        </form></td>
+        <td class="n">      <form name="form2" method="get" action="http://www.google.com/custom" target="_blank">
+          Search the Web<br>
+              <input name="q" type="text" size="15">
+		   <INPUT type=hidden name=cof VALUE="AH:center;AWFID:f26fab3e9229b820;">
+           <input name="imageField2" type="image" src="graphics/template/button_go.gif" width="25" height="17" border="0">
+        </form></td>
+      </tr>
+    </table></td>
+    <td width="259" valign="bottom"><img src="graphics/index/logo_nymh.jpg" alt="" width="244" height="59"></td>
+    <td width="116"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"> <a href="index.cfm"><img src="graphics/index/nav_nymherald.gif" alt="New York Mills Herald" width="177" height="31" border="0"></a><a href="sections.cfm?Heading_Name=1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('news','','graphics/index/nav_news_over.gif',1)"><img src="graphics/index/nav_news.gif" alt="news" name="news" width="42" height="31" border="0"></a><img src="graphics/index/img_curve_tan2.gif" alt="" width="21" height="31"><a href="sections.cfm?Heading_Name=2" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sports','','graphics/index/nav_sports_over.gif',1)"><img src="graphics/index/nav_sports.gif" alt="sports" name="sports" width="48" height="31" border="0"></a><img src="graphics/index/img_curve_tan2.gif" alt="" width="21" height="31"><a href="sections.cfm?Heading_Name=3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('announcements','','graphics/index/nav_announce_over.gif',1)"><img src="graphics/index/nav_announce.gif" alt="announcements" name="announcements" width="99" height="31" border="0"></a><img src="graphics/index/img_curve_tan2.gif" alt="" width="21" height="31"><a href="classifieds.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('classifieds','','graphics/index/nav_classifieds_over.gif',1)"><img src="graphics/index/nav_classifieds.gif" alt="classifieds" name="classifieds" width="69" height="31" border="0"></a><img src="graphics/index/img_curve_tan2.gif" alt="" width="21" height="31"><a href="yellowpages.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('yellowpages','','graphics/index/nav_yellowpages_over.gif',1)"><img src="graphics/index/nav_yellowpages.gif" alt="yellow pages" name="yellowpages" width="83" height="31" border="0"></a><img src="graphics/index/img_curve_tan2.gif" alt="" width="21" height="31"><a href="about.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('aboutus','','graphics/index/nav_aboutus_over.gif',1)"><img src="graphics/index/nav_aboutus.gif" alt="about us" name="aboutus" width="64" height="31" border="0"></a><img src="graphics/index/img_curve_grn.gif" alt="" width="17" height="31"><a href="mailto:herald@eot.com" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('contactus','','graphics/index/nav_contactus_over.gif',1)"><img src="graphics/index/nav_contactus.gif" alt="contact us" name="contactus" width="91" height="31" border="0"></a></td>
+  </tr>
+</table>
+<table width="790" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="25" bgcolor="#E3D9D4">&nbsp;</td>
+    <td width="654" height="25" valign="middle" bgcolor="#E3D9D4"><a href="subscribe.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('subscribe','','graphics/template/nav_subscribe_over.gif',1)"><img src="graphics/template/nav_subscribe.gif" alt="subscribe" name="subscribe" width="59" height="13" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="backissues.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('archives','','graphics/template/nav_archives_over.gif',1)"><img src="graphics/template/nav_archives.gif" alt="archives" name="archives" width="54" height="13" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="community.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('community','','graphics/template/nav_community_over.gif',1)"><img src="graphics/template/nav_community.gif" alt="community" name="community" width="67" height="13" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="calendar.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('calendar','','graphics/template/nav_calendar_over.gif',1)"><img src="graphics/template/nav_calendar.gif" alt="calendar" name="calendar" width="54" height="13" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="resortsearch.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('resorts','','graphics/template/nav_resorts_over.gif',1)"><img src="graphics/template/nav_resorts.gif" alt="resorts" name="resorts" width="50" height="13" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="advertise.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('advertise','','graphics/template/nav_advertise_over.gif',1)"><img src="graphics/template/nav_advertise.gif" alt="advertise" name="advertise" width="59" height="13" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="locallinks.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('locallinks','','graphics/template/nav_locallinks_over.gif',1)"><img src="graphics/template/nav_locallinks.gif" alt="local links" name="locallinks" width="67" height="13" border="0"></a></td>
+    <td width="2" height="25" bgcolor="#FFFFFF">&nbsp;</td>
+    <td width="97" height="25" align="center" valign="middle" bgcolor="#E3D9D4"><a href="javascript:;" onClick="displayWindow('weather.cfm','forecast','410','515','menubar=yes,scrollbars=yes,resizable=yes')" onMouseOver="MM_swapImage('weather','','graphics/template/nav_weather_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="graphics/template/nav_weather.gif" alt="weather" name="weather" width="81" height="17" border="0"></a></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="2" cellpadding="0">
+  <tr>
+    <td width="2%">&nbsp;</td>
+    <td valign="top" class="n"><br><!-- InstanceBeginEditable name="pagebody" -->
+		
+      
+	  
+      <table border="0" align="left" cellpadding="5" cellspacing="5" width="300">
+         
+          <tr> 
+            <td><img src="images/13CAD4CC-A1FB-476D-99A85E2FAE9722CF.jpg" border="1" width="300" height="199">
+              <br>              <span class="si">Image by Kevin Cederstrom</span><br>              <span class="s">Gordy and Joan Tolppi grow and sell a wide range of vegetables - everything from squash to onions to peppers - on the vegetable farm northeast of New York Mills. </span> </td>
+          </tr>
+         
+          <tr> 
+            <td><img src="images/FFA08D42-89B8-400A-B10E8A2A2F881284.jpg" border="1" width="300" height="196">
+              <br>              <span class="si">Image by Kevin Cederstrom</span><br>              <span class="s">Gordy Tolppi checks on a section of his 30-acre vegetable farm as workers pick potatoes at Gordy's Greenhouse northeast of New York Mills.</span> </td>
+          </tr>
+         
+      </table>
+	  
+      <br>
+      <span class="lb">From cukes to pumpkins, Gordy's is a vegetable lover's paradise</span> <br>
+      
+      <span class="ngrey">08/07/2003</span> <br>
+        <br>
+        <br>
+        <span class="n"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!-- This HTML document was generated by PageMaker -->
+<!-- On Thu Aug 07 12:48:30 2003 from "Untitled-1" -->
+<HTML>
+<HEAD>
+<TITLE>Untitled1</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<!-- Generation of PM publication page 1 -->
+
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 LANG=en DIR=LTR WIDTH="612" COLS="3">
+<!-- Some browsers do not display table correctly. -->
+<!-- The following GIF images are here to work around the problem. -->
+<TR VALIGN="TOP" ALIGN="LEFT">
+<TD COLSPAN=1 WIDTH=72><IMG SRC="" WIDTH=72 HEIGHT=1></TD>
+<TD COLSPAN=1 WIDTH=264><IMG SRC="" WIDTH=264 HEIGHT=1></TD>
+<TD COLSPAN=1 WIDTH=275><IMG SRC="" WIDTH=275 HEIGHT=1></TD>
+<TR VALIGN="TOP" ALIGN="LEFT">
+<TD COLSPAN=1 HEIGHT=54>
+<TR VALIGN="TOP" ALIGN="LEFT">
+<TD COLSPAN=1>
+<TD COLSPAN=1 HEIGHT=535 WIDTH=264 VALIGN="TOP">
+<P 
+ALIGN="JUSTIFY"><B>Kevin Cederstrom</B>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Gordy Tolppi started his little vegetable garden 50 years ago, 
+and now it's not so little anymore.
+<P ALIGN="JUSTIFY">He and his wife, Joan, have seen the garden grow into a 
+30-acre vegetable farm at Gordy's Greenhouse northeast of New York Mills. 
+<P ALIGN="JUSTIFY">It's nearing the end of summer and this is the time of year 
+where the fresh vegetables are ripe for picking over the next few months.
+<P ALIGN="JUSTIFY">Gordy said the cold crops like beans, peas, cabbage and 
+broccoli will be ready soon. Cucumbers are ready now and being 
+picked every day.
+<P ALIGN="JUSTIFY">Driving around the land,  Gordy points out all the different 
+crops and  where they are situated over the 30 acres. He's got peppers 
+- both green and hot -carrots, dill, a few different kinds of 
+squash, sweet corn, onions and beets. 
+<P ALIGN="JUSTIFY">There are watermelons, musk melons, seven acres of 
+tomatoes, and four acres of potatoes. Pumpkins take up another seven 
+acres. The Tolppis have carving pumpkins, which grow to between 
+20-70 pounds each, and the monster pumpkins, which reach upwards 
+to 150 pounds.
+<P ALIGN="JUSTIFY">Gordy started raising and selling his first vegetables in 
+1952 shortly after high school. Joan joined him in 1965 when the two 
+were married. 
+<P ALIGN="JUSTIFY">Gordy said they added vegetables to the acreage more and 
+more through the years until the vegetable farm got to be its biggest 
+in the 70's. Things haven't decreased much since. The Tolppis 
+take care of and pick the vegetables themselves, with some hired 
+help, and it's definitely a full-time job this time of year. 
+<P ALIGN="JUSTIFY">&quot;It's pretty big right now, with the 30 acres,&quot; Gordy said. &quot;It's 
+a big job to keep the fields cultivated and sprayed.&quot;
+<P ALIGN="JUSTIFY">That cultivation is a continual job for Gordy because he's got 
+to keep the weeds from growing between the rows and away from 
+his crops.
+<P ALIGN="JUSTIFY"> He kind of enjoys the cultivation aspect of the business, 
+though. That's when he can jump on one of the old Farmall tractors he 
+collects and restores to work in the field.
+<P ALIGN="JUSTIFY">The Tolppis generally plant the vegetables around the last 
+days of May and begin selling the middle of July. 
+<P ALIGN="JUSTIFY">Turning onto the gravel road leading past vegetable fields and 
+to the house, customers can see colorful flowers planted along 
+the road. Gordy planted 5,000 flowers in three rows, more than 1/4 
+mile long, just for show. He said the project cost him a fortune but 
+likes the way the flowers look next to his vegetables.
+<P ALIGN="JUSTIFY">Along with growing and selling vegetables, the Tolppis 
+also operate five greenhouses. The greenhouses are only open in 
+the spring and are where customers can pick up bedding flowers 
+and vegetable plants for gardens.
+<P ALIGN="JUSTIFY">Gordy's Greenhouse is located nine miles north and three 
+miles east of New York Mills on Otter Tail County Highway 8, then 1/4 
+mile north on 575th Ave.
+<P ALIGN="JUSTIFY">The fresh vegetables are available seven days a week, 9 
+a.m.-7 p.m., To reach the Tolppis by phone call 218-837-5396.
+<TD COLSPAN=1 HEIGHT=535>
+<TR VALIGN="TOP" ALIGN="LEFT">
+<TD COLSPAN=1 HEIGHT=202>
+</TABLE>
+</BODY>
+</HTML>
+</span> <br>
+        <br>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+    
+    
+    
+    
+  
+  
+
+
+
+
+
+
+  <div id="article_ad">
+  <img src="http://www.in-forum.com/gfx/groud_ad_header.gif" border="0"><br>
+  
+    <!-- In-forum.com Living/Health/Family/News/ROS, 300x250 Box (Above Fold) -->
+
+<iframe src="http://z1.adserver.com/w/cp.x;rid=394;tid=6;ev=1;dt=2;ac=64;c=92;" width=300 height=250 hspace=0 vspace=0 frameborder=0 marginheight=0 marginwidth=0 scrolling=no>
+
+<a href="http://z1.adserver.com/w/cp.x;rid=394;tid=6;ev=2;dt=3;ac=64;c=92;" target="_blank"><img width=300 height=250 src="http://z1.adserver.com/w/cp.x;rid=394;tid=6;ev=1;dt=3;ac=64;c=92;" border=0></a></iframe>
+
+<!-- In-forum.com Living/Health/Family/News/ROS, 300x250 Box (Above Fold) -->
+
+
+
+
+
+  
+  </div>
+
+
+
+
+
+
+        <br>
+        <a href="contact.cfm?Article_Id=287&comment=yes" class="nr">Give
+        us your feedback on this article. </a> <br>
+      <br>
+<br>
+<br><!-- InstanceEndEditable --></td>
+    <td width="21%" valign="top"><div align="center"><a href="http://www.forumauctions.com" target="_blank"><img src="graphics/banner/banner_tile_forum.gif" alt="Visit Forum Auctions for the Area's Auction Listings" width="120" height="62" border="0"></a><br>
+        <a href="http://www.jobshq.net" target="_blank"><br>
+        <img src="graphics/banner/ban_tile_jobshq.gif" alt="JobsHQ.net - Your employment headquarters" width="120" height="60" border="0"> </a><br>
+        <a href="http://www.mndestinations.com" target="_blank"><br>
+        <img src="graphics/banner/banner_tile_destinations.gif" alt="Experience the Lakes, Rivers, and Woods of Minnesota with MN Destinations." width="120" height="62" border="0"></a><br>
+        <a href="http://www.perham.com" target="_blank"><br>
+        <img src="graphics/banner/banner_tile_perham.jpg" alt="Perham, Minnesota." width="119" height="93" border="0"></a> </div></td>
+  </tr>
+  <tr align="center" valign="top">
+    <td colspan="3"><br>
+      <br>
+    <a href="sections.cfm?Heading_Name=1">News</a> | <a href="sections.cfm?Heading_Name=2">Sports</a> | <a href="sections.cfm?Heading_Name=3">Announcements</a> | <a href="classifieds.cfm">Classifieds</a> | <a href="yellowpages.cfm">Yellow
+    Pages</a> | <a href="about.cfm">About Us</a> | <a href="mailto:herald@eot.com">Contact
+    Us</a><br>
+    <a href="subscribe.cfm">Subscriptions</a> | <a href="backissues.cfm">Archives</a> | <a href="community.cfm">Community</a> |
+    <a href="calendar.cfm">Calendar</a> | <a href="resorts.cfm">Resorts</a> | <a href="advertise.cfm">Advertise</a>    | <a href="locallinks.cfm">Local
+    Links</a> | <a href="javascript:;" onClick="displayWindow('weather.cfm','forecast','410','515','menubar=yes,scrollbars=yes,resizable=yes')">Weather</a> | <a href="index.cfm">Home</a></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

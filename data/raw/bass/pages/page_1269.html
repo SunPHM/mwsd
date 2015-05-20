@@ -1,0 +1,359 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- #BeginTemplate "/Templates/DaveMods2.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Alive-n-Kickin' </title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../includes/styles.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" alink="#0000CC" link="#3333FF" vlink="#333366" text="#996699" onLoad="MM_preloadImages('../images/News1.jpg','../images/News2.jpg','../images/Shows1.jpg','../images/Shows2.jpg','../images/Pics1.jpg','../images/Pics2.jpg','../images/Songs1.jpg','../images/Songs2.jpg','../images/Contact1.jpg','../images/Contact2.jpg')">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top"> <br>
+      <table width="800" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="48">
+            <div align="center"><img src="../images/Banner%20with%20girl%205.jpg" width="800" height="126" usemap="#Home" border="0"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td height="20" bgcolor="#000000"> 
+            <table width="776" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="776" bgcolor="#000000" bordercolor="#FFFFFF" height="38"> 
+                  <div align="center"> <img src="../images/spacer_gray.jpg" width="800" height="3"> 
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td><a href="../news/index.html" onClick="MM_nbGroup('down','group1','News','../images/News1.jpg',1)" onMouseOver="MM_nbGroup('over','News','../images/News2.jpg','../images/News2.jpg',1)" onMouseOut="MM_nbGroup('out')"><img name="News" src="../images/News1.jpg" border="0" onLoad="" width="120" height="30"></a></td>
+                        <td><a href="../shows/index.html" onClick="MM_nbGroup('down','group1','Shows','../images/Shows1.jpg',1)" onMouseOver="MM_nbGroup('over','Shows','../images/Shows2.jpg','../images/Shows2.jpg',1)" onMouseOut="MM_nbGroup('out')"><img name="Shows" src="../images/Shows1.jpg" border="0" onLoad="" width="120" height="30"></a></td>
+                        <td><a href="../Pics/index.html" onClick="MM_nbGroup('down','group1','Pics','../images/Pics1.jpg',1)" onMouseOver="MM_nbGroup('over','Pics','../images/Pics2.jpg','../images/Pics2.jpg',1)" onMouseOut="MM_nbGroup('out')"><img name="Pics" src="../images/Pics1.jpg" border="0" onLoad="" width="120" height="30"></a></td>
+                        <td><a href="../songs/index.html" onClick="MM_nbGroup('down','group1','Songs','../images/Songs1.jpg',1)" onMouseOver="MM_nbGroup('over','Songs','../images/Songs2.jpg','../images/Songs2.jpg',1)" onMouseOut="MM_nbGroup('out')"><img name="Songs" src="../images/Songs1.jpg" border="0" onLoad="" width="120" height="30"></a></td>
+                        <td><a href="../contact/index.html" onClick="MM_nbGroup('down','group1','Contact','../images/Contact1.jpg',1)" onMouseOver="MM_nbGroup('over','Contact','../images/Contact2.jpg','../images/Contact2.jpg',1)" onMouseOut="MM_nbGroup('out')"><img name="Contact" src="../images/Contact1.jpg" border="0" onLoad="" width="120" height="30"></a></td>
+                      </tr>
+                    </table>
+                    <img src="../images/left_black_space.gif" width="146" height="40"></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="800" border="0" cellspacing="0" cellpadding="0" height="760">
+              <tr> 
+                <td width="50" valign="top" height="788" bgcolor="#000000"><img src="../images/left_black_space.gif" width="95" height="98"></td>
+                <td valign="top" bgcolor="#000000" class="bodyCopy" width="569" height="788"> 
+                  <table width="100%" border="0" cellpadding="5" cellspacing="5" height="666">
+                    <tr> 
+                      <td valign="top" class="bodyCopy" height="214" width="600"><!-- #BeginEditable "Text" --><span class="titlesBold">ABOUT 
+                        THE BAND</span><br>
+                        <br>
+                        <span class="bodyCopyBold"><img src="../images/George%20Bio.JPG" alt="Alive-N-Kickin'" width="220" height="369" hspace="5" vspace="5" border="0" align="right">George 
+                        Dimitri</span> - <span class="bodyCopySmall">Piano, Keyboards, 
+                        Acoustic and Electric Rhythm Guitars, Lead and Back-up 
+                        Vocals, Harmonica <br>
+                        <br>
+                        A seasoned veteran of the live music scene, George began 
+                        his playing career back in 1985 when he purchased a Cort 
+                        hot pink Titan bass (which he still has). He thumped out 
+                        the low end in 80&#8217;s local bands Taz and In N Out. 
+                        George has 2 CD recordings of original music from those 
+                        bands. In 1992, with the coming demise of the 80&#8217;s 
+                        metal scene, George moved on to Top40 and for the next 
+                        10 years played in successful Top40 variety bands such 
+                        as Impostor, Skyline, and Wildfire (voted Best Band overall 
+                        &#8211; 2000 Western Maryland Times/News Annual Reader&#8217;s 
+                        Poll). It was with Wildfire that George moved from bass 
+                        to playing keyboards, guitar, and harmonica.<br>
+                        <br>
+                        George has years of theory training, vocal coaching, and 
+                        instrument lessons under his belt. The versatility necessary 
+                        to playing all the styles of music that Top40 demands 
+                        has made George an exceptionally complete player on several 
+                        instruments. You can check out George as a featured artist 
+                        on the Conklin guitars web page at by <a href="http://www.conklinguitars.com/artistprofiles/dimitridescript.html">clicking 
+                        here</a>.<br>
+                        <br>
+                        Accenting his playing, George is a very active entertainer. 
+                        His energy is unparalleled on stage. &#8220;I have always 
+                        felt that musicians need to entertain and showmanship 
+                        on stage is part of the entertainment package.&#8221;<br>
+                        <br>
+                        George resides in LaPlata, MD and has a top-flight cosmetic 
+                        dental practice in Waldorf, Md. If you need dental advice 
+                        George will be happy to give you his card but, please, 
+                        do not ask him for dental treatment while at a band job. 
+                        Check out his website at <a href="http://www.dimitridental.com" target="_blank">www.dimitridental.com</a>.</span> 
+                        <p><span class="bodyCopyBold"><img src="../images/Alan_Colvin_guitar.jpg" alt="Alive-N-Kickin'" width="200" height="300" hspace="5" vspace="5" border="0" align="left">Alan 
+                          Colvin</span> - <span class="bodyCopySmall">lead &amp; 
+                          rhythm guitar, 6 string acoustic guitar, lead vocals, 
+                          back-up vocals, slide guitar<br>
+                          <br>
+                          Alan started his musical training at the behest of his 
+                          mother who insisted that he take piano lessons at the 
+                          age of 10. Even though it was not his choice, he continued 
+                          the lessons for 2 years before his father, without any 
+                          prompting or request, bought him an acoustic guitar 
+                          and a 30-page beginner book just to see what he would 
+                          do with it on Christmas morning. Well it turned out 
+                          to be a lot more entertaining than anyone expected. 
+                          By the end of Christmas day, Alan had learned how to 
+                          string and tune the guitar and before he went to bed 
+                          that night, was playing along with the vinyl 45 copy 
+                          of &#8220;She Loves You&#8221; on Swan records by the 
+                          Beatles, which was also a Christmas present. And the 
+                          rest, they say, is history.<br>
+                          <br>
+                          With his love for the guitar and his natural ability 
+                          well recognized, he entered his first band when he was 
+                          14. Along with a group of fellow members of a drum corp. 
+                          called &#8220;The Pink Panthers&#8221; that he maintained 
+                          a membership which brought him, his colleages, and his 
+                          community great distinction in winning 10 national championships 
+                          in 12 years, he got his first band and stage show experience. 
+                          <br>
+                          <br>
+                          Since then Alan has played in several different bands. 
+                          The two most notable of these were &#8220;Side Effects&#8221; 
+                          which was together, and very successful, from 1984 &#8211; 
+                          1986 where the band worked all over the Washington metro 
+                          area. The majority of there work was in College Park 
+                          and Georgetown in clubs like &#8220;The Bastille&#8221;, 
+                          &#8220;The Paragon&#8221;, and &#8220;The Bayou&#8221; 
+                          where the band got their opportunity to play there own 
+                          material while warming up for national acts.<br>
+                          <br>
+                          The last band Alan was in before joining with Alive-n-Kickin' 
+                          was called &#8220;Back Ally Jones&#8221;. He formed 
+                          BAJ after his previous band &#8220;Licking Post&#8221; 
+                          disbanded over their displeasure of Alan&#8217;s choice 
+                          of ME Jones as co-lead vocalist and true to his conviction, 
+                          she was his first choice when picking members for the 
+                          new band. BAJ enjoyed great success playing all over 
+                          the metro area, as well as Baltimore, Annapolis, and 
+                          Ocean City. During the seven years that BAJ was in existence, 
+                          there were several bright moments including gigs at 
+                          Massenutten Ski Resort, The Purple Moose, and a new 
+                          original CD release called &#8220;Set Me Free&#8221; 
+                          where Alan either wrote or co-wrote nine of the thirteen 
+                          songs on the CD.<br>
+                          <br>
+                          After the breakup of BAJ, Alan found himself without 
+                          a gig in the works for more years than he&#8217;s got 
+                          fingers but that didn&#8217;t last long. Drummer Steve 
+                          Miller had found out about the breakup and in less than 
+                          two months of the previous band&#8217;s ending, was 
+                          knocking on his door asking him to join with him in 
+                          this new band. <br>
+                          <br>
+                          Now here we are! With his years of experience and his 
+                          vocal and guitar talent he has become a valuable member 
+                          of Alive-n-Kickin' and expects that this will last a 
+                          good long time.</span></p>
+                        <p><span class="bodyCopyBold"><img src="../images/Chris_Welborn_bass.jpg" alt="Alive-N-Kickin'" width="300" height="243" hspace="5" vspace="5" border="0" align="right">Chris 
+                          Welborn</span> - <span class="bodyCopySmall">6 string 
+                          bass guitar<br>
+                          <br>
+                          Chris has been playing bass for 16 years. He was a founding 
+                          member<br>
+                          Of the power metal band &quot;Division&quot; (91-94). 
+                          He played in &quot;Popp Culture&quot; (with Steve), 
+                          a top 40, swing, horn band fronted by John Popp (producer 
+                          of the G. Gordon Liddy Show)(95-97). He was also the 
+                          recording and touring bassist for Dark Symphonies recording 
+                          artists &quot;Arise From Thorns / Brave&quot;. He recorded 
+                          three albums with them: AFT- Before an Audience of Stars, 
+                          Brave- Waist Deep in Dark Waters, Brave- Searching for 
+                          the Sun. Chris also toured the US extensively under 
+                          both band names. He is an accomplished audio engineer 
+                          and is currently working in the world of pro audio retail.</span><br>
+                          <br>
+                          <span class="bodyCopyBold"><img src="../images/Steve_Miller_drums.jpg" alt="Alive-N-Kickin'" width="223" height="300" hspace="5" vspace="5" border="0" align="left"></span></p>
+                        <p><span class="bodyCopyBold">Steve Miller</span> - <span class="bodyCopySmall">drums 
+                          , lead vocals, back-up vocals<br>
+                          <br>
+                          Drawn to the energy and passion of music, Steve began 
+                          playing drums after seeing his first KISS concert in 
+                          1983. Eric Carr became his instant hero that night, 
+                          and remains so to this day. &quot;I remember feeling 
+                          the bass drums hitting me in the chest with every beat!!&quot; 
+                          Ever since, Steve has been driven to succeed in drumming, 
+                          no matter what scale or stage he may be on.<br>
+                          <br>
+                          His passion has taken him from Baltimore to the sunshine 
+                          of Los Angeles, in search of the best musicians, bands, 
+                          and teachers to help him hone his craft. This has included 
+                          a long tuteledge under his original teacher, Myles Evans 
+                          (DC STAR, KIK* The Dog) and several sessions with the 
+                          legendary BOBBY ROCK (Nelson, Vinnie VIncent). &quot;I 
+                          am constantly learning and practicing. There is always 
+                          something new to work on, rudiments; hand speed; polyrythyms; 
+                          DOUBLEBASS; technique; POWER!!! I will never stop!!!!'<br>
+                          <br>
+                          With Alive-n-Kickin' Steve hopes to achieve the goal 
+                          of making this the best band in the mid-Atlantic area. 
+                          &quot;The music we are playing is what I grew up on. 
+                          It is the music I used to practice to in my bedroom 
+                          after school. It is the music that was always the most 
+                          fun. It is the soundtrack from the era of EXCESS!!!! 
+                          &quot; That is exactly how Steve plays, with EXCESS!!!! 
+                          Excessive Hitting, Excessive Energy, Excessive Charisma...Excessive 
+                          POWER!!!!</span><br>
+                          <br>
+                          <span class="bodyCopyBold"><img src="../images/Dave%20Bio%202.JPG"alt="Alive-N-Kickin'" width="213" height="258" hspace="5" vspace="5" border="0" align="right"></span><span class="bodyCopyBold">Dave 
+                          Meagher</span> - <span class="bodyCopySmall"> lead vocals</span><br>
+                          <br>
+                          <span class="bodyCopySmall">Dave started listening to 
+                          heavy metal as a teenager, with Back In Black and KISS 
+                          Alive being the first albums he ever purchased. A friend 
+                          later introduced him to Iron Maiden, and that was the 
+                          beginning of a long love affair. After he was hooked 
+                          on The Scorpions and Queensrÿche it became apparent 
+                          that he had a natural affinity to music with soaring, 
+                          killer vocals. He worshiped the vocal gods - Dickinson, 
+                          Tate, Halford, Dio... &quot;I would sing along with 
+                          these guys and attempt to emulate their styles, but 
+                          I quickly realized you can only sound like yourself."<br>
+                          <br>
+                          In 2001, Dave co-founded the progressive metal cover 
+                          band, Critical Path, with two friends. "We started from 
+                          scratch - Rick played guitar, Ron played bass, and I 
+                          offered to sing. It was my first real band so I didn't 
+                          know what to expect - I just knew I loved the music 
+                          and I wanted to try my hand at singing. It soon became 
+                          clear that although I had some raw talent, I didn't 
+                          know how to control it. After months of practicing and 
+                          playing out I had improved significantly, but felt I 
+                          had reached a plateau so I sought out a vocal coach." 
+                          Dave hooked up with Steve Whiteman (KIX, Funny Money) 
+                          in early 2003 and has been training with him ever since. 
+                          "It is a real revelation when you realize how much theory 
+                          and technique there is behind singing properly.&quot;<br>
+                          <br>
+                          Although relatively new to the band scene, Dave aspires 
+                          to help raise Alive-n-Kickin' to another level of excellence 
+                          and to provide the people who watch the band with a 
+                          musical experience they will enjoy and remember.</span></p>
+                        <p class="bodyCopySmall">Dave currently listens to music 
+                          by Fates Warning, Iron Maiden, Dream Theater, Queensrÿche 
+                          and admits that he loves the new metal: Disturbed, Godsmack, 
+                          etc.. He is a software engineer and resides in Monkton, 
+                          MD with his wife, children, canine, and reptiles.</p>
+                        <p> <span class="bodyCopySmall">"When you know that your 
+                          time is close at hand, maybe then you'll begin to understand 
+                          that life down here is just a strange illusion..."</span> 
+                        </p>
+                        <p align="left"><span class="bodyCopyBold"><img src="../images/Ed%20Bio.JPG" alt="Alive-N-Kickin'" width="200" height="333" hspace="5" vspace="5" border="0" align="left"></span></p>
+                        <p align="left"><span class="bodyCopyBold">Ed Avella</span> 
+                          - <span class="bodyCopySmall">lead &amp; rhythm guitar, 
+                          backing vocals<br>
+                          <br>
+                          <b>Influences</b>: Anyone he's ever heard. Biggest thief 
+                          in the world.</span></p>
+                        <p align="left"><span class="bodyCopySmall"><b>Gear</b>: 
+                          Custom Dreams EA model guitars, Line6 POD Pro preamp, 
+                          Ampeg amps, Crate amps, Behringer power amps, Marshall 
+                          enclosures, Furman power conditioners.</span></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p><span class="bodyCopySmall">Ed is the most recent member 
+                          of the band and very much enjoys playing with his instrument. 
+                          He tells us he is a very good guitarist.</span></p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p><span class="bodyCopyBold"><img src="../images/Animal.jpg" alt="Alive-N-Kickin'" width="216" height="337" hspace="5" vspace="5" border="0" align="right"></span><span class="bodyCopyBold">Animal</span> 
+                          - <span class="bodyCopySmall">King Roade <br>
+                          <br>
+                          Animal is the band's photographer, videographer, road 
+                          crew, drum tech, and general fixer-upper. A drummer 
+                          in his own right, he is no stranger to setting up a 
+                          stage and keeping the show moving. Anyone who wishes 
+                          to sign up for the E-list or purchase a shirt, bumper 
+                          sticker, or other band product should see Animal or 
+                          his team</span> </p>
+                        <p align="center">&nbsp;</p>
+                        <p align="center">&nbsp;</p>
+                        <p align="center">&nbsp;</p>
+                        <p align="center">&nbsp;</p>
+                        <p align="center">&nbsp;</p>
+                        <p align="center">&nbsp;</p>
+                        <!-- #EndEditable --></td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="23" valign="top" height="788">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    <br></td>
+  </tr>
+</table>
+<a href="../shows/index.html">index</a> <a href="../songs/index.html">index</a> 
+<a href="../Pics/index.html">index</a> <a href="../news/index.html">index</a> 
+<map name="Home"> 
+  <area shape="rect" coords="22,34,387,119" href="../index.html">
+</map>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,354 @@
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- hide JS code
+function validateForm(form) // validate form
+
+//FIRST NAME VALIDATION
+  {
+  if (!validateFirstName(form.firstName.value))  // is the first name valid?
+    {
+    form.firstName.focus()
+    return false
+    }
+
+//LAST NAME VALIDATION
+ {
+  if (!validateLastName(form.lastName.value))  // is the last name valid?
+    {
+    form.lastName.focus()
+    return false
+    }
+
+//E-MAIL VALIDATION
+
+  if (!validateEMail(form.email.value))          // is the email address valid?
+    {
+    form.email.focus()
+    return false
+    }
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// FIRST NAME VALIDATION RULES
+
+function validateFirstName(firstName)
+  {
+  if (isBlank(firstName))               // is first name field blank?
+    {
+    alert("Enter your first name, please!") // return this message if it is blank
+    return false
+    }
+  if (firstName.indexOf(" ", 0) != -1)  // does first name contain two names?
+    {
+    alert("Enter one name only, please!")  // if so, return this message
+    return false
+    }
+  return true
+  }
+function isBlank(testStr)
+  {
+  if (testStr.length == 0)                     // nothing entered?
+    return true
+  for (var i = 0; i <= testStr.length-1; i++)  // all spaces?
+    if (testStr.charAt(i) != " ")
+      return false
+  return true
+  }
+
+//LAST NAME VALIDATION RULES
+
+function validateLastName(lastName)
+  {
+  if (isBlank(lastName))               // last name field blank?
+    {
+    alert("Enter your last name, please!")  // return this message if it is blank
+    return false
+    }
+  if (lastName.indexOf(" ", 0) != -1)  // does last name contain two names?
+    {
+    alert("Enter one name only, please!") // if so, return this message
+    return false
+    }
+  return true
+  }
+function isBlank(testStr)
+  {
+  if (testStr.length == 0)                     // nothing entered?
+    return true
+  for (var i = 0; i <= testStr.length-1; i++)  // all spaces?
+    if (testStr.charAt(i) != " ")
+      return false
+  return true
+  }
+
+
+// EMAIL VALIDATION RULES
+
+function validateEMail(email)
+  {
+  if (isBlank(email))                       // email blank?
+    {
+    alert("Enter your email address, please!")  // return this message if it is blank
+    return false
+    }
+  var atsignPos = email.indexOf("@", 0)     // check for @ sign
+  if (atsignPos == -1)	
+    {
+    alert("Enter a valid email address with an @, please!")  // return this message if no @ sign present
+    return false
+    }
+  if (email.indexOf(".", atsignPos) == -1)  // check for full stop after @ sign	
+    {
+    alert("Enter a valid email domain after the @, please!") //return this message if no full stop after @ sign
+    return false
+    }
+  return true
+  }
+}}
+// end JS hide -->
+</SCRIPT>
+
+</head>
+
+
+
+
+<!--ISPD Website, designed by Andrew Dixon 2002, as part of an assignment for ITLearning Centre-->
+
+<html>
+
+<head>
+
+<title>Beatles For Sale</title>
+
+</head>
+
+<link rel=stylesheet type="text/css" href="style.css">
+
+<body>
+
+
+
+<!--Logo and header-->
+
+<div align="center">
+
+<!-- Begin Table -->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="445" HEIGHT="108">
+
+<TR>
+<TD ROWSPAN="1" COLSPAN="1" WIDTH="445" HEIGHT="21">
+	<IMG NAME="Logo0" SRC="graphics/Logo_1x1.jpg" WIDTH="445" HEIGHT="21" BORDER="0"></TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="1" COLSPAN="1" WIDTH="445" HEIGHT="22">
+	<IMG NAME="Logo1" SRC="graphics/Logo_2x1.jpg" WIDTH="445" HEIGHT="22" BORDER="0"></TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="1" COLSPAN="1" WIDTH="445" HEIGHT="21">
+	<IMG NAME="Logo2" SRC="graphics/Logo_3x1.jpg" WIDTH="445" HEIGHT="21" BORDER="0"></TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="1" COLSPAN="1" WIDTH="445" HEIGHT="22">
+	<IMG NAME="Logo3" SRC="graphics/Logo_4x1.jpg" WIDTH="445" HEIGHT="22" BORDER="0"></TD>
+</TR>
+
+<TR>
+<TD ROWSPAN="1" COLSPAN="1" WIDTH="445" HEIGHT="22">
+	<IMG NAME="Logo4" SRC="graphics/Logo_5x1.jpg" WIDTH="445" HEIGHT="22" BORDER="0"></TD>
+</TR>
+
+</TABLE>
+<!-- End Table -->
+
+
+<center>
+
+<p>It's the toppermost of the poppermost!</p>
+
+<!--Links to other pages-->
+
+<center>
+
+<b>
+<a href="index.asp?CartID=619045716022006"">[Home]</a>    
+<a href="aboutus.asp?CartID=619045716022006"">[About Us]</a>    
+<a href="contact.asp?CartID=619045716022006"">[Contact]</a>
+</b>
+
+<hr>
+
+<p>
+<!--Search box-->
+
+<div align="right">
+
+<form method="get" action="search.asp">
+<div align="right"><b><font color = #ff0000>Search</font></b>: <input type = "text" name="Search">
+<input type = "Submit" value = "Go!">
+<input type = "hidden" name="CartID" value = "619045716022006">
+</form>
+
+<!--end of search box-->
+
+
+
+
+
+<!--Master Table Table Column 1-->
+
+<table  width="100%" border="0" cellspacing="0" cellpadding="4">
+
+<tr> 
+	<td align="left" width="300" height="103" valign="top" >
+
+
+
+
+<h2><a href='search.asp?Artist=The Beatles&CartID=619045716022006'><img src='graphics/Beatles3.jpg' alt='The Beatles' width='93' height='102' border='0'></a> The Beatles</h2><h2><a href='search.asp?Artist=John Lennon&CartID=619045716022006'><img src='graphics/Lennon.jpg' alt='John Lennon' width='93' height='102' border='0'></a> John Lennon</h2><h2><a href='search.asp?Artist=Paul McCartney&CartID=619045716022006'><img src='graphics/McCartney.jpg' alt='Paul McCartney' width='93' height='102' border='0'></a> Paul McCartney</h2><h2><a href='search.asp?Artist=George Harrison&CartID=619045716022006'><img src='graphics/Harrison.jpg' alt='George Harrison' width='93' height='102' border='0'></a> George Harrison</h2><h2><a href='search.asp?Artist=Ringo Starr&CartID=619045716022006'><img src='graphics/Starr.jpg' alt='Ringo Starr' width='93' height='102' border='0'></a> Ringo Starr</h2>	
+	</td>
+
+<!--Master Table Column 2-->
+
+	<td valign="top"> 
+
+
+<p>
+
+
+
+<div align="left">
+<p>Welcome to <b><img src="graphics/Beatles4.jpg" alt="The Beatles" align="right"><font color="#ff0000">Beatles For Sale</font></b>, your first stop for CD's by the fab four.</p>
+
+<p>We've got a wide selection, whether you're a beginner looking to start a collection, or a long time fan looking for that rarity to complete your collection, chances are we've got it!</p>
+
+<p>Using our on-line ordering service, despatch of goods is guaranteed within the UK within 24 hours.</p>
+
+<p>So what are you waiting for? Money can't buy you love, but it can buy you some of the greatest CD's ever released!</p>
+
+<p>To search for a CD, enter either the title (or part of the title), artist (Beatles, Lennon etc.), type (Album, Single etc.) or year of release  in to the search box above, and hit "Go!". Our active database will only return products which are <b>guaranteed</b> in stock, to avoid disappointment. 
+</p>
+
+
+<p>If you wish to view all our CD's by The Beatles (or subsequent solo careers) select the appropriate picture on the left of your screen.</p>
+
+<hr>
+
+<!-- Newsletter -->
+
+
+<p>Subscribe to our <b><font color ="#ff0000">Newsletter!
+</font></b> and receive a monthly e-mail packed with information on new releases and special offers.</p>
+
+<p>Just complete the form below and you will be added to our mailing list-</p>
+
+<!--These are the boxes for submitting form data, they pick up the javascript rules declared in the head of this page-->
+
+<form name="Newsletter" action=mailto:info@ardwebdesign.co.uk method=post 
+onSubmit="return validateForm(Newsletter)"enctype="text/plain">
+
+<!--Nested Table-->
+
+<table border="0">
+<tr>
+	<td><b>First Name:</b>
+	</td>
+
+	<td> <input type="text" name="firstName" size="15">
+	</td>
+</tr>
+
+<tr>
+	<td><b>Last Name:</b>
+	</td>
+	
+	<td> <input type="text" name="lastName" size="20">
+	</td>
+</tr>
+
+<tr>
+	<td><b>EMail:</b>
+	</td>
+
+	<td> <input type="text" name="email" size="40">
+	</td>
+</tr>
+
+<tr>
+
+<!--End of Nested table-->
+
+</table>
+
+<p>Is there any way in which you think "<b>Beatles For Sale</b>" could be improved? If so, please tell us here:</p>
+
+<center><textarea name="variable name" rows="6" cols="40"></textarea></p>
+
+<center><input type="submit" value="Submit"></p>
+
+<hr>
+
+
+<!-- Lyrics Game -->
+
+<p><B><font color="#ff0000">Just For Fun!</font></B></p>
+
+<img src="graphics/HofnerBass.jpg" alt="Paul's Hofner Bass Guitar" align="left" height="108" width="109">
+
+<div align="left">
+
+<p>Can you guess which Beatles song the lyrics below are from? <br>
+Hit 'Refresh' to see if you get a new lyric.</p>
+
+<p><b><font color="#ff0000">
+
+
+I think I'm gonna be sad
+
+</b>
+</font>
+</p>
+
+
+
+<!--End of Master Table-->
+</td>
+	</table>
+
+<hr>
+
+<p>
+
+<!-- Footer -->
+
+<hr="85%">
+
+<table border="0" width="85%" align="center">
+<tr>
+	<td>
+<font size="-2" color="#000000">
+This website has been designed by Andrew Dixon (<a href="http://www.ardwebdesign.co.uk" target="_blank">www.ardwebdesign.co.uk</a>) as part of an Internet Services Project Diploma (ISPD), and should not be considered to be a live website.
+
+Therefore, no monies will be taken from any accounts and no products will be delivered.</font>
+
+	</td>
+</tr>
+
+</table>
+
+
+
+
+
+</body>
+		</html>
+
+
+

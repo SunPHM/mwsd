@@ -1,0 +1,4 @@
+http://stella.sourceforge.net/docs/stella.html
+http://stella.sourceforge.net/docs/graphics/space_invaders.png
+http://re2.mm-a1.yimg.com/image/14065310
+stella - a multi-platform atari 2600 vcs emulator

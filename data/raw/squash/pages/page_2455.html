@@ -1,0 +1,323 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		
+<title>The Bubble</title>
+<link rel="stylesheet" type="text/css" media="screen" href="/middcms/Css/styles.css" />
+
+<link rel="stylesheet" type="text/css" media="print" href="/middcms/Css/print.css" />
+
+<meta name="author" content="Middlebury College" />
+<meta name="keywords" content="middlebury college, liberal arts, education, higher education, middlebury, vermont" />
+<meta name="description" content="middlebury college" />
+<meta name="robots" content="all" />
+		
+<script type="text/javascript">
+
+/* Edit Console */
+var ec = null;
+var ecc = null;
+var ecIsInit = false;
+var ecIsMove = false;
+var ecX = 0;
+var ecY = 0;
+
+function ecDoubleClick()
+{
+	if (ecc.style.display == "none")
+		ecc.style.display = "block";
+	else
+		ecc.style.display = "none";
+}
+
+function ecMouseOver()
+{
+	if (!ecIsInit)
+		ecInit();
+}
+
+function ecInit()
+{
+	ec = document.getElementById("editConsole");
+	ecc = document.getElementById("editConsoleContent");
+	ecIsInit = true;
+	
+	ec.onmousedown = ecMouseHandler;
+	document.onmousemove = ecMouseHandler;
+	document.onmouseup = ecMouseHandler;
+}
+
+function ecMouseHandler(ev)
+{
+	if (ev == null)
+		ev = event;
+	
+	switch (ev.type)
+	{
+		case "mousedown":
+			ecIsMove = true;
+			
+			if (!isNaN(parseInt(ec.style.left)))
+			{
+				ecX = (ev.pageX?ev.pageX:ev.clientX) - parseInt(ec.style.left);
+				ecY = (ev.pageY?ev.pageY:ev.clientY) - parseInt(ec.style.top);
+			}
+			else
+			{
+				ecX = (ev.pageX?ev.pageX:ev.clientX);
+				ecY = (ev.pageY?ev.pageY:ev.clientY);
+			}
+			break;
+			
+		case "mouseup":
+			ecIsMove = false;
+			break;
+			
+		case "mousemove":
+			if (ecIsMove)
+			{
+				ec.style.left = (ev.pageX?ev.pageX:ev.clientX) - ecX;
+				ec.style.top = (ev.pageY?ev.pageY:ev.clientY) - ecY;
+			}
+			break;
+			
+		default:
+			break;
+	}
+}
+/* End Edit Console */
+
+</script>
+	</head>
+	<body>
+		<form name="cmsform" method="post" action="Main.aspx?NRMODE=Published&amp;NRORIGINALURL=%2fathletics%2ffacilities%2fbubble%2ehtm&amp;NRNODEGUID=%7bEB57F544-C374-4C32-BFA4-B2D41D09048E%7d&amp;NRCACHEHINT=NoModifyGuest" id="cmsform">
+<input type="hidden" name="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" value="dDwxMjMxODcyNTt0PDtsPGk8MT47aTw1Pjs+O2w8dDw7bDxpPDE+Oz47bDx0PHA8bDxUZXh0Oz47bDxUaGUgQnViYmxlOz4+Ozs+Oz4+O3Q8O2w8aTwxPjtpPDk+O2k8MTc+O2k8MTk+Oz47bDx0PHA8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Pjs7Pjt0PDtsPGk8MT47aTwzPjs+O2w8dDxwPGw8VGV4dDs+O2w8XDxhIGhyZWY9Imh0dHA6Ly93d3cubWlkZGxlYnVyeS5lZHUvIlw+TWlkZGxlYnVyeSBDb2xsZWdlXDwvYVw+Jm5ic3BcOyZndFw7Jm5ic3BcO1w8YSBocmVmPSJodHRwOi8vd3d3Lm1pZGRsZWJ1cnkuZWR1L2F0aGxldGljcy8iXD5BdGhsZXRpY3NcPC9hXD4mbmJzcFw7Jmd0XDsmbmJzcFw7XDxhIGhyZWY9Imh0dHA6Ly93d3cubWlkZGxlYnVyeS5lZHUvYXRobGV0aWNzL2ZhY2lsaXRpZXMvIlw+RmFjaWxpdGllc1w8L2FcPiZuYnNwXDsmZ3RcOyZuYnNwXDtUaGUgQnViYmxlOz4+Ozs+O3Q8cDxwPGw8VmlzaWJsZTs+O2w8bzx0Pjs+Pjs+O2w8aTwzPjs+O2w8dDx0PDtwPGw8aTwwPjtpPDE+O2k8Mj47aTwzPjtpPDQ+O2k8NT47aTw2PjtpPDc+O2k8OD47aTw5PjtpPDEwPjtpPDExPjtpPDEyPjtpPDEzPjtpPDE0PjtpPDE1PjtpPDE2PjtpPDE3PjtpPDE4PjtpPDE5PjtpPDIwPjtpPDIxPjtpPDIyPjs+O2w8cDwtLSBQbGVhc2UgQ2hvb3NlIGEgU3BvcnQgLS07XGU+O3A8QmFzZWJhbGw7L2F0aGxldGljcy9zcG9ydHMvbWVucy9iYXNlYmFsbC8+O3A8TWVuJ3MgQmFza2V0YmFsbDsvYXRobGV0aWNzL3Nwb3J0cy9tZW5zL2Jhc2tldGJhbGwvPjtwPFdvbWVuJ3MgQmFza2V0YmFsbDsvYXRobGV0aWNzL3Nwb3J0cy93b21lbnMvYmFza2V0YmFsbC8+O3A8Q3Jvc3MgQ291bnRyeTsvYXRobGV0aWNzL3Nwb3J0cy9jb2VkL2Nyb3NzY291bnRyeS8+O3A8RmllbGQgSG9ja2V5Oy9hdGhsZXRpY3Mvc3BvcnRzL3dvbWVucy9maWVsZGhvY2tleS8+O3A8Rm9vdGJhbGw7L2F0aGxldGljcy9zcG9ydHMvbWVucy9mb290YmFsbC8+O3A8TWVuJ3MgR29sZjsvYXRobGV0aWNzL3Nwb3J0cy9tZW5zL2dvbGYvPjtwPFdvbWVuJ3MgR29sZjsvYXRobGV0aWNzL3Nwb3J0cy93b21lbnMvZ29sZi8+O3A8TWVuJ3MgSG9ja2V5Oy9hdGhsZXRpY3Mvc3BvcnRzL21lbnMvaG9ja2V5Lz47cDxXb21lbidzIEhvY2tleTsvYXRobGV0aWNzL3Nwb3J0cy93b21lbnMvaG9ja2V5Lz47cDxNZW4ncyBMYWNyb3NzZTsvYXRobGV0aWNzL3Nwb3J0cy9tZW5zL2xhY3Jvc3NlLz47cDxXb21lbidzIExhY3Jvc3NlOy9hdGhsZXRpY3Mvc3BvcnRzL3dvbWVucy9sYWNyb3NzZS8+O3A8U2tpaW5nOy9hdGhsZXRpY3Mvc3BvcnRzL2NvZWQvc2tpaW5nLz47cDxNZW4ncyBTb2NjZXI7L2F0aGxldGljcy9zcG9ydHMvbWVucy9zb2NjZXIvPjtwPFdvbWVuJ3MgU29jY2VyOy9hdGhsZXRpY3Mvc3BvcnRzL3dvbWVucy9zb2NjZXIvPjtwPFNvZnRiYWxsOy9hdGhsZXRpY3Mvc3BvcnRzL3dvbWVucy9zb2Z0YmFsbC8+O3A8V29tZW4ncyBTcXVhc2g7L2F0aGxldGljcy9zcG9ydHMvd29tZW5zL3NxdWFzaC8+O3A8U3dpbW1pbmcgJiBEaXZpbmc7L2F0aGxldGljcy9zcG9ydHMvY29lZC9zd2ltZGl2ZS8+O3A8TWVuJ3MgVGVubmlzOy9hdGhsZXRpY3Mvc3BvcnRzL21lbnMvdGVubmlzLz47cDxXb21lbidzIFRlbm5pczsvYXRobGV0aWNzL3Nwb3J0cy93b21lbnMvdGVubmlzLz47cDxUcmFjayAmIEZpZWxkOy9hdGhsZXRpY3Mvc3BvcnRzL2NvZWQvdHJhY2svPjtwPFdvbWVuJ3MgVm9sbGV5YmFsbDsvYXRobGV0aWNzL3Nwb3J0cy93b21lbnMvdm9sbGV5YmFsbC8+Oz4+Oz47Oz47Pj47Pj47dDw7bDxpPDQ+O2k8MTI+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8cDxwPGw8VmlzaWJsZTs+O2w8bzx0Pjs+Pjs+Ozs+Oz4+O3Q8dDxwPHA8bDxWaXNpYmxlOz47bDxvPHQ+Oz4+Oz47cDxsPGk8MD47aTwxPjtpPDI+O2k8Mz47aTw0Pjs+O2w8cDxTdHVkZW50czsvc3R1ZGVudHMvPjtwPFBhcmVudHM7L3BhcmVudHMvPjtwPEFsdW1uaTsvYWx1bW5pLz47cDxGYWN1bHR5ICYgU3RhZmY7L2ZhY3N0YWZmLz47cDxEb25vcnM7L3N1cHBvcnRpbmcvPjs+Pjs+Ozs+Oz4+O3Q8O2w8aTwxPjs+O2w8dDxwPHA8bDxUZXh0Oz47bDxMb2cgT247Pj47Pjs7Pjs+Pjs+Pjs+Pjs+q+9WGqfM7wJoIXDlu43nIDVBikg=" />
+
+<script language="javascript" type="text/javascript">
+<!--
+	function __doPostBack(eventTarget, eventArgument) {
+		var theform;
+		if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+			theform = document.cmsform;
+		}
+		else {
+			theform = document.forms["cmsform"];
+		}
+		theform.__EVENTTARGET.value = eventTarget.split("$").join(":");
+		theform.__EVENTARGUMENT.value = eventArgument;
+		theform.submit();
+	}
+// -->
+</script>
+
+<script language="javascript" type="text/javascript">
+<!--
+   var __CMS_PostbackForm = document.cmsform;
+   var __CMS_CurrentUrl = "/middcms/Html/Main.aspx?NRMODE=Published&NRORIGINALURL=%2fathletics%2ffacilities%2fbubble%2ehtm&NRNODEGUID=%7bEB57F544-C374-4C32-BFA4-B2D41D09048E%7d&NRCACHEHINT=NoModifyGuest";
+   __CMS_PostbackForm.action = __CMS_CurrentUrl;
+// -->
+</script>
+
+
+
+
+			
+			<div class="main">
+				
+<div class="header">
+	<div class="headerTools">
+		<a href="http://go.middlebury.edu/search">Search</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/directory">Directory</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/calendars">Calendars</a>
+	</div>
+	
+	
+	<a href="/"><img class="headerLogo" src="/middcms/images/mclogo.gif" alt="Middlebury College" /></a>
+	<div class="headerNav">
+		<a href="http://go.middlebury.edu/admissions">Admissions</a>
+		<img class="headerNav" src="/middcms/images/nav/nav_spacer_4dots.gif" alt="" />
+		<a href="http://go.middlebury.edu/academics">Academics</a>
+		<img class="headerNav" src="/middcms/images/nav/nav_spacer_4dots.gif" alt="" />
+		<a href="http://go.middlebury.edu/campuslife">Campus Life</a>
+		<img class="headerNav" src="/middcms/images/nav/nav_spacer_4dots.gif" alt="" />
+		<a href="http://go.middlebury.edu/athletics">Athletics</a>
+		<img class="headerNav" src="/middcms/images/nav/nav_spacer_4dots.gif" alt="" />
+		<a href="http://go.middlebury.edu/arts">Arts</a>
+		<img class="headerNav" src="/middcms/images/nav/nav_spacer_4dots.gif" alt="" />
+		<a href="http://go.middlebury.edu/about">About Middlebury</a>
+		<img class="headerNav" src="/middcms/images/nav/nav_spacer_4dots.gif" alt="" />
+		<a href="http://go.middlebury.edu/administration">Administration</a>
+	</div>
+	<div class="clear">
+	</div>
+</div>
+				<div class="columns">
+					<div class="columnsInner">
+						<div class="leftcol">
+							<img src="/NR/rdonlyres/DAD0A559-E30B-440D-B4CA-359095D4EEEE/0/head_athletics_left_photo_22.jpg" alt="" class="leftcolHead" /><a href="/athletics/"><img src="/middcms/images/head/athletics/head_athletics_nav.gif" alt="Athletics" class="leftcolNavHead" /></a>
+
+<div class="navMenu">
+	<a href="/athletics/homeevents/">Home Event Schedule</a>
+<a href="/athletics/sports/">Varsity Sports</a>
+<a href="/athletics/news/">Athletics News</a>
+<a href="/athletics/about/">About Athletics</a>
+<a href="/athletics/staff/">Athletics Staff</a>
+<a href="/athletics/facaff/">Faculty Affiliate Program</a>
+<div class="navMenuSelected">
+<a href="/athletics/facilities/">Facilities</a>
+</div>
+<div class="navSubMenu">
+<a href="/athletics/facilities/schedules/">Athletics Facilities Schedules</a>
+<a href="/athletics/facilities/dragone.htm">Allan Dragone Track &amp; Field Complex</a>
+<a href="/athletics/facilities/kenyon.htm">Chip Kenyon '85 Arena</a>
+<a href="/athletics/facilities/fitnesscenter.htm">Fitness Center</a>
+<a href="/athletics/facilities/forbes.htm">Forbes Baseball Field</a>
+<a href="/athletics/facilities/general.htm">General Athletics Photos</a>
+<a href="/athletics/facilities/kenyonlounge.htm">Kenyon Lounge</a>
+<a href="/athletics/facilities/lawsonlounge.htm">Lawson Lounge</a>
+<a href="/athletics/facilities/natatorium.htm">Natatorium</a>
+<a href="/athletics/facilities/nelson.htm">Nelson Recreation Center</a>
+<a href="/athletics/facilities/pepingym.htm">Pepin Gymnasium</a>
+<a href="/athletics/facilities/kohn.htm">Peter Kohn Field</a>
+<a href="/athletics/facilities/golfcourse.htm">Ralph Myhre Golf Course</a>
+<a href="/athletics/facilities/rstc.htm">Rikert Ski Touring Center</a>
+<a href="/athletics/facilities/snowbowl.htm">Snow Bowl</a>
+<a href="/athletics/facilities/softball.htm">Softball Field</a>
+<a href="/athletics/facilities/sportsmed.htm">Sports Medicine</a>
+<div class="navSubMenuSelected">
+<a href="/athletics/facilities/bubble.htm">The Bubble</a>
+</div>
+<a href="/athletics/facilities/youngman.htm">Youngman Field at Alumni Stadium</a>
+</div>
+<a href="/athletics/sportsmed/">Sports Medicine</a>
+<a href="/athletics/snowbowl/">Snow Bowl</a>
+<a href="/athletics/rikert/">Rikert Ski Touring Center</a>
+<a href="/athletics/golfcourse/">Ralph Myhre Golf Course</a>
+<a href="/athletics/clubsports/">Club Sports</a>
+<a href="/athletics/links/">Links</a>
+<a href="/athletics/prospectives/">Prospective Form</a>
+<a href="/athletics/contact/">Contact Us</a>
+
+</div>
+
+
+<img src="/middcms/images/nav/nav_column_left_bottom.gif" alt="" />
+
+						</div>
+						<div class="centercol">
+							
+							
+<div class="breadcrumb">
+	<div class="breadcrumbTop">
+	<a href="http://www.middlebury.edu/">Middlebury College</a>&nbsp;&gt;&nbsp;<a href="http://www.middlebury.edu/athletics/">Athletics</a>&nbsp;&gt;&nbsp;<a href="http://www.middlebury.edu/athletics/facilities/">Facilities</a>&nbsp;&gt;&nbsp;The Bubble
+	</div>
+	<table id="breadcrumb_breadcrumbBottom" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td>
+	
+		<div class="breadcrumbBottom">
+			<div class="breadcrumbBottomLeft">
+				<h1>Athletics</h1>
+			</div>
+			<div class="breadcrumbBottomRight">
+				<select name="breadcrumb:crumbBottomDdl" id="breadcrumb_crumbBottomDdl">
+		<option value="">-- Please Choose a Sport --</option>
+		<option value="/athletics/sports/mens/baseball/">Baseball</option>
+		<option value="/athletics/sports/mens/basketball/">Men's Basketball</option>
+		<option value="/athletics/sports/womens/basketball/">Women's Basketball</option>
+		<option value="/athletics/sports/coed/crosscountry/">Cross Country</option>
+		<option value="/athletics/sports/womens/fieldhockey/">Field Hockey</option>
+		<option value="/athletics/sports/mens/football/">Football</option>
+		<option value="/athletics/sports/mens/golf/">Men's Golf</option>
+		<option value="/athletics/sports/womens/golf/">Women's Golf</option>
+		<option value="/athletics/sports/mens/hockey/">Men's Hockey</option>
+		<option value="/athletics/sports/womens/hockey/">Women's Hockey</option>
+		<option value="/athletics/sports/mens/lacrosse/">Men's Lacrosse</option>
+		<option value="/athletics/sports/womens/lacrosse/">Women's Lacrosse</option>
+		<option value="/athletics/sports/coed/skiing/">Skiing</option>
+		<option value="/athletics/sports/mens/soccer/">Men's Soccer</option>
+		<option value="/athletics/sports/womens/soccer/">Women's Soccer</option>
+		<option value="/athletics/sports/womens/softball/">Softball</option>
+		<option value="/athletics/sports/womens/squash/">Women's Squash</option>
+		<option value="/athletics/sports/coed/swimdive/">Swimming &amp; Diving</option>
+		<option value="/athletics/sports/mens/tennis/">Men's Tennis</option>
+		<option value="/athletics/sports/womens/tennis/">Women's Tennis</option>
+		<option value="/athletics/sports/coed/track/">Track &amp; Field</option>
+		<option value="/athletics/sports/womens/volleyball/">Women's Volleyball</option>
+
+	</select>
+				<input type="submit" name="breadcrumb:crumbBottomBtn" value="Go" id="breadcrumb_crumbBottomBtn" class="button" />
+			</div>
+		</div>
+	
+</td></tr></table>
+	
+</div>
+
+							<div class="banner">
+								<h1>The Bubble</h1>
+
+							</div>
+							<div class="content">
+								
+								<span id="mainContent">
+		<p>
+		</p>
+		<p>
+		</p>
+		<p align="center">
+				<img style="WIDTH: 350px; HEIGHT: 234px" alt="Indoor view of The Bubble" src="/NR/rdonlyres/9FEC2413-9374-4B01-91B8-1EB1BEEFF43A/0/bubbleinside.jpg" align="absMiddle" border="0" /> </p>
+		<br />Formerly known as Fletcher Field House, "The Bubble", was inflated in the summer of '03. The facility maintains a rubberized surface, tennis courts and an indoor track. New with the facility are five international squash courts. <p align="center"><img style="WIDTH: 216px; HEIGHT: 288px" alt="Squash courts" src="/NR/rdonlyres/07180D13-470B-4EBD-8250-5286D2A4462C/0/courts.jpg" border="0" /></p></span>
+							</div>
+						</div>
+						<div class="rightcol">
+							<img src="/NR/rdonlyres/D059B286-A0C6-46C5-8790-2BDC79537E9D/0/head_athletics_right_photo_1.jpg" alt="" />
+
+
+
+
+<img src="/middcms/images/nav/nav_column_right_tab.gif" class="rightcolTab" alt="" />
+<img src="/middcms/images/nav/nav_gateways_for.gif" alt="Gateways For:" />
+
+<div class="gateways">
+	<select name="rightcol:ddlGateways" id="rightcol_ddlGateways">
+	<option value="/students/">Students</option>
+	<option value="/parents/">Parents</option>
+	<option value="/alumni/">Alumni</option>
+	<option value="/facstaff/">Faculty &amp; Staff</option>
+	<option value="/supporting/">Donors</option>
+
+</select>
+	<input type="submit" name="rightcol:btnGateways" value="Go" id="rightcol_btnGateways" class="button" />
+</div>
+<img alt="" src="/middcms/images/nav/nav_column_right_bottom.gif" />
+
+						</div>
+					</div>
+				</div>
+				<div class="clear">&nbsp;</div>
+				
+<div class="footer">
+	<div class="footerNav">
+		<a href="http://go.middlebury.edu/store">College Store</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/library">Library</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/jobseekers">Job Seekers</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/directions">Directions</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/campusmap">Campus Map</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/sitemap">Site Map</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/privacy">Privacy</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/help">Help</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/webmail">WebMail</a>&nbsp;|&nbsp;
+		<a href="http://go.middlebury.edu/bannerweb">Banner Web</a>
+	</div><br />
+	Middlebury Vermont 05753 802-443-5000<br />
+	<a href="/about/copyright/">©</a>
+	The President and Fellows of Middlebury College. All Rights Reserved.
+	<br /><br />
+	<a id="footer_btnLogon" class="btnLogon" href="javascript:__doPostBack('footer$btnLogon','')">Log On</a>
+</div>
+			</div>
+		</form>
+	</body>
+</html>

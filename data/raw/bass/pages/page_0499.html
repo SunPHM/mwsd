@@ -1,0 +1,109 @@
+<html>
+
+<head><script LANGUAGE="JavaScript"><!--
+// Preload and play audio files with event handler (MouseOver sound)
+// designed by JavaScript Archive, (c)1999
+// Get more free javascripts at http://jsarchive.8m.com
+
+var aySound = new Array();
+// Below: source for sound files to be preloaded
+aySound[0] = "audio/BassG24k.mp3";
+
+// DO NOT edit below this line
+document.write('<BGSOUND ID="auIEContainer">')
+IE = (navigator.appVersion.indexOf("MSIE")!=-1 && document.all)? 1:0;
+NS = (navigator.appName=="Netscape" && navigator.plugins["LiveAudio"])? 1:0;
+ver4 = IE||NS? 1:0;
+onload=auPreload;
+
+function auPreload() {
+if (!ver4) return;
+if (NS) auEmb = new Layer(0,window);
+else {
+Str = "<DIV ID='auEmb' STYLE='position:absolute;'></DIV>";
+document.body.insertAdjacentHTML("BeforeEnd",Str);
+}
+var Str = '';
+for (i=0;i<aySound.length;i++)
+Str += "<EMBED SRC='"+aySound[i]+"' AUTOSTART='TRUE' HIDDEN='FALSE'>"
+if (IE) auEmb.innerHTML = Str;
+else {
+auEmb.document.open();
+auEmb.document.write(Str);
+auEmb.document.close();
+}
+auCon = IE? document.all.auIEContainer:auEmb;
+auCon.control = auCtrl;
+}
+function auCtrl(whSound,play) {
+if (IE) this.src = play? aySound[whSound]:'';
+else eval("this.document.embeds[whSound]." + (play? "play()":"stop()"))
+}
+function playSound(whSound) { if (window.auCon) auCon.control(whSound,true); }
+function stopSound(whSound) { if (window.auCon) auCon.control(whSound,false); }
+//-->
+</script>
+
+<title>Wind Chimes by Music of the Spheres</title>
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body stylesrc="http://www.wvgallery.com/index.html" bgcolor="#FFFFFF" link="#000000" vlink="#000000" alink="#000000">
+<div align="left">
+
+<table border="0" width="585">
+  <tr>
+    <td width="100%"><big><strong>Bass</strong></big><table border="0" width="100%">
+      <tr>
+        <td width="33%"><img src="images/windchimes/bass.jpg" alt="bass.jpg (2640 bytes)" width="150" height="236"></td>
+        <td width="67%">Our largest chime available in all<br>
+        ten tunings, this chime has a deep, <br>
+        natural sound and enduring sustain<br>
+        <p>Available in 10 styles:<ul>
+          <li>Pentatonic</li>
+          <li>Quartal </li>
+          <li>Chinese</li>
+          <li>Mongolian </li>
+          <li>Aquarian </li>
+          <li>Gypsy&nbsp; &nbsp;&nbsp;&nbsp; (now playing) </li>
+          <li>Hawaiian </li>
+          <li>Balinese </li>
+          <li>Japanese </li>
+          <li>Whole Tone </li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2">&nbsp;<div align="left"><table border="1" height="78" width="378">
+          <tr>
+            <td colspan="5" height="13" width="372"><font face="Verdana, Arial" size="1"><b>Specifications</b></font></td>
+          </tr>
+          <tr>
+            <td height="34" width="75"><font face="Verdana, Arial" size="1"><b>Size/Pitch</b></font></td>
+            <td height="34" width="75"><font face="Verdana, Arial" size="1"><b>Overall <br>
+            Length</b></font></td>
+            <td height="34" width="76"><font face="Verdana, Arial" size="1"><b>Longest <br>
+            Tube</b></font></td>
+            <td height="34" width="76"><font face="Verdana, Arial" size="1"><b>Weight<br>
+            (lbs)</b></font></td>
+            <td height="34" width="76"><font face="Verdana, Arial" size="1"><b>Tube O.D.</b></font></td>
+          </tr>
+          <tr>
+            <td height="13" width="75"><font face="Verdana, Arial" size="1">Bass</font></td>
+            <td height="13" width="75"><font face="Verdana, Arial" size="1">90&quot;</font></td>
+            <td height="13" width="76"><font face="Verdana, Arial" size="1">51&quot;</font></td>
+            <td height="13" width="76"><font face="Verdana, Arial" size="1">44</font></td>
+            <td height="13" width="76"><font face="Verdana, Arial" size="1">2 1/2&quot;</font></td>
+          </tr>
+        </table>
+        </div></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<p>&nbsp; </p>
+</body>
+</html>

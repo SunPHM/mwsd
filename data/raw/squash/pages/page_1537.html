@@ -1,0 +1,360 @@
+<html>
+<head>
+<title> - Forbes.com</title>
+<META NAME="robots" CONTENT="noarchive">
+<link rel="SHORTCUT ICON" href="http://images.forbes.com/icon/favicon.ico">
+<script language="JavaScript" type="text/javascript">
+<!--
+if (navigator.appName.indexOf("Netscape") != -1){
+document.write ('<LINK REL="STYLESHEET" TYPE="text/css" HREF="http://images.forbes.com/css/style_ns.css">');
+} else {
+document.write ('<LINK REL="STYLESHEET" TYPE="text/css" HREF="http://images.forbes.com/css/style_ie.css">');
+}
+// -->
+</script>
+<SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
+<!-- Hide script from old browsers
+function newWindow() {
+bestbuyWindow = window.open('inv_fun_bestbuy_index.jhtml', 'bestbuy', 'width=200,height=200')
+}
+function jumpNav (form) {
+if (form.jumpSelect.options[form.jumpSelect.selectedIndex].value != "") {
+this.location = form.jumpSelect.options[form.jumpSelect.selectedIndex].value;
+}
+}
+// End hiding script from old browsers -->
+</SCRIPT>
+<script language="JavaScript">
+<!--
+var thisSpeed = 6000;
+var myCancel;
+var nextPage = true;
+var prevPage = false;
+function parentLoad(url) {
+opener.location = url;
+}
+function moveSlides(direction) {
+if (direction == 1) {
+document.location.href = "cx_ns_1001featslide_2.html" + "?thisSpeed=" + thisSpeed;
+} else {
+document.location.href = "" + "?thisSpeed=" + thisSpeed;
+}
+}
+function procrastinate(speed) {
+if (nextPage == true) {
+myCancel = window.setTimeout('moveSlides(1)',speed);
+}
+}
+function stopThis() {
+window.clearTimeout(myCancel);
+}
+function changeSpeed(factor) {
+thisSpeed = thisSpeed * factor;
+// document.location.href = window.location.pathname + "?thisSpeed=" + thisSpeed;
+window.location.search = "?thisSpeed=" + thisSpeed;
+}
+var queries = window.location.search.split('&');
+for (i = 0; i < queries.length; i++) {
+var pair = queries[i].split('=');
+if ( (pair[0] != null) && (pair[0].indexOf('thisSpeed') > -1) && (pair[1] != null)) {
+thisSpeed = parseInt(pair[1]);
+if (isNaN(thisSpeed)) {
+thisSpeed = 6000;
+}
+}
+}
+//-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+var partner = '';
+var query = this.location.search.substring(1);
+if( query.length > 0 ) {
+var params=query.split("&");
+for (var i = 0 ; i < params.length ; i++) {
+var pos = params[i].indexOf("=");
+var name = params[i].substring(0, pos);
+var value = params[i].substring(pos + 1);
+if( name == "partner" ) {
+partner = value;
+}
+}
+}
+var url = window.document.URL.toString();
+if(url.indexOf("archive") != -1 ) {
+var partner = "keepmedia";
+}
+var currentHostname=this.location.hostname;
+if (currentHostname.length > 0) {
+if (currentHostname == "aol.forbes.com" || currentHostname == "forbes.aol.com") {
+partner = 'aol';
+}
+}
+var partner_cookie = "partner_session=" + partner;
+if (document.cookie.indexOf(partner_cookie) < 0) {
+document.cookie=partner_cookie + ';path=/;domain=.forbes.com';
+}
+//-->
+</script>
+<script language="JavaScript" src="http://images.forbes.com/scripts/popit.js"></script>
+</head>
+<body onLoad="procrastinate(thisSpeed);" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#ffffff" link="#003399" alink="#0080ff" vlink="#6699cc" text="#000000">
+<script language="JavaScript" type="text/javascript">
+<!--
+if (document.cookie.indexOf('partner_session=aol') != -1) {
+document.write('<SCRIPT SRC="http://aolsvc.aol.com/pf/tools/hat/js/hat100.js"><img src="http://server-us.imrworldwide.com/cgi-bin/count?cid=us_forbes-aol_0" width=0 height=0></SCRIPT><NOSCRIPT><table border=0 cellpadding=0 cellspacing=0 width=100% background="http://aolsvc.aol.com/pf/tools/hat/gr/bluetilehat_gr.gif"><tr><TD ALIGN=left><a href="aol://1722:Personal Finance"><img src="http://aolsvc.aol.com/pf/tools/hat/gr/pfhat2_gr.gif" border=0 align=left hspace=0 alt="AOL Personal Finance Main"></a><img src="http://server-us.imrworldwide.com/cgi-bin/count?cid=us_forbes-aol_0" width=0 height=0></TD></TR></TABLE></NOSCRIPT>');
+}
+if (document.cookie.indexOf('partner_session=msnbc') != -1) {
+var _rsCI='us-forbes';
+var _rsCG='msnbc_hat_test';
+var _rsDT=1;
+var _rsSI=escape(window.location);
+var _rsLP=location.protocol.indexOf('https')>-1?'https:':'http:';
+var _rsRP=escape(document.referrer);
+var _rsND=_rsLP+'//secure-us.imrworldwide.com/';
+if (parseInt(navigator.appVersion)>=4) {
+var _rsRD=(new Date()).getTime();
+var _rsSE=1;
+var _rsSV='';
+var _rsSM=1.0;
+_rsCL='<scr'+'ipt language="JavaScript" type="text/javascript" src="'+_rsND+'v5.js"><\/scr'+'ipt>';
+}
+else {
+_rsCL='<img src="/cms/components/'+_rsND+'cgi-bin/m?ci='+_rsCI+'&cg='+_rsCG+'&si='+_rsSI+'&rp='+_rsRP+'">';
+}
+//document.write(_rsCL);
+document.write('<table cellspacing="0" cellpadding="0" border="0" width="120%" bgcolor="#384877"><td><map name="map10099859"><area coords="0,0,56,41" shape="rect" alt="MSNBC" href="/"><area coords="397,16,474,41" shape="rect" alt="Blogs Etc." href="http://www.msnbc.msn.com/id/3032105/"><area coords="346,17,399,41" shape="rect" alt="Travel" href="http://www.msnbc.msn.com/id/3032123/"><area coords="279,20,346,41" shape="rect" alt="Weather" href="http://weather.msn.com/local.aspx?wealocations=wc:USNY0996"><area coords="218,21,280,41" shape="rect" alt="Health" href="http://www.msnbc.msn.com/id/3032076/"><area coords="488,0,589,20" shape="rect" alt="Tech / Science" href="http://www.msnbc.msn.com/id/3032118/"><area coords="387,0,488,19" shape="rect" alt="Entertainment" href="http://www.msnbc.msn.com/id/3032084/"><area coords="334,0,387,20" shape="rect" alt="Sports" href="http://www.msnbc.msn.com/id/3032113/"><area coords="267,0,334,20" shape="rect" alt="Business" href="http://www.msnbc.msn.com/id/3032072/"><area coords="179,0,266,20" shape="rect" alt="World News" href="http://www.msnbc.msn.com/id/3032507/"><area coords="100,0,179,20" shape="rect" alt="U.S. News" href="http://www.msnbc.msn.com/id/3032525/"></map><img border="0" src="http://images.forbes.com/media/partners/msnbc/MSNBC_partnerstripe.gif" height="41" width="678" vspace="0" hspace="0" usemap="#map10099859"></td></table>');
+}
+// -->
+</script>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr bgcolor="#336699">
+<td width="10">&nbsp;</td>
+<td colspan="3" nowrap width="100%">&nbsp;<br>
+<script language="JavaScript" src="http://images.forbes.com/scripts/slideshow_setup.js"></script>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+OAS_url = 'http://ads.forbes.com/RealMedia/ads/';
+if(typeof OAS_sitepage=="undefined"){
+OAS_sitepage = "forbes.com/slideshow/nosection/story/id1095305";
+}
+else{
+if(OAS_sitepage.length == 0){
+OAS_sitepage = "forbes.com/slideshow/nosection/story/id1095305";
+}
+}
+if(typeof OAS_listpos=="undefined"){
+OAS_listpos = "AdController,BigBanner,Block,x58";
+}
+else{
+if(OAS_listpos.length == 0){
+OAS_listpos = "AdController,BigBanner,Block,x58";
+}
+}
+OAS_query = '';
+OAS_target = '_top';
+OAS_version = 10;
+OAS_rn = '001234567890'; OAS_rns = '1234567890';
+OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+function OAS_NORMAL(pos) {
+document.write('<A HREF="' + OAS_url + 'click_nx.cgi/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" TARGET=' + OAS_target + '>');
+document.write('<IMG SRC="' + OAS_url + 'adstream_nx.cgi/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" BORDER=0></A>');
+}
+function OAS_RICH(pos) {
+document.write('<A HREF="' + OAS_url + 'click_nx.cgi/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" TARGET=' + OAS_target + '>');
+document.write('<IMG SRC="' + OAS_url + 'adstream_nx.cgi/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" BORDER=0></A>');
+}
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=JavaScript1.1>
+<!--
+OAS_version = 11;
+if (navigator.userAgent.indexOf('Mozilla/3') != -1 || navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1)
+OAS_version = 10;
+if (OAS_version >= 11)
+document.write('<SCRIPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + OAS_query + '"><\/SCRIPT>');
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+document.write('');
+function OAS_AD(pos) {
+if (OAS_version >= 11)
+OAS_RICH(pos);
+else
+OAS_NORMAL(pos);
+}
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+OAS_AD('AdController');
+//-->
+</SCRIPT>
+<div style="display:none">
+<script language="JavaScript" src="http://images.forbes.com/scripts/omniture/s_code_forbescom.js"></script>
+<script language="JavaScript" src="http://images.forbes.com/scripts/omniture/s_code_remote.js"></script>
+</div>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+OAS_AD('BigBanner');
+//-->
+</SCRIPT>
+</td>
+</tr>
+<tr bgcolor="#336699">
+<td width="10">&nbsp;</td>
+<td width="90">
+<a href="javascript:parentLoad('http://www.forbes.com')">
+<img src="http://images.forbes.com/media/assets/forbes_logo_tiny.gif" width="69" height="24" hspace="10" vspace="4" border="0">
+</a>
+</td>
+<td width="10">&nbsp;</td>
+<td width="100%" class="mainarttitle">
+<span class="white"></span>
+</td>
+</tr>
+<tr>
+<td colspan="4" width="100%"><img src="http://images.forbes.com/media/assets/stripe.gif" width="100%" height="4" border="0"></td></tr>
+</table>
+<span class="hpspace">&nbsp;<br></span>
+<table width="756" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width="10">&nbsp;</td>
+<td width="400">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="280">
+<b><a href="javascript:changeSpeed(2);">slower</a> |
+<a href="javascript:stopThis()">stop</a> |
+<a href="javascript:changeSpeed(0.5);">faster</a>
+| <a href="javascript:moveSlides(1)">next &gt;</a></b>
+</td><td width="120">
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+OAS_AD('StoryLogo');
+//-->
+</SCRIPT>
+</td></tr></table><br>
+<img border="0" src="http://images.forbes.com/images/2003/09/30/1_1001sport.jpg" height="280" width="350" vspace="15" hspace="5"> <span class="mainarttxt">The preferred game of Wall Street has convenience on its side, as 30 minutes on the squash court provides an impressive cardiorespiratory workout. Extended rallies and almost constant running builds muscular strength and endurance in the lower body, while lunges, twists and turns increase flexibility in the back and abdomen. "For people just getting into the game, it's almost too much to sustain, but once you get there, squash is tremendous," says Paul Assaiante, head coach of the five-time defending national intercollegiate champion men's squash team at Trinity College in Hartford, Conn. Assaiante recommends a regimen of yoga, sprinting and distance running for preparation. Be wary of groin pulls, torn Achilles tendons and your opponent's racquet.   </span>
+<br>
+<br>
+</td>
+<td width="10">&nbsp;</td>
+<td width="336"><center>
+<span class="smallgreytxt">A D V E R T I S E M E N T</span><br>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+OAS_AD('Block');
+//-->
+</SCRIPT>
+<br><br>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+OAS_AD('x58');
+//-->
+</SCRIPT>
+</center>
+<!-- <droplet src="/cms/components/incl_specialsection.jhtml"></droplet><br> -->
+</td>
+</tr>
+</table>
+<script language="JavaScript" type="text/javascript"><!--
+var _rsCI="us-forbes";
+var _rsCG="0";
+if (document.cookie.length > 0) {
+begin = document.cookie.indexOf('ceonetwork_session=');
+if (begin > -1) {
+_rsCG="ceonetwork";
+}
+}
+var _rsDT=0;
+var _rsSI=escape(window.location);
+var _rsLP=location.protocol.indexOf('https')>-1?'https:':'http:';
+var _rsRP=escape(document.referrer);
+var _rsND=_rsLP+'//secure-us.imrworldwide.com/';
+if (parseInt(navigator.appVersion)>=4) {
+var _rsRD=(new Date()).getTime();
+var _rsSE=1;
+var _rsSV="";
+var _rsSM=0.0;
+_rsCL='<scr'+'ipt language="JavaScript" type="text/javascript" src="'+_rsND+'v5.js"></scr'+'ipt>';
+} else {
+_rsCL='<img src="'+_rsND+'cgi-bin/m?ci='+_rsCI+'&cg='+_rsCG+'&si='+_rsSI+'&rp='+_rsRP+'">';
+}
+document.write(_rsCL);
+//--></script>
+<noscript>
+<img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-forbes&amp;cg=0" alt="">
+</noscript>
+<NOSCRIPT>
+<img src="http://forbesCollect.247realmedia.com/data/?tax0_SiteID=1&amp;JS=False" width=0 height=0>
+</NOSCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2">
+var if_Site_ID = "forbes";
+var if_sid="1";
+var urlpath = location.pathname.toString();
+var query=location.search.toString();
+var host=location.host.toString();
+var now = new Date();
+var hours = now.getHours();
+var tokenarray = urlpath.split('/');
+var segmentlist="";
+var j=1;
+segmentlist="&url=" + urlpath;
+segmentlist="&fullurl=" + host+urlpath+query;
+segmentlist="&hour=" + hours;
+for (var i=0; i< tokenarray.length; i++)
+if (tokenarray[i] != "cms" && tokenarray[i] != "template" && tokenarray[i] != "" )
+{
+if (j == 1) {
+if ((tokenarray[i] == "business") ||
+(tokenarray[i] == "commerce") ||
+(tokenarray[i] == "energy") ||
+(tokenarray[i] == "healthcare") ||
+(tokenarray[i] == "manufacturing") ||
+(tokenarray[i] == "services") ||
+(tokenarray[i] == "technology") ||
+(tokenarray[i] == "smallbusiness") ) {
+segmentlist=segmentlist + "&business=" + tokenarray[i];
+}
+}
+if (tokenarray[i].indexOf("html") == -1) {
+segmentlist = segmentlist + "&segment" + j + "=" + tokenarray[i];
+j++;
+}
+else {
+segmentlist = segmentlist + "&filename=" + tokenarray[i];
+segmentlist = segmentlist + "&filenamequery=" + tokenarray[i] + query;
+if (i > 3) {
+segmentlist = segmentlist + "&uri=/" + tokenarray[i-3] + "/" + tokenarray[i-2] + "/" + tokenarray[i-1] + "/" + tokenarray[i];
+}
+if (tokenarray[i].indexOf("_print.html") != -1) {
+segmentlist = segmentlist + "&printversion=" + tokenarray[i];
+}
+}
+}
+var partnerLoc = query.indexOf("partner=");
+var partner= "";
+if (partnerLoc > -1) {
+partnerLoc = partnerLoc + 8;
+var end = query.indexOf("&",partnerLoc);
+if (end > -1) {
+partner= query.substring(partnerLoc, end);
+}
+else	   {
+partner = query.substring(partnerLoc);
+}
+}
+var if_tag = "<SCRIPT LANGUAGE='JavaScript' " + "DEFER SRC=http" + "://" +  "a248.e.akamai.net/7/836/1132/102403/delivery-va.247realmedia.com/scripts/" +  if_Site_ID + "_if.js" +  "><\/SCR" + "IPT>";
+if (partner.length > 0) {
+segmentlist = segmentlist + "&partner=" + partner;
+}
+var mep1=segmentlist;
+document.write(if_tag);
+</SCRIPT>
+<!--
+static = true
+-->
+</body>
+</html>

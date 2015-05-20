@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = '<$MTBlogHost$>';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Idea by:  Nic Wolfe (Nic@TimelapseProductions.com) -->
+<!-- Web URL:  http://fineline.xs.mw -->
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=660,height=500');");
+}
+// End -->
+</script>
+
+<link rel="shortcut icon" href="http://buffoonery.org/images/favicon.ico" />
+
+<script language="JavaScript">
+<!--
+image1on=new Image (113,26); image1off=new Image (113,26);
+image1on.src="http://buffoonery.org/images/nav/blog_r.gif"; image1off.src="http://buffoonery.org/images/nav/blog.jpg";
+
+image2on=new Image (113,26); image2off=new Image (113,26);
+image2on.src="http://buffoonery.org/images/nav/photolog_r.gif"; image2off.src="http://buffoonery.org/images/nav/photolog.jpg";
+
+image3on=new Image (113,26); image3off=new Image (113,26);
+image3on.src="http://buffoonery.org/images/nav/moblog_r.gif"; image3off.src="http://buffoonery.org/images/nav/moblog.jpg";
+
+image4on=new Image (115,26); image4off=new Image (115,26);
+image4on.src="http://buffoonery.org/images/nav/about_r.gif"; image4off.src="http://buffoonery.org/images/nav/about.jpg";
+//-->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>buffoonery.org | a seattle weblog</title>
+<link href="http://buffoonery.org/styles.css" rel="stylesheet" type="text/css"/>
+<meta name="ICBM" content="47.68611, -122.38166">
+<meta name="DC.title" content="buffoonery.org">
+</head>
+
+<body>
+
+<div id="frame">
+
+<div id="top"><img src="http://buffoonery.org/images/banner.jpg" alt="BUFFOONERY." /></div>
+
+<div id="split2">
+
+	<div id="split2header">
+		<p class="split2headertext">Hello</p>
+	</div>
+	
+	<div id="welcome">
+		<p class="welcometext">I'm an IT consultant in Seattle. I write about technology, sex, Macs, restaurants, and photography, mostly.<br />&raquo; <a href="http://buffoonery.org/about.html">More info</a></p>
+	</div>
+
+	<div id="split2header">
+		<p class="split2headertext">My Photos</p>
+	</div>
+
+	<div id="blogroll">
+<!-- Start of Flickr Badge -->
+<style type="text/css">
+td {margin: 0px 0px 10px 0px;}
+#flickr_badge_source_txt {padding:0; font: 11px Arial, Helvetica, Sans serif; color:#666666;}
+#flickr_badge_icon {display:block !important; margin:0 !important; border: 1px solid rgb(0, 0, 0) !important;}
+#flickr_icon_td {padding:0 5px 0 0 !important;}
+.flickr_badge_image {text-align:left; margin: 0px 0px 10px 0px; padding: 0px; !important;}
+.flickr_badge_image img {border: none; margin: 0px 0px 10px 0px; !important;}
+#flickr_www {display:block; padding:0 10px 0 20px !important; font: 11px Arial, Helvetica, Sans serif !important; color:#3993ff !important;}
+#flickr_badge_uber_wrapper a:hover,
+#flickr_badge_uber_wrapper a:link,
+#flickr_badge_uber_wrapper a:active,
+#flickr_badge_uber_wrapper a:visited {text-decoration:none !important; background:inherit !important;color:#3993ff;}
+#flickr_badge_wrapper {}
+#flickr_badge_source {padding:0 !important; font: 11px Arial, Helvetica, Sans serif !important; color:#666666 !important;}
+</style>
+<table id="flickr_badge_uber_wrapper" cellpadding="0" cellspacing="0" border="0"><tr><td><table cellpadding="0" cellspacing="10" border="0" id="flickr_badge_wrapper">
+<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=5&display=latest&size=t&layout=v&source=user&user=51035716498%40N01"></script>
+</table><a href="http://www.flickr.com" id="flickr_www">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a>
+</td></tr></table>
+<!-- End of Flickr Badge -->
+	</div>
+
+	<div id="split2header">
+		<p class="split2headertext">Blogroll</p>
+	</div>
+
+	<div id="blogroll">
+<script language="javascript" type="text/javascript" src="http://rpc.blogrolling.com/display.php?r=0ce1dbb1aa90a4d6a2f49cdda4843ac7"></script>
+	</div>
+
+	<div id="split2header">
+		<p class="split2headertext">Categories</p>
+	</div>
+	
+	<div id="welcome">
+		<p class="welcometext"><a href="http://buffoonery.org/blog/SNORK.html">SNORK Adventures 2005</a></p>
+	</div>
+
+	<div id="split2header">
+		<p class="split2headertext">Misc.</p>
+	</div>
+
+	<div id="welcome">
+
+<script language="javascript"><!--
+    wd = screen.width;
+    ht = screen.height;
+
+    arg="<form target=porn onsubmit=\"window.open('', 'porn', 'width="+wd+",height="+ht+",status=mp,resizable=yes,scrollbars=no,left=0,top=0')\" action=http://buffoonery.org/gifporn/index2.html method=post><input type=hidden name=wd ";
+    arg+="value="+wd+"><input type=hidden name=ht ";
+ 	arg+="value="+ht+"><input type=image src=http://buffoonery.org/images/gifporn.gif alt=ENTER></form>";
+
+    document.write(arg);
+//--></script>
+
+<a href="http://buffoonery.org/blog/index.xml"><img src="http://buffoonery.org/images/rss.gif"></a>
+
+<br><br>
+
+<a target="_top" href="http://t.extreme-dm.com/?login=buffblog">
+<img src="http://t1.extreme-dm.com/i.gif" height=1
+border=0 width=1 alt=""></a><script language="javascript1.2"><!--
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;//-->
+</script><script language="javascript"><!--
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=\"http://t0.extreme-dm.com",
+"/c.g?tag=buffblog&j=y&srw="+EXw+"&srb="+EXb+"&",
+"l="+escape(EXd.referrer)+"\" height=1 width=1>");//-->
+</script><noscript><img height=1 width=1 alt=""
+src="http://t0.extreme-dm.com/c.g?tag=buffblog&j=n"></noscript> 
+
+	</div>
+
+
+<br clear="all" />
+</div>
+
+<div id="nav"><a href="http://buffoonery.org/blog/" OnMouseOver="image1.src=image1on.src; image2.src=image2off.src; image3.src=image3off.src; image4.src=image4off.src" onMouseOut="image1.src=image1on.src; image2.src=image2off.src; image3.src=image3off.src; image4.src=image4off.src"><img src="http://buffoonery.org/images/nav/blog_r.gif" width="113" height="26" name="image1" alt="BLOG" style="padding: 0px; margin: 0px 5px 0px 0px; border: 0px;" /></a><a href="http://www.flickr.com/photos/manwhoyells/" OnMouseOver="image1.src=image1off.src; image2.src=image2on.src; image3.src=image3off.src; image4.src=image4off.src" onMouseOut="image1.src=image1on.src; image2.src=image2off.src; image3.src=image3off.src; image4.src=image4off.src"><img src="http://buffoonery.org/images/nav/photolog.jpg" width="113" height="26" name="image2" alt="PHOTOLOG" style="padding: 0px; margin: 0px 5px 0px 0px; border: 0px;" /></a><a href="http://www.flickr.com/photos/manwhoyells/tags/phonecam/" OnMouseOver="image1.src=image1off.src; image2.src=image2off.src; image3.src=image3on.src; image4.src=image4off.src" onMouseOut="image1.src=image1on.src; image2.src=image2off.src; image3.src=image3off.src; image4.src=image4off.src"><img src="http://buffoonery.org/images/nav/moblog.jpg" width="113" height="26" name="image3" alt="MOBLOG" style="padding: 0px; margin: 0px 5px 0px 0px; border: 0px;" /></a><a href="http://buffoonery.org/about.html" OnMouseOver="image1.src=image1off.src; image2.src=image2off.src; image3.src=image3off.src; image4.src=image4on.src" onMouseOut="image1.src=image1on.src; image2.src=image2off.src; image3.src=image3off.src; image4.src=image4off.src"><img src="http://buffoonery.org/images/nav/about.jpg" width="115" height="26" name="image4" alt="ABOUT" style="padding: 0px; margin: 0px; border: 0px;" /></a></div>
+
+<div id="split1">
+
+	<div id="spacer"><p> </p></div>
+	
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/post_96.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/545"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/02/post_96.html"
+    dc:subject="Links"
+    dc:description="Snowing in seoul. sigh......"
+    dc:creator="enderws"
+    dc:date="2006-02-06T21:32:36-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="Flickr Photo Download: snowing in seoul" href="http://www.flickr.com/photo_zoom.gne?id=96502043&size=l">Snowing in seoul. sigh...</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/post_96.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/02/post_96.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/free.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/544"
+    dc:title="Free"
+    dc:identifier="http://buffoonery.org/blog/2006/02/free.html"
+    dc:subject="Posts"
+    dc:description="Free to Seattle-area people: Netgear Wireless Digital Music Player MP101. Comes with short RCA audio cable, AC adapter, remote, user manual, and installation CD. Works fine as far as I know. Prefer you pick up. e-mail manuel@buffoonery.org. UPDATE: TAKEN!..."
+    dc:creator="enderws"
+    dc:date="2006-02-04T16:50:31-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+			    			<div id="mtdateheader">
+    				<p class="mtdateheadertext">February  4</p>
+				</div>
+			
+	
+			<div id="mtentrytitle">
+				<a name="003498"></a>
+				<p class="mttitletext">Free</p>
+			</div>
+
+			<div id="mtpostsentry">	
+				<div id="mtpostsentrytext">
+					<p>Free to Seattle-area people: <a href="http://www.netgear.com/products/details/MP101.php" target="_blank">Netgear Wireless Digital Music Player</a> MP101. Comes with short RCA audio cable, AC adapter, remote, user manual, and installation CD. Works fine as far as I know. Prefer you pick up. e-mail <a href="mailto:manuel@buffoonery.org">manuel@buffoonery.org</a>.</p>
+
+<p><b>UPDATE: TAKEN!</b></p>
+				</div>
+			</div>
+
+			<div id="mtposted">
+				<p class="mtpostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/free.html#comments">Comments (1)</a>
+					 |
+					<a href="http://buffoonery.org/blog/2006/02/free.html#trackbacks">TrackBacks (0)</a>
+ | 
+					<a href="http://buffoonery.org/blog/2006/02/free.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/post_95.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/543"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/02/post_95.html"
+    dc:subject="Links"
+    dc:description="WWYDWOHD? (via Mike Whybark)..."
+    dc:creator="enderws"
+    dc:date="2006-02-03T23:21:48-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="" href="http://www.100dildos.com/">WWYDWOHD?</a> (via Mike Whybark)</p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/post_95.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/02/post_95.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/more_books.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/542"
+    dc:title="More Books"
+    dc:identifier="http://buffoonery.org/blog/2006/02/more_books.html"
+    dc:subject="Posts"
+    dc:description="In Me Own Words: The Autobiography of Bigfoot Graham Roumieu This book debunks myths and stereotypes about Bigfoot. In reality, Bigfoot is a jaded and sarcastic actor who sees himself as a victim of society&apos;s cruelty towards misfits. In reality,..."
+    dc:creator="enderws"
+    dc:date="2006-02-03T22:16:05-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+			
+	
+			<div id="mtentrytitle">
+				<a name="003496"></a>
+				<p class="mttitletext">More Books</p>
+			</div>
+
+			<div id="mtpostsentry">	
+				<div id="mtpostsentrytext">
+					<p><img src="http://buffoonery.org/images/random/bigfoot2.jpg" style="margin: 0px 0px 10px 10px; padding: 4px; border: 1px solid #DBC45F; float: right; background-color: white;"><a href="http://www.amazon.com/gp/product/091639784X/ref=pd_bxgy_img_b/104-1000481-0284742?%5Fencoding=UTF8"><b>In Me Own Words: The Autobiography of Bigfoot</b></a><br />
+Graham Roumieu<br />
+This book debunks myths and stereotypes about Bigfoot. In reality, Bigfoot is a jaded and sarcastic actor who sees himself as a victim of society's cruelty towards misfits. In reality, Bigfoot has simple wants and needs. He wants a chance to differentiate himself from crude Hollywood monsters like Chewbacca and use his range and depth. He needs to dismember people. He wants to like himself more and be accepted by his fellow actors. He needs to eat babies.</p>
+
+<p>"Lots of people make money from bigfoot. You think me see one thin dime? No. Monster truck people no even ask to use name. Teach them lesson. Maybe I smash with log, maybe with rock. I see what tickle fancy when time come. Make hurt good."</p>
+
+<p>Beautifully illustrated with ink and watercolor.</p>
+
+<p><img src="http://buffoonery.org/images/random/bigfoot1.jpg" style="margin: 0px 0px 10px 10px; padding: 4px; border: 1px solid #DBC45F; float: right; background-color: white;"><a href="http://www.amazon.com/gp/product/0452286859/sr=1-1/qid=1139036545/ref=pd_bbs_1/104-1000481-0284742?%5Fencoding=UTF8"><b>Me Write Book: It Bigfoot Memoir</b></a><br />
+Graham Roumieu<br />
+The second book by Bigfoot is not nearly as good as the first. In Me Own Words is more concise and snarky; Me Write Book is longwinded and overuses poop and dismemberment jokes. However, it further cuts to the core of this misunderstood gentle giant.</p>
+
+<p>"Bigfoot sometime get called rolling stone. Called irresponsible. Have bad debt. Trail of bad lady relationship. No can help. I a hunter-gatherer. And maybe just a bit of an asshole."</p>
+
+<p><img src="http://buffoonery.org/images/random/lookingforjake.jpg" style="margin: 0px 0px 10px 10px; padding: 4px; border: 1px solid #DBC45F; float: right; background-color: white;"><br />
+<a href="http://www.amazon.com/gp/product/0345476077/sr=1-1/qid=1139036623/ref=pd_bbs_1/104-1000481-0284742?%5Fencoding=UTF8"><strong>Looking for Jake</strong></a><br />
+China Mieville<br />
+Short stories by one of my favorite authors. A few were too boring to finish. A few take place in the dark, dangerous megacity his previous books are set in. I liked those the most. All of them have some element of paranoia, conspiracy. That I like.</p>
+
+<p><img src="http://buffoonery.org/images/random/out.jpg" style="margin: 0px 0px 10px 10px; padding: 4px; border: 1px solid #DBC45F; float: right; background-color: white;"><a href="http://www.amazon.com/gp/product/1400078377/sr=1-1/qid=1139036502/ref=pd_bbs_1/104-1000481-0284742?%5Fencoding=UTF8"><strong>Out</strong></a><br />
+Natsuo Kirino<br />
+Freakin' awesome. A story about four women who work night shift in a factory in Japan, their families, murders, the mafia, loan sharks, perverts. I like this book because the characters are neither all good nor all bad, so you can relate to them. The book really goes into each of their heads and follows their decisionmaking processes after someone is murdered and they dispose of the body. Women bond together in the face of adversity moreso than men. The women here see an out of their shitty home and family situations. This book really fucks with the traditional Japanese housewife gender role; the women  excercise their own agency in some extreme ways.</p>
+
+<p>Currently reading <a href="http://www.amazon.com/gp/product/0374299633/sr=1-1/qid=1139036659/ref=pd_bbs_1/104-1000481-0284742?%5Fencoding=UTF8"><b>The Assassin's Gate: America in Iraq</b></a>.</p>
+				</div>
+			</div>
+
+			<div id="mtposted">
+				<p class="mtpostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/more_books.html#comments">Comments (0)</a>
+					 |
+					<a href="http://buffoonery.org/blog/2006/02/more_books.html#trackbacks">TrackBacks (0)</a>
+ | 
+					<a href="http://buffoonery.org/blog/2006/02/more_books.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/post_94.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/541"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/02/post_94.html"
+    dc:subject="Links"
+    dc:description="Twelve Phrases Involving Al Roker That Return Only One Hit on Google..."
+    dc:creator="enderws"
+    dc:date="2006-02-02T13:52:12-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="McSweeney's Internet Tendency: Twelve Phrases Involving Al Roker That Return Only One Hit on Google." href="http://www.mcsweeneys.net/links/lists/20MatthewStidle.html">Twelve Phrases Involving Al Roker That Return Only One Hit on Google</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/post_94.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/02/post_94.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/post_93.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/540"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/02/post_93.html"
+    dc:subject="Links"
+    dc:description="Loveoirs calls bullshit on Texas A&amp;M..."
+    dc:creator="enderws"
+    dc:date="2006-02-01T19:39:52-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="Loveoirs � Seahawks and Fans, I’m Sorry" href="http://loveoirs.com/2006/02/01/seahawks-and-fans-im-sorry">Loveoirs calls bullshit on Texas A&M</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/post_93.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/02/post_93.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/post_92.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/539"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/02/post_92.html"
+    dc:subject="Links"
+    dc:description="Somebody please give this guy an award Update: Don Filemon is wearing a Texas A&amp;M shirt-this must be their fabled 12th man!..."
+    dc:creator="enderws"
+    dc:date="2006-02-01T17:51:59-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="Doing the Filemon - Google Video" href="http://video.google.com/videoplay?docid=190001347791779291">Somebody please give this guy an award</a><br />
+Update: Don Filemon is wearing a Texas A&M shirt--this must be their fabled 12th man!</p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/post_92.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/02/post_92.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/02/post_91.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/538"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/02/post_91.html"
+    dc:subject="Links"
+    dc:description="Reentry video of the Stardust satellite..."
+    dc:creator="enderws"
+    dc:date="2006-02-01T17:24:35-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="stardust_reentrya.mov (video/quicktime Object)" href="http://stardust.jpl.nasa.gov/anim/stardust_reentrya.mov">Reentry video of the Stardust satellite</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/02/post_91.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/02/post_91.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_90.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/537"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_90.html"
+    dc:subject="Links"
+    dc:description="Sound up - my ytmnd favs - Boil &apos;em - tie - George Costanza - Colony - Conangator - I believe you have my stapler - Batman ualuealuealeuale - Conan ends Stephen Colbert - One long sentence - Florida Bonus..."
+    dc:creator="enderws"
+    dc:date="2006-01-31T23:51:52-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p>Sound up -- my ytmnd favs -- <a title="Boil 'em" href="http://boilemmashmem.ytmnd.com/">Boil 'em</a> - <a href="http://tie.ytmnd.com/" target="_blank">tie</a> - <a href="http://dhfjgg.ytmnd.com/" target="_blank">George Costanza</a> - <a href="http://jamestown.ytmnd.com/" target="_blank">Colony</a> - <a href="http://conangator.ytmnd.com/" target="_blank">Conangator</a> - <a href="http://spreadmystaplerandflyaway.ytmnd.com/" target="_blank">I believe you have my stapler</a> - <a href="http://ualuealuealeuale.ytmnd.com/" target="_blank">Batman ualuealuealeuale</a> - <a href="http://conancolbert.ytmnd.com/" target="_blank">Conan ends Stephen Colbert</a> - <a href="http://long.ytmnd.com/" target="_blank">One long sentence</a> - <a href="http://wilmaflorida.ytmnsfw.com/" target="_blank">Florida</a><br />
+Bonus loop: <a href="http://thedarkchannel.com/loops/12/" target="_blank">Napoleon Dynamite steak to the face</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_90.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_90.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_89.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/536"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_89.html"
+    dc:subject="Links"
+    dc:description="Ghastly knitted art..."
+    dc:creator="enderws"
+    dc:date="2006-01-31T21:19:26-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="Beutiful art made with kintting" href="http://www.yumlum.com/galleries/knitwear/knitwear_art.htm">Ghastly knitted art</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_89.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_89.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_88.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/535"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_88.html"
+    dc:subject="Links"
+    dc:description="Britain&apos;s greatest accomplishment in Iraq, including driving out the Turks..."
+    dc:creator="enderws"
+    dc:date="2006-01-31T17:52:41-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="Armadillo - Google Video" href="http://video.google.com/videoplay?docid=-6917284118614449656">Britain's greatest accomplishment in Iraq, including driving out the Turks</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_88.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_88.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_87.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/534"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_87.html"
+    dc:subject="Links"
+    dc:description="I want. Now. The beer too...."
+    dc:creator="enderws"
+    dc:date="2006-01-30T22:50:48-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="焼きねぎ on Flickr - Photo Sharing!" href="http://www.flickr.com/photos/ayustety/91800884/">I want. Now. The beer too.</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_87.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_87.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_86.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/533"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_86.html"
+    dc:subject="Links"
+    dc:description="Sound up. ICP + Triumph...."
+    dc:creator="enderws"
+    dc:date="2006-01-29T20:48:05-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a href="http://thedarkchannel.com/loops/27/">Sound up. ICP + Triumph.</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_86.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_86.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_85.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/532"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_85.html"
+    dc:subject="Links"
+    dc:description="IS THIS WHAT YOU WANT, MR. ALITO??..."
+    dc:creator="enderws"
+    dc:date="2006-01-27T18:06:32-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="b3ta.com board" href="http://www.b3ta.com/board/5579011">IS THIS WHAT YOU WANT, MR. ALITO??</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_85.html#comments">Comments (1)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_85.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+		<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://buffoonery.org/blog/2006/01/post_84.html"
+    trackback:ping="http://buffoonery.org/cgi-bin/mt-tb.cgi/531"
+    dc:title=""
+    dc:identifier="http://buffoonery.org/blog/2006/01/post_84.html"
+    dc:subject="Links"
+    dc:description="Sphinx. Tits. Two great tastes that taste great together...."
+    dc:creator="enderws"
+    dc:date="2006-01-26T17:10:20-08:00" />
+</rdf:RDF>
+-->
+
+
+		
+		
+		
+			<div id="mtlinksentry">	
+				<div id="mtlinksentrytext">
+					<p><a title="Sphinx with Tits 2002 on Flickr - Photo Sharing!" href="http://www.flickr.com/photos/tiangotlost/86763512/">Sphinx. Tits. Two great tastes that taste great together.</a></p>
+				</div>
+			</div>
+
+			<div id="mtlinksposted">
+				<p class="mtlinkspostedtext">
+					<a href="http://buffoonery.org/blog/2006/01/post_84.html#comments">Comments (0)</a>
+					 | 
+					<a href="http://buffoonery.org/blog/2006/01/post_84.html">Permalink</a>
+				</p>
+			</div>
+		
+		
+		
+	
+
+	<div id="mtblogarchivelist">
+
+		<p class="mtblogarchivelistheader">Archives</p>
+
+		<p class="mtblogarchivelisttext">2006: 
+		<a href="http://buffoonery.org/blog/archives/2006_01.html">Jan</a> <a href="http://buffoonery.org/blog/archives/2006_02.html">Feb</a> 		
+		
+		</p>
+		
+		<p class="mtblogarchivelisttext">2005: 
+		<a href="http://buffoonery.org/blog/archives/2005_01.html">Jan</a>
+		<a href="http://buffoonery.org/blog/archives/2005_02.html">Feb</a>
+		<a href="http://buffoonery.org/blog/archives/2005_03.html">Mar</a>
+		<a href="http://buffoonery.org/blog/archives/2005_04.html">Apr</a>
+		<a href="http://buffoonery.org/blog/archives/2005_05.html">May</a>
+		<a href="http://buffoonery.org/blog/archives/2005_06.html">Jun</a>
+		<a href="http://buffoonery.org/blog/archives/2005_07.html">Jul</a>
+		<a href="http://buffoonery.org/blog/archives/2005_08.html">Aug</a>
+		<a href="http://buffoonery.org/blog/archives/2005_09.html">Sep</a>
+		<a href="http://buffoonery.org/blog/archives/2005_10.html">Oct</a>
+		<a href="http://buffoonery.org/blog/archives/2005_11.html">Nov</a>
+		<a href="http://buffoonery.org/blog/archives/2005_12.html">Dec</a>
+		</p>
+
+		<p class="mtblogarchivelisttext">2004: 
+		<a href="http://buffoonery.org/blog/archives/2004_01.html">Jan</a>
+		<a href="http://buffoonery.org/blog/archives/2004_02.html">Feb</a>
+		<a href="http://buffoonery.org/blog/archives/2004_03.html">Mar</a>
+		<a href="http://buffoonery.org/blog/archives/2004_04.html">Apr</a>
+		<a href="http://buffoonery.org/blog/archives/2004_05.html">May</a>
+		<a href="http://buffoonery.org/blog/archives/2004_06.html">Jun</a>
+		<a href="http://buffoonery.org/blog/archives/2004_07.html">Jul</a>
+		<a href="http://buffoonery.org/blog/archives/2004_08.html">Aug</a>
+		<a href="http://buffoonery.org/blog/archives/2004_09.html">Sep</a>
+		<a href="http://buffoonery.org/blog/archives/2004_10.html">Oct</a>
+		<a href="http://buffoonery.org/blog/archives/2004_11.html">Nov</a>
+		<a href="http://buffoonery.org/blog/archives/2004_12.html">Dec</a>
+		</p>
+
+		<p class="mtblogarchivelisttext">2003: 
+		<a href="http://buffoonery.org/blog/archives/2003_01.html">Jan</a>
+		<a href="http://buffoonery.org/blog/archives/2003_02.html">Feb</a>
+		<a href="http://buffoonery.org/blog/archives/2003_03.html">Mar</a>
+		<a href="http://buffoonery.org/blog/archives/2003_04.html">Apr</a>
+		<a href="http://buffoonery.org/blog/archives/2003_05.html">May</a>
+		<a href="http://buffoonery.org/blog/archives/2003_06.html">Jun</a>
+		<a href="http://buffoonery.org/blog/archives/2003_07.html">Jul</a>
+		<a href="http://buffoonery.org/blog/archives/2003_08.html">Aug</a>
+		<a href="http://buffoonery.org/blog/archives/2003_09.html">Sep</a>
+		<a href="http://buffoonery.org/blog/archives/2003_10.html">Oct</a>
+		<a href="http://buffoonery.org/blog/archives/2003_11.html">Nov</a>
+		<a href="http://buffoonery.org/blog/archives/2003_12.html">Dec</a>
+		</p>
+
+		<p class="mtblogarchivelisttext">2002: 
+		<a href="http://buffoonery.org/blog/archives/2002_01.html">Jan</a>
+		<a href="http://buffoonery.org/blog/archives/2002_02.html">Feb</a>
+		<a href="http://buffoonery.org/blog/archives/2002_03.html">Mar</a>
+		<a href="http://buffoonery.org/blog/archives/2002_04.html">Apr</a>
+		<a href="http://buffoonery.org/blog/archives/2002_05.html">May</a>
+		<a href="http://buffoonery.org/blog/archives/2002_06.html">Jun</a>
+		<a href="http://buffoonery.org/blog/archives/2002_07.html">Jul</a>
+		<a href="http://buffoonery.org/blog/archives/2002_08.html">Aug</a>
+		<a href="http://buffoonery.org/blog/archives/2002_09.html">Sep</a>
+		<a href="http://buffoonery.org/blog/archives/2002_10.html">Oct</a>
+		<a href="http://buffoonery.org/blog/archives/2002_11.html">Nov</a>
+		<a href="http://buffoonery.org/blog/archives/2002_12.html">Dec</a>
+		</p>
+
+	</div>
+
+
+</div>
+
+<br clear="all" />
+
+</div>
+
+</body>
+</html>

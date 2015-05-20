@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+
+
+<link rel="shortcut icon" href="/favicon.ico" /><style><!--
+body,td,div,.p,a{font-family:arial,sans-serif}
+div,td{color:#000}
+.f,.fl:link{color:#6f6f6f}
+a:link,.w,a.w:link,.w a:link{color:#00c}
+a:visited,.fl:visited{color:#551a8b}
+a:active,.fl:active{color:#f00}
+.t a:link,.t a:active,.t a:visited,.t{color:#ffffff}
+.t{background-color:#3366cc}
+.h{color:#3366cc}
+.i,.i:link{color:#a90a08}
+.a,.a:link{color:#008000}
+.z{display:none}
+div.n {margin-top: 1ex}
+.n a{font-size:10pt; color:#000}
+.n .i{font-size:10pt; font-weight:bold}
+.q a:visited,.q a:link,.q a:active,.q {text-decoration: none; color: #00c;}
+.b{font-size: 12pt; color:#00c; font-weight:bold}
+.ch{cursor:pointer;cursor:hand}
+.white { color: #FFFFFF}
+.whitelink { color: #FFFFFF; text-decoration: underline}
+.whitebold {  font-weight: bold; color: #FFFFFF}
+.bpathlink {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF}
+.heading {  font-size: 13px; color: #FF9900; font-weight: bold}
+.headinglink {  font-size: 13px; col_or: #FF9900; font-weight: bold; text-decoration: underline}
+.greeting {  font-size: 13px; color: #FFFF00; font-weight: bold; text-decoration: underline}
+.heading2 {  font-size: 14px; color: #AA0000; font-weight: bold}
+.heading2_unblt {  font-size: 14px; color: #AA0000}
+.more { font-size: 10px }
+.mini { font-size: 8px }
+ H1{ font-size:22px;font-weight:bold}
+ H2{ font-size:22px;font-weight:bold}
+ H3{ font-size:10px;font-weight:normal}
+
+
+
+
+.TabTable {
+ COLOR:#AA0000;
+ BACKGROUND-COLOR: #F0F0F0;
+border-right:solid;
+border-left:solid;
+border-top:solid;
+border-width:2;
+border-bottom:solid}
+//-->
+</style>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" >
+<CENTER>
+
+<!-- BEGIN HEADER TABLE -->
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=1><FORM NAME="s" ACTION=/><TR><TD WIDTH=185 ROWSPAN=2><A HREF=/><IMG SRC=/img/Largest_Cities.gif WIDTH=167 HEIGHT=108 BORDER=0 WIDTH=179 HEIGHT=83 ALT="All the Largest Cities of the World"></A></TD>
+<TD ALIGN=CENTER VALIGN=top><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH=100%>
+<TR><TD>&nbsp;</TD><TD ALIGN=LEFT WIDTH=450><TABLE CELLPADDING=0 CELLSPACING=1 BORDER=0 WIDTH=450><TR><TD>&nbsp;</TD><TD COLSPAN=5 VALIGN=TOP>
+
+Hi Guest, <A HREF="/login.bml">Login</A></TD><TD COLSPAN=7 ALIGN=RIGHT VALIGN=TOP><FONT COLOR=#FF0000>&diams;</FONT> <A HREF=/create.bml>create a photo journal</A>
+</TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD></TD><TD BGCOLOR=#CCCCFF ALIGN=CENTER WIDTH=17%><a 
+ href=/users/gc_user/ 
+onMouseover="showit(0)"><B>Journal</B></TD><TD WIDTH=2%>&nbsp;</TD><TD BGCOLOR=#CCCCFF ALIGN=CENTER WIDTH=17%><a href="/update.bml" onMouseover="showit(1)"><B>Publish</B></TD><TD WIDTH=2%>&nbsp;</TD><TD BGCOLOR=#CCCCFF ALIGN=CENTER WIDTH=13%><a href="/messages/privmsg.php" onMouseover="showit(5)"><B>Mail <IMG SRC=/img/envelope.gif BORDER=0 ALIGN=ABSMIDDLE WIDTH=13 HEIGHT=10></B></TD><TD WIDTH=2%>&nbsp;</TD><TD BGCOLOR=#CCCCFF ALIGN=CENTER WIDTH=17%><a href="/editinfo.bml" onMouseover="showit(2)"><B>Settings</B></TD><TD WIDTH=2%>&nbsp;</TD><TD BGCOLOR=#CCCCFF ALIGN=CENTER WIDTH=17%><a href="/directorysearch.bml" onMouseover="showit(3)"><B>Users</B></TD><TD WIDTH=2%>&nbsp;</TD><TD BGCOLOR=#CCCCFF ALIGN=CENTER WIDTH=17%><a href="/support/index.bml" onMouseover="showit(4)"><B>Help</B></TD><TD>&nbsp;</TD></TR><TR><TD COLSPAN=13 BGCOLOR=#AA0000><img height=1 WIDTH=200 src=/img/dot.gif></td></TR><TR><TD></TD><TD COLSPAN=11><ilayer width=450 height=32 name="dep1" bgColor="white">
+<layer name="dep2" width=450 height=32>
+</layer>
+</ilayer>
+<div id="describe" style="width:450px;height:16px" onMouseover="clear_delayhide()" onMouseout="resetit(event)"></div>
+</TD></TR></table></TD><script language="JavaScript1.2">
+
+
+var submenu=new Array()
+
+submenu[0]='<font color=#FF0000>&diams; <a href=/users/gc_user/>My Journal</a>&nbsp;&nbsp;&diams; <a href=/users/gc_user/calendar/>Calendar</a>&nbsp;&nbsp;&diams; <a href=/users/gc_user/friends/>Friends\'</a>&nbsp;&nbsp;&diams; <a href=/tools/memories.bml>Memories</a></font>'
+submenu[1]='<font color=#FF0000>&diams; <a href="/update.bml">Add a new Entry</a>&nbsp;&nbsp;&diams; <a href="/editjournal.bml">Edit old Entries</a>&nbsp;&nbsp;&diams; <a href="/editpics.bml">Profile Pictures</a></font>'
+
+submenu[2]='<div align=center><font color=#FF0000>&diams; <a href="/editinfo.bml">Personal Info</a>&nbsp;&nbsp;&diams; <a href="/friends/edit.bml">Edit Friends</a>&nbsp;&nbsp;&diams; <a href="/modify_do.bml">Modify Journal Style</a></font></div>'
+
+submenu[3]='<div align=right><font color=#FF0000>&diams; <a href="/random.bml">Random!</a>&nbsp;&nbsp;&diams; <a href="/interests.bml">By Interest</a>&nbsp;&nbsp;&diams; <a href="/directorysearch.bml">Search</a></font></div>'
+
+submenu[4]='<div align=right><font color=#FF0000>&nbsp;&nbsp;&diams; <a href="/news.bml">Site News</a>&nbsp;&nbsp;&diams; <a href="/support/faq.bml">FAQ</a>&nbsp;&nbsp;&diams; <a href="/support/index.bml">Support Area</a>&nbsp;&nbsp;&diams; <a href="/lostinfo.bml">Lost Password?</a></font></div>'
+
+submenu[5]='<div align=center><font color=#FF0000>&nbsp;&nbsp;&diams; <a href="/messages/privmsg.php">Read and write private Messages</a></div>'
+var delay_hide=6000
+
+
+var menuobj=document.getElementById? document.getElementById("describe") : document.all? document.all.describe : document.layers? document.dep1.document.dep2 : ""
+
+var shown = 0;
+
+function showit(which){
+shown = 1;
+clear_delayhide()
+thecontent=(which==-1)? "" : submenu[which]
+if (document.getElementById||document.all)
+menuobj.innerHTML=thecontent
+else if (document.layers){
+menuobj.document.write(thecontent)
+menuobj.document.close()
+}
+}
+
+function resetit(e){
+if (document.all&&!menuobj.contains(e.toElement))
+delayhide=setTimeout("showit(-1)",delay_hide)
+else if (document.getElementById&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhide=setTimeout("showit(-1)",delay_hide)
+}
+
+function clear_delayhide(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+</script><TD>&nbsp;</TD><TD ALIGN=LEFT>Search for a <B>City</B> or Keyword:<BR>
+<INPUT TYPE=TEXT VALUE='' NAME="query">&nbsp;<INPUT TYPE=submit Value='Search'><P>
+</TD></TR></TABLE></TR></FORM></TABLE>
+
+
+<!-- END HEADER TABLE -->
+
+<BR>
+
+<!-- BEGIN BODY TABLE -->
+<TABLE WIDTH=90% CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<TR VALIGN=TOP VALIGN=LEFT>
+<TD WIDTH=90%>
+<!-- BEGIN MAIN CONTENT -->
+
+
+<p><table width=100%><tr valign='middle'><td><img src='http://www.greatestcities.com/userpic/5502/9025' width='100' height='133' align='absmiddle' hspace='3' title='Tom' alt=''></td><td>Tom (<span class='ljuser' style='white-space:nowrap;'><a href='http://www.greatestcities.com/userinfo.bml?user=t133'><img src='http://www.greatestcities.com/img/userinfo.gif' alt='userinfo' width='17' height='17' style='vertical-align:bottom;border:0;' /></a><a href='http://www.greatestcities.com/users/t133/'><b>t133</b></a></span>) wrote,<br /><font size='-1'>@ <a href="http://www.greatestcities.com/users/t133/2003/">2003</a>-<a href="http://www.greatestcities.com/users/t133/2003/11/">11</a>-<a href="http://www.greatestcities.com/users/t133/2003/11/26/">26</a> 11:49:00</font></td><td align=center width=60%><CENTER><FONT SIZE=1><BR></FONT>
+<table cellspacing=0 cellpadding=0 border=0 bgcolor="#ccccff">
+ <tr>
+  <td width=7 align=left valign=top>
+   <img width=7 height=7 src="/img/corn_nw.gif" alt=""></td>
+  <td height=7>
+   <img height=7 src="/img/dot.gif" alt=""></td>
+  <td width=7 valign=top align=right>
+   <img height=7 src="/img/corn_ne.gif" alt=""></td>
+ </tr><tr>
+  <td width=7>
+   <img width=7 height=1 src="/img/dot.gif" alt=""></td>
+  <td valign=top>
+<table><tr><td valign='middle'><a href="/go.bml?journal=t133&amp;itemid=7103&amp;dir=prev"><img src="http://www.greatestcities.com/img/btn_prev.gif" width="22" height="20" alt="Previous Entry" border='0' align="absmiddle"></a>&nbsp;&nbsp;<a href="/tools/memadd.bml?journal=t133&amp;itemid=7103"><img src="http://www.greatestcities.com/img/memadd.gif" width="22" height="20" alt="Add to memories!" border='0' align="absmiddle"></a>&nbsp;&nbsp;<a href="/tools/tellafriend.bml?journal=t133&amp;itemid=7103"><img src="http://www.greatestcities.com/img/btn_tellfriend.gif" width="22" height="20" alt="Tell a Friend!" border='0' align="absmiddle"></a>&nbsp;&nbsp;<a href="/go.bml?journal=t133&amp;itemid=7103&amp;dir=next"><img src="http://www.greatestcities.com/img/btn_next.gif" width="22" height="20" alt="Next Entry" border='0' align="absmiddle"></a></td></tr></table>
+
+  </td>
+  <td width=7>
+   <img width=7 height=1 src="/img/dot.gif" alt=""></td>
+ </tr><tr>
+  <td width=7 align=left valign=top>
+   <img width=7 height=7 src="/img/corn_sw.gif" alt=""></td>
+  <td height=7>
+   <img height=7 src="/img/dot.gif" alt=""></td>
+  <td width=7 valign=top align=right>
+   <img height=7 src="/img/corn_se.gif" alt=""></td>
+ </tr>
+</table>
+
+</CENTER>
+</td></tr></table><div style='margin-left: 30px'><font face='Arial,Helvetica' size='+1'><i><b>Robles Diversion Dam</b></i></font><br />
+
+<style><!--
+.ch{cursor:pointer;cursor:hand}
+//--></style><script><!--
+function ss(w) {window.status = w;return true;}function cs(){window.status='';}function ha(a){  }function ca(a) {  top.location.href=document.getElementById(a).href;}function ga(o,e) {if (document.getElementById) {a=o.id.substring(1);p = "";r = "";g = e.target;if (g) {t = g.id;f = g.parentNode;if (f) {p = f.id;h = f.parentNode;if (h)r = h.id;}} else {h = e.srcElement;f = h.parentNode;if (f)p = f.id;t = h.id;}if (t==a || p==a || r==a)return true;top.location.href=document.getElementById(a).href;}}
+//-->
+</script>
+
+  <script language="JavaScript">
+  <!--
+
+  // This function displays the ad results.
+  // It must be defined above the script that calls show_ads.js
+  // to guarantee that it is defined when show_ads.js makes the call-back.
+
+  function google_ad_request_done(google_ads) {
+
+    // Proceed only if we have ads to display!
+    if (google_ads.length < 1 )
+      return;
+
+    // Display ads in a table
+ 
+    // Print "Ads By Google" -- include link to Google feedback page if available
+    document.write("<table cellpadding=\"2\" cellspacing=0 border=0 bgcolor=\"#ffffff\" width=100%><tr><td align=\"center\" valign=middle nowrap><font size=-2 color=#6f6f6f>");
+    if (google_info.feedback_url) {
+      document.write("<a href=\"" + google_info.feedback_url + 
+        "\">Ads by Google</a>");
+    } else {
+      document.write("Ads By Google");
+    }
+    document.write("</font></td></tr>");  
+  
+    // For text ads, display each ad in turn.
+    // In this example, each ad goes in a new row in the table.
+    if (google_ads[0].type == 'text') {
+      for(i = 0; i < google_ads.length; ++i) {
+        document.write("<tr><td id=\"taw" + i + "\" class=\"ch\" nowrap onFocus=\"ss('go to " + google_ads[i].visible_url + "')\" onMouseOver=\"ss('go to " + google_ads[i].visible_url + "')\" onMouseOut=\"cs()\" onClick=\"ga(this,event)\">" +
+          "<b><a class=\"ad\" id=\"aw" + i + "\" target=\"_top\" href=\"" +  google_ads[i].url + "\" onFocus=\"ss('go to " + google_ads[i].visible_url + "')\" onMouseOver=\"return ss('go to " + google_ads[i].visible_url + "')\" onMouseOut=\"cs()\" onClick=\"ha('')\">" +
+          google_ads[i].line1 + "</a></b><br>" +
+          google_ads[i].line2 + " " +
+          google_ads[i].line3 + "" + 
+          "</td></tr>"); 
+      }
+    }
+
+    // For an image ad, display the image; there will be only one .
+    if (google_ads[0].type == 'image') {
+      document.write("<tr><td align=\"center\">" +
+        "<a href=\"" + google_ads[0].url + "\"style=\"text-decoration: none\">" +
+        "<img src=\"" + google_ads[0].image_url + 
+        "\" height=\"" + google_ads[0].height + 
+        "\" width=\"" + google_ads[0].width +
+        "\" border=\"0\"></a></td></tr>");
+    }
+
+    // Finish up anything that needs finishing up
+    document.write ("</table>");
+  }
+
+  -->
+  </script>
+
+  <script language="JavaScript">
+  <!--
+
+    // This script sets the attributes for requesting ads.
+    google_ad_client = "pub-6438771988880563";
+    google_alternate_ad_url = "http://www.greatestcities.com/img/google_adsense_script.html";
+    google_ad_channel ="4869932110";
+    google_ad_output = "js";         
+    google_max_num_ads = 5;
+    google_ad_type = "text";
+    google_color_line = "ff0000";     
+    
+  -->
+  </script>
+
+  <script language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+
+<br>I got up early this morning and walked over to the Robles Diversion Dam to see the progress they have make on the new fish ladder. The temperature was 35 and frost was on the ground. The air was smokey and the sun was out. My route took me up the Ventura River bed. When I arrived a crane was unloading a large piece of steel from a flatbed truck. I believe the steel is used as a form for the new concrete walls.<IMG SRC=http://www.greatestcities.com/8135pic/949/CP8949.jpg/crane.jpg WIDTH=432 HEIGHT=329 ALT="Crane" BORDER=1 ALIGN=LEFT><BR CLEAR=ALL></div><br clear='all' /><hr width='100%' size='2' align='center' /><p align='center' class='lesstop'><b>(<a href='7103.html?mode=reply'>Post a new comment</a>)</b></p>
+
+
+
+<!-- END MAIN CONTENT -->
+</TD>
+</TR>
+</TABLE>
+<!-- END BODY TABLE -->
+
+
+<P ALIGN=CENTER><CENTER>
+<BR>
+<!-- BEGIN FOOTER TABLE -->
+<TABLE WIDTH="630" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<TR ALIGN=CENTER VALIGN=TOP>
+<TD ALIGN=CENTER>
+	<IMG SRC="/img/bluedot.gif" ALT="" WIDTH="350" HEIGHT="1" HSPACE="0" VSPACE="2" BORDER="0"><BR>
+	<FONT FACE="Arial, Helvetica" SIZE="-2">
+		<A HREF="/legal/privacy.bml">Privacy Policy</A> - 
+		<A HREF="/legal.html">Legal Disclaimer</A> - 
+	</FONT>
+</TD>
+</TR>
+</TABLE>
+<!-- END FOOTER TABLE -->
+
+</CENTER>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Dale Beach Bass</title>
+	<link href="../../../res/styles.css" rel="stylesheet">
+	<link rel="prefetch" href="Dale Carp.html">
+<script language="javascript" src="../../../res/x.js"></script>
+<script language="JavaScript">
+function saveCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000))
+		var expires = "; expires="+date.toGMTString()
+	}
+	else expires = ""
+	document.cookie = name+"="+value+expires+"; path=/"
+}
+function readCookie(name) {
+	var nameEQ = name + "="
+	var ca = document.cookie.split(';')
+	for(var i=0;i<ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length)
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length)
+	}
+	return '';
+}
+function setSlideShowCookie() {
+	saveCookie('slideShow', 'true');
+}
+
+function moveOn() {
+	document.location.href = 'Dale Carp.html';
+}
+function stopSlideShow() {
+	try {
+		clearTimeout(timeout);
+	} catch(e) {
+	}
+	saveCookie('slideShow', '', -1);
+}
+
+var timeout = null;
+function initPage() {
+	if (readCookie('slideShow') == 'true') {
+	
+		timeout = setTimeout('moveOn()', 4000);
+	
+
+	}
+	resizeHandler();
+}
+function resizeHandler() {
+	xHeight('divActivity', parseInt(xClientHeight(),10) + parseInt(xScrollTop(),10));
+}
+window.onresize = resizeHandler
+window.onscroll = resizeHandler
+</script>
+</head>
+<body onload="initPage();" ID="slide">
+
+<div id="divActivity">
+<div id="divImageActivity">
+<table border="0" cellspacing="0" cellpadding="0" width="185">
+<tr>
+	<td colspan="3" width="185" class="ImagePaneHeader">Image activities</td>
+</tr>
+<tr>
+	<td width="1" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="ImagePaneRow"><a href="../index.html" class="ImagePaneRow"><img src="../../../res/FolderUp.gif" border="0" align="absmiddle" style="margin-right: 5px;"/>Back to index page</a></td>
+	<td width="1" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+<script language="JavaScript">
+if (readCookie('slideShow') == 'true') {
+	document.write("<tr>" +
+	"	<td width=\"1\" class=\"ImagePaneFrame\"><img src=\"../../../res/1x1.gif\" width=\"1\" height=\"1\"/></td>" +
+	"	<td width=\"183\" class=\"ImagePaneRow\"><a onclick=\"stopSlideShow(); document.location.reload(false); return false;\" href=\"#\" class=\"ImagePaneRow\"><img src=\"../../../res/Slideshow.gif\" border=\"0\" align=\"absmiddle\" style=\"margin-right: 5px;\"/>Stop slideshow</a></td>" +
+	"	<td width=\"1\" class=\"ImagePaneFrame\"><img src=\"../../../res/1x1.gif\" width=\"1\" height=\"1\"/></td>" +
+	"</tr>");
+} else {
+	document.write("<tr>" +
+	"	<td width=\"1\" class=\"ImagePaneFrame\"><img src=\"../../../res/1x1.gif\" width=\"1\" height=\"1\"/></td>" +
+	"	<td width=\"183\" class=\"ImagePaneRow\"><a onclick=\"setSlideShowCookie();\" href=\"Dale Carp.html\" class=\"ImagePaneRow\"><img src=\"../../../res/Slideshow.gif\" border=\"0\" align=\"absmiddle\" style=\"margin-right: 5px;\"/>Start slideshow</a></td>" +
+	"	<td width=\"1\" class=\"ImagePaneFrame\"><img src=\"../../../res/1x1.gif\" width=\"1\" height=\"1\"/></td>" +
+	"</tr>");
+}
+</script>
+
+
+
+<tr>
+	<td width="1" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="ImagePaneRow"><a onclick="stopSlideShow();" href="Dale Carp.html" class="ImagePaneRow"><img src="../../../res/Forward.gif" border="0" align="absmiddle" style="margin-right: 5px;"/>Next image</a></td>
+	<td width="1" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+
+<tr>
+	<td width="1" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="ImagePaneRow"><a onclick="stopSlideShow();" href="Dale Bass Pool.html" class="ImagePaneRow"><img src="../../../res/Back.gif" border="0" align="absmiddle" style="margin-right: 5px;"/>Previous image</a></td>
+	<td width="1" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+<tr>
+	<td width="185" colspan="3" class="ImagePaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+</table>
+</div>
+<div id="divInfoActivity">
+<table border="0" cellspacing="0" cellpadding="0" width="185" ID="Table1">
+<tr>
+	<td colspan="3" width="185" class="InfoPaneHeader">Information</td>
+</tr>
+<tr>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="InfoPaneRow"><strong>Dale Beach Bass.jpg</strong></td>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+<tr>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="InfoPaneRow">JPEG</td>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+
+<tr>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="InfoPaneRow">Resolution: 554x558</td>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+<tr>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="InfoPaneRow">File size: 56947 bytes</td>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+<tr>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+	<td width="183" class="InfoPaneRow">Date: 11/28/02 12:42 PM</td>
+	<td width="1" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>
+	<td width="185" colspan="3" class="InfoPaneFrame"><img src="../../../res/1x1.gif" width="1" height="1"/></td>
+</tr>
+</table>
+</div>
+<div id="divJAlbum">
+Powered by <a href="http://jalbum.net" target="_blank"><img src="../../../res/JAlbum.gif" border="0" alt="JAlbum" align="absmiddle"/></a>&nbsp;JAlbum
+</div>
+</div>
+<div id="divMainSlideHeader">Dale Beach Bass.jpg (5 of 39)</div>
+<div id="divMain" align="center">
+
+
+<img src="Dale Beach Bass.jpg" width="554" height="558">
+
+<!-- Always display comment below image (if exists) -->
+
+<br>
+
+
+</div>
+</body>
+</html>

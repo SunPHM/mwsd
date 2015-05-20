@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta name="description" content="Linux games database">
+      <meta name="author" content="Bob Zimbinski">
+      <meta name="keywords" content="Linux, Games, News">
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+      <title>The Linux Game Tome</title>
+      <link rel="stylesheet" href="/html/happypenguin.css">
+      <LINK REL="alternate" TITLE="Happypenguin RSS" HREF="//happypenguin.org/html/news.rdf" TYPE="application/rss+xml">
+      <link REL="shortcut icon" HREF="/images/lady.png" type="image/png">
+      <script language="JavaScript" type="text/plain">
+         function addsidebar() {
+            if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function")) {
+               window.sidebar.addPanel ("Happypenguin.org","http://happypenguin.org/sidebar","");
+            }
+         }
+      </script>
+   </head>
+   <body bgcolor="#FFFFFF" link="#000080" text="#000000" alink="#000080" vlink="#000080">
+
+      <table border="0" width="100%" cellpadding="5">
+         <tr>
+            <td align="left">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                           <tr>
+                              <td align="left">
+                                 &nbsp;
+                              </td>
+                              <td bgcolor="#000080" align="center" style="border-right: 2px solid #808080; padding: 3px; font-size: 14px;" width="140">
+                                 <font color="white"><b>Games!</b></font>
+                              </td>
+                          </tr>
+                           <tr>
+                              <td align="right" valign="bottom"><img src="/images/lady_top2.jpg" width="78" height="91" alt=""></td>
+                              <td bgcolor="#ffff80" align="center" class="NewsBox" width="140" nowrap>
+                                 <a href="/list?sort=title">By Name</a><br>
+                                 <a href="/list?sort=approved_date">By Date Added</a><br>
+                                 <a href="/list?sort=timestamp">By Last Update</a><br>
+                                 <a href="/list?sort=avg_rating">By Rating</a><br>
+                                 <a href="/list?sort=category">By Type</a><br>
+                                 <form method="GET" action="/list">
+                                    <input type="text" name="search" size="10" maxlength="40" value="Search" onfocus="this.value='';">
+                                 </form>
+                                 <a href="/test/search">[Advanced Search]</a>
+                                 <br>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td colspan="2" align="left" valign="top"><img src="/images/lady_bottom2.jpg" width="144" height="41" alt=""></td>
+                           </tr>
+                        </table>
+            </td>
+            <td align="center" width="50%">
+               <img src="/images/logo6.jpg" alt="The Linux Game Tome" width="250">
+            </td>
+            <td align="right" valign="top">
+      <table cellpadding="0" cellspacing="0" border="0">
+         <tr>
+<!--            <td bgcolor="#000080" align="center" style="border-right: 2px solid #808080; border-bottom: 2px solid #808080; padding: 3px; font-size: 14px;" colspan="2">
+               <font color="white"><b>Community!</b></font>
+            </td> -->
+            <td>&nbsp;</td>
+         </tr>
+ 
+     <tr>
+      <td valign="bottom" class="gen" align="right" style="font-size: 11px;">
+<!--
+         <img src="/images/pixel.gif" width="1" height="93" alt="">
+         <b><a href="irc://irc.freenode.net/gametome">#gametome</a></b> on
+         <br>irc.freenode.net
+-->        
+      </td>
+
+      <td valign="bottom" rowspan="2">
+
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td align="left" style="font-size: 14px;" valign="bottom">
+<!--               <b><a href="/forums">Forums</a></b> -->
+            </td>
+            <td align="right" valign="top" width="119"><img src="/images/lady2_top.jpg" alt="" height="50"></td>
+         </tr>
+         <tr>
+            <td align="right" valign="top" colspan="2"><img src="/images/lady2_middle1.jpg" alt="" width="119" height="20"></td>
+         </tr>
+         <tr>
+            <td colspan="2" align="right" valign="top"><img src="/images/lady2_middle2.jpg" alt="" width="90" height="23"></td>
+         </tr>
+         <tr>
+            <td align="right" valign="top" colspan="2"><img src="/images/lady2_bottom.jpg" alt="" width="119" height="41"></td>
+         </tr>
+     </table>
+
+     </td>
+     </tR>
+     <tr><td><img src="/images/pixel.gif" width="1" height="14" alt=""></td></tr>
+
+ 
+     </table>
+            </td>
+         </tr>
+         <tr>
+            <td width="100%" colspan="3" align="center">
+               <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                  <tr>
+<td colspan="5" width="100%" align="right" class="TopNav"><a href="/forums/profile.php?mode=register">Register</a><br>
+<a href="/forums/login.php">Login</a></td>                  <tr>
+                     <td width="20%" class="NewsNav"><a href="/news/">News</a></td>
+                     <td width="20%" class="NewsNav"><a href="/add/">Submit a Game</a></td>
+                     <td width="20%" class="NewsNav"><a href="/forums">Forums</a></td>
+<!--                     <td width="20%" class="NewsNav"><a href="/irc/">IRC</a></td> -->
+                     <td width="20%" class="NewsNav"><a href="/about/">About/FAQ</a></td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+         <center>
+         
+         <table border="0" cellpadding="0" cellspacing="0" class="Shadow" width="90%">
+         <tr bgcolor="#000080">
+         <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt=""></td>
+         <td align="left" valign="bottom" nowrap><h1><font color="#ffff80">Gem Drop X</font></h1></td>
+         <td align="right" colspan="2"><font color="#ffff80"><b>Version: 0.9</b></font></td>
+         </tr>
+         
+         <tr bgcolor="#000080">
+         <td colspan="2">
+            <font color="#ffff80">
+<b>Author:</b> <a href="mailto:gemdropx@@@newbreedsoftware...com"><font color="#00ff00">Bill Kendrick</font></a></font></td>
+<td align="right" valign="top" colspan="2"><font color="#ffff80"><b>Published by New Breed Software</b></font></td>
+      </tr>
+
+      <tr bgcolor="#000080">
+         <td align="left" colspan="2">
+            <font color="#ffff80"><b>Category:</b> Puzzle</font>
+         </td>
+         <td align="right" nowrap>
+            <a href="/comment?oid=Gem%20Drop%20X&type=games">
+               <font size="-2" color="#00ff00">Rate this game yourself!</font>
+            </a>
+            &nbsp
+            <font color="#ffff80"><b>Average of 5 Ratings:</b><a href="#" title="3.40"><img src="/images/star.gif" alt="3.40" border="0"></a><a href="#" title="3.40"><img src="/images/star.gif" alt="3.40" border="0"></a><a href="#" title="3.40"><img src="/images/star.gif" alt="3.40" border="0"></a></font>
+         </td>
+         <td valign="bottom" align="right"><img src="/images/br-g.gif" width="20" height="20" alt=""></td>
+      </tr>
+
+      <tr bgcolor="#c0c0c0">
+      <td colspan="4"><br>
+<a href="/images/gemdropx1.jpg"><img src="/images/thumbs/gemdropx1.jpg" align="right" alt="Gem Drop X Screenshot" height="200" width="147"></a>
+Clear the gems before they crush you!<p>
+Gem Drop X is a fast-paced puzzle game where it's your job to clear the screen of gems before they squash you! (You're at the bottom, they're at the top, and they keep coming!)
+
+You grab gems (up to 10) of the same
+color and use them to knock more gems
+off the screen. Match 3 or more of the
+same color in a column and BAM! they
+explode! Any ajdacent gems of the same
+color also explode, causing a chain
+reaction that might cover the entire
+screen!<p>
+<b>License:</b> free<br>
+<br><b>Additional System Requirements:</b> <li><a href="http://www.libsdl.org/index.php">SDL</a><li><a href="http://www.libsdl.org/projects/SDL_mixer/index.html">SDL_mixer</a>
+<li><a href="http://www.libsdl.org/projects/SDL_image">SDL_image</a>  (optional, for sound and music)  
+
+
+      </td>
+    </tr>
+    <tr bgcolor="#c0c0c0">
+      <td colspan="4">
+         <p>
+         <center>
+            <table border="1" width="100%" cellspacing="0" cellpadding="2">
+               <tr bgcolor="#000080">
+                  <th><font size="-1" color="#ffff80">Sound:</font></th>
+                  <th><font size="-1" color="#ffff80">Play in X:</font></th>
+                  <th><font size="-1" color="#ffff80">Play in Console:</font></th>
+                  <th><font size="-1" color="#ffff80">Multiplayer:</font></th>
+                  <th><font size="-1" color="#ffff80">Network Play:</font></th>
+                  <th><font size="-1" color="#ffff80">3D Acceleration:</font></th>
+                  <th><font size="-1" color="#ffff80">Source Available:</font></th>
+               </tr>
+               <tr>
+<td width="16%" align="center" bgcolor="palegreen">yes</td>
+<td width="16%" align="center" bgcolor="palegreen">yes</td>
+<td width="16%" align="center" bgcolor="pink">no</td>
+<td width="16%" align="center" bgcolor="pink">no</td>
+<td width="16%" align="center" bgcolor="pink">no</td>
+<td width="16%" align="center" bgcolor="pink">no</td>
+<td width="16%" align="center" bgcolor="palegreen">yes</td>
+</tr>
+</table>
+</center>
+<p>
+<ul>
+<li><a href="http://www.newbreedsoftware.com/gemdropx/">Gem Drop X home page</a>
+<li><a href="ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/">Download Gem Drop X</a>
+<li><a href="http://www.libsdl.org/">Simple DirectMedia Layer libraries (required)</a>
+<li><a href="http://www.libsdl.org/projects/SDL_mixer/index.html">SDL_mixer</a>
+<li><a href="http://www.newbreedsoftware.com/gemdrop/">Gem Drop (original Atari 8-bit game)</a>
+</ul>
+<br><center><h2>If you try this software, don't forget to come back to this page and rate it!</h2></center>
+<div align="right"><font size="-1"><em>Submitted by <a href="mailto:bill^at^newbreedsoftware^dot^com">billkendri</a> on 1999-03-23.   </em></font>
+</div>
+</td>
+</tr>
+</table>
+</center>
+<br><center><hr width="40%">[ <a href="/update?Gem%20Drop%20X">Submit an update about this game</a> ]
+</center>
+   <center>
+      <p>
+      <hr width="50%" noshade>
+      <p>
+<a href="/comment?oid=Gem%20Drop%20X&amp;type=games">[Post a new comment]</a>
+<font size="+1"><b><a name="comments"><br>Comments</a></b></font><br>
+<p>
+      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="14622"><b>A good little game for kids</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:"><font color="#ffff80"><b>Anonymous</b>
+            @ 193.250.125.51 
+            </font></a>
+            <font color="#ffff80">on Oct 16 2003 1:09 PM</font>
+         </td>
+         <td align="right" nowrap>&nbsp;</td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">Hi, this is suitable for kids, it's fun and they need to think a little to succeed.
+Some bad details : the little man is too little. We can't see him a lot when playing. I think it's important for kids to identify themselves to a caracter they like - like Tux in Tux4kids. Why not enabling the choice of the caracter, and so Tux could be chosen ? And this game would suit with other Tuxgames ;-)
+It's easy : good for people and kids to learn the computer, but games lovers will be boring themselves quickly.
+
+Stephane Ascoet, working in a cyberspace (http://mairie.wanadoo.fr/saintthonan/) on Apple eMacs under OS X.2.8 with Camino through Squid and a Bewan Firewall.</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=14622">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="5614"><b>Level selection</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:"><font color="#ffff80"><b>Anonymous</b>
+            @ 63.101.96.27 
+            </font></a>
+            <font color="#ffff80">on Jun 3 2002 2:37 PM</font>
+         </td>
+         <td align="right" nowrap>&nbsp;</td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">As explained in README.txt, use the [L] key to select the starting level.  Tsk tsk!  RTFM! :)</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=5614">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="5606"><b>Very fun</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:rpgnmets^at^aol^dot^com"><font color="#ffff80"><b>rrenaud</b>
+            @ 67.81.154.64 
+            </font></a>
+            <font color="#ffff80">on Jun 2 2002 10:54 PM</font>
+         </td>
+         <td align="right" nowrap><a href="#" title="5"><img src="/images/star.gif" alt="5" border="0"></a><a href="#" title="5"><img src="/images/star.gif" alt="5" border="0"></a><a href="#" title="5"><img src="/images/star.gif" alt="5" border="0"></a><a href="#" title="5"><img src="/images/star.gif" alt="5" border="0"></a><a href="#" title="5"><img src="/images/star.gif" alt="5" border="0"></a></td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">I'd like to be able to resume at the last level I played up to even after closing the game (Well.. I can now that I made it a command line option :) )... but it's a good feature for the game I think.  After you've played a bit, the first few levels aren't challenging at all, and it's not real fun to beat them over and over just to get to the harder ones.</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=5606">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="4002"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:bill^at^newbreedsoftware^dot^com"><font color="#ffff80"><b>billkendri</b>
+            @ 63.101.96.1 
+            </font></a>
+            <font color="#ffff80">on Aug 16 2001 4:45 PM</font>
+         </td>
+         <td align="right" nowrap>&nbsp;</td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">Actually, both the README and AUTHORS files mention that the game is based on "Magical Drop" (III to be specific) by SNK. :)  How many stars would you have given me if you'd've read the docs? ;)
+</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=4002">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="3913"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:mokonaNO@SPAMclub-internet.fr"><font color="#ffff80"><b>Mokona</b>
+            @ 194.98.85.14 
+            </font></a>
+            <font color="#ffff80">on Jul 25 2001 5:20 AM</font>
+         </td>
+         <td align="right" nowrap><a href="#" title="3"><img src="/images/star.gif" alt="3" border="0"></a><a href="#" title="3"><img src="/images/star.gif" alt="3" border="0"></a><a href="#" title="3"><img src="/images/star.gif" alt="3" border="0"></a></td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">I would have put four stars if there was a mention it was a clone of one of my favorite games : Magical Drop.
+
+So I can rate only the clone, not the game itself.
+</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=3913">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="1326"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:lvibert^at^cs^dot^brandeis^dot^edu"><font color="#ffff80"><b>lvibert</b>
+            @ 129.64.3.184 
+            </font></a>
+            <font color="#ffff80">on Sep 1 1999 6:51 PM</font>
+         </td>
+         <td align="right" nowrap><a href="#" title="3"><img src="/images/star.gif" alt="3" border="0"></a><a href="#" title="3"><img src="/images/star.gif" alt="3" border="0"></a><a href="#" title="3"><img src="/images/star.gif" alt="3" border="0"></a></td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">First level, too slow, last too fast...(take a time to win level 14 !) but nice litle game</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=1326">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="738"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:billNO@SPAMnewbreedsoftware.com"><font color="#ffff80"><b>billkendri</b>
+            @ 207.104.33.146 
+            </font></a>
+            <font color="#ffff80">on Jun 5 1999 4:23 AM</font>
+         </td>
+         <td align="right" nowrap>&nbsp;</td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">Bernhard Trummer's graphics update rocks. (No pun intended)
+</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=738">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="509"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:llogiq^at^bigfoot^dot^de"><font color="#ffff80"><b>kloss</b>
+            @  
+            </font></a>
+            <font color="#ffff80">on Mar 31 1999 11:12 AM</font>
+         </td>
+         <td align="right" nowrap><a href="#" title="4"><img src="/images/star.gif" alt="4" border="0"></a><a href="#" title="4"><img src="/images/star.gif" alt="4" border="0"></a><a href="#" title="4"><img src="/images/star.gif" alt="4" border="0"></a><a href="#" title="4"><img src="/images/star.gif" alt="4" border="0"></a></td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">This game can rock. Easy to learn, can get hard to play. My suggestion: make the whole game FASTER! By now, it can be played by my grandma without looking at ;)</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=509">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="487"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:bill@@@newbreedsoftware...com"><font color="#ffff80"><b>billkendri</b>
+            @  
+            </font></a>
+            <font color="#ffff80">on Mar 24 1999 7:32 PM</font>
+         </td>
+         <td align="right" nowrap>&nbsp;</td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">A fun game (my girlfriend likes it a lot), and pretty damned good for being ported directly from an Atari 8-bit program written in "Action!"!!! :)
+</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=487">[Reply]</a>
+</td></tr>
+</table>
+<p>      <table border="0" cellspacing="0" cellpadding="0" width="90%" class="Shadow">
+         <tr bgcolor="#000080">
+            <td width="20" valign="top" align="left"><img src="/images/tl.gif" width="20" height="20" alt="" border="0"></td>
+         <td align="left" width="100%">
+            <font color="#00ff00">
+               &nbsp;
+               <a name="480"><b>Gem Drop X</b></a>
+            </font>
+            <font color="#ffff80">
+               posted by
+            </font>
+            <a href="mailto:bernhard.trummerNO@SPAMgmx.net"><font color="#ffff80"><b>slash</b>
+            @  
+            </font></a>
+            <font color="#ffff80">on Mar 24 1999 1:01 AM</font>
+         </td>
+         <td align="right" nowrap><a href="#" title="2"><img src="/images/star.gif" alt="2" border="0"></a><a href="#" title="2"><img src="/images/star.gif" alt="2" border="0"></a></td>
+         <td valign="bottom" align="right" width="20"><img src="/images/br-lg.gif" width="20" height="20" alt=""></td>
+   </tr>
+   <tr>
+      <td colspan="4" bgcolor="#e0e0e0">Nice idea of the game.
+
+But I think the graphics could be better
+(then it is worth at least 3 stars :-)
+</td>
+   </tr>
+   <tr><td colspan="4" bgcolor="#e0e0e0">&nbsp;</td></tr>
+   <tr>
+      <td bgcolor="#e0e0e0" colspan="4" style="border-top: solid black 1px; border-bottom: solid black 1px;">
+<a href="/comment?type=games&amp;parent=480">[Reply]</a>
+</td></tr>
+</table>
+<p></center>
+   </td>
+</tr>
+<tr bgcolor="#ffffff">
+   <td colspan="3" align="center">
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+         <tr>
+            <td width="20%" class="NewsNav" nowrap><a href="/news">News</a></td>
+            <td width="20%" class="NewsNav" nowrap><a href="/add">Submit a Game</a></td>
+            <td width="20%" class="NewsNav" nowrap><a href="/forums">Forums</a></td>
+<!--            <td width="20%" class="NewsNav" nowrap><a href="/irc">IRC</a></td> -->
+            <td width="20%" class="NewsNav" nowrap><a href="/about/">About/FAQ</a></td>
+        </tr>
+      </table>
+      <br>
+      <font size="-2"><em>Copyright &copy 1999-2005 Bob Zimbinski.  Feedback to <a href="mailto:staff@happypenguin.org">staff@happypenguin.org</a>.</em></font>
+   </td>
+</tr>
+</table>
+</body></html>

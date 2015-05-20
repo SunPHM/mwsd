@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>My Weapon of choice, the bass guitar</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+//  Original version from an anonymous source, care of Michael Baxter. 
+var timed = 0;
+var scrollGo = false;
+var delay=140; //make this variable lower to speed scrolling, higher to slow it down
+var space=200;
+function scroll_start() {
+        var i=0;
+        msg="........My weapon of choice.....The Aria Pro II......" 
+	for (i=0;i<space;i++)
+                msg=" "+msg;
+        scrollGo=true;
+        timerid=window.setTimeout("scrollmsg(0)",delay);
+}
+function scrollmsg(pos) {
+        var out = "";
+        scrollGo=false;
+        if (pos < msg.length)
+                self.status = msg.substring(pos, msg.length);
+        else
+                pos=-1;
+        ++pos;
+        scrollGo=true;
+        timerid=window.setTimeout("scrollmsg("+pos+")",delay);
+}
+
+</script>
+
+<SCRIPT LANGUAGE=JAVASCRIPT>
+<!--
+	function OpenURL( Index )
+	{
+	if( Index == 0 ) window.location = "bass.html";
+	if( Index == 1 ) window.location = "stranger.html";
+	if( Index == 2 ) window.location = "room101.html";
+	if( Index == 3 ) window.location = "rock.html";
+	if( Index == 4 ) window.location = "bluefox.html";
+	if( Index == 5 ) window.location = "ash.html";
+	if( Index == 6 ) window.location = "misc.html";
+	if( Index == 7 ) window.location = "others.html";
+	if( Index == 8 ) window.location = "disclaimer.html";
+	if( Index == 9) window.location = "gallery.html";
+	if( Index == 10 ) window.location = "main.html";
+	}
+//-->
+</SCRIPT>
+
+
+
+</head>
+
+<body BGCOLOR="000000" background="source/background.gif" text="ffffff" link="ffffff" vlink="ffffff" alink="ffffff" ONLOAD="scroll_start();">
+
+<FORM NAME=NAVIGATE>
+<SELECT NAME=LIST SIZE=1 Onchange="OpenURL( document.NAVIGATE.LIST.selectedIndex )">
+<OPTION NAME=BASS>My Bass Guitar
+<OPTION NAME=STRANGE>Portrait Of A Stranger...
+<OPTION NAME=ROOM101>Room 101...
+<OPTION NAME=ROCK>Rock Music...
+<OPTION NAME=BLUEFOX>The Blue Fox...
+<OPTION NAME=ASH>Wishbone Ash...
+<OPTION NAME=MISC>Miscellaneous links...
+<OPTION NAME=OTHER>Other Strange People...
+<OPTION NAME=DISC>Disclaimer And Credits...
+<OPTION NAME=GALLERY>Photo Gallery...
+<OPTION NAME=MENU>The Strange Menu...
+</SELECT>
+</FORM>
+
+<center>
+<br>
+<H1>The Weapon of choice!</h1>
+<h4>
+<br>
+<img src="source/bass_amp.jpg" align=center height=300 width=175 alt="The 4-Stringed Axe"></a>
+<img src="source/which_one.jpg" align=center height=300 width=175 alt="I do occassionally get confused..."></a>
+<br>
+</center>
+<B>Make: </B><a href="http://www.ariausa.com" target=_parent>Aria</a><br><br>
+<B>Model: </B>Pro II (Magna Series)</a><BR><BR>
+<B>Amplification: </B><a href="http://www.laney.co.uk" target=_parent>Laney BC30</a><BR><BR>
+I have always liked the sound of the bass guitar and have always promised myself
+that I would buy one...<br><br>
+Well, it took me until June 2000 but I eventually got round to it! This was 
+£200 (I'd only just gotten my finances in any kind of order and then along
+comes this!) 2nd hand from a guy at work but it was worth it! <BR><center>
+<img src="source/amp.jpg" align=center height=200 width=250 alt="The neighbour-scarer"></a><br></center>
+Since buying it, I've had the action lowered to that of a six-string, and 
+I've re-strung it with medium gauge Rotasound strings which gives it a nice 
+almost acoustic sound. I have tried lessons but at the moment, I am quite happy
+to improve in my own time and at my own speed! <BR><BR>
+Two useful sources of tabulature for the bass are available at: 
+<a href="http://www.olga.net" target=_parent>The Online Guitar Archive</a>, and
+<a href="http://www.basstabarchive" target=_parent>The Bass Tab Archive</a>. <br>
+<center><br>
+<img src="source/play_it.jpg" align=center height=250 width=150 alt="Like I say..."></a>
+<img src="source/bad_technique.jpg" align=center height=250 width=150 alt="...I am improving..."></a>
+<img src="source/play_it2.jpg" align=center height=250 width=150 alt="...and besides, I was very, very drunk indeed!"></a>
+</center>
+<br>
+<br>
+Play to me, play to <a href="mailto:thestranger@strangeaffair.com">The Stranger</a>
+<br>
+
+<form>
+<input type=button value="Back" OnClick="window.location='main.html'">
+</form>
+
+</body>
+</html>

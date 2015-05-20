@@ -1,0 +1,387 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Peek Jewelry</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script><meta name="Microsoft Border" content="tb">
+</head>
+
+<body stylesrc="peek.htm" onload="dynAnimation()" bgcolor="#000000" text="#FF00FF"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<div align="center"><center>
+
+<table border="0" width="572" bordercolor="#000000" bordercolorlight="#000000"
+bordercolordark="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="412" colspan="5" align="center"><font color="#FF0000"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A
+    Frederick Oklahoma Home Page</strong></font></td>
+  </tr>
+  <tr>
+    <td width="80" height="5" align="center"><font color="#FF0000"><font face="Arial Narrow"><a
+    href="marde.htm"><strong><small><small><small><small>MARDE Enterprises</small></small></small></small></strong></a></font></font></td>
+    <td width="80" height="5" align="center"><font color="#FF0000"><font face="Arial Narrow"><a
+    href="p4t.htm"><small><small><small><small>Pressed for Time</small></small></small></small></a></font></font></td>
+    <td width="120" height="5" align="center"><font color="#FF0000"><font face="Arial Narrow"><a
+    href="lineman.htm"><strong><small><small><small><small>Journeyman Lineman Page</small></small></small></small></strong></a></font></font></td>
+    <td width="80" height="5" align="center"><font color="#FF0000"><font face="Arial Narrow"><strong><small><small><small><small><a
+    href="peek.htm">Peeka Boo Teek</a></small></small></small></small></strong></font></font></td>
+    <td width="80" height="5" align="center"><font color="#FF0000"><font face="Arial Narrow"><a
+    href="index.htm#SEARCH"><strong><small><small><small><small>SEARCH</small></small></small></small></strong></a></font></font></td>
+  </tr>
+  <tr>
+    <td width="80" height="5" align="center"><font face="Arial Narrow" color="#FF0000"><a
+    href="index.htm"><strong><small><small><small><small>HOME</small></small></small></small></strong></a></font></td>
+    <td width="80" height="5" align="center"><font face="Arial Narrow" color="#FF0000"><a
+    href="ThayerRags.htm"><strong><small><small><small><small>ThayerRags</small></small></small></small></strong></a></font></td>
+    <td width="120" height="5" align="center"><font face="Arial Narrow" color="#FF0000"><a
+    href="index.htm#MOTORCYCLE"><small><small><small><small><strong>MOTORCYCLE LINKS</strong></small></small></small></small></a></font></td>
+    <td width="80" height="5" align="center"><font face="Arial Narrow" color="#FF0000"><a
+    href="index.htm#HOUSEKEEPING"><small><small><small><small><strong>HOUSKEEPING</strong></small></small></small></small></a></font></td>
+    <td width="80" height="5" align="center"><font face="Arial Narrow" color="#FF0000"><a
+    href="index.htm#WEATHER"><strong><small><small><small><small>WEATHER</small></small></small></small></strong></a></font></td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+<p align="center"><img src="imagespeek/peeka.jpg" alt="peeka.jpg (53713 bytes)" width="460" height="117"></p>
+
+<p align="center" dynamicanimation="flyLeft"
+style="position: relative !important; left: 10000 !important"><strong><big><big><big>Jewelry</big></big></big></strong></p>
+
+<p align="center">(Click on photo thumbnails to enlarge photos) <a href="#PAYMENT"><em><strong>Payment
+Information</strong></em></a></p>
+
+<p align="left"><a href="http://www.cdthayer.com/imagespeek/EmerDiaRing1.jpg"><img
+src="imagespeek/EmerDiaRing1_small.jpg" alt="EmerDiaRing1.jpg (79152 bytes)" width="100" height="75"></a> <a
+href="http://www.cdthayer.com/imagespeek/EmerDiaRing1a.jpg"><img
+src="imagespeek/EmerDiaRing1a_small.jpg" alt="EmerDiaRing1a.jpg (78462 bytes)" width="100" height="75"></a> <a
+href="http://www.cdthayer.com/imagespeek/EmerDiaRing1b.jpg"><img
+src="imagespeek/EmerDiaRing1b_small.jpg" alt="EmerDiaRing1b.jpg (60719 bytes)" width="100" height="75"></a>
+Emerald &amp; Diamond Ring - $300.00</p>
+
+<p align="left"><a href="http://www.cdthayer.com/imagespeek/squash1.jpg"><img
+src="imagespeek/squash1_small.jpg" alt="squash1.jpg (48617 bytes)" width="100" height="132"></a> Mother of Pearl
+Silver Squash Blossom - $799.00</p>
+
+<p align="left"><a href="http://www.cdthayer.com/imagespeek/cuff_1.jpg"><img
+src="imagespeek/cuff_1_small.jpg" alt="cuff_1.jpg (6625 bytes)" width="100" height="50"></a> Mother of Pearl
+Silver Wrist Cuff - $499.00</p>
+
+<p align="left">&nbsp;</p>
+
+<p align="center"><a name="PAYMENT"><big><font color="#FFFFFF"><strong>PAYMENT</strong></font></big></a></p>
+
+<p align="center">All prices listed are without shipping costs added. Shipping costs vary
+and depend on item and destination. Domestic payment will be accepted in the form of Money
+Orders, Cashier Checks, or Personal Checks. Foreign payment will be accepted in the form
+of International Money Orders only. Send an email to <a
+href="mailto:leonathayer@hotmail.com">leonathayer@hotmail.com</a> for payment information
+and shipping costs.</p>
+
+<p align="center">&nbsp;</p>
+
+<p align="center">Return to Main <em><strong><a href="peek.htm">Peeka Boo Teek</a></strong></em>
+Page 
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<hr>
+
+<p align="center"><font color="#FF8000"><small><small>All content, including photos and
+graphics, is copyrighted and owned by or used with permission by MARDE Enterprises.
+Unauthorized use is prohibited.</small></small></font></p>
+
+<p align="center"><font size="1">IF, HOWEVER, YOU SEE EVIDENCE TO THE CONTRARY, PLEASE
+CONTACT THE WEBMASTER AT cdthayer.com.&nbsp; TO REQUEST REMOVAL OF COPYRIGHT MATERIALS.
+&nbsp;YOUR COPYRIGHT MATERIALS WILL GLADLY BE REMOVED.&nbsp; THANK YOU.&nbsp; THE VIEWS,
+OPINIONS, OR COMMENTS ON THESE PAGES ARE THOSE OF THE CONTRIBUTOR, AND MAY NOT NECESSARILY
+REPRESENT THE VIEWS OR OPINIONS OF MARDE Enterprises, www.cdthayer.com , or CD THAYER.
+CONTRIBUTORS ARE RESPONSIBLE FOR THEIR OWN POSTINGS.</font></p>
+
+<p align="center"><font size="1">Contact the WebMaster at: <img
+src="images/Mail9121.gif" width="32" height="32"></font><small><small> <font color="#FF8000"><a
+href="mailto:OlPoop@cdthayer.com">OlPoop@cdthayer.com</a> </font></small></small></p>
+
+<p align="center"><font size="1">©1998-2005 </font>
+<applet code="fphover.class" codebase="_fpclass/" width="47" height="50">
+  <param name="text" value>
+  <param name="color" value="#000080">
+  <param name="hovercolor" value="#0000FF">
+  <param name="textcolor" value="#FFFFFF">
+  <param name="effect" value="glow">
+  <param name="url" value="marde.htm" valuetype="ref">
+  <param name="image" value="images/mardegif2.gif" valuetype="ref">
+  <param name="hoverimage" value="images/mardelogo2_drop.gif" valuetype="ref">
+  <param name="sound" value valuetype="ref">
+  <param name="hoversound" value valuetype="ref">
+</applet>
+<font size="1">MARDE Enterprises <a href="http://www.cdthayer.com">www.cdthayer.com</a> <img
+src="images/Microsoft_FrontPage21A4.gif" width="114" height="43"> Best viewed with <img
+src="images/Animated_Microsoft_Internet_Explorer2310.gif" width="88" height="31"></font></p>
+
+<p align="center"><font size="1">Created by CD Thayer - August 1998</font></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

@@ -1,0 +1,232 @@
+<?php
+function commentCount($n) {
+  if ($file = @fopen("http://www.decablog.com/trouble/comments/$n.comment", 'r')) {
+    $thisFile = file("http://www.decablog.com/trouble/comments/$n.comment");
+    $comments = sizeof($thisFile);
+    if($comments == 1) {$comments .= " troubled report! ";} else {$comments .= " troubles reported!! ";}
+  }
+  else {$comments = " got trouble to report? ";}
+  return $comments;
+}
+?>
+
+
+
+
+<HTML>
+<HEAD>
+  <TITLE>A Romanticized Portrait of a Dull Life</TITLE>
+  <STYLE>
+  <!--
+  body {background:B5E5FF;
+    color:000000;
+    font-family:trebuchet ms,verdana,arial;
+    font-size:12px;
+    }
+
+  a {text-decoration: none;color:FF4800;}
+  a:hover {color:FFFCCC; background:FF4800;}
+
+  .deca {
+    padding: 2px 8px 2px 8px;
+    font-size:13px;
+    font-weight:bold;
+	border-color:043C82;
+	border-style:solid;
+    border-width:1px 1px 1px 1px;
+    }
+
+  a.deca {text-decoration: none;color:043C82;}
+  a:hover.deca {color:00B2EB; background:043C82;}
+
+  .date {font-family:trebuchet ms,verdana,arial;
+    font-size:14px;
+    color:FFFFFF;
+    font-weight:bold;
+	text-align:right;
+    padding: 3px 20px 3px 3px;
+	width:495px;
+	background:D9400B;
+	border-color:000000;
+	border-style:solid;
+    border-width:1px 1px 1px 0px;
+    float:left;
+    }
+
+  .time {font-family:trebuchet ms,verdana,arial;
+    font-size:9px;
+    color:000000;
+	text-align:right;
+    padding: 0px 10px 0px 3px;
+	width:250px;
+	background:A8D59D;
+	border-color:000000;
+	border-style:solid;
+    border-width:1px 1px 1px 0px;
+    float:left;
+    }
+
+  .time a {text-decoration: none;color:20401A;}
+  .time a:hover {color:A8D59D; background:20401A;}
+
+  .body {text-align:justify;
+    font-family:trebuchet ms,verdana,arial;
+    font-size:12px;
+    padding: 0px 30px 0px 35px}
+
+  .links {font-size:10px;
+    font-family:trebuchet ms,verdana,arial;
+    color:FFFFFF;
+    font-weight:bold;
+	text-align:left;
+    padding: 0px 3px 0px 5px;
+    margin: 8px 2px 0px 0px;
+	width:100px;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.80;
+	background:FF4800;
+	border-color:FFF99D;
+	border-style:solid;
+    border-width:1px 0px 1px 1px;
+    float:right;}
+
+   a.links {text-decoration: none;color:FFFFFF;}
+   a:hover.links {color:FF4800; background:FFFFFF;}
+  -->
+  </STYLE>
+
+<script language="javascript">
+<!--
+  function viewComments(n) {
+  window.open('http://www.decablog.com/trouble/comments.php?' + n, 'comments' + n, 'directories=0,height=480,location=0,resizable=no,status=1,scrollbars=1,toolbar=0,width=351');
+  }
+//-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+  iArray=new Array(
+    "images/lt_09film.gif");
+  var num = Math.floor(iArray.length*Math.random());
+  ri='<IMG SRC="'+ iArray[num]+ '" BORDER="0" HEIGHT="124" WIDTH="526"><BR>';
+// -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<DIV ALIGN="center">
+
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD ALIGN="left" VALIGN="top" WIDTH="176">
+  <IMG SRC="images/lt_01.gif" BORDER="0" HEIGHT="124" WIDTH="176"><BR>
+</TD>
+<TD ALIGN="left" VALIGN="top" BACKGROUND="images/lt_10.gif" WIDTH="526">
+  <script>
+    <!--
+    document.write(ri);
+    // -->
+  </script>
+</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="top" BACKGROUND="images/lt_07.gif">
+  <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+  <TR>
+  <TD ALIGN="left" VALIGN="top" WIDTH="176">
+    <IMG SRC="images/lt_02film.gif" BORDER="0" HEIGHT="74" WIDTH="176"><BR>
+  </TD>
+  </TR>
+  </TR>
+  <TR>
+  <TD ALIGN="left" VALIGN="top" BACKGROUND="images/lt_03film.gif">
+    <IMG SRC="images/clearpixel.gif" BORDER="0" ALIGN="left" HEIGHT="165" WIDTH="1">
+    <A HREF="index.php" CLASS="links">&nbsp;journal&nbsp;</A><BR>
+    <A HREF="pix.html" CLASS="links">&nbsp;pix&nbsp;</A><BR>
+    <A HREF="poetry.html" CLASS="links">&nbsp;poetry/writing&nbsp;</A><BR>
+    <!--<A HREF="18x4.php" CLASS="links">&nbsp;18 x 4&nbsp;</A><BR>-->
+  </TD>
+  </TR>
+  <TR>
+  <TD ALIGN="left" VALIGN="top">
+    <IMG SRC="images/lt_04film.gif" BORDER="0" HEIGHT="35" WIDTH="176"><BR>
+  </TD>
+  </TR>
+  <TR>
+  <TD ALIGN="left" VALIGN="top" BACKGROUND="images/lt_05film.gif">
+    <IMG SRC="images/clearpixel.gif" BORDER="0" ALIGN="left" HEIGHT="276" WIDTH="1">
+    <A HREF=".html" CLASS="links">&nbsp;october 2001&nbsp;</A><BR>
+    <A HREF=".html" CLASS="links">&nbsp;september 2001&nbsp;</A><BR>
+  </TD>
+  </TR>
+  <TR>
+  <TD ALIGN="left" VALIGN="top">
+    <IMG SRC="images/lt_06.gif" BORDER="0" HEIGHT="1" WIDTH="176"><BR>
+  </TD>
+  </TR>
+  </TABLE>
+</TD>
+<TD ALIGN="left" VALIGN="top" BACKGROUND="images/lt_10.gif" WIDTH="526">
+  <BR>
+
+  <DIV CLASS="date">Pictures</DIV>
+  <DIV CLASS="body"><br><br>My friend Seth is the master at holiday melon carving.  I'm fortunate to be his protege.  Here is some of his work and one pathetic example of my own.</h4><br><br>
+<img src="images/poe.jpg"><br>
+<B>Edgar Allen Poe</B><br>
+This is the first melon creation I saw of Seth's.  Poe is carved in pumpkin.<br>
+Occasion: Halloween 2000<br><br>
+
+<img src="images/fyodor.jpg"><br>
+<B>Dostoyevsky</B><br>
+Dostoyevsky is carved into a honeydew.  The appearance is beautiful, but the melon was unforgiving.  Seth remarked that a thicker shelled melon would be optimal.<br>
+Occasion: December 1 2000 (Who needs a reason to have a party and carve melons?)<br><br>
+
+<img src="images/bogey.jpg"><br>
+<B>Bogey and Bacall</B><br>
+Bogey is actually a watermelon and Bacall is a summer squash.<br>
+Occasion: Christmas Party 2000<br><br>
+
+<img src="images/gauss.jpg"><br>
+<B>Carl Friedrich Gauss</B> (mathematician)<br>
+I know it looks terrible next to Seth's specimens.  But I was proud.  This is actually my second attempt.  If I can find the photo of the Oscar Wilde melon I made, I will upload it.<br>
+Occasion: Christmas Party 2000<br><br>
+
+<img src="images/scream.jpg"><br>
+Here is my most recent Halloween Costume--Edvard Munch's <i>The Scream</i><br>
+Previous costumes include a stalk of asparagus, a can of French's French Fried Onions, a box of Macaroni and Cheese.<br>
+Somewhere photos of the former two exist, if I can find, I will upload.  The latter is so long ago, I don't believe I have any photos.  It was also my best work and I consider it my second biggest mistake ever.</font><br><br>
+  <BR><BR></DIV>
+  <DIV ALIGN="center" CLASS="time"><A HREF="filmreviews.html">&nbsp;back to film list&nbsp;</A></DIV>
+</TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="bottom" BACKGROUND="images/lt_07.gif">
+  <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+  <script type="text/javascript" language="JavaScript">var site="s10lankytrouble"</script>
+  <script type="text/javascript" language="JavaScript1.2" src="http://s10.sitemeter.com/js/counter.js?site=s10lankytrouble">
+  </script>
+  <noscript>
+  <a href="http://s10.sitemeter.com/stats.asp?site=s10lankytrouble" target="_top">
+  <img src="http://s10.sitemeter.com/meter.asp?site=s10lankytrouble" alt="Site Meter" border=0></a>
+  </noscript>
+  <!-- Copyright (c)2000 Site Meter -->
+  <!--WEBBOT bot="HTMLMarkup" Endspan --><BR>
+  <IMG SRC="images/clearpixel.gif" BORDER="0" HEIGHT="7" WIDTH="1"><BR>
+  <IMG SRC="images/lt_08.gif" BORDER="0" HEIGHT="2" WIDTH="176"><BR>
+</TD>
+<TD ALIGN="left" VALIGN="bottom" BACKGROUND="images/lt_10.gif">
+    <IMG SRC="images/lt_11.gif" BORDER="0" HEIGHT="1" WIDTH="526"><BR>
+</TD>
+</TR>
+</TABLE>
+<CENTER>
+  <IMG SRC="images/clearpixel.gif" BORDER="0" HEIGHT="7" WIDTH="1"><BR>
+  <A HREF="/" CLASS="deca">Return to the Decablog</A>
+</CENTER>
+<BR>
+
+</DIV>
+</BODY>
+</HTML>
+

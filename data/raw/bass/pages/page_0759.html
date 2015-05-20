@@ -1,0 +1,128 @@
+<html><!-- #BeginTemplate "/templates/templatework.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> <!-- #BeginEditable "doctitle" --> 
+<title>Rivative Reveals the Bass</title>
+<!-- #EndEditable --> <!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<table cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td width="67" height="28" valign="top"></td>
+    <td width="14" height="28" valign="top"></td>
+    <td width="412" height="28" valign="top"></td>
+    <td width="13" height="28" valign="top"></td>
+    <td width="63" height="28" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="67" height="119" valign="top"></td>
+    <td width="439" height="119" colspan="3" valign="top"><!-- #BeginEditable "riv%20logo" --><a href="../../animations/better_tomorrow.html"><img src="../../../rivlogo.jpg" width="439" height="101" border="0"></a><!-- #EndEditable --></td>
+    <td width="63" height="119" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="67" height="548" valign="top"></td>
+    <td width="14" height="548" valign="top"></td>
+    <td width="412" height="548" valign="top"><!-- #BeginEditable "text%20here" --> 
+      <br>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>For the technical 
+      side of you, here are the juicy details and keen photographs behind Marsette's 
+      hacked Boogie Bass.</b></font>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">These two ingredients 
+        should complete the picture: <br>
+        <br>
+        1.The ISD 1420P solid-state "chipcorder" voice record/playback chip. Stores 
+        20 seconds of telephone-quality voice. Nonvolatile, in-system-recordable. 
+        28 pin DIP. Available from JDR Microdevices for about $9. Particularly 
+        well-suited for storing "special" messages inside talking Bass. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">2.The ATMEL 
+        AT89S8252 microcontroller. 8051 core. 8kB of serial-downloadable flash 
+        program storage. 2kB of data storage EEPROM. 40 pin DIP. Available from 
+        JDR for abut $7. Particularly well suited for storing "special" head/tail/mouth 
+        movements inside talking Bass.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Here are 
+        some photos of the innards of the Bass, after the addition of "special" 
+        mode:</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="bass1.jpg" width="258" height="192"></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="bass2.jpg" width="256" height="192"></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="bass3.jpg" width="257" height="192"></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">As you can 
+        see, there are three circuit boards involved. The one in the upper left 
+        (the green one) is the original board. The little one just below it holds 
+        some switches and things that make up a control panel for the "special" 
+        mode. The big one on the right holds the ISD1420, the AT89S8252, and an 
+        audio amplifier.</font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> Controls 
+        have been added to the rear of the modified Bass to facilitate switching 
+        between "normal" and "special" modes: </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="bass4.jpg" width="278" height="215"></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">There is 
+        a toggle switch for changing modes, along with a trimpot for adjusting 
+        the volume in special mode, an LED for feedback (very useful during software 
+        development), and four DIP switches for setting the "special" sub-mode. 
+        </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">There are 
+        currently five such sub-modes: </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Record</b> 
+        This is the mode for recording a new message, up to 20 seconds long. Only 
+        one "special" message is supported at a time. When the button on the front 
+        is pushed and held in, any sound will be recorded until the button is 
+        let out (or 20 seconds is reached, whichever happens first). New "special" 
+        messages can be re-recorded as often as you like, and doing so will erase 
+        the existing "special" message (and reset all head/tail/mouth movements). 
+        </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Record 
+        Mouth</b> In this mode the movement of the mouth can be recorded. Press 
+        and release the button on the front to start playback of the "special" 
+        message, along with any existing recorded tail and head movements. While 
+        the message is playing, press and hold the button to open the mouth. Release 
+        to close it. The mouth movements recorded here will be played back subsequently 
+        whenever the message is played in Play, Record Head, or Record Tail modes. 
+        It can be difficult to get the timing right, so it helps to have a digital 
+        stopwatch on hand. And you can of course re-record the movements as many 
+        times as you like (re-recording the movement does not erase the current 
+        audio or movements of the other body parts). </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Record 
+        Head</b> This mode allows the movement of the head (either flat against 
+        the plaque or turned to face you). Operation is similar to Record Mouth 
+        mode. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Record 
+        Tail</b> This mode is for recording tail movements. Operation is similar 
+        to Record Mouth mode. </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Play</b> 
+        When the button is pushed and released in this mode the currently stored 
+        message is played back, along with any recorded head/tail/mouth movements. 
+        The front of the fish is unchanged, except for the addition of a small 
+        hole for the microphone: </font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="bassflat.jpg" width="254" height="190"></font></p>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">See <a href="http://www.ai.mit.edu/%7Evona/bass/bass.html">Marsette's 
+        Website </a>which was duped head, mouth and tail for rivative, with permisison 
+        from the author, mais oui!</font></p>
+      <p>&nbsp;</p>
+      <!-- #EndEditable --></td>
+    <td width="13" height="548" valign="top"></td>
+    <td width="63" height="548" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="569" height="76" colspan="5" valign="top"> 
+      <div align="center"><font face="Courier New, Courier, mono" size="-1"><font size="+1"><a href="mailto:tony@rivative.com">EMAIL</a> 
+        &#149; <a href="../../connectfiles/about.html">ABOUT</a> &#149; <a href="../../connectfiles/carpark.html">WHERE 
+        CAN I PARK MY CAR IN BROOKLYN?</a> &#149; <a href="../../connectfiles/archives.html">ARCHIVES</a> 
+        &#149; <a href="../../connectfiles/submission.html">SUBMISSIONS</a> &#149; 
+        <a href="../../connectfiles/reviews.html">REVIEWS</a> &#149; <a href="../../connectfiles/moreart.html">ART</a> 
+        &#149; <a href="../../connectfiles/flashomatic.html">FLASH-O-MATIC</a> &#149; 
+        <a href="../../connectfiles/dietarchive.html">DIET ADS</a> &#149; <a href="../../music/index.html">MUSIC</a> 
+        &#149; YEAH &#149; <a href="../../index.html">HOME</a></font></font></div>
+</td>
+  </tr>
+  <tr>
+    <td width="67" height="1" valign="top"><img width="67" height="1" src="../../templates/transparent.gif"></td>
+    <td width="14" height="1" valign="top"><img width="14" height="1" src="../../templates/transparent.gif"></td>
+    <td width="412" height="1" valign="top"><img width="412" height="1" src="../../templates/transparent.gif"></td>
+    <td width="13" height="1" valign="top"><img width="13" height="1" src="../../templates/transparent.gif"></td>
+    <td width="63" height="1" valign="top"><img width="63" height="1" src="../../templates/transparent.gif"></td>
+  </tr>
+</table>
+
+</body>
+<!-- #EndTemplate --></html>

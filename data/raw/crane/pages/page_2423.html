@@ -1,0 +1,407 @@
+<HTML>
+<HEAD>
+<TITLE>Birding and Wildlife Viewing: General Information</TITLE>
+<script language="JavaScript" src="js/swap.js"></script>
+<script language="JavaScript">
+<!--
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+
+function P7_autoLayers() { //v1.1 PVII
+ var g,b,k,f,args=P7_autoLayers.arguments;
+ if(!document.p7setc) {p7c=new Array();document.p7setc=true;}
+ for(k=0; k<p7c.length; k++) {
+  if((g=MM_findObj(p7c[k]))!=null) {
+   b=(document.layers)?g:g.style;b.visibility="hidden";}}
+ for(k=0; k<args.length; k++) {
+  if((g=MM_findObj(args[k])) != null) {
+   b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+   for(j=0;j<p7c.length;j++) {
+    if(args[k]==p7c[j]) {f=true;}}
+  if(!f) {p7c[p7c.length++]=args[k];}}}
+}
+
+function P7_Snap() { //v2.5 by PVII
+  var x,y,ox,oy,p,tx,a,b,k,d,da,e,el,args=P7_Snap.arguments;
+  var bx,byy;a=parseInt(a);
+  for (k=0; k<(args.length-3); k+=4)
+   if ((g=MM_findObj(args[k]))!=null) {
+    el=eval(MM_findObj(args[k+1]));
+    a=parseInt(args[k+2]);b=parseInt(args[k+3]);
+    x=0;y=0;ox=0;oy=0;p="";tx=1;da="document.all['"+args[k]+"']";
+    if(document.getElementById) {
+     d="document.getElementsByName('"+args[k]+"')[0]";
+     if(!eval(d)) {d="document.getElementById('"+args[k]+"')";if(!eval(d)) {d=da;}}
+    }else if(document.all) {d=da;} 
+    if (document.all || document.getElementById) {
+     while (tx==1) {p+=".offsetParent";
+      if(eval(d+p)) {x+=parseInt(eval(d+p+".offsetLeft"));y+=parseInt(eval(d+p+".offsetTop"));
+      }else{tx=0;}}
+     ox=parseInt(g.offsetLeft);oy=parseInt(g.offsetTop);var tw=x+ox+y+oy;
+     if(tw==0 || (navigator.appVersion.indexOf("MSIE 4")>-1 && navigator.appVersion.indexOf("Mac")>-1)) {
+      ox=0;oy=0;if(g.style.left){x=parseInt(g.style.left);y=parseInt(g.style.top);
+      }else{var w1=parseInt(el.style.width);bx=(a<0)?-5-w1:-10;
+      a=(Math.abs(a)<1000)?0:a;b=(Math.abs(b)<1000)?0:b;
+      x=document.body.scrollLeft + event.clientX + bx;
+      y=document.body.scrollTop + event.clientY;}}
+   }else if (document.layers) {x=g.x;y=g.y;
+    var q0=document.layers,dd="";
+    for(var s=0;s<q0.length;s++) {dd='document.'+q0[s].name;
+     if(eval(dd+'.document.'+args[k])) {
+      x+=eval(dd+'.left');y+=eval(dd+'.top');break;}}}
+   if(el) {e=(document.layers)?el:el.style;
+   var xx=parseInt(x+ox+a),yy=parseInt(y+oy+b);
+   if(navigator.appName=="Netscape" && parseInt(navigator.appVersion)>4){xx+="px";yy+="px";}
+   if(navigator.appVersion.indexOf("MSIE 5")>-1 && navigator.appVersion.indexOf("Mac")>-1){
+    xx+=parseInt(document.body.leftMargin);yy+=parseInt(document.body.topMargin);
+    xx+="px";yy+="px";}
+   e.left=xx;e.top=yy;}}
+}
+//-->
+</script>
+<link rel="stylesheet" href="cbstyles.css" type="text/css">
+</HEAD>
+<BODY bgcolor="#FFFFFF" onLoad="MM_preloadImages('images/topnav_r1_c3_f2.gif','images/topnav_r1_c4_f2.gif','images/topnav_r1_c5_f2.gif','images/topnav_r1_c6_f2.gif','images/topnav_r1_c3.gif','images/topnav_r1_c4.gif','images/topnav_r1_c5.gif','images/topnav_r1_c6.gif','images/topnav_r1_c2_f2.gif');P7_autoLayers()">
+<!-- #BeginLibraryItem "/Library/layers.lbi" --><div id="aboutdrop" style="position:absolute; width:226px; z-index:2; left: 169; top: 145; visibility: hidden"> 
+  <table width="220" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="219"> 
+        <table width="213" border="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF">
+          <tr> 
+            <td><img src="images/shim.gif" width="213" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"> <a href="about_cheyenne_bottoms.html">About 
+                Cheyenne Bottoms<br>
+                Wildlife Viewing Area</a> </div>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="about_tnc.html">About 
+                The Nature Conservancy<br>
+                Preserve at Cheyenne Bottoms</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"> <a href="about_quivira.html">About Quivira <br>
+                National Wildlife Refuge</a></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="1" bgcolor="#003366"><img src="images/blue_shim.gif" width="1" height="100%"></td>
+    </tr>
+  </table>
+</div>
+<div id="aboutcloser" style="position:absolute; width:260px; z-index:1; left: 143; top: 148; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers();MM_swapImage('topnav_r1_c3','','images/topnav_r1_c3.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/shim.gif" width="260" height="180" border="0"></a></div>
+
+<div id="visitordrop" style="position:absolute; width:226px; z-index:4; visibility: hidden"> 
+  <table width="220" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="219"> 
+        <table width="213" border="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF">
+          <tr> 
+            <td><img src="images/shim.gif" width="213" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="visitor_lodging_dining.html">Lodging 
+                and Dining</a> </div>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"> <a href="visitor_touring.html">Driving Tours at Cheyenne Bottoms</a></div>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="visitor_photo.html">Photography</a></div>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="visitor_hiking.html">Hiking</a></div>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="visitor_events.html">Festivals 
+                and Events</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="about_maps_directions.html">Directions 
+                and Maps</a></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="1" bgcolor="#003366"><img src="images/blue_shim.gif" width="1" height="100%"></td>
+    </tr>
+  </table>
+  
+</div>
+<div id="visitorcloser" style="position:absolute; width:260px; z-index:3; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers();MM_swapImage('topnav_r1_c4','','images/topnav_r1_c4.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/shim.gif" width="260" height="220" border="0"></a></div>
+<div id="viewdrop" style="position:absolute; width:226px; z-index:7; visibility: hidden"> 
+  <table width="220" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="219"> 
+        <table width="213" border="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF">
+          <tr> 
+            <td><img src="images/shim.gif" width="213" height="1"></td>
+          </tr>
+          <tr>
+            <td>
+			  <p class="droplink" align="right"><a href="b_w_general.html">General 
+                Information</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="b_w_beginners_tips.html">Tips 
+                for Beginners</a><a href="javascript;"></a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="b_w_birdlist.html">List 
+                of Birds</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="b_w_marlist.html">Mammal/Reptile/Amphibian 
+                List </a><a href="javascript;"></a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="b_w_tracks.html">Wild Life Tracks</a></div>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="join_the_journey.html">Join the Journey&#153;</a></div>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="b_w_sightings.html">Current 
+                Sightings</a></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="1" bgcolor="#003366"><img src="images/blue_shim.gif" width="1" height="100%"></td>
+    </tr>
+  </table>
+  
+</div>
+<div id="viewcloser" style="position:absolute; width:260px; z-index:6; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers();MM_swapImage('topnav_r1_c5','','images/topnav_r1_c5.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/shim.gif" width="260" height="250" border="0"></a></div>
+<div id="huntdrop" style="position:absolute; width:226px; z-index:9; visibility: hidden"> 
+  <table width="220" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="219"> 
+        <table width="213" border="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF">
+          <tr> 
+            <td><img src="images/shim.gif" width="213" height="1"></td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="hunt_cheyenne_bottoms.html">Cheyenne 
+                Bottoms Information, <br>
+                Map, and Tips</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="hunt_quivira.html">Quivira 
+                NWR use, Regulations, Recommendations, and Map</a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="hunt_other.html">Other 
+                Public Hunting</a><a href="javascript;"></a></p>
+            </td>
+          </tr>
+          <tr> 
+            <td class="droplink"> 
+              <div align="right"><a href="hunt_private.html">Hunting on Private 
+                Land</a></div>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <p class="droplink" align="right"><a href="hunt_services.html">Hunter 
+                Services</a></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="1" bgcolor="#003366"><img src="images/blue_shim.gif" width="1" height="100%"></td>
+    </tr>
+  </table>
+  
+</div>
+<div id="huntclose" style="position:absolute; width:260px; z-index:8; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers();MM_swapImage('topnav_r1_c6','','images/topnav_r1_c6.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/shim.gif" width="260" height="340" border="0"></a></div><!-- #EndLibraryItem --><!-- URL's used in the movie-->
+<!-- text used in the movie-->
+<!-- #BeginLibraryItem "/Library/topnav.lbi" --><a name="istop"></a>
+<table width="680" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <div align="right"><a href="http://www.greatamericantrails.com"><img src="images/gat_project.gif" width="333" height="22" border="0" alt="Great American Trails"></a></div>
+    </td>
+  </tr>
+</table>
+<div align="center"> <img src="images/top_nav_static.jpg" width="680" height="120"> 
+  <table border="0" cellpadding="0" cellspacing="0" width="680">
+    <tr> 
+      <td colspan="6"><a href="javascript:;" onMouseOver="P7_autoLayers();MM_swapImage('topnav_r1_c3','','images/topnav_r1_c3.gif',1);MM_swapImage('topnav_r1_c4','','images/topnav_r1_c4.gif',1);MM_swapImage('topnav_r1_c5','','images/topnav_r1_c5.gif',1);MM_swapImage('topnav_r1_c6','','images/topnav_r1_c6.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/shim.gif" width="680" height="10" border="0"></a></td>
+    </tr>
+    <!-- fwtable fwsrc="topnav.png" fwbase="topnav.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+    <tr> 
+      <td><a href="javascript:;" onMouseOver="P7_autoLayers()"><img name="topnav_r1_c1" src="images/topnav_r1_c1.gif" width="160" height="18" border="0"></a></td>
+      <td><a href="index.html" onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('topnav_r1_c2','','images/topnav_r1_c2_f2.gif',1);MM_swapImage('topnav_r1_c3','','images/topnav_r1_c3.gif',1);P7_autoLayers()" ><img name="topnav_r1_c2" src="images/topnav_r1_c2.gif" width="50" height="18" border="0" alt="Home"></a></td>
+      <td><a href="general_information.html"  onMouseOver="MM_swapImage('topnav_r1_c3','','images/topnav_r1_c3_f2.gif',1);MM_swapImage('topnav_r1_c4','','images/topnav_r1_c4.gif',0);P7_autoLayers('aboutdrop','aboutcloser');P7_Snap('topnav_r1_c1','aboutcloser',98,18,'topnav_r1_c1','aboutdrop',111,18)" ><img name="topnav_r1_c3" src="images/topnav_r1_c3.gif" width="129" height="18" border="0" alt="General Information"></a></td>
+      <td><a href="visitor_information.html"  onMouseOver="MM_swapImage('topnav_r1_c4','','images/topnav_r1_c4_f2.gif',1);P7_autoLayers('visitordrop','visitorcloser');P7_Snap('topnav_r1_c1','visitorcloser',209,18,'topnav_r1_c1','visitordrop',229,18);MM_swapImage('topnav_r1_c3','','images/topnav_r1_c3.gif',0);MM_swapImage('topnav_r1_c5','','images/topnav_r1_c5.gif',0)" ><img name="topnav_r1_c4" src="images/topnav_r1_c4.gif" width="119" height="18" border="0" alt="Visitor Information"></a></td>
+      <td><a href="birding_wildlife.html"  onMouseOver="MM_swapImage('topnav_r1_c5','','images/topnav_r1_c5_f2.gif',1);P7_autoLayers('viewdrop','viewcloser');P7_Snap('topnav_r1_c1','viewcloser',373,18,'topnav_r1_c1','viewdrop',393,18);MM_swapImage('topnav_r1_c4','','images/topnav_r1_c4.gif',0);MM_swapImage('topnav_r1_c6','','images/topnav_r1_c6.gif',0)" ><img name="topnav_r1_c5" src="images/topnav_r1_c5.gif" width="164" height="18" border="0" alt="Birding and Wildlife Viewing"></a></td>
+      <td><a href="hunt.html"  onMouseOver="MM_swapImage('topnav_r1_c6','','images/topnav_r1_c6_f2.gif',1);P7_autoLayers('huntdrop','huntclose');P7_Snap('topnav_r1_c1','huntclose',431,18,'topnav_r1_c1','huntdrop',458,18);MM_swapImage('topnav_r1_c5','','images/topnav_r1_c5.gif',0)" ><img name="topnav_r1_c6" src="images/topnav_r1_c6.gif" width="58" height="18" border="0" alt="Hunting"></a></td>
+    </tr>
+  </table></div>
+<!-- #EndLibraryItem --><table width="680" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="150" valign="top" bgcolor="#848C5A"> 
+      <div align="center"> 
+        <p>&nbsp;</p>
+          <!-- #BeginLibraryItem "/Library/leftnav.lbi" --><table width="150" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td> 
+                <p><b><a href="contact_us.html">Contact us</a></b></p>
+                
+      <p><b><a href="sign_up.html">Sign up for KDWP newsletter </a></b></p>
+                <p><b><a href="join_the_journey.html">Join the Journey&#153;</a></b></p>
+                
+        <p><a href="b_w_sightings.html"><b>Current sightings</b></a></p>
+                  <p align="right"><br>
+                    <input type="text" name="textfield" size="15">
+                    <br>
+                    <b><a href="form1.html">Search!</a></b></p>
+                  <p align="right">&nbsp;</p>
+                  <p align="right">&nbsp;</p>
+                  <p align="right">&nbsp;</p>
+              </td>
+            </tr>
+          </table><!-- #EndLibraryItem --><p>&nbsp;</p>
+        <p style="margin-bottom: 0;">&nbsp;</p>
+      </div>
+    </td>
+    <td class="droplink"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="8">
+        <tr> 
+          <td> 
+            <h1 align="right">&nbsp;</h1>
+            <h1 align="right">Birdwatching and Wildlife Viewing</h1>
+            <p><b>Cheyenne Bottoms and Quivira NWR</b></p>
+            <p><img src="images/sandhill_crane_in_flight.jpg" width="220" height="169" align="right" alt="Sandhill Crane in Flight">Birdwatchers 
+              have long held Cheyenne Bottoms and Quivira as two "must see" places. 
+              Over 320 bird species have been spotted in Cheyenne Bottoms Wildlife 
+              Area and 250 in Quivira National Wildlife Refuge. Birds feeding 
+              along the roadways are easily observed with the naked eye. However, 
+              a 10X binocular or a spotting scope is ideal, especially for locating 
+              nests. (For example, the Yellow-headed Blackbird builds its nest 
+              by pulling together two or three cattails.)</p>
+            <p>Mid-March brings migrating ducks and cranes. Whooping Cranes migrate 
+              in flocks of two to seven and sometimes accompany the smaller gray 
+              sandhill crane. A Great Bend naturalist describes his first-time 
+              sighting: </p>
+            <dir> 
+              <p style="margin-bottom: 0">"When I thought about how few of these are in the whole world 
+                and I saw a flock of 20, I was seeing one seventh of the world's 
+                population and that was to me like seeing Haley's Comet!"</p>
+            </dir>
+            <p>Distinctive Whooping Crane characteristics are their five-foot 
+              height, snow-white color, red and black heads, black wing tips and 
+              most distinguishing of all, their loud "whooping" call during flight. 
+              Marsh waters provide crab, crayfish, frogs and other small aquatic 
+              life to boost the "whoopers" on their 2,500 mile trip between Northern 
+              Canada and South Texas. Whooping Cranes usually stop in the fall 
+              and occasionally in the spring in early April. Quivira's Wildlife 
+              Drive is the best place to see them but one should always call ahead 
+              to see if the "whoopers" are in residence.</p>
+            <p style="margin-bottom: 0;">Quivira: (620) 486-2393 </p>
+                
+            <p>Cheyenne Bottoms Hotline: (620) 793-7730</p>
+            <p><img src="images/spotted_sandpiper.jpg" width="220" height="149" align="right" alt="Spotted Sandpiper">In 
+              April common shorebirds like the Sandpiper, Plover, Phalaropes, 
+              Avocets, Godwits, and Dowitchers come. Tens of thousands of these 
+              flock to the mudflats where they probe successfully for bloodworms 
+              to fatten up for the remainder of their homeward journeys. (Bloodworms 
+              are larvae of the midge fly, which swarms in summer providing food 
+              for swallows.) Over 100 species of shorebirds nest in the refuges. 
+              The Snowy Plover and the Kildeer build hundreds of nests in the 
+              banks along Quivira NWR's Wildlife Drive in the summer and 60 plus 
+              species are permanent residents. More than 25 species of ducks and 
+              geese have been identified and at times number over 600,000.</p>
+            <dir> 
+              <p style="margin-bottom: 0">&quot;Shorebird watching can be immensely enjoyable,&quot; says 
+                Gene Brehm, Wildlife and Parks writer. He notes that the real 
+                crowd pleasers are Wilson's Phalarope sandpipers that swim rapidly 
+                in tight circles, stirring insects from the bottom muck, then 
+                picking out larvae caught in the resulting current. &quot;A casual 
+                observer... might think he's witnessing a group of brain damaged 
+                birds.&quot;</p>
+            </dir>
+            <p><img src="images/american_bittern.jpg" width="177" height="220" align="right" alt="American Bittern">Summer 
+              birds include Red-winged and Yellow-headed Blackbirds who build 
+              nests in the cattails, and Great Blue Herons, Snowy Egrets, Black-crowned 
+              Night Herons and American Bitterns who eat fish and frogs. Swainson's 
+              Hawk and Mississippi Kite are also summer residents. Marsh Hawks, 
+              Kestrels and Red-tailed Hawks are common throughout the year.</p>
+            <p>Barn Owls live around the CB headquarters building in specially 
+              made boxes. Burrowing Owls wait patiently beside prairie dog holes 
+              just north of the area and Great Horned Owls are easily sighted 
+              when they cross in front of the moon. Quivira has many owls living 
+              in timbered areas. Owl pellets that contain hair and bones of small 
+              rodents litter the sandy walking areas. </p>
+            <p>Fall brings almost a repeat of spring and winter brings the Golden 
+              and Bald Eagles. Look for Bald Eagles in Cheyenne Bottoms and around 
+              Little Salt March in Quivira.</p>
+            <p>Experienced birdwatchers like to go to various parts of the world 
+              to see gatherings of specific kinds of birds. This area offers VARIETY 
+              like none other in the world. </p>
+            <h1 align="center" style="margin-bottom: 0;">Birdwatching Map</h1>
+                        
+            <p align="center" style="margin-bottom: 0;">Click image 
+              for a larger view</p>
+                        
+            <p align="center"><a href="CheyenneBottomsSmallMap.htm"><img src="images/cheyennebottomsmapsmallest_001.jpg" border="0" width="500" height="355"></a></p>
+            <p>&nbsp;</p>
+             <!-- #BeginLibraryItem "/Library/bottomnav.lbi" --><p align="center" class="droplink"><a href="index.html">Home</a> | <a href="#istop">Top 
+  of Page</a><br>
+  <a href="general_information.html">General Information</a> | <a href="visitor_information.html">Visitor 
+  Information</a> | <a href="birding_wildlife.html">Birding and Wildlife Viewing</a> 
+  | <a href="hunt.html">Hunting</a> </p>
+
+<p align="left"><span class="credits"><br>
+  Site design and coding by <a href="http://www.fermatainc.com/" target="_blank">Fermata 
+  Inc.</a></span><!-- #EndLibraryItem --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+</BODY>
+</HTML>

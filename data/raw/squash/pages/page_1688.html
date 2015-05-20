@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>Interests of Florian Floyd Mueller</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="The homebase of Florian Floyd Mueller is my donation to the web. This is an overview over my study, work and ideas which I have done just for your viewing pleasure and to get me the best jobs possible!">
+<meta name="keywords" content="online,resume,portfolio,homepage,floyd,florian,muller,mueller,e-resume,excellent,multimedia,digital,media,medieninformatik,job,employment,internet,development,developer,analyst,technology,real,audio,video,eresume,software,programming,html,interactive,multi,narrative,network,application,intranet,extranet,seeker,career,IT,information,media,lab,project,management,cd-rom,dhtml,javascript,css,perl,c++,interface,design,instructional,educational,concept,conceptualisation,industry,internship,furtwangen,australia,germany,bachelor,degree,graduate,qualified,experience">
+<meta name="robots" content="index, follow">
+
+<script language="JavaScript" type="text/javascript">
+<!--
+	// by florian mueller
+
+	// preloads the images for rollover etc.
+	// call WM_preloadImages('imageURL')
+		
+	function WM_preloadImages() {
+		if (document.images) {
+			if (typeof document.WM == 'undefined') {
+				document.WM = new Object();
+			}
+			
+			document.WM.loadedImages = new Array();
+			var argLength = WM_preloadImages.arguments.length;
+			for(arg=0;arg<argLength;arg++) {
+				document.WM.loadedImages[arg] = new Image();	
+				document.WM.loadedImages[arg].src = WM_preloadImages.arguments[arg];
+			}
+		}
+
+	}
+	
+	
+	
+	// Function #3
+	//-------------	
+	// imageSwap for rollovers and message in statusbar
+	// call imageSwap(originalImageName, 'newSourceURL', message);
+	
+	function imageSwap(daImage, daSrc, message){
+		var objStr,obj;  		
+		if(document.images){
+	    		if (typeof daImage == 'string') {
+			      // This whole objStr nonesense is here solely to gain compatability
+			      // with ie3 for the mac.
+			      objStr = 'document.' + daImage;
+			      obj = eval(objStr);
+			      obj.src = daSrc;
+			}
+			else if ((typeof daImage == 'object') && daImage && daImage.src) {
+				daImage.src = daSrc;
+			}
+		}
+		
+		// call statusbar function
+		return statusbar(message);
+	}
+	
+	
+	// Function #4
+	//-------------			
+	// Swap 2 images for rollovers and message in statusbar + swap help image
+	// call imageSwap2(originalImageName, 'newSourceURL', message, 'help');
+	
+	function imageSwap2(daImage, daSrc, message, help){
+		
+
+  		var objStr,obj;
+		if(document.images){
+	    		if (typeof daImage == 'string') {
+			      // This whole objStr nonesense is here solely to gain compatability
+			      // with ie3 for the mac.
+			      objStr = 'document.' + daImage;
+			      obj = eval(objStr);
+			      obj.src = daSrc;
+			      // this is for the help
+			      document.help.src = help;
+			}
+			else if ((typeof daImage == 'object') && daImage && daImage.src) {
+				daImage.src = daSrc;
+				document.help.src = help;
+			}
+		}
+		
+		// call statusbar function
+		return statusbar(message);
+	}		
+
+	// Function #4
+	//-------------	
+	// status for displaying text in the statusbar
+	// call statusbar('text');
+	
+	function statusbar(message) {
+		
+		if (document.images) {
+			 window.status = message; return true;
+		}
+	}
+
+	// Function #5
+	//-------------
+	// opens a new window
+	// call newWindow('params');
+	function newWindow(theURL,winName,features) {
+		window.open(theURL,winName,features);
+	}
+
+
+
+	// load the mouseOver images here
+		var about = new Image();about.src = "../img/about.gif";
+		var about_n = new Image();about_n.src = "../img/about_n.gif";
+		var about_help = new Image();about_help.src = "../img/about_help.gif";
+		var study = new Image();study.src = "../img/study.gif";
+		var study_n = new Image();study_n.src = "../img/study_n.gif";
+		var study_help = new Image();study_help.src = "../img/study_help.gif";
+		var work = new Image();work.src = "../img/work.gif";
+		var work_n = new Image();work_n.src = "../img/work_n.gif";
+		var work_help = new Image();work_help.src = "../img/work_help.gif";
+		var achievements = new Image();achievements.src = "../img/achievements.gif";
+		var achievements_n = new Image();achievements_n.src = "../img/achievements_n.gif";
+		var achievements_help = new Image();achievements_help.src = "../img/achievements_help.gif";
+		var skills = new Image();skills.src = "../img/skills.gif";
+		var skills_n = new Image();skills_n.src = "../img/skills_n.gif";
+		var skills_help = new Image();skills_help.src = "../img/skills_help.gif";	
+		var examples = new Image();examples.src = "../img/examples.gif";
+		var examples_n = new Image();examples_n.src = "../img/examples_n.gif";
+		var examples_help = new Image();examples_help.src = "../img/examples_help.gif";
+		var resume = new Image();resume.src = "../img/resume.gif";
+		var resume_n = new Image();resume_n.src = "../img/resume_n.gif";
+		var resume_help = new Image();resume_help.src = "../img/resume_help.gif";
+		var aims = new Image();aims.src = "../img/aims.gif";
+		var aims_n = new Image();aims_n.src = "../img/aims_n.gif";
+		var aims_help = new Image();aims_help.src = "../img/aims_help.gif";
+		var tour = new Image();tour.src = "../img/tour.gif";
+		var tour_n = new Image();tour_n.src = "../img/tour_n.gif";
+		var tour_help = new Image();tour_help.src = "../img/tour_help.gif";				
+		
+		var search = new Image();search.src = "../img/search.gif";
+		var search_h = new Image();search_h.src = "../img/search_h.gif";
+		var home = new Image();home.src = "../img/home.gif";
+		var home_h = new Image();home_h.src = "../img/home_h.gif";
+		var email_address = new Image();email_address.src = "../img/email_address.gif";
+		var email_address_h = new Image();email_address_h.src = "../img/email_address_h.gif";
+		var forward_button = new Image();forward_button.src = "../img/forward_button.gif";
+		var forward_button_h = new Image();forward_button_h.src = "../img/forward_button_h.gif";
+		var backward_button = new Image();backward_button.src = "../img/backward_button.gif";
+		var backward_button_h = new Image();backward_button_h.src = "../img/backward_button_h.gif";	
+
+
+//-->
+</script>
+
+
+</head>
+
+<body bgcolor="#000000" text="#666666" link="#333333" vlink="#666666" alink="#000000">
+<div align="CENTER">
+  <table border="0" width="765" cellspacing="0" cellpadding="0" align="CENTER">
+    <tr> 
+      <td valign="TOP" BACKGROUND="../img/left_fade_fill.gif" bgcolor="#000000"><div align="RIGHT"><img src="../img/logo.gif" width="172" height="125" align="TOP"><br>
+        <a href="../about/about.htm" onmouseover="return statusbar('Internal Link: Where I come from and go to, my theories, contact details and site statistics'); " onmouseout="return statusbar('');"> 
+        <img name='about' src="../img/about.gif" width="172" height="34" align="TOP" border="0"><br>
+        </a> 
+        <a href="theories.htm">
+        <img src="img/theories.gif" width="172" height="15" border="0"></a><br>
+        <a href="interests.htm"><img src="img/interests.gif" width="172" height="15" border="0"></a><br>
+        <a href="contact.htm"><img src="img/contact.gif" width="172" height="15" border="0"></a><br>
+        <a href="site_statistics.htm"><img src="img/site_statistics.gif" width="172" height="15" border="0"></a><br>
+        <a href="credits.htm"><img src="img/credits.gif" width="172" height="15" border="0"></a><br>
+        
+        <a href="../study/study.htm" onmouseover="return imageSwap2(study, '../img/study.gif', 'Internal Link: My degrees in Digital Media (Germany) and Multimedia (Australia)', '../img/study_help.gif'); " onmouseout="return imageSwap2(study, '../img/study_n.gif', '', '../img/about_help.gif');">
+        
+        <img name='study' src="../img/study_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../work/work.htm" onmouseover="return imageSwap2(work, '../img/work.gif', 'Internal Link: My most recent jobs: Virtual Artists (Australia), Springer Publisher (Germany), Queensland Open Learning Network (Australia)', '../img/work_help.gif'); " onmouseout="return imageSwap2(work, '../img/work_n.gif', '', '../img/about_help.gif');"> 
+        <img name='work' src="../img/work_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../achievements/achievements.htm" onmouseover="return imageSwap2(achievements, '../img/achievements.gif', 'Internal Link: I have been offered two scholarships, started Germany\'s first college radio Diaroe, and ...', '../img/achievements_help.gif'); " onmouseout="return imageSwap2(achievements, '../img/achievements_n.gif', '', '../img/about_help.gif');"> 
+        <img name='achievements' src="../img/achievements_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../skills/skills.htm" onmouseover="return imageSwap2(skills, '../img/skills.gif', 'Internal Link: Thorough skills in new media conceptualising and development, project management, interface design and instructional design all on the thoery as well as on the practical level', '../img/skills_help.gif'); " onmouseout="return imageSwap2(skills, '../img/skills_n.gif', '', '../img/about_help.gif');"> 
+        <img name='skills' src="../img/skills_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../examples/examples.htm" onmouseover="return imageSwap2(examples, '../img/examples.gif', 'Internal Link: A few of my work examples (realVideo, VRML2, DHTML, virtual reality, neural network...)', '../img/examples_help.gif'); " onmouseout="return imageSwap2(examples, '../img/examples_n.gif', '', '../img/about_help.gif');"> 
+        <img name='examples' src="../img/examples_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../resume/resume.htm" onmouseover="return imageSwap2(resume, '../img/resume.gif', 'Internal Link: All at a glance: My resume in HTML as well as PDF format', '../img/resume_help.gif'); " onmouseout="return imageSwap2(resume, '../img/resume_n.gif', '', '../img/about_help.gif');"> 
+        <img name='resume' src="../img/resume_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../aims/aims.htm" onmouseover="return imageSwap2(aims, '../img/aims.gif', 'Internal Link: My plans to go further into research and career objectives', '../img/aims_help.gif'); " onmouseout="return imageSwap2(aims, '../img/aims_n.gif', '', '../img/about_help.gif');"> 
+        <img name='aims' src="../img/aims_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <a href="../tour/tour.htm" onmouseover="return imageSwap2(tour, '../img/tour.gif', 'Internal Link: Here you can tour through my life', '../img/tour_help.gif'); " onmouseout="return imageSwap2(tour, '../img/tour_n.gif', '', '../img/about_help.gif');"> 
+        <img name='tour' src="../img/tour_n.gif" width="172" height="33" align="TOP" border="0"></a><br>
+        <img name='help' src="../img/about_help.gif" width="172" height="127"><br>
+        <img src="../img/left_fade_fill.gif" width="172" height="100%"></div> </td>
+      <td valign="TOP" bgcolor="#FFFFFF"><div align="LEFT"><img src="../img/logo_fade_name.gif" width="98" height="143"><br>
+        <img src="img/line.gif" width="98" height="25"></div></td><td valign="TOP" bgcolor="#FFFFFF"><p><img src="../img/top_fade_home.gif" width="324" height="24"><a href="../home/home.htm"  onmouseover="return imageSwap(home, '../img/home_h.gif', 'Internal Link: To the frontpage'); " onmouseout="return imageSwap(home, '../img/home.gif', '');"><img name='home' src="../img/home.gif" width="42" height="24" border="0"></a><a href="../search/search.htm"  onmouseover="return imageSwap(searchb, '../img/search_h.gif', 'Internal Link: You can search through my site using a searchengine'); " onmouseout="return imageSwap(searchb, '../img/search.gif', '');"><img name='searchb' src="../img/search.gif" width="53" height="24" border="0"></a><br>
+          
+          
+          
+          
+          
+          
+        
+          <img src="../img/name.gif" width="419" height="62" align="TOP"><br>
+          <img src="img/about.gif" width="419" height="93"><br>
+          <img src="../img/title_low.gif" width="155" height="18"><img src="img/interests_tit.gif" width="264" height="18"><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="2"><br>
+          </font></p>
+          
+          
+        
+        <!-- HERE COMES THE CONTENT
+        --> 
+        <p><font color="#666666" face="Tahoma, Verdana, Arial" size="3">Sport</font></p>
+        <p>I<font color="#666666" face="Tahoma, Verdana, Arial" size="2"> am an 
+          active and keen participant in sport and during the basketball season 
+          spend much of my leisure time training and playing basketball. Although 
+          I am not really good at it, I love this game. I also enjoy riding my 
+          bike. My bike is not merely excercise equipment, it is also a personal 
+          statement.<img src="img/sunrise.jpg" width="220" height="219" align="RIGHT" vspace="8" hspace="8"></font></p>
+        <p><font color="#666666" face="Tahoma, Verdana, Arial" size="2">I also 
+          play tennis, table-tennis and squash and try to find soccer interesting.</font></p>
+        <p><font color="#666666" face="Tahoma, Verdana, Arial" size="3">Travel</font></p>
+        <p><font color="#666666" face="Tahoma, Verdana, Arial" size="2">I have 
+          traveled a lot around Australia and Europe, especially in France, because 
+          it is quite close to where I used to live. I have also seen Spain, Sweden, 
+          Austria, Switzerland, Italy, Hungary and England. </font></p>
+        <p><font color="#666666" face="Tahoma, Verdana, Arial" size="2">Next I 
+          would like to visit friends in the Netherlands as well as in Norway.</font></p>
+        <p><font face="Tahoma, Verdana, Arial" size="2" color="#666666"> </font></p>
+        <p>&nbsp; </p>
+        <!-- END OF CONTENT
+        -->  
+
+        
+        
+        </td>
+      <td valign="TOP" BACKGROUND="../img/right_line.gif" bgcolor="#FFFFFF"><div align="RIGHT"><img src="../img/right_line_top.gif" width="76"><br>
+        <img src="../img/right_line.gif" width="76" height="100%" vspace="0" hspace="0" border="0"><br></div>
+      </td>
+    </tr>
+    <tr> 
+      <td><img src="../img/left_fade_fill_buttons.gif" width="172" height="37"></td>
+      <td bgcolor="#FFFFFF">&nbsp;</td>
+      <td bgcolor="#FFFFFF" align="RIGHT" valign="BOTTOM"> 
+        <div align="RIGHT">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="MIDDLE">&nbsp;</td>
+              <td valign="MIDDLE">&nbsp;</td>
+              <td valign="MIDDLE"><font size="1" color="#666666"><a href="contact.htm" onmouseover="return imageSwap(forw, '../img/forward_button_h.gif', 'Internal Link: One page forward'); " onmouseout="return imageSwap(forw, '../img/forward_button.gif', '');"><img name='forw' src="../img/forward_button.gif" width="17" height="22" border="0" alt="to my  contact details" align="MIDDLE"></a></font></td>
+            </tr>
+          </table>
+          
+        </div>
+      </td>
+      <td><img src="../img/right_line.gif" width="76" height="37"></td></tr><tr bgcolor="#000000"> 
+      <td colspan="4"><img src="../img/bottom_line.gif" width="765" height="79"></td>
+    </tr>
+    <tr bgcolor="#000000"><td colspan="4"> <img src="../img/bottom_fade.gif" width="546" height="12"><a href="../about/contact.htm"  onmouseover="return imageSwap(emailb, '../img/email_address_h.gif', 'Internal Link: There are many ways to contact me');" onmouseout="return imageSwap(emailb, '../img/email_address.gif', '');"><img name='emailb' src="../img/email_address.gif" width="168" height="12" border="0" alt="to the contact page"></a><img src="../img/bottom_round_corner.gif" width="51" height="12"></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+<META Name="Habillage" Content="ManyPage 0.9 developed by Pierre Cordani with Pascal Vuylsteker help">
+
+        <META NAME="Author" CONTENT="Pascal Vuylsteker">
+	<META NAME="description" CONTENT="eScience : teaching and research in Virtual Reality and around">
+	<META NAME="keywords" CONTENT="Computer Graphics, Lecture Notes">
+	<META NAME="Rating" CONTENT="General">
+    <META Name="date" Content="Tue, 20 Apr 2004 13:35:08 GMT">
+    <LINK REL="SHORTCUT ICON" href="/favicon.ico">
+	<TITLE>eScience : Computer Graphics : Practical Assignment 2</TITLE>
+
+<style type="text/css">
+<!--
+
+h1 {  font-family: Arial, Helvetica, sans-serif; color: #990000; background-color: #CCFFFF; clip:    rect(   ); text-align: center}
+h2 {  font-family: Arial, Helvetica, sans-serif; color: #990000; background-color: #CCFFFF}
+h3 {  padding-left: 30px; font-family: Arial, Helvetica, sans-serif; border-color: #CCFFFF; border-bottom-width: thin}
+h4 {  padding-left: 60px; font-family: Arial, Helvetica, sans-serif; border-color: #CCFFFF; border-bottom-width: thin}
+.titrevrarchitect {  color: #CC0000}
+.lecturenotes { font-size: 1px; color: #FFFFFF; line-height: 1px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; visibility: hidden}
+.lecturenotesCopy { font-size: 1px; color: #FFFFFF; line-height: 1px; padding-top: 0px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; visibility: hidden}
+.lecturetexte {  text-indent: 20pt; clip:    rect(   ); margin-left: 20px; color: #000033}
+.javacode {  color: #000099; background-color: #FFFF00; font-family: "Courier New", Courier, mono; font-size: medium; font-weight: bold}
+.javacodeNew { color: #0000FF; background-color: #FFCC00; font-family: "Courier New", Courier, mono; font-size: medium; font-weight: bold }
+.indice {  vertical-align: sub}
+.exposant {	vertical-align: super;	}
+.math { color: #000033; background-color: #FFFF99; font-family: "Courier New", Courier, mono; font-size: medium; font-weight: normal; text-align: center}
+.mathNonCenter { color: #000033; background-color: #FFFF99; font-family: "Courier New", Courier, mono; font-size: medium; font-weight: normal}
+.redBox { border: medium solid #FF0000;}
+.surligne { font-weight: bold; color: #CC0000; background-color: #FFFF66; }
+
+
+a:link {color:#990000}
+a:visited {color:#990000} 
+a:hover {color:#FF0000}
+a.h2:link {color:#990000}
+a.h2:visited {color:#990000} 
+a.h2:hover {color:#FF0000}
+
+-->
+</style>
+
+<script id='keycode'>
+IE4 = (document.all); 
+NS4 = (document.layers); 
+if (NS4) document.captureEvents(Event.KEYPRESS);document.onkeypress = doKey; 
+function doKey(e) { 
+whichASC = (NS4) ? e.which : event.keyCode; 
+whichKey = String.fromCharCode(whichASC).toLowerCase(); 
+switch (whichKey) { 
+case "b": 
+eval("parent.location=''");
+break; 
+case "v": 
+eval("parent.location=''");
+break; 
+case "n": 
+eval("parent.location=''");
+break; 
+case "m": 
+eval("parent.location=''");
+break; 
+case "u": 
+eval("parent.location=''");
+break; 
+case "y": 
+eval("parent.location=''");
+break; 
+case "i": 
+eval("parent.location=''");
+break; 
+case "g": 
+eval("parent.location='/lecture/cg/index.en.html'");
+break; 
+case "h": 
+eval("parent.location='/lecture/cg/index.en.html'");
+break; 
+default: break;}
+}
+</script>
+
+
+</HEAD>
+	
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<CENTER>
+<table class="lecturetexte" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000099">
+  <tr class="lecturetexte" bgcolor="#000066"> 
+    <td class="lecturetexte"> 
+          
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" 
+            bgcolor="#DDFFFF">
+                
+                <th bgcolor="#DDFFFF">[
+				 <a HREF="http://www.vuylsteker.net/index.en.html" 
+				 onMouseOver="window.status='Contact'; 
+				 return true"><font face="Arial, Helvetica, sans-serif">Contact</font></A>
+				 ]</th>
+                <th bgcolor="#DDFFFF">[
+				 <a href="/links/top_computergraphics.en.html" 
+				 onMouseOver="window.status='Links'; 
+				 return true"><font face="Arial, Helvetica, sans-serif">Links</font></A>
+				 ]</th>
+                
+                
+                
+			</table>
+          
+    </td>
+  </tr>
+</table>
+</CENTER>		
+	
+
+    
+	
+	
+    
+
+<!-- Debut du corps . Fin de l'habillage de haut de page -->
+
+	
+<H2>Practical Assignment CG 2</H2>
+<H1>Let's play squash</H1>
+<P>In this assignment you are asked to simulate a squash game in 3D, where the 
+  players, the terrain and the ball would be instances of different classes. </P>
+<P align="center"><A href="scr_shot.jpg"><IMG src="scr_shot.jpg" width="512" height="384" border="0"></A> 
+</P>
+<H3>The terrain class</H3>
+<P>The minimum terrain should be composed of a rectangular ground and one wall. 
+  A typical terrain would be more complex (2, 3, 4, 5 walls). The definition of 
+  the terrain include a &quot;launcher&quot; which initialises a ball's position, 
+  speed, and acceleration (earth gravitation by default) located in the middle 
+  of the wall at a height of one meter and pointed in such a way that the ball 
+  should be at a height of 1 meter when reaching the centre of the terrain. If 
+  there is more than one ball on the terrain, they are sent FIFO (First In First 
+  Out) at a 5 seconds intervals. If a ball reaches the outside of the ground it 
+  should be put back in the launcher queue.</P>
+<P>When the terrain receives the position of the ball it checks by itself if there 
+  is a collision (a ball should always remain on the same side of a wall). If 
+  a collision is detected, it informs the ball and specifies the point of impact, 
+  the normal to the plane and a kinetic energy reduction factor, the value of 
+  which depends on the surface (0&lt;value&lt;=1).</P>
+<P>Initial value of position of the thrown balls should be an easily accessible 
+  parameter of the terrain (constructor parameter for instance).</P>
+<P>For a simple terrain, it should be possible to specify the following parameters 
+  : the size of the ground, and the height of the walls. Then you should be able 
+  to ask for up to 4 other walls, which will appear successively as the right 
+  wall, the left wall, the ceiling and the back wall.</P>
+<H3>The balls </H3>
+<P>A ball should know its position, speed and acceleration and should send this 
+  information to the terrain and the players every frame).</P>
+<P> Each time a ball receives the information about a collision (point and normal 
+  and energy collision factor) from the terrain or the players, it should compute 
+  its new velocity and immediately send its resulting change of behaviour. </P>
+<P>One of the ball parameters is the percent of kinetic energy the ball will lose 
+  after each collision with the ground or the walls or the racket. In fact the 
+  change in Kinetic energy (and therefore in speed) is defined both by the ball 
+  (loss of energy) and either the racket (gain of energy) or the wall (lose of 
+  energy) and the resulting effect is calculated by the multiplication of the 
+  two factors :</P>
+<P>Effect = BallLost * WallLost or Effect = BallLost * GroundLost</P>
+<P>or Effect = BallLost * RacquetGain (it will be either a lost or a gain)</P>
+<P>And the relation between the square of the speed, before (v) and after (v') 
+  the collision is given by v'<SPAN class="indice">2</SPAN> = Effect * v2</P>
+<P>You should check that 0 &lt; BallLost &lt;= 1 ; 0 &lt; WallLost&lt;= 1 ; 0 
+  &lt; GroundLost&lt;= 1 (a value of 1 exists only in perfect materials)</P>
+<P>and 1 &lt;= RacquetGain &lt;= 10</P>
+<P> If the total energy (kinetic+potential) of the ball is close to zero, it should 
+  be put back in the FIF0 launcher queue. ( E = 1/2mv2 + mgh). <BR>
+  If the ball goes to far away from the terrain (because it didn't touch any walls, 
+  it will be brought back into the FIFO launcher queue.</P>
+<H3>The players</H3>
+<P>When launching a racket/player, you specify the size of the racket in centimetres 
+  (between two limits chosen in order to match the possible speed of the racket), 
+  the colour of the racket, and the set of keys to manipulate the racket. If the 
+  colour has already been chosen, then the next available one will be attributed 
+  automatically (amongst a predefined list of possible colours).</P>
+<P>The default controls for the first two players :</P>
+<TABLE width="60%" border="1" align="center" cellpadding="2" cellspacing="0">
+  <TR> 
+    <TH>Move</TH>
+    <TH>Left player</TH>
+    <TH>Right player</TH>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Toward the main wall</DIV></TH>
+    <TD align="center">
+<DIV align="center">W</DIV></TD>
+    <TD align="center">8</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Backward</DIV></TH>
+    <TD><DIV align="center">S</DIV></TD>
+    <TD align="center">5</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Left</DIV></TH>
+    <TD align="center">A</TD>
+    <TD align="center">4</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Right</DIV></TH>
+    <TD align="center">D</TD>
+    <TD align="center">6</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Up</DIV></TH>
+    <TD align="center">Q</TD>
+    <TD align="center">7</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Down</DIV></TH>
+    <TD align="center">E</TD>
+    <TD align="center">9</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Positive rotation around x axis</DIV></TH>
+    <TD align="center">C</TD>
+    <TD align="center">O</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Negative rotation around x axis</DIV></TH>
+    <TD align="center">V</TD>
+    <TD align="center">P</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Positive rotation around y axis</DIV></TH>
+    <TD align="center">B</TD>
+    <TD align="center">[</TD>
+  </TR>
+  <TR> 
+    <TH><DIV align="left">Negative rotation around y axis</DIV></TH>
+    <TD align="center">N</TD>
+    <TD align="center">]</TD>
+  </TR>
+</TABLE>
+<P>Each player is represented by a square or disc racket ( the display look could 
+  be different, but the collision detection will be done against a square or disc 
+  surface, whatever you chose). </P>
+<P>The bigger is the racket, the slower it can be move (Width x Speed = Constant)</P>
+<P>When the racket receives the position of the ball, it checks by itself if a 
+  collision has occurred. If yes, it informs the ball and specifies the point 
+  of impact and the normal to the plane and the gain in kinetic energy ( 1&lt;= 
+  gain &lt;= 10) which is proportional to the speed of the racket (to simplify 
+  this, just assume that this is a constant depending directly on the size of 
+  the racket, and proportional to its speed).</P>
+<P>For the direction and the speed of the ball after a collision, you should implement 
+  at least the &quot;Mixed Treatment&quot; of the &quot;<A href="http://www.ifi.unizh.ch/%7Enoser/BIBLIO/ball.pdf">Generic 
+  3D Ball Animation Model for Networked Interactive VR Environments</A>&quot; 
+  paper. The &quot;Physical response&quot; (taking into account the direction 
+  of the racket) would be a plus but is not compulsory.</P>
+<TABLE width="99%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <TR>
+    <TD><DIV align="center"><IMG src="collision.png" width="300" height="176"><BR>
+        Collision (if detected, Pafter will become Pintersection)</DIV></TD>
+    <TD><DIV align="center"><IMG src="nocollision.png" width="467" height="257"><BR>
+        No Collision (this situation should be detected quickly)</DIV></TD>
+  </TR>
+</TABLE>
+<P>One should be able to move the racket along the 3 translations (x, y , z) and 
+  to rotate it around the two axis parallel to the main wall. So 10 </P>
+<P align="center"><IMG src="moves.png" width="479" height="290"></P>
+<H3>The game</H3>
+<P>The Game class is the 3D representation of the game. I will let you chose if 
+  there should be still another class to represent the 2D interface (just explain 
+  your decision in your REAME file). The idea is that there should be a class 
+  that will take care of organise the launching of the game (attribution of colours, 
+  set of keys,...), and take care of the organisation of the time in such a way 
+  that every class gets the time to do whatever it needs to do (event loop).</P>
+<H2><A name="GroundRules"></A>Ground Rules for all projects:&nbsp; </H2>
+<UL>
+  <LI>The design and coding must be your own.</LI>
+  <LI>Don't use code from previous semesters.</LI>
+  <LI>Cite any models, images, ideas, or algorithms that you do not develop yourself.</LI>
+  <LI> Project is due before midnight of the day indicated : 18 October 2002.</LI>
+  <LI>The project will be presented by both members of the group in a 2x5+5 min 
+    session on the 30th and 31st of October in the eScience laboratory. Each student 
+    will have 5 min to present their part of the project and there will be a 5 
+    min Q&amp;A period.</LI>
+  <LI>Please read this text through to the end before touching the keyboard.</LI>
+  <LI>Then before beginning the project, have a look at this document on the web 
+    page : you will find some useful links like the one to the README file model 
+    or some pictures of the original work.</LI>
+  <LI>Late : if the assignment is not finished in time, there will be a 10 % penalty 
+    for each day late after the 22nd of October 2002.<BR>
+  </LI>
+</UL>
+<H2><A name="SubmitProject"></A>To submit a project ...</H2>
+<H3> you should put altogether, in a directory called 02CGA2_U<I>studentID1_</I>U<I>studentID2 
+  </I></H3>
+<H4>(Where 'studentID1'... your student ID !)</H4>
+<UL>
+  <LI>Your well commented Java source file(s)</LI>
+  <LI>Your compiled classes</LI>
+  <LI>The documentation generated by javadoc (make sure you are using the &quot;-private&quot; 
+    option in order to have all the classes and methods documented).</LI>
+  <LI> A 'README.html' HTML file that should summarise and/or describe (it is 
+    your report file and is important in the marking)... 
+    <UL>
+      <LI>all that is available in your directory</LI>
+      <LI>the options you have chosen to implement (there should be at least 2 
+        of them)</LI>
+      <LI>how to use your program</LI>
+      <LI>the command line options</LI>
+      <LI>the GUI</LI>
+      <LI>The way you have implemented the algorithm (tricks that are particulars 
+        to your work)</LI>
+      <LI>one or more screenshots of your program (that shows both the tree and 
+        the GUI)</LI>
+      <LI>main organisation of the project (class, algorithms ...)</LI>
+    </UL>
+  </LI>
+</UL>
+<P>Here is its <A href="README.html">README.html file template</A></P>
+<H3>Use the jar command to put your directory into a single jar file based on 
+  the same name and mail this file to <A href="mailto:pascal.vuylsteker@anu.edu.au">pascal.vuylsteker@anu.edu.au</A></H3>
+<PRE>cd .. (go to the directory in which 02CGA2_UstudentID1_UstudentID2 is located)</PRE>
+<PRE>jar cvf 02CGA2_UstudentID1_UstudentID2.jar 02CGA2_UstudentID1_UstudentID2/</PRE>
+<P>Mail the file (02CGA2_UstudentID1_UstudentID2.jar) as an attached document. 
+  Be sure that the title of your mail is '02CGA2_UstudentID1_UstudentID2.jar'</P>
+<P>!!! <B>Your jar file should not be more than 750 kB</B> !!! </P>
+<H2><A name="Minimum"></A>The minimum requirements</H2>
+<P>Your project should be composed of, at least, the following :</P>
+<P>(1) A set of at least 4 to 6 well balanced large classes (there could some 
+  other small ones). Think about it in term of reusability of the code, and allocation 
+  of the work between members of the working group. </P>
+<P>(2) One public class, whose name will be &quot;Assignment&quot; and that will 
+  contain the &quot;main method&quot; in such a way that, to test your project, 
+  I will only need to call <KBD>'java Assignment [command line arguments]' </KBD>to 
+  run it. Because yours classes will be well documented, I should be able to write 
+  that &quot;Assignment&quot; class by myself without to much work. That means 
+  that the aim of that class is just to get and treat the command line arguments 
+  and launch the main one(s).</P>
+<P>(3) You will explain the use of the arguments in your README file but the 2 
+  first one will be </P>
+<P>E.g. : <KBD>java Assignment</KBD> <KBD>numberOfUsers numberOfBalls</KBD></P>
+<P>With default values : 2&nbsp; and 1</P>
+<P>(4) When you write down &quot;<KBD>java Assignment -h</KBD>&quot; <KBD>or &quot;java 
+  Assignment -?</KBD>&quot;, you are expected to receive a user's manual (an extract 
+  of your README file ?)</P>
+<P>(5) Remember that sometime, users may be dumb and may not use the right number 
+  of arguments, nor the expected argument</P>
+<P>(6) Your main classes should not have references to the com.sun.j3d.utils package. 
+  If you really want to use theses packages, you should encapsulate their use 
+  into some of your specific classes. You will then be able to use your personal 
+  specific classes in your main classes</P>
+<P>(7) the usual comfort of an interface is the resizability of the main frame 
+  and the fact that the frame is well dimensioned and placed inside the display 
+  screen at the start.</P>
+<P>(8) The scene should contain a background object and a horizontal plane.</P>
+<P>(9) Your code should be well commented and presented (extracted comments for 
+  the documentation and some insides comment whenever there is an algorithm to 
+  comment.</P>
+<P>(10) The main window should display the squash court from its back, looking 
+  at the main wall</P>
+<P>(11) The second window (or 2D part of the main frame, whatever you chose to 
+  implement) will contain the GUI to allow you to start a new game (after changing 
+  the number of user/ball/walls) and to change the keys attributed for each users 
+  moves </P>
+<P>(12) The compiled classes should be available at the root of your directory. 
+  During the marking process, I may :</P>
+<UL>
+  <LI>unjar your jar file (jar xvf...)</LI>
+  <LI>cd into your directory (all the file should be in your directory or in subdirectories 
+    and should not mess with my working directory !)</LI>
+  <LI>run '<KBD>java Assignment</KBD> <KBD>2 2</KBD>'</LI>
+  <LI>del *.class</LI>
+  <LI>javac *.java</LI>
+  <LI>and keep doing other sort of tests...</LI>
+</UL>
+<H2>(Not So) Optional Development:</H2>
+<H4>You should do at least <B>two <I>( 2 )</I></B> of theses options to get the 
+  maximum mark.</H4>
+<H4>1) ViewPoints</H4>
+<P>At least two different other viewpoints amongst the following ones, rendered 
+  in another frame (we should have simultaneously : the main canvas3D with the 
+  &quot;from behind&quot; viewpoint and a second canvas3D where you should be 
+  able to switch between the additional views) </P>
+<UL>
+  <UL>
+    <LI>From above the scene (would be used as a map of the scene).</LI>
+    <LI>From behind one chosen user, following it, looking towards the main wall</LI>
+    <LI>From the centre of the racket looking at direction of the normal to the 
+      racket.</LI>
+    <LI>From the ball, looking at the direction in which it is moving.</LI>
+  </UL>
+</UL>
+<H4>2) Shadowing</H4>
+<P>In order to improve the playability of the game, you should&nbsp; add two &quot;shadows&quot; 
+  for each moving object (balls and rackets). One shadow will represent the position 
+  of the object on the floor and the other one on the main wall. They are projection 
+  of the object on those planes. </P>
+<P>PS. : A additional option to this option (does not count in the mark : you 
+  do it only for the fun) would be to propose an additional helper that will display 
+  racket's orientation.</P>
+<H4>3) Computer play</H4>
+<P>You may decide that some (and sometimes all) of the players will be directed 
+  by the computer. You should include some different parameters for each computer 
+  player, and adjust the characteristics in such a way that the computer may lose 
+  (except if you chose the &quot;invincibly set of parameter&quot;).</P>
+<H4>4) Physical modeling for the ball</H4>
+<P>Ball lifting : take into account not only the position of the rackets and its 
+  speed, but the orientation of its speed, and add a spinning characteristic to 
+  the ball, defined by a rotation axis and a rotation speed). Any collision (wall 
+  or racket) will have an effect on the Spin (change in speed and direction), 
+  and will be effected by this spin (the reflection won't be anymore of the same 
+  angle, in the same plane).You will have to well explain your physical model, 
+  both in your java comments and in the README file.</P>
+<H4>5) Mouse</H4>
+<P>One of the players should be able to use the mouse to move its racket (horizontal 
+  movement of the racket).</P>
+<H4>6) Real Squash rules</H4>
+<P>Addition of the official squash rules and score. I don't give you those rules 
+  here, but I've have some specialists around here who will be able to confirm 
+  for me if you have used the correct rules. In that option, you will have to 
+  display correct border lines on the walls, and check where and when the ball 
+  rebound occurs (You could for instance use a Finite State Machine to describe 
+  the rules). Again, document the rules in your README file.</P>
+<H4>7) Sound feedback</H4>
+<P>Each time a collision occur, one should hear it.</P>
+<H4>8) <A href="../../../ivr/exercises/a3/index.en.html">IVR</A></H4>
+<P>Do the internetworked VR assignment : Make the game be playable over the net 
+  (See the specification of this assignment within next week, on the IVR Web page). 
+  This option is of course not a valid one for IVR students !!! (nor for the group 
+  that will work with Shaun Press).</P>
+<H4>9) Wedge</H4>
+<P>An implementation of that project that would be usable on the Wedge (i.e. that 
+  uses the Tiwi package).<BR>
+  If you want&nbsp; to do that option, you should tell me quite early in order 
+  to get some allocated time on the wedge computer.</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P></P>
+<P>&nbsp;</P>
+
+
+<!-- Fin du corps . Habillage de bas de page -->
+
+
+<CENTER>
+				<CENTER>
+<table class="menuup" width="100%" border="0" cellspacing="2" cellpadding="2" bgcolor="#000099">
+  <tr class="menuup" bgcolor="#000066"> 
+    <td class="menuup"> 
+      <table class="menuup" border="0" cellspacing="0" cellpadding="3" bgcolor="#00FFFF" width="100%">
+        <tr class="menuup"> 
+          <td class="menuup" rowspan="3" bgcolor="#009999"> <pre><a HREF="/lecture/index.en.html"><font 
+	size="+3" color="#CC0000" face="Arial, Helvetica, sans-serif" class="titrevrarchitect">eScience</font></a></pre></td>
+		  <td class="menuup" bgcolor="#66FFFF">
+		  
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0" 
+            bgcolor="#66FFFF">
+                <th bgcolor="#66FFFF"><font size="-2">&lt;</font>
+				 <font face="Arial, Helvetica, sans-serif"><a HREF="index.en.html" 
+				 onMouseOver="window.status='Computer Graphics'; 
+				 return true">Computer Graphics</A>
+
+				 
+				 
+				 
+				 
+
+				</font>
+				 <font size="-2">&gt;</font></th>
+			</table>
+		  
+		  </td>
+        </tr>
+        <tr class="menuup"> 
+          <td class="menuup" bgcolor="#66FFFF"> 
+          
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" 
+            bgcolor="#DDFFFF">
+                
+                <th bgcolor="#DDFFFF">[
+				 <a HREF="http://www.vuylsteker.net/index.en.html" 
+				 onMouseOver="window.status='Contact'; 
+				 return true"><font face="Arial, Helvetica, sans-serif">Contact</font></A>
+				 ]</th>
+                <th bgcolor="#DDFFFF">[
+				 <a href="/links/top_computergraphics.en.html" 
+				 onMouseOver="window.status='Links'; 
+				 return true"><font face="Arial, Helvetica, sans-serif">Links</font></A>
+				 ]</th>
+                
+                
+                
+			</table>
+          
+          </td>
+        </tr>        
+      </table>
+    </td>
+  </tr>
+</table>
+</CENTER>
+				<BR>
+				
+				<TABLE BORDER="0" WIDTH="100%">
+				<TR>
+					<TD ALIGN=LEFT>See the "Links" link above to find out the sources of the proposed informations<BR>
+				<A HREF="http://www.vuylsteker.net/index.en.html">Pascal Vuylsteker</A> / 
+				<A HREF="http://escience.anu.edu.au">eScience</A> / 
+				<A HREF="http://cs.anu.edu.au">Computer Science</A> / 
+				<A HREF="http://www.anu.edu.au">ANU</A> 
+					</TD>
+					<TD ALIGN=CENTER>Last modified: 20/4/2004
+					<BR><A HREF="tableOfContent.en.html">TOC</A>&nbsp;-&nbsp;<A HREF="printNotes.en.html">Print</A>
+					</TD>
+					<TD ALIGN=RIGHT>Send your comments at :<BR>
+				<A HREF="mailto:Hugh.Fisher@anu.edu.au">&lt;Hugh.Fisher@anu.edu.au&gt;</A>
+					</TD>
+				</TR>
+				</TABLE>
+				</CENTER>		
+
+		
+</BODY>
+</HTML>

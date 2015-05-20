@@ -1,0 +1,864 @@
+<html xmlns:java="java"><!--New version $indexFile-->
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<title>Music</title>
+<meta name="Description" content="">
+<meta name="Keywords" content="galway, west coast of ireland, connemara, corrib, vacation, holiday, news, Guinness, Pint, ">
+<style type="text/css">
+#topbar {
+	overflow:hidden;
+	height: 200px;
+}
+
+#navbar {
+	margin:0px 10px 0px 10px;
+	height:20px;
+	overflow:hidden;
+}
+	
+#sidebarleft {
+	position: absolute;
+	margin:0px;
+	left:10px;
+	top: 200px;
+	width:150px;
+	overflow:hidden;
+}
+
+.sidebarleft-block {
+    padding: 6px;
+    margin: 5px 0px 5px 0px; 
+	border: 1px solid #999;
+	background-color:#eee;
+	overflow:hidden;
+	font:10px/14px verdana, arial, helvetica, sans-serif;
+}
+.sidebarleft-block img {
+  margin: 5px 0px 5px 0px;
+}
+.sidebarleft-block h4 {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.sidebarleft-block p {
+  font-size: 10px;
+}
+
+#sidebarright {
+	position: absolute;
+	right:10px;
+	top:200px;
+	width:175px;
+	overflow:hidden;
+}
+
+.sidebarright-block {
+	margin:0px 0px 10px 0px;
+	width:175px;
+	padding:10px;
+	border:1px dashed #999;
+	background-color:#eee;
+	overflow:hidden;
+}
+
+#content {
+	margin-left: 170px;
+	margin-right: 200px;
+}
+
+#content-2col {
+    margin-right: 200px;
+}
+		
+h1,h2,h3,h4 {
+    font-weight:900;
+    color:#08246b;
+}
+		
+h1 {
+	font-size:22px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	background: #eee;
+	border: 1px solid #999;
+}
+h2 {
+	font-size:18px;
+}
+h3 {
+	font-size:15px;
+}
+h4 {
+	font-size:12px;
+}
+
+#content h4 {text-align: left;}	
+	
+a {
+	text-decoration:none;
+	font-weight:600;
+	/* font-family:verdana, arial, helvetica, sans-serif; */
+	color:#09c;
+}
+a:link {color:#09c;}
+a:visited {color:#09c;}
+a:hover {background-color:#eee;}
+
+body, p, td {
+	font:12px/16px verdana, arial, helvetica, sans-serif;
+	/* font:12px/18px verdana, arial, helvetica, sans-serif; */
+}
+
+p {
+	margin:9px 0px 9px 0px;
+}
+
+p:lang(de) {
+  color: #800;
+}
+	
+body,form,input {
+	margin:0px;
+	padding:0px;
+}
+
+.error {
+	color:#ff0000;
+}	
+
+.sideAdBox {
+  width:150px; background: #eee; 
+  margin: 4px 0px 4px 0px;
+  padding: 2px;
+}
+.sideAdText {font-size: 11px;}
+.sideAdHead {font-size: 14px; text-align: center;}
+.sideAdPhoto {align: center;}
+
+
+.sideBox {
+  margin: 2px 0px 2px 0px;
+  width: 150px;
+  //border:  1px solid #fec424;
+  background: #eef9fd;
+}
+.sideBoxTitle {
+  text-weight: bold;
+  //background: #fec424;
+  //color: #ffffff;
+}
+.sideBoxContent {
+  padding: 2px;
+}
+
+.centerCol .sideBox {
+  width: 100%;
+}
+
+
+/*
+ * YP Directory 
+ */
+ 
+.ypRec {
+  border: 1px dashed #888;
+  padding: 4px;
+  margin: 4px 0px 0px 0px;	
+  -moz-border-radius: 4px;
+  -moz-border-width: 4px;  
+  clear: both;
+}
+.ypRecPremium {
+  border: 1px dashed #888;
+}
+
+.ypImgDiv {
+  float: right;
+  text-align: center;
+  vertical-align: bottom;
+  border: 1px;
+  background: white;
+  border-color: black;
+  margin: 1px;
+  padding: 1px;
+  width: 150px;
+  height: 150px;
+}
+.ypEContact {
+}
+.ypImg {
+  vertical-align: middle;
+}
+.ypComment {
+  font-size: smaller;
+}
+.ypComment_de {
+  padding-left: 25px;
+  background-image: url('/gr/flag_de.gif');
+  background-repeat: no-repeat;
+ } 
+.ypComment_de p {
+}
+
+
+.menuLevel1 {
+  margin: 10px 0px 10px 0px;
+  padding-bottom: 10px;
+}
+.menuLevel2  {
+  padding-bottom: 10px;
+  margin-left: 40px;
+}
+.menuOptionLevel1 a {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.menuOptionLevel2 a {
+  font-size: 12px; 
+  margin-right: 10px;
+}
+
+
+.classifiedAdBox {
+    /* border-bottom: thin dashed #000; */
+    margin: 2px 0px 2px 0px;
+    padding: 4px;
+}
+.classifiedAdBox h3 {
+    margin: 0px; 
+    padding: 0px;
+}
+
+
+.photo {
+  padding: 5px;
+  text-align: center;
+  font-size: smaller;
+}
+.photo table[align=right] {
+  margin-left:10px;
+}
+.photo table[align=left] {
+  margin-right:10px;
+}
+.photo img {
+  border: 1px solid black;
+}
+.photo p, .photo td {
+  color: #333;
+  font-size: smaller;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<div id="topbar">
+<a href="/"><img border="0" height="72" width="222" alt="galway.net logo" src="/gr/gn/logo.gif"></a>
+<div style="position: absolute;  left:222px;  top:10px;  /*width:550px;*/  overflow:hidden;  text-align:center;">
+<table border="0" cellspacing="0" cellpadding="1" width="100%">
+<tr valign="top">
+<td align="center"><a href="/galwayguide/acc/">Accommodation</a>
+|
+<a href="/galwayguide/events/">What's On?</a>
+|
+<a href="/galwayguide/transport/">Travel</a>
+|
+<a href="/galwayguide/webcam/">Webcams</a>
+<br>
+<a href="/galwayguide/classifiedads/">Classified Ads</a>
+|
+<a href="/galwayguide/news/2004/">Local News</a>
+|
+<a href="/galwayguide/gallery/">Photo Gallery</a>
+|
+<a href="/galwayguide/history/">History</a></td><td></td><td align="center">
+<form action="http://beta.galway.net/cgi-bin/search.cgi" style="padding: 0px; margin: 0px;">
+<input size="16" name="q" type="text">
+<br>
+<input type="image" src="/gr/gn/trim_search.gif">
+</form>
+</td>
+</tr>
+</table>
+</div>
+<div align="center" id="topads">
+<table><tr>
+<td>
+<a href="http://www.sleepzone.ie/"><img alt="advert" src="/galwayguide/ads/topads/homepage/t1-116.png" width="120" height="75" border="0" /></a></td>
+
+
+<td>
+<a href="http://www.galway.net/cgi-bin/jumpto?http://www.ibishotel.com/ibis/lien_externe.svlt?goto=liste_hotel&nom_ville=irlande"><img alt="IBIS hotels advertisement"
+title="IBIS hotels advertisement"
+src="/galwayguide/ads/topads/homepage/t5-ibis.gif"
+width="130"
+height="75"
+border="0"
+/>
+</td>
+
+<td>
+<a href="http://www.windsor.ie/carhire/carhire.asp"><img alt="advert" src="/galwayguide/ads/topads/homepage/t4-119.png" width="120" height="75" border="0" /></a></td>
+
+
+
+</tr></table>
+<img alt="" src="http://www.galway.net/GalwayNet/AdLogger?ids=116,119" />
+
+</div>
+<div id="navbar">
+You are here:
+
+<a href="/galwayguide/">Galway</a>
+&gt;
+<a href="/galwayguide/pub/">Pubs</a>
+&gt; Music</div>
+</div>
+<table border="0">
+<tr valign="top">
+<td width="150">
+<div id="x-sidebarleft">
+
+<div class="sidebarleft-block">
+<h4>Book Assist</h4>
+
+<a href="/cgi-bin/jumpto?http://www.bookassist.com/affiliate/galwaynet/index.html">
+<img alt="Bookassist Logo" border="0" height="36" src="/galwayguide/ads/balogo130.gif" width="130">
+</a>
+
+<p>Book accommodation online with Book Assist. <a href="/cgi-bin/jumpto?http://www.bookassist.com/affiliate/galwaynet/index.html">Click here!</a>
+
+</p>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Galway City</h4>
+
+<img alt="Galway City" border="1" height="96" src="/galwayguide/galwaycity/busker.jpg" width="130">
+<a href="/galwayguide/galwaycity/activities">*Activities</a>
+
+<br>
+
+<a href="/galwayguide/todo/">*Sights/Walks</a>
+
+<br>
+
+<a href="/galwayguide/galwaycity/arts/">*The Arts, Festivals</a>
+
+<br>
+
+<a href="/galwayguide/galwaycity/goingout/">*Going out: Pubs, Clubs, Food, Gigs, Cinema...</a>
+
+<br>
+
+<a href="/galwayguide/acc/">*Accommodation</a>
+
+<br>
+
+<a href="/galwayguide/history">*History</a>
+
+<br>
+
+<a href="/galwayguide/shop/">*Shopping</a>
+
+<br>
+
+<a href="/galwayguide/service/realestate/">*Property Page</a>
+
+<br>
+
+<a href="/galwayguide/service/">*Business Listings</a>
+
+<br>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>What's On 2004</h4>
+
+<b>Daily Event Guide</b>
+
+<br>
+
+
+
+<style type="text/css">
+.calendar td {
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+}
+.calToday a {
+  color: red;
+}
+.calHead td {
+  text-align:center;
+}
+</style>
+
+<table class="calendar" border="1" cellspacing="0" cellpadding="0">
+
+<tr class="calHead">
+<!--
+<td><a href="calendar.jsp?year=2006&month=2&monthoffset=-1">&laquo;</a></td>
+-->
+<td colspan="7" align="center"><b>February 2006</b></td>
+<!--
+<td><a href="calendar.jsp?year=2006&month=2&monthoffset=1">&raquo;</a></td>
+-->
+</tr>
+
+<tr class="calHead">
+<td><b>S</b></td>
+<td><b>M</b></td>
+<td><b>T</b></td>
+<td><b>W</b></td>
+<td><b>T</b></td>
+<td><b>F</b></td>
+<td><b>S</b></td>
+</tr>
+
+<tr>
+<td>
+
+&nbsp;
+</td>
+<td>
+
+&nbsp;
+</td>
+<td>
+
+&nbsp;
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=1&showDescription=1">1</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=2&showDescription=1">2</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=3&showDescription=1">3</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=4&showDescription=1">4</a>
+</td>
+</tr>
+<tr>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=5&showDescription=1">5</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=6&showDescription=1">6</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=7&showDescription=1">7</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=8&showDescription=1">8</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=9&showDescription=1">9</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=10&showDescription=1">10</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=11&showDescription=1">11</a>
+</td>
+</tr>
+<tr>
+<td class="calToday">
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=12&showDescription=1">12</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=13&showDescription=1">13</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=14&showDescription=1">14</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=15&showDescription=1">15</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=16&showDescription=1">16</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=17&showDescription=1">17</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=18&showDescription=1">18</a>
+</td>
+</tr>
+<tr>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=19&showDescription=1">19</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=20&showDescription=1">20</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=21&showDescription=1">21</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=22&showDescription=1">22</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=23&showDescription=1">23</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=24&showDescription=1">24</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=25&showDescription=1">25</a>
+</td>
+</tr>
+<tr>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=26&showDescription=1">26</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=27&showDescription=1">27</a>
+</td>
+<td>
+
+<a href="/galwayguide/events/calendar/?year=2006&month=2&mday=28&showDescription=1">28</a>
+</td>
+<td>
+
+&nbsp;
+</td>
+<td>
+
+&nbsp;
+</td>
+<td>
+
+&nbsp;
+</td>
+<td>
+
+&nbsp;
+</td>
+</tr>
+</table>
+
+
+
+<br>
+
+<b>Monthly Event Guide</b>
+
+<br>
+
+<a href="/galwayguide/events/2004/">Click Here!</a>
+
+<br>
+
+<br>
+
+<b>Popular Festivals &amp; Events</b>
+
+<br>
+
+<a href="/galwayguide/events/2004/06/bobdylan/">*Bob Dylan plays Pearse Stadium(June 27 )</a>
+
+<br>
+
+<a href="/galwayguide/events/2004/07/film/">*Galway Film Fleadh (July 6-11)</a>
+
+<br>
+
+<a href="/galwayguide/events/2004/07/artsfestival/">*Galway Arts Festival (July 12-25)</a>
+
+<br>
+
+<a href="/galwayguide/events/2004/07/galwayraces/">*Galway Races (July 26-Aug 1)</a>
+
+<br>
+
+<a href="/galwayguide/events/2004/09/GalwayOysterFestival/">*Galway Oyster Festival (Sept 23-26)</a>
+
+<br>
+
+<a href="/galwayguide/events/2004/10/Baboro/">*Baboro Childrens Festival (Oct 11-17)</a>
+
+<br>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Guide To The West Of Ireland</h4>
+
+<img alt="Connemara" border="1" height="96" src="/galwayguide/visit/burren/poulnabronesmall.jpg" width="130">
+<p>
+
+<a href="/galwayguide/visit/aran/">* The Aran Islands</a>
+
+<br>
+
+<a href="/galwayguide/visit/burren/">* The Burren &amp; The Cliffs Of Moher</a>
+
+<br>
+
+<a href="/galwayguide/visit/connemara/">* Connemara</a>
+
+<br>
+
+</p>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Going Out in Galway</h4>
+
+<img alt="Going Out" border="1" height="96" src="/galwayguide/ads/goingout.jpg" width="130">
+<a href="/galwayguide/food/">Restaurants</a>
+
+<br>
+
+<a href="/galwayguide/pub/">Pubs</a>
+
+<br>
+
+<a href="/galwayguide/ent/nightclub/">Nightclubs</a>
+
+<br>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Activities Guide</h4>
+
+<a href="/galwayguide/activities2004/">
+<img alt="Connemara" border="1" height="96" src="/galwayguide/activities2004/watersport.jpg" width="130">
+</a>
+
+<p>
+
+<a href="http://www.galway.net/galwayguide/activities2004/angling/">Angling</a>
+
+<br>
+
+<a href="http://www.galway.net/galwayguide/activities2004/cycling/">Cycling</a>
+
+<br>
+
+<a href="http://www.galway.net/galwayguide/activities2004/equestrian/">Equestrian</a>
+
+<br>
+
+<a href="http://www.galway.net/galwayguide/activities2004/golf/">Golf</a>
+
+<br>
+
+<a href="http://www.galway.net/galwayguide/activities2004/mountaineering/">Hill Walking &amp; Mountaineering</a>
+<a href="http://www.galway.net/galwayguide/activities2004/water/">Watersports</a>
+
+</p>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Galway Races</h4>
+
+
+<a href="/galwayguide/gallery/2003/galwayraces2003/">
+<img alt="Galway Races" border="1" height="130" src="/galwayguide/gallery/2003/galwayraces2003/DSC_0926-mod.tn.jpg" width="130">
+</a>
+
+
+<p>
+
+<a href="/galwayguide/gallery/2003/galwayraces2003/">Click here to access Galway Races Gallery</a>.
+</p>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Salthill Airshow</h4>
+
+<a href="/galwayguide/gallery/2003/salthill_airshow2003/">
+<img alt="A Red Arrows Hawk aircraft pulls up from a dive during the Salthill Airshow. Sunday 6 July 2003. Photo: Joe Desbonnet." border="1" height="100" src="/galwayguide/pod/dsc_9603-mod.tn.jpg" width="130">
+</a>
+
+A Red Arrows Hawk aircraft pulls up from a dive during at the Salthill Airshow.
+Sunday 6 July 2003. Photo: Joe Desbonnet. 
+
+<p></p>
+
+
+<a href="/galwayguide/gallery/2003/salthill_airshow2003/">
+<img alt="The Vixen Break at the end of the Red Arrows display. In the background is LE Ciara (Irish Naval Service) and the Clare mountains in the distance. Photo: Joe Desbonnet" border="1" height="100" src="/galwayguide/pod/dsc_9626-mod.tn.jpg" width="130">
+</a>
+The <em>Vixen Break</em> at the end of the Red Arrows display. In the background is LE Ciara (Irish Naval Service) and the Clare mountains in the distance. Photo: Joe Desbonnet
+
+<p></p>
+
+
+<a href="/gallery2003/salthill_airshow2003/">Click here to access Airshow gallery</a>
+
+</div>
+
+<div class="sidebarleft-block">
+<h4>Around Galway</h4>
+
+
+<img alt="A labrador watches the sunset at Salthill, Sunday 6 April 2003. Photo: Joe Desbonnet" height="100" src="/galwayguide/pod/DSC_7060.tn.jpg" width="130">
+A labrador watches the sunset at Salthill, Sunday 6 April 2003. Photo: Joe Desbonnet
+
+<p></p>
+
+
+<img alt="Claddagh at night. Photo: Joe Desbonnet" height="100" src="/galwayguide/pod/claddaghnight1.tn.jpg" width="130">
+
+Claddagh at night. Photo: Joe Desbonnet
+
+</div>
+
+</div>
+</td><td>
+<div id="x-content">
+<h1>Music</h1>
+
+<div class="menuLevel1">
+
+<div class="menuOptionLevel1">
+<a href="trad/">
+&diams; 
+Traditional Music</a>
+</div>
+
+<div class="menuOptionLevel1">
+<a href="jazz/">
+&diams; 
+Jazz</a>
+</div>
+
+<div class="menuOptionLevel1">
+<a href="piano/">
+&diams; 
+Piano</a>
+</div>
+
+<div class="menuOptionLevel1">
+<a href="rock/">
+&diams; 
+Rock</a>
+</div>
+
+<div class="menuOptionLevel1">
+<a href="other/">
+&diams; 
+Varied</a>
+</div>
+
+</div>
+
+
+<table align="RIGHT">
+<tr>
+<td><img alt="Crane Bar" height="164" src="crane.jpg" width="215"><br>
+<small><i>Crane Bar - famous for its 'trad' sessions</i></small></td>
+</tr>
+</table>
+<p>There is a very strong tradition of Irish music in Galway and the pubs reflect this, especially Taaffes, Neachtains and the Lisheen bar. Music is listened to with conversation, and not in a formal concert atmosphere. Many visitors don't fully understand this passive music ethos, but in a way it is similar to the promenades in London, where the music is apparently background, but nonetheless enjoyed. Jazz is ever popular, and it tends to move around from pub to pub and most pubs feature at least a couple of nights of live music.</p>
+
+<br clear="both">
+<div class="footer">
+
+
+
+
+(c) 1995-2004 Galway.Net / World Wide Web Marketing Ltd. 
+4/5 High Street, Galway, Ireland. Tel: +353 91 565442. Website comments to
+webmaster<!--no-spam-->@<!--no-spam-->
+galway.net.
+
+</div>
+</div>
+</td><td width="150">
+<div x-style="background-color: blue;" id="x-sidebarright">
+<h3>Advertisements</h3>
+<script language="JavaScript">
+<!--
+google_ad_client = 'pub-3912332240580296';
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = '120x600_as';
+google_color_border = "A8DDA0";
+google_color_bg = "EBFFED";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "6F6F6F";
+// -->
+</script>
+<div class="sideAdBox">
+<div align="center">
+<script language="JavaScript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+</div>
+</div>
+
+<script language="JavaScript">
+<!--
+google_ad_client = 'pub-3912332240580296';
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = '120x600_as';
+google_color_border = "A8DDA0";
+google_color_bg = "EBFFED";
+google_color_link = "0000CC";
+google_color_url = "008000";
+google_color_text = "6F6F6F";
+// -->
+</script>
+<div class="sideAdBox">
+<div align="center">
+<script language="JavaScript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+</div>
+</div>
+
+<!-- ad ids: 0,0-->
+
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-2">
+   <META NAME="Author" CONTENT="Leszek Chmielewski">
+   <META NAME="Keywords" CONTENT="detection of defects, defect detection,
+     ferrite, core, ferrites, cores, magnets, ceramics, black ceramics,
+     classification of defects, irregularity, irregularities,
+     chip, pull-out, crack, flashing, ragged edge, measurement of cracks,
+     quality inspection, quality control, production line quality control,
+     process control,
+     standardization, standardisation, standards, 
+     SQUASH">
+   <TITLE>SQUASH Project - Abstract</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<A HREF="sqmirror.htm">
+<IMG BORDER=0 SRC="squashlg.gif" ALT="SQUASH logo" HSPACE=20 VSPACE=10
+HEIGHT=70 WIDTH=128 ALIGN=LEFT></A>
+<A HREF="http://www.tpo.org.pl/">
+<IMG BORDER=0 SRC="../tpologo.gif" ALT="TPO logo" HSPACE=44 VSPACE=10
+HEIGHT=70 WIDTH=80 ALIGN=RIGHT></A>
+
+<CENTER>
+<BR><B>Standard compliant QUAlity control System for High-level ceramic
+material manufacturing (SQUASH)</B>
+<BR><FONT SIZE=-2>INCO-COPERNICUS, grant no. ERBIC 15CT 96 0742. 1997-98.</FONT>
+<BR><FONT SIZE=-1>
+Co-ordinated by the University of Cagliari, Italy,
+<BR>in cooperation with
+<A HREF="http://www.aetnet.it">
+AET - Advanced Engineering Technology S.r.l.</A>, Italy
+</FONT>
+<BR><FONT SIZE=-1>The
+<A HREF="http://www.tpo.org.pl">Association for Image Processing</A>,
+Poland, was one of the contractors.</FONT>
+</CENTER>
+<TABLE WIDTH="100%" >
+<TR ALIGN=RIGHT><TD>
+  <!-- stat.4u.pl NiE KaSoWaC --> 
+  <a target=_top href="http://stat.4u.pl/?TPO_SQUASH"><img src="http://ad.stat.4u.pl/s4u.gif" border="0"></a> 
+  <script language="javascript"> 
+  <!-- 
+  function s4upl() { return "";} 
+  //--> 
+  </script> 
+  <script language="JavaScript" src="http://ad.stat.4u.pl/s.js?TPO_SQUASH"></script> 
+  <script language="JavaScript"> 
+  <!-- 
+  s4uext=s4upl(); 
+  document.write("<img src=\"http://stat.4u.pl/cgi-bin/s.cgi?i=TPO_SQUASH"+s4uext+"\" width=1 height=1>"); 
+  //--> 
+  </script> 
+  <noscript><img src="http://stat.4u.pl/cgi-bin/s.cgi?i=TPO_SQUASH&r=ns" width="1" height="1"></noscript> 
+  <!-- stat.4u.pl KoNiEc -->
+</TD></TR>
+</TABLE>
+<CENTER>
+<A HREF="sqmirror.htm"><FONT SIZE=+1 COLOR="#dd0000">The main page of the Project</FONT></A>
+</CENTER>
+<HR>
+
+<P>
+
+<CENTER>
+Abstract of the results obtained and owned by the
+<A HREF="http://www.tpo.org.pl">Association for Image Processing</A>, PL</FONT>
+<P><FONT SIZE=+2><B>Detection and Classification of Surface Irregularities
+<BR>in Black Ceramics</B></FONT>
+<P>
+<A HREF="http://www.ippt.gov.pl/~lchmiel">
+L. Chmielewski</A>,
+<A HREF="mailto:Marek Skłodowski <msklod@ippt.gov.pl>">
+M. Skłodowski</A>,
+<A HREF="mailto:Waldemar Cudny <wcudny@ippt.gov.pl>">
+W. Cudny</A>,
+<A HREF="http://www.ippt.gov.pl/~mnieniew">
+M. Nieniewski</A>
+<BR><FONT SIZE=-1><A HREF="http://www.tpo.org.pl">
+Association for Image Processing</A></FONT>
+<BR><FONT SIZE=-1>and Institute of Fundamental Technological Research, PAS</FONT>
+<BR>
+<A HREF="mailto:Adam Jóźwik<adamj@ibbrain.ibb.waw.pl>">
+A. Jóźwik</A>
+<BR><FONT SIZE=-1>Institute of Biocybernetics and Biomedical Engineering, PAS</FONT>
+</CENTER>
+
+<P ALIGN=RIGHT>
+<A HREF="siaic2002.pps"><B>Presentation of the Project</B></A><BR>
+(PowerPoint, 2.5&nbsp;MB)<BR>
+given at the<BR>
+<I>International Workshop on Structural Image Analysis in Investigation of
+Concrete</I><BR>
+October 21-23, 2002, Warsaw, Poland<BR>
+organized by the<BR>
+<A HREF="http://www.ippt.gov.pl/amas/">Institute
+of Fundamental Technological Research, PAS - Center of Excellence for Advanced Materials and
+Structures</A>
+</P>
+
+<H3>1 Overview</H3>
+
+Manufacturers and buyers of black ceramics distinguish numerous classes
+of surface irregularities (defects) of black ceramics. However, only some
+irregularities of selected surfaces have been chosen for the present research,
+due to their high importance to the quality of the final products.
+
+<BR>&nbsp;&nbsp;&nbsp; The objects considered are mainly hard and soft
+ferrite materials: ferrite cores and magnets. Other materials of similar
+appearance can be inspected in the same or similar way.
+
+<BR>&nbsp;&nbsp;&nbsp; The monochromatic images of the irregularities of
+interest are acquired by the system consisting of a highly specialised
+lighting system [<A HREF="#EPS97">EPS97</A>], a standard digital camera, and a computer.
+
+<BR>&nbsp;&nbsp;&nbsp; A hierarchical method for classification of a core
+with respect to surface irregularities has been applied. It consists of
+two main phases:
+
+<UL>
+<LI>
+<B>Detection phase.&nbsp;</B> Regions which might be irregular are detected.
+In this phase three detectors are used: dynamic thresholding, a morphological
+detector of elongated irregularities, and a morphological detector of compact
+irregularities. The latter is hierarchical in itself: the morphological
+pyramid technique has been used
+[<A HREF="#Nie97">Nie97</A>, <A HREF="#NN97">NN97</A>].
+In detecting the irregularities
+of different sizes the structuring elements are kept the same, but the
+image is scaled down, to reduce the time of computations. If a hardware
+morphological processor were applied, this phase would take milliseconds. The
+results obtained are reliable enough to initially classify very defective
+objects as generally bad.</LI>
+
+<LI>
+<B>Classification phase.&nbsp;</B> Pixels of the regions selected in the
+detection phase are classified with a highly advanced version of the <I>K
+nearest neighbours</I> method (K-NN)
+[<A HREF="#Joz83">Joz83</A>, <A HREF="#Joz96">Joz96</A>].
+The features used were
+selected from a large number of possible deterministic, statistical and
+textural measures, with the use of numerous training samples. For an object
+which passed the preclassification in the detection phase, this process
+can take from 2 to 10 seconds (Pentium, 200 MHz).</LI>
+</UL>
+
+The whole method is complemented by postproccessing the results of the
+classification phase: the context information is taken into account by
+a local weighted voting process.
+
+<BR>&nbsp;&nbsp;&nbsp; Finally, the irregularities are measured, and the
+results are compared with quality standards to get the final classification
+of the product as belonging to a respective quality class. Quantitative
+nature of the measurements make them useful in analysis of the production
+process.
+
+
+<H3>2 Types of considered irregularities</H3>
+
+The surface irregularities considered are: chips, pull-outs and cracks (Fig. 1).
+<P>
+<CENTER><TABLE CELLSPACING=0 CELLPADDING=5 COLS=4 WIDTH="80%" >
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+<CENTER><IMG SRC="chips.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>a</B></TD>
+<TD>
+<CENTER><IMG SRC="pullouts.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>b</B></TD>
+<TD>
+<CENTER><IMG SRC="cracks.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>c</B></TD>
+<TD>
+<CENTER><IMG SRC="allirreg.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>d</B></TD>
+</TR>
+<CAPTION ALIGN=BOTTOM><FONT SIZE=-1>Fig. 1. Various types of irregularities:
+a: chips; b: pull-outs; c: pull-out and crack; d: various, might be difficult
+to discern.</FONT></CAPTION>
+</TABLE></CENTER>
+
+
+<H3>3 Training and classification</H3>
+
+The classifier applied to feature-based classification of the pixels
+marked as possibly irregular by the detection phase is a highly advanced
+version of the K-NN method, having the&nbsp; following properties:
+1<SUP>o</SUP> fuzzy,
+2<SUP>o</SUP> parallel (1 classifier for each pair of classes),
+3<SUP>o</SUP> with full selection of features,
+4<SUP>o</SUP> hierarchical (a simple 1-NN version is used where classes
+do not overlap in the feature space),
+5<SUP>o</SUP> with reduced reference patterns set.
+This combination leads to high speed and accuracy of classification.
+
+<BR>&nbsp;&nbsp;&nbsp; The used 64 features were the textural features
+[<A HREF="#Law80">Law80</A>] and local section of brightness function
+[<A HREF="#CSCMJ97">CSCMJ97</A>].
+
+<BR>&nbsp;&nbsp;&nbsp; From the point of view of the user it is important
+how to prepare the data for training the classifier. The training process
+has been organised in such a way that its main part consists in showing
+examples of image pixels which belong to all classes defined for the specific
+problem. This is done by manually marking such pixels in colours (Fig.2).
+A large number of training pixels (<I>training patterns</I>) coming from each
+class should be given to obtain good final classification results.
+In the examples presented in Fig. 2, there were 4297 training pixels
+prepared. With this large set, the global classification error rate
+estimated by the classifier on the training set was was 3.3% (with the
+<I>leave-one-out</I> method
+[<A HREF="#Bez86">Bez86</A>, <A HREF="#Das95">Das95</A>,
+<A HREF="#CSCMJ97">CSCMJ97</A>]). Keeping this measure
+of error small is a necessary, but not a sufficient condition of receiving
+a classifier with acceptable <I>generalisation power</I>
+(ability to correctly classify the patterns which it has never seen).
+Good final results for a large set of example images should be received
+first - see Fig. 2. 
+
+<BR>&nbsp;&nbsp;&nbsp; It is the experience gained in this research that
+for good classification, each class should be divided into subclasses.
+Let us take an example of a chip. The following six derived classes have
+been introduced: dark chip, bright chip, edge between a chip
+(dark and bright separately) and good object, edge between a chip (dark
+and bright) and background. After classification, all these classes are
+merged into one: chip.
+
+<BR>&nbsp;&nbsp;&nbsp; The fully automated process of training the classifier
+consists in
+forming the reduced sets of reference patterns for all class pairs, selecting
+the most significant features for each pair of classes and choosing <I>K</I>
+(the number of neighbours in the feature space) for each pair. The size
+(power) of the set of reference patterns, which is the set of representant
+patterns for each class, is usually less than 10% of the size of the set of
+training patterns.
+
+<H3>4 Examples of results</H3>
+
+The results of classification of the images of Figs. 2 a1 and a2
+can be seen in Figs. d1 and d2 (Good pixels were not marked).
+Only those pixels which were detected as irregular by the
+detection phase (Figs. 2 c1 and b2) were classified. After taking into
+account the context information, the separated single pixels disappear
+(Fig. 2 c2 and d2), and the image is ready for measuring the blobs
+corresponding to various classes of irregularities.
+
+<P>
+<CENTER><TABLE CELLSPACING=0 CELLPADDING=5 COLS=4 WIDTH="80%" >
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+<CENTER><IMG SRC="r9a1i.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>a1</B></TD>
+<TD>
+<CENTER><IMG SRC="r9a1t.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>b1</B></TD>
+<TD>
+<CENTER><IMG SRC="r9a1d.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>c1</B></TD>
+<TD>
+<CENTER><IMG SRC="r9a1o.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>d1</B></TD>
+</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+<CENTER><IMG SRC="r3a1i.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>a2</B></TD>
+<TD>
+<CENTER><IMG SRC="r3a1d.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>b2</B></TD>
+<TD>
+<CENTER><IMG SRC="r3a1r.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>c2</B></TD>
+<TD>
+<CENTER><IMG SRC="r3a1o.gif" HEIGHT=128 WIDTH=128 ALIGN=ABSCENTER></CENTER>
+<B>d2</B></TD>
+</TR>
+<CAPTION ALIGN=BOTTOM><FONT SIZE=-1>Fig. 2. Examples of detection and
+classification of irregularities.
+<BR>a1: input image 1
+(some pixels of this image were taken for training - see b1);
+b1: training patterns taken from image a1
+(<FONT COLOR="00ffff">blue: chip</FONT>,
+ <FONT COLOR="00ff00">green: pull-out</FONT>,
+ <FONT COLOR="ff0000">red: crack</FONT>,
+ <FONT COLOR="ffff00">yellow: good object</FONT>);
+c1: detected <FONT COLOR="cd9b1d">irregular regions (brown)</FONT>;
+d1:
+<FONT COLOR="00ffff">re</FONT><FONT COLOR="00ff00">su</FONT><FONT COLOR="ff0000">lt</FONT>s
+of classification after postprocessing.
+<BR>a2: input image 2
+(no pixels of this image were taken for training);
+b2: detected <FONT COLOR="cd9b1d">irregular regions</FONT>;
+c2: raw
+<FONT COLOR="00ffff">re</FONT><FONT COLOR="00ff00">su</FONT><FONT COLOR="ff0000">lt</FONT>s
+of classification.
+d2:
+<FONT COLOR="00ffff">re</FONT><FONT COLOR="00ff00">su</FONT><FONT COLOR="ff0000">lt</FONT>s
+of classification after postprocessing.
+</FONT></CAPTION>
+</TABLE></CENTER>
+
+<P>The object shown in Fig. 2 a2 has the diameter of 10 mm.
+The displayed part of the image has 200*200 pixels (0.0568&nbsp;mm/pix).
+The following results have been obtained for that object:
+
+<P>
+<CENTER>
+<B>Total area of irregularities: 6.18 [mm<SUP>2</SUP>]</B>
+</CENTER>
+<CENTER><TABLE CELLSPACING=4 CELLPADDING=0 WIDTH="100%" >
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+#
+</TD><TD>
+CLASS
+</TD><TD>
+blobs
+</TD><TD>
+type
+</TD><TD>
+max blob
+</TD><TD>
+total 
+</TD><TD>
+quality
+</TD>
+</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+3
+</TD><TD>
+CHIP
+</TD><TD>
+12
+</TD><TD>
+AREA
+</TD><TD>
+0.11/0.50 [mm<SUP>2</SUP>]
+</TD><TD>
+0.57/1.00 [mm<SUP>2</SUP>]
+</TD><TD>
+GOOD
+</TD>
+</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+7
+</TD><TD>
+PULL-OUT
+</TD><TD>
+24
+</TD><TD>
+AREA
+</TD><TD>
+0.89/0.50 [mm<SUP>2</SUP>]
+</TD><TD>
+1.76/1.00 [mm<SUP>2</SUP>]
+</TD><TD>
+<FONT COLOR=red>BAD!</FONT>
+</TD>
+</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>
+10
+</TD><TD>
+CRACK
+</TD><TD>
+19
+</TD><TD>
+LENGTH
+</TD><TD>
+3.46/1.50 [mm]
+</TD><TD>
+11.76/3.00 [mm]
+</TD><TD>
+<FONT COLOR=red>BAD!</FONT>
+</TD>
+</TR>
+<CAPTION ALIGN=BOTTOM><FONT COLOR=red SIZE=+1>!!! this object is BAD !!!
+</FONT></CAPTION>
+</TABLE></CENTER>
+
+<P>
+The classification took about 12.4&nbsp;s
+(Pentium, 200&nbsp;Mhz; note that for an object with less irregularities the
+classification would be proportionally quicker - classification of one pixel
+- 0.0032&nbsp;mm<SUP><FONT SIZE=-2>2</FONT></SUP> - takes approx. 6.5&nbsp;ms).
+The detection carried out by software took 10&nbsp;s
+(the same process would take less than 0.05&nbsp;s if a typical hardware
+morphological processor were used).
+
+
+
+<H3>5 Conclusions</H3>
+<A HREF="http://www.tpo.org.pl">
+<IMG BORDER=0 SRC="../tpologo.gif" ALT="TPO logo" HSPACE=10 VSPACE=10 WIDTH=100 ALIGN=RIGHT></A>
+
+A hierarchical computerised optical inspection system for detection and
+classification of defects (called irregularities) on flat surfaces of
+products of black ceramics has been designed and implemented. Special
+attention was paid to overcoming the difficulties related to dark colour
+of the tested objects and to attain invariance of the phases of inspection
+to such noncontrollable factors like scale of the defects and location of
+the object.
+
+<BR>&nbsp;&nbsp;&nbsp; The system has been found to work properly in a
+series of tests. Quantitative nature of the results make it possible to
+carry out various kinds of analyses of the production process.
+
+<BR>&nbsp;&nbsp;&nbsp; The methodology has been developed up to a level
+at which an industrial implementation is possible. For this purpose, no
+other highly specialised hardware seem to be necessary than a mathematical
+morphology processor.
+
+<BR>&nbsp;&nbsp;&nbsp; The proposed methods are applicable to detection
+of defects on flat surfaces of numerous similar (ferrite cores, magnets,
+sintered carbides) and dissimilar materials.
+
+
+<H3>References</H3>
+
+<UL>
+<LI>
+<A NAME="Bez86"/A>
+[Bez86] J.C. Bezdek, S.K. Chuan, D.Leep, Generalized k-NN rules, <I>Fuzzy
+Sets and Systems</I>, <B>18</B>, 1986, pp. 237-256.</LI>
+
+<LI>
+<A NAME="CSCMJ97"/A>
+[CSCMJ97]&nbsp; L. Chmielewski, M. Skłodowski, W. Cudny, M. Nieniewski,
+and A. Jóźwik.&nbsp; Optical system for detection and classification of
+surface defects in ferrites. <I>Proc. 3rd Symp. Image Processing Techniques
+(TPO'97)</I>, Serock, Poland, Oct 29-31, 1997, 1-13.</LI>
+
+<LI>
+<A NAME="Das95"/A>
+[Das95] B.V. Dasarathy, <I>Nearest Neighbor (NN) norms: NN pattern classification
+techniques</I>, IEEE Computer Society Press, 1995.</LI>
+
+<LI>
+<A NAME="EPS97"/A>
+[EPS97]&nbsp; <I>Light systems for testing the surface irregularities of
+ferrite cores</I>, EPSILON(R) ARG Ltd, Jan 1997 (annex to Report of the
+project CRASH, CRASH Consortium, Jan 97).</LI>
+
+<LI>
+<A NAME="Joz83"/A>
+[Joz83]&nbsp; A. Jóźwik. A learning scheme for a fuzzy&nbsp; k-NN rule.
+<I>Pattern Recognition Letters</I>, <B>1</B>, 1983, pp. 287-289.</LI>
+
+<LI>
+<A NAME="Joz96"/A>
+[Joz96]&nbsp; A. Jóźwik, L. Chmielewski, W. Cudny, M. Skłodowski, A 1-NN
+preclassifier for fuzzy k-NN Rule, <I>Proc. 13th Int. Conf. Pattern Recognition</I>,
+Wien, Austria, Aug 25-29, 1996, pp. D-234 - D-238.</LI>
+
+<LI>
+<A NAME="Law80"/A>
+[Law80]&nbsp; K. I. Laws, Textured image segmentation, Univ. of Southern
+California, Image Processing Institute, <I>USCIPI Report 940</I>, Jan 1980
+(also in W. K. Pratt, <I>Digital Image Processing</I>, John Wiley, New
+York 1991).</LI>
+
+<LI>
+<A NAME="Nie97"/A>
+[Nie97]&nbsp; M. Nieniewski, Morphological method of detection of defects
+on the surface of ferrite cores, <I>Proc. 10th Scandinavian Conf. Image
+Analysis</I>, Lappeenranta, Finland, June 9-11, 1997, pp. 323-330.</LI>
+
+<LI>
+<A NAME="NN97"/A>
+[NN97]&nbsp; T.C. Nguyen, M. Nieniewski, Using genetic algorithm for optimisation
+of the thresholds in the morphological pyramid for detecting defects on
+the surface of ferrite cores, <I>Proc. 3rd Symp. Image Processing Techniques</I>,
+Serock, Poland, Oct 29-31, 1997, 229-242.</LI>
+
+</UL>
+
+<P>
+<HR>
+
+<A HREF="http://www.tpo.org.pl/"><IMG BORDER=0 SRC="../home.gif" ALT="HOME" ALIGN=right></A>
+<A HREF="index.html"><I>back to top</I></A>
+
+<P>
+
+<ADDRESS>
+  Updated: Oct 23, 2002. &nbsp; Last maintained: Oct 23, 2002. &nbsp; &nbsp;
+  Contact:
+  <A HREF="http://www.ippt.gov.pl/~lchmiel/">Leszek Chmielewski</A>,
+  e-mail: <A HREF="mailto:lchmiel@ippt.gov.pl">lchmiel@ippt.gov.pl</A>.
+</ADDRESS>
+<CENTER>
+  <IMG SRC="../linepat.gif" WIDTH="500" HEIGHT="4">
+</CENTER>
+</BODY>
+</HTML>
+
+<!--
+<A HREF="http://www.ippt.gov.pl/~lchmiel/publ/detclasi.gz"><FONT SIZE=-2>Load
+the presentation as 16 colour transparencies - PS, GZIPped</FONT></A>
+-->
+

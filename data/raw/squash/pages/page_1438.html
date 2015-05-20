@@ -1,0 +1,202 @@
+<!--
+# Author: Joshua Chin
+# Organization: N.A.
+# Date: 15 September 2001
+# Version 1.0 (Default)
+# Description: Photo Album page
+# Revision History:
+# Date		Author		Revision Description
+#
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+	<head>
+		<title>UCSC Photo Album - United Condo Squash Club</title>
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<link href="/common/ucsc.css" type=text/css rel="stylesheet">
+		<meta name="description" content="United Condo Squash Club, Singapore">
+		<meta name="keywords" content="United Condo Squash Club, UCSC, Singapore, Squash">
+	</head>
+
+	<body class="body">
+		<script language=JavaScript>
+		<!--
+
+		//Disable right mouse click Script
+		//By Maximus (maximus@nsimail.com)
+		//For full source code, visit http://www.dynamicdrive.com
+
+		var message="Function Disabled!";
+		///////////////////////////////////
+		function clickIE() {if (document.all) {alert(message);return false;}}
+		function clickNS(e) {if
+		(document.layers||(document.getElementById&&!document.all)) {
+		if (e.which==2||e.which==3) {alert(message);return false;}}}
+		if (document.layers)
+		{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+		else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+		document.oncontextmenu=new Function("return false")
+		// -->
+		</script>
+		<table align="left" width="610"  cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td align="center">
+
+					<!--
+ucsc_header.jsp
+-->
+
+<table align="center" width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td align="center">
+			<div class="background5">
+				<br>
+				UCSC Photo Album
+			</div>
+		</td>
+	</tr>
+</table>
+
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<form>
+
+						
+
+						<!-- to initialize all the variables needed for paging -->
+						<!--
+ucsc_photoAlbumPagingInit.jsp
+
+Note: must come after getting the total record count for the table that the records are being retrieved
+-->
+
+
+
+						<!-- to retrieve guestbook information -->
+						
+
+<table align="center" width="10%"  cellspacing="0" cellpadding="0" border="0">
+	<tr>
+
+		
+
+
+				<td align="center">
+					<a href="/ucsc_photoAlbumIndividual.jsp?path=%2Fphoto%2FDSCN7652A.jpg&description=UCSC+Member+Aussie+David+Bellette%2C+in+his+personal+capacity+conducts+a+Beep+Test+for+interested+members+to+gauge+their+fitness+level+for+the+game+of+squash" onMouseOver="status='Click on thumbnail for an enlarged view';return true;" target="main"><img src="/photo/t_DSCN7652A.jpg" border="1" frame="box" rules="all" bordercolor="000000" alt="UCSC Member Aussie David Bellette, in his personal capacity conducts a Beep Test for interested members to gauge their fitness level for the game of squash"></a>&nbsp;&nbsp;
+				</td>
+
+  
+
+
+				<td align="center">
+					<a href="/ucsc_photoAlbumIndividual.jsp?path=%2Fphoto%2FDSCN7798A.jpg&description=End+of+NSL+2004+dinner+bash+at+Joseph+Wong%27s+house" onMouseOver="status='Click on thumbnail for an enlarged view';return true;" target="main"><img src="/photo/t_DSCN7798A.jpg" border="1" frame="box" rules="all" bordercolor="000000" alt="End of NSL 2004 dinner bash at Joseph Wong's house"></a>&nbsp;&nbsp;
+				</td>
+
+  
+
+
+				<td align="center">
+					<a href="/ucsc_photoAlbumIndividual.jsp?path=%2Fphoto%2FDSCN7747A.jpg&description=Jubilated+UCSC+players+in+celebration" onMouseOver="status='Click on thumbnail for an enlarged view';return true;" target="main"><img src="/photo/t_DSCN7747A.jpg" border="1" frame="box" rules="all" bordercolor="000000" alt="Jubilated UCSC players in celebration"></a>&nbsp;&nbsp;
+				</td>
+
+  
+
+
+				<td align="center">
+					<a href="/ucsc_photoAlbumIndividual.jsp?path=%2Fphoto%2FDSCN7743A.jpg&description=Joseph+Wong%2C+Chairman+of+UCSC+receiving+the+%27Club+of+the+Year+2004%27+trophy" onMouseOver="status='Click on thumbnail for an enlarged view';return true;" target="main"><img src="/photo/t_DSCN7743A.jpg" border="1" frame="box" rules="all" bordercolor="000000" alt="Joseph Wong, Chairman of UCSC receiving the 'Club of the Year 2004' trophy"></a>&nbsp;&nbsp;
+				</td>
+
+  
+
+
+				<td align="center">
+					<a href="/ucsc_photoAlbumIndividual.jsp?path=%2Fphoto%2FDSCF0024.jpg&description=Pak+Tjun+and+Kelvin+Kan%2C+after+a+friendly+match+at+the+Doncaster+Squash+Club%2C+Melbourne.+Who%27s+next%3F%21%21%21" onMouseOver="status='Click on thumbnail for an enlarged view';return true;" target="main"><img src="/photo/t_DSCF0024.jpg" border="1" frame="box" rules="all" bordercolor="000000" alt="Pak Tjun and Kelvin Kan, after a friendly match at the Doncaster Squash Club, Melbourne. Who's next?!!!"></a>&nbsp;&nbsp;
+				</td>
+
+  
+
+
+				<td align="center">
+					<a href="/ucsc_photoAlbumIndividual.jsp?path=%2Fphoto%2FDSCN6364A.jpg&description=Friends+celebrating+Yee+Lin%27s+Birthday" onMouseOver="status='Click on thumbnail for an enlarged view';return true;" target="main"><img src="/photo/DSCN6364B.jpg" border="1" frame="box" rules="all" bordercolor="000000" alt="Friends celebrating Yee Lin's Birthday"></a>&nbsp;&nbsp;
+				</td>
+
+  
+
+		</tr>
+</table>
+
+
+
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="center" width="100%">
+
+                <!-- to perform record paging -->
+	            	<!--
+ucsc_photoAlbumPaging.jsp
+-->
+
+
+	<font class="font13">Page 1 of 5</font>
+	<font class="font13">&nbsp;&nbsp;[</font>
+
+		<a href="ucsc_photoAlbum.jsp?id=3&currentPage=1&searchCriteria=&searchString=&orderBy=lastUpdated" onMouseOver="status='Page 1 of 5';return true">1</a>
+
+		<a href="ucsc_photoAlbum.jsp?id=3&currentPage=2&searchCriteria=&searchString=&orderBy=lastUpdated" onMouseOver="status='Page 2 of 5';return true">2</a>
+
+		<a href="ucsc_photoAlbum.jsp?id=3&currentPage=3&searchCriteria=&searchString=&orderBy=lastUpdated" onMouseOver="status='Page 3 of 5';return true">3</a>
+
+		<a href="ucsc_photoAlbum.jsp?id=3&currentPage=4&searchCriteria=&searchString=&orderBy=lastUpdated" onMouseOver="status='Page 4 of 5';return true">4</a>
+
+		<a href="ucsc_photoAlbum.jsp?id=3&currentPage=5&searchCriteria=&searchString=&orderBy=lastUpdated" onMouseOver="status='Page 5 of 5';return true">5</a>
+
+	<font class="font13">]</font>
+
+
+<br>
+
+
+
+  <input type="button" class="submit" value="Previous" disabled>
+
+
+
+<input type="button" class="submit" value="Next" onClick="location.href='ucsc_photoAlbum.jsp?id=3&currentPage=2&searchCriteria=&searchString=&orderBy=lastUpdated'">
+
+
+
+					
+
+          			<input type="button" class="submit" value="Photo Categories" onclick="location.href='/ucsc_photoCategory.jsp?pageTitle=UCSC+Photo+Album'">
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+
+					<!--# Author: Joshua Chin# Organization: N.A.# Date: 15 September 2001# Version 1.0 (Default)# Description: Footer page# Revision History:# Date		Author		Revision Description#--><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">	<tr>		<td align="center">			<hr color="#000000" size="1">		</td>	</tr>	<tr>		<td align="center">			<font class="font13">				Email all comments, views or wishes to the <a href="mailto:chinpakt@squash4all.com" onMouseOver="status='Email The UCSC Webmaster';return true" onMouseOut="status='';return true">UCSC Webmaster</a><br>				Copyright &copy;2001-2005 United Condo Squash Club<br>				All Rights Reserved.<br>				Best viewed with Microsoft Internet Explorer 5.x with a 1024x768 resolution			</font>		</td>	</tr></table>
+
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

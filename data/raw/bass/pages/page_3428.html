@@ -1,0 +1,317 @@
+<script language="javascript">
+	<!--
+		// gets the zipcode cookie data from the club's cookie
+
+		function getCookie(CookieName) {
+			var search = CookieName + "=";
+			if(document.cookie.length > 0) {
+				offset = document.cookie.indexOf(search);
+				if(offset != -1) {
+					offset += search.length;
+					end = document.cookie.indexOf(";", offset);
+					
+					if(end == -1) {
+						end = document.cookie.length;
+					}
+					return document.cookie.substring(offset, end);
+				}
+			}
+		}
+
+		// checks to see if the client is a spider
+
+			var spiderFound = false;
+			var useragent = window.navigator.userAgent;
+			useragent = useragent.toUpperCase();
+			if(useragent.substring(0, 6) == "GOOGLE" || useragent.substring(0, 7) == "BACKRUB") {
+				// should match all Google Spiders
+				spiderFound = true;
+			} else if(useragent.substring(0, 5) == "YAHOO") {
+				// should match all Yahoo spiders
+				spiderFound = true;
+			} else if(useragent.substring(0, 6) == "MSNBOT") {
+				// should match all MSN spiders
+				spiderFound = true;
+			} else if(useragent.substring(0, 5) == "LYCOS") {
+				// should match Lycos
+				spiderFound = true;
+			} else if(useragent.substring(0, 12) == "ACSC_CRAWLER") {
+				// should match ACSC_CRAWLER
+				spiderFound = true;
+			} else if(useragent.indexOf("Keynote") > 0 ) {
+				// should match Keynote Script
+				spiderFound = true;
+			} else if(useragent.substring(0, 8) == "MERCATOR") {
+				// should match AltaVista
+				spiderFound = true;
+			}
+
+		
+
+
+	// -->
+
+
+	<!--	
+		//***ZIPCODEVERIFIED***
+		// club method, used to route to a page that they host and
+		// detects whether or not the entered zipcode is theirs.
+		//
+		// alternate implementation is to pass to the AES ZipCode Application
+		// which will need to be modified to send the user to a passed in
+		// URL should the zipcode entered match the club passed in the URL
+
+		// only going to process if an actual end user
+		if(!spiderFound) {
+		// get the data string from the ZipCode cookie
+			var cookieData = getCookie("zipcode");
+			var foundZipCode = ""
+			var foundAssociation = ""
+			var foundClub = ""
+			var startIndex = 0;
+			
+			// found a ZipCode cookie
+			// for it to be valid it must be zipcode(>4 digits)|Association(3 char)|Club(>0 digits)
+			if(cookieData > "") {
+				// get the first marker		
+				pipe = cookieData.indexOf("|");
+				// get the zipcode, which is a minimum of 5 digits
+				if(pipe > 4) {
+					foundZipCode = cookieData.substring(startIndex, pipe);
+					startIndex = pipe + 1
+					// get the association
+					pipe = cookieData.indexOf("|", startIndex);
+					if(pipe > 8) {
+						foundAssociation = cookieData.substring(startIndex, pipe);
+						// get the club
+						startIndex = pipe + 1;
+						if(cookieData.length > startIndex) {
+							foundClub = cookieData.substring(startIndex);
+						}
+					}
+				}
+			}
+			// last check to ensure everything is ok
+			if(foundZipCode > "" && foundAssociation > "" && foundClub > "") {
+				// we have valid data
+				if(foundClub == "4") {
+					// this is our user, keep them here.
+				} else {
+					// invalid cookie, must verify client is in our territory
+					window.location = "http://www.aaa.com/?rclub=4&stop=yes&rurl=http://www.aaa-calif.com/&rdurl=" + encodeURIComponent(window.location);		
+				}
+			} else {
+				// invalid cookie, must verify client is in our territory
+				window.location = "http://www.aaa.com/?rclub=4&stop=yes&rurl=http://www.aaa-calif.com/&rdurl=" + encodeURIComponent(window.location);		
+			}			
+		}
+
+	// -->		
+</script>
+<html>
+
+<head>
+
+<title>Westways Magazine - Archived Issues</title>
+
+<style type="text/css">
+hr.gold {
+color: #f4b655;
+}
+
+.disclaim {
+font-family: arial, verdana, sans-serif;
+font-size: xx-small;
+}
+</style> 
+
+<!---begin static header--->
+
+</head>
+<body text=#000000 bgcolor=#ffffff>
+
+
+<a name="top"> 
+<table width="510" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+	<td width="510"> 
+	<img src="/westways/redesign_archive_header.jpg" alt="Westways Archived Issues" width="510" height="56" border="0">
+<!--BEGIN DISCLAIMER INCLUDE-->
+	<span class="disclaim">You are viewing content from the <i>Westways</i> magazine archives. Content and links may no longer be current.</span>
+	<hr size="1" class="gold">
+<!--END DISCLAIMER INCLUDE-->
+	<p>
+
+
+<!--BEGINNING OF ARCHIVAL CONTENT-->	
+
+<img src="/westways/ww_bonapp.gif" alt="Bon Appetit" width="300" height="85"><br>
+        
+<font face="verdana, arial, helvetica" size="5"><b>Rolling on the Riviera</b></font> 
+<p>
+<font face="verdana, arial, helvetica" size="3"><b>In the mood for Mediterranean food</b></font>
+      <p> 
+<i>Photographs by Leslie Bird</i>
+<!---start text here---> 
+<p>
+<b>San Diego And Imperial Counties</b>
+<p>
+<img src="u.gif" alt="U" width="41" height="35" hspace="5" vspace="1" align="left">nlike San Francisco restaurants, which delight in setting trends, San Diego eateries can be slow to embrace new culinary concepts.
+<table width=260 align=left>
+<tr><td>
+<img src="apps1.jpg" alt="The view is of La Jolla Cove, but the cuisine is distinctly Mediterranean. A glass of Azul's private-label wine provides a nice accompaniment to either the herb-roasted white sea bass (right) or the tempting Pot de Creme Napoleon (left). Photo by Leslie Bird" width="250" height="292" hspace="5" vspace="5" align="right"></td></tr>
+<tr><td><center>
+<font face="verdana, arial, helvetica" size="1"><b>The view is of La Jolla Cove, but the cuisine is distinctly Mediterranean. A glass of Azul's private-label wine provides a nice accompaniment to either the herb-roasted white sea bass (right) or the tempting Pot de Cr&egrave;me Napoleon (left).</b></font></center>
+</td></tr>
+</table> This certainly was true when the first ripples of California cuisine touched the local food scene, although a number of innovative San Diego restaurants ultimately helped define this influential cooking style. The rather belated realization that the local climate and topography have much in common with the Riviera inspired several chefs to write menus based on Mediterranean cooking, which likes to ignore national borders and relies heavily on the sea, top-quality produce, and the sharp flavors provided by herbs, garlic, and pungent cheeses.
+<p>
+Among those fascinated by a cuisine as sunny as San Diego is John Malcolm, executive chef of the new <b>Azul La Jolla</b>, a spacious restaurant located on the seaside neighborhood's high-rent, view-rich Prospect Street. The dining room's views of La Jolla Cove and seagoing points north are so good, in fact, that some guests probably ignore the decor, which is highlighted by Mediterranean works of art. Azul is attractive, to be sure, and the prices reflect the choice setting, but as is common in La Jolla, the mood retains a notably relaxed tone.
+<p>
+Subtitled "Tastes of the Mediterranean," Malcolm's appetizer list takes diners on a leisurely, tasty prowl through the coastal cuisines of Spain, France, Italy, and Greece and is highlighted by such offerings as pan-crisped shrimp risotto cakes dressed with lemon-garlic mayonnaise and grilled asparagus with a black olive dressing and baby-tomato vinaigrette. The elaborately titled Artisan's Meze Platter uses the Greek word for "appetizer" to describe a substantial sampler of tasty mouthfuls, many based on seafood and ranging from bruschetta to small, strongly flavored salads; delicate rice fritters; and perhaps a mound of creamy French p&acirc;t&eacute;. The meze assortment can be approached as a meal if preceded by the velvet-textured white bean soup, to which saut&eacute;ed escarole and radicchio add tart bursts of flavor.
+<p>
+A richly assorted vegetable ragout makes an attractive accompaniment to the herb-roasted white sea bass with Proven&ccedil;al flavors. Roasted vegetables play a supporting role to the substantial rack of lamb, crusted quite deliciously with minced ni&ccedil;oise olives, which reappear as garnish for grilled local swordfish with saffron-potato hash and tomato-caper confit. Azul's Mediterranean accent also results in such happy creations as grilled free-range chicken breast with a sauce of white port and an irresistible gratin of goat cheese and potato.
+<p> 
+The desserts submerge the senses in sweet self-indulgences that include an unusual lemon shortcake with fresh strawberries, whipped cream, <i>and</i> lemon sauce; and the <i>vin santo</i> sabayon, a suave custard flavored with the sweet dessert wine the Italians deem <i>santo</i>, or holy. Not surprisingly, it tastes heavenly. 
+<p>
+<i>Azul La Jolla is located at 1250 Prospect Street, La Jolla; (858) 454-9616. Open for lunch Tuesday through Sunday 11:30 a.m. to 2:30 p.m.; for dinner Sunday through Thursday 5:30 to 10 p.m., Friday and Saturday 5:30 to 11 p.m. Full bar. Wheelchair accessible. Valet parking. Most major credit cards accepted. Reservations suggested. Dinner for two, food only: $60&#150;$90. 
+<p align=right> &#151; David Nelson</i>
+<p>
+<b>Orange County</b>
+<p>
+<img src="w.gif" alt="W" width="45" height="35" hspace="3" vspace="1" align="left">ho can forget those glorious island-themed restaurants of the '50s and '60s with names like the Outrigger, Waikiki West, and Trader You-Fill-in-the-Name? I was a real sucker for those dimly lit places decorated with tacky Polynesian kitsch, hypnotic aquariums, sickly sweet foods, and little cocktail umbrellas. As my tastes became more refined, I avoided such places &#151; until now.
+<p>
+<b>Duke's Huntington Beach</b>, on the surface promising everything there was to hate about these overdone poi palaces of the past, has brought back their inherent fun and added a serious side of good food. Named after Hawaiian surfing legend Duke Kahanamoku and located at the foot of the Huntington Beach pier, the restaurant has replaced the Polynesian clich&eacute; with a bright, open interior rich with the surfing memorabilia and beach accoutrements you still half-expect from such a place. Little umbrellas adorn drinks with names like lava flow and orange blossom margarita.
+<p>
+All similarities to the tiki-covered restaurants of yesterday end there. Duke's menu features a large selection of fish and aged beef &#151; all very fresh, all simply prepared. Forget miniature tentacles and spongy meat, our calamari appetizer featured long, thick strips of calamari steak, quick-fried and served with a horseradish-laced guava dipping sauce. The salads, especially a plate of tender greens and fried wontons with a sweet-hot cilantro vinaigrette, were terrific.
+<p>
+The entr&eacute;e menu is straightforward and simple. A plate of fresh swordfish arrived tableside perfectly grilled in nothing more than its own juices and a touch of citrus. Duke's regularly features five or six fresh-fish selections on any given night, as well as Australian lobster tail and Alaskan king crab legs. While the steak selection is not as broad, all the cuts we tasted were tender and perfectly grilled to order (a medium-rare, while still blood red in the middle, was hot and charred as requested).
+<p>
+<center>
+<table bgcolor="#1E6796" width=400 cellpadding=8>
+<tr><td><center><font face="verdana, arial, helvetica" size=3 color="#ffffff"><b>Forget miniature tentacles and spongy meat, our calamari appetizer featured long think strips of calamari steak, quick-fried and served with a horseradish-laced guava dipping sauce.</b></font></center>
+</td></tr>
+</table>
+</center>
+<p>
+And for those who insist on reliving their Polynesian favorites, Duke's serves a tasty quartet of "Island Favorites," including a ginger barbecued breast of huli huli chicken and sweet Big Island glazed pork ribs.
+<p>
+With its beachside 180-degree view, protected patio, blend of tongue-in-cheek Island kitsch with a clean, contemporary ambience and simple, modern menu, Duke's is perfect for a lazy lunch or an evening repose. Even the prices seem a bit nostalgic (read: inexpensive), given that Duke's sits along some of the priciest real estate in Southern California.
+<p>
+<i>Duke's Huntington Beach is located at 317 Pacific Coast Hwy.; (714) 374-6446. Open for lunch Tuesday through Saturday 11:30 a.m. to 2:30 p.m.; for dinner Sunday through Thursday 5 to 10 p.m., Friday 5 to 10:30 p.m., Saturday and Sunday 4:30 to 10:30 p.m.; for Sunday brunch 10 a.m. to 2 p.m. The Barefoot Bar offers a pared-down menu between lunch and dinner hours. Wheelchair accessible. Valet parking in front of the restaurant and self-parking in a parking structure two blocks up Main Street at Walnut. Most major credit cards accepted. Reservations recommended. Dinner for two, food only: $24&#150;$70. 
+<p align=right> &#151; Pete Johnson</i>
+<p>
+<b>THE VALLEYS</b>
+<p>
+<img src="f-serif.gif" alt="F" width="41" height="35" hspace="3" vspace="1" align="left">ire consumed the restaurant that previously stood at 11801 Ventura Boulevard, so it's ironic that flames are now at the heart of the restaurant that has taken its place. <b>Spark Woodfire Cooking</b>, which opened last May, was designed after the neighborhood <i>rosticcerias</i> that dot Italy. Judging from the restaurant's popularity, the concept appears to have translated well to Studio City.
+<p>
+The centerpiece of Spark's kitchen, which is visible from the dining room thanks to a glass window, is an impressive, vertical wood-burning rotisserie imported from Sicily. The chef roasts chicken, lamb, <i>porchetta</i> (pork leg), duck, and an unusual menu item for Los Angeles &#151; rabbit. A separate wood-burning grill gives fresh fish, steaks, and vegetables their smoky flavor and char-grilled veneer. A wood-burning pizza oven crisps the thin-crust pizzas. Even the rich, cheesy lasagna and other baked pasta dishes take their turn in the heat of a wood fire.
+<p>
+Most of Spark's menu items are Italian or are at least inspired by Italy, such as the tasty <i>fritto misto</i>: a mixture of shrimp, calamari, and zucchini slices quickly deep-fried and served, rustic-style, on a plate lined with brown paper. Non-Italian dishes include a cornbread skillet with fresh chiles and Wisconsin cheddar and a bounteous Cobb salad made with <i>pancetta</i> (Italian bacon).
+<p>
+Portions are immense: The spicy-hot Chicken alla Diavola is half a bird, and the mixed rotisserie platter "for one," which includes lamb, chicken, and <i>porchetta</i>, is ample for two. However, I'd prefer to see smaller servings and more attention to detail; the <i>porchetta</i> was dry and not terribly flavorful, for example. But I seem to be in the minority. Customers clearly enjoy the <i>abbondanza</i> &#151; diners can share tastes of their dishes, and nearly everyone leaves with a doggie bag.
+<p>
+Spark is owned by two restaurant pros: Danilo Terribili, who also owns Alto Palato in West Hollywood, and Bill Chait, who founded Louise's Trattoria 15 years ago. Terribili is known for his wine acumen, and for Spark he's assembled a list of inexpensive bottlings that pair well with the food. He also serves tasting portions (three ounces) of wines in custom-made wineglass carriers constructed out of wire, a user-friendly way to introduce diners to different wines. It's surely no accident that the wineglass carriers are eye-catching, which is certain to boost wine sales. Flaming good idea.
+<p>
+<i>Spark Woodfire Cooking is located at 11801 Ventura Blvd., Studio City; (818) 623-8883. Open for lunch Monday through Saturday 11:30 a.m. to 3 p.m.; for dinner Sunday through Thursday 5 to 10 p.m., Friday and Saturday 5 to 11 p.m. Full bar. Wheelchair accessible. Valet parking. Most major credit cards accepted. Reservations accepted for parties of six or more. Dinner for two, food only: $26&#150;$60. 
+<p align=right> &#151; Jean Barrett</i>
+<p>
+<b>Inland Empire</b>
+<p>
+<img src="O.gif" alt="O" width="41" height="35" hspace="3" vspace="1" align="left">n a residential street just minutes from downtown Palm Springs, there's a charming hideaway that's worth seeking.
+      <table width=260 cellpadding=5 border=0 align=right>
+        <tr><td><img src="apps2.jpg" alt="Diners savor Europa's romantic setting, as well as its food. The salmon filet is topped with zucchinis, mushrooms, and cr&egrave;me fra&icirc;che, then wrapped and baked in parchment paper." width="250" height="298" hspace="5" vspace="2">
+</td></tr>
+<tr><td><center><font face="verdana, arial, helvetica" size="1"><b>Diners savor Europa's romantic setting, as well as its food. The salmon filet is topped with zucchinis, mushrooms, and cr&egrave;me fra&icirc;che, then wrapped and baked in parchment paper.</b></font></center>
+</td></tr>
+</table> The Villa Royale Inn belonged to one of Palm Springs's successful families until the 1980s, when two Hollywood set designers snapped it up, renovated the interiors, and added the romantic <b>Europa</b> restaurant.
+<p>
+And what a setting they've created. Step inside and you'll feel as if you've been transported to an intimate castle in Europe. The textured pomegranate-colored walls and tables topped with small lamps or candles add to the room's warmth. French doors thrown open reveal a tiled courtyard from which the mesmerizing trill of fountains drifts. Patrons can dine indoors in the glow of the fireplace or outdoors under a Milky Way of desert stars.
+<p>
+We started with the house-made p&acirc;t&eacute;, a buttery-smooth blend of pureed pork enriched with hazelnuts and sprinkled with finely grated Parmesan cheese and fat capers. The evening's salad special comprised a variety of field greens tossed with hearts of palm in a piquant citrus vinaigrette. A basket of fragrant olive and sourdough bread accompanied the meal.
+<p>
+The Rodney Strong merlot we sipped at the poolside bar before we were seated turned out to be a fine companion for an entr&eacute;e of pork medallions, pounded to perfect tenderness, then saut&eacute;ed with apple brandy, apple slices, and fresh dates. Boasting deep flavor, the salmon in parchment understandably remains one of Europa's signature dishes. The fresh salmon filet is topped with zucchini and mushrooms, slathered with cr&egrave;me fra&icirc;che, then wrapped and baked in parchment paper. When the server sliced open the parchment tableside, steaming aromas wafted through the dining room.
+<p>
+If the entr&eacute;es seem larger than life, it could have something to do with the king-size rectangular blue delft plates they're served on. A broad swirl of vegetables &#151; sweet-and-sour cabbage, zucchini rounds, and al dente carrot sticks-fill out each dish.
+<p>
+Save room for one of the house-made desserts, which include baked apple with hot cinnamon-pecan sauce, a good chocolate mousse, and cr&egrave;me br&ucirc;l&eacute;e. You don't have to go home feeling full: Simply finish off the meal with a post-prandial stroll around the lush grounds of the Villa Royale.
+<p>
+<i>Europa Restaurant is located at 1620 Indian Trail, Palm Springs; (760) 327-2314. Open for lunch Tuesday through Saturday 11:30 a.m. to 2 p.m.; for dinner Tuesday through Saturday 5:30 to 10 p.m.; for champagne brunch Sunday 11:30 a.m. to 2 p.m. Full bar. Wheelchair accessible. Valet parking. Most major credit cards accepted. Reservations recommended. Dinner for two, food only: 
+$40&#150;$70. 
+<p align=right> &#151; Sharon Apfelbaum</i>
+<p>
+<b>Points North</b>
+<p>
+<img src="R.gif" alt="R" width="41" height="35" hspace="3" vspace="1" align="left"><b>itrovo</b> has been touted as a great romantic hide-away. An Italian trattoria at one end of a shopping center doesn't qualify as "romantic" in my book, but I suppose the intimate main dining room with a view of the open kitchen and the patio does possess a certain charm after dark when the lights are low. Perhaps it can be just the spot for a clandestine rendezvous. Located off the beaten path in suburban Westlake Village, it's away from high-traffic Westlake Boulevard, where numerous restaurants compete for diners' dollars.
+<p>
+Start with the refreshing <i>insalata alle fragole</i>, a mixture of fresh field greens dotted with Gorgonzola and ripe strawberries and set off by an excellent balsamic vinaigrette. A rendition of fried calamari, with several shrimp thrown in for good measure, is brought to the table piping hot; the huge portion is the perfect finger food for sharing. The carpaccio, however, didn't fare so well. Listed under antipasti, it turned out to be more of a salad: The slices of raw beef were buried under a tangle of salad greens, without the promised olive oil or lemon to moisten the proceedings.
+<p>
+On the entr&eacute;e side, grilled meats and fish are offered, but the majority of the menu is given over to pizza and pasta. The pizza contadina, topped with grilled sausage, basil, tomato, and mozzarella, is top-drawer, crisp and smoky from its preparation in the wood-burning oven.
+<p>
+Among the pastas, the farfalle has a subtle pink sauce, the marriage of tomatoes and vodka, which is embellished with chunks of salmon. It's mild enough so it doesn't overpower. The house-made <i>orecchiett</i> (ear-shaped pasta), perfectly al dente, was saut&eacute;ed with sausage, fresh broccoli, and spicy red chile pepper, while the mushroom risotto, appropriately earthy and filling, was a satisfying helping of comfort food.
+<p>
+Cr&egrave;me br&ucirc;l&eacute;e is done correctly here, foursquare and straightforward with no extraneous flavor elements. In addition, the tiramisu is a good, if light, confection, while anything with chocolate (e.g., the mousse cake) is a no-brainer.
+<p>
+The wine list, split between well-priced Californian and Italian selections, is nicely suited to the menu. However, both the wines we ordered, Ferrari Carano sauvignon blanc and Sanford pinot noir, were unavailable. Our server apologized, suggested alternatives in the same price range, and then (we assume, out of embarrassment) didn't charge us for them. Ritrovo is obviously a place that puts its customers first, which certainly encouraged us to return.
+<p>
+<i>Ritrovo is located at 1125 Lindero Canyon Road, Westlake Village; (818) 889-0191. Open for lunch Tuesday through Friday 11:30 a.m. to 2:30 p.m.; for dinner Tuesday through Thursday 5:30 to 10 p.m., Friday and Saturday 5:30 to 11 p.m., Sunday 5 to 9 p.m. Closed Monday. Full bar. Wheelchair accessible. Self-parking. Most major credit cards accepted. Reservations recommended. Dinner for two, food only: $40&#150;$65. 
+<p align=right> &#151; Dennis Schaefer</i>
+<p>
+<b>L.A. And Environs</b>
+<p>
+<img src="I.gif" alt="I" width="41" height="35" hspace="3" vspace="1" align="left"> grew up in Los Feliz in the '60s and '70s; my father grew up in Los Feliz in the '30s and '40s. Therefore, it's been entertaining for my family to witness Los Feliz slowly morph into one of the hippest American neighborhoods since New York's Tribeca. Ha! We showed those snobby Westsiders!
+<p>
+What's bringing the outsiders in are places like <b>vermont</b>. Yes, Los Feliz is now the sort of neighborhood that has restaurants with lowercase names. But before you write it off as hopelessly pretentious, you should know that vermont is run by a couple of the nicest guys you'll ever meet (Manuel Mesta and Michael Gelzhiser) and staffed by equally friendly waiters.
+<table width=230 align=right cellpadding=1>
+<tr><td><center><img src="apps3.jpg" alt="Owners Manuel Mesta (standing) and Michael Gelzhiser preside over vermont's friendly service and sophisticated yet homey menu. "Michaels favorite saladblends fris&eacuteebaconand poached egg. - Photo by Leslie Bird" width="225" height="295" hspace="1" vspace="1"></center></td></tr>
+<tr><td><center><font face="verdana, arial, helvetica" size="1"><b>Owners Manuel Mesta (standing) and Michael Gelzhiser preside over vermont's friendly service and sophisticated yet homey menu. "Michael's favorite salad" blends fris&eacute;e, bacon, and poached egg.</b></font></center>
+</td></tr>
+</table>
+They greet you warmly, they take good care of you, and they set a relaxed mood &#151; which can be, after all, as important to the dining experience as the food. Fortunately, the kitchen also delivers, turning out sophisticated yet homey American cooking at fair prices, making this an ideal, if somewhat upscale, neighborhood restaurant.
+<p>
+When I first walked in, I couldn't believe this was the site of the old Sarno's, a smoky, cluttered fringe-Hollywood joint from my youth. The opera memorabilia and piano are gone, and the room is cool and chic now with white walls, arches, and huge potted palms. The diners, an artsy clientele that reflects the neighborhood, are as handsome as the setting. Only the noise at peak hours detracts from the good vibe.
+<p>
+The cooking, following the recent trend toward updated home cooking, is stylish and uncluttered. It's the kind of food that makes you feel good, not the kind that grabs attention. So the Caesar salad is straightforward, the crab cakes pair up with a classic aioli, and "Michael's favorite salad" is a time-honored blend of fris&eacute;e, bacon, poached egg, and a warm sherry vinaigrette. Main courses run toward dishes such as a fat pork chop stuffed with apples, cherries, and herbs and a light, crispy white fish on a bed of pearl pasta and asparagus tips with a subtle basil-watercress sauce. Desserts &#151; among them bread pudding with chocolate chips, apple tart with caramel sauce, and vanilla ice cream &#151; are equally homey and well-prepared.
+<p>
+It's good to see Los Feliz thriving. Even better is being able to eat so well in my old stomping grounds. 
+<p>
+<i>vermont is located at 1714 N. Vermont Avenue, Los Feliz; (323) 661-6163. Open 
+for lunch Tuesday through Friday 11:30 a.m. to 3 p.m.; for dinner Tuesday through 
+Sunday 5:30 to 10:30 p.m. Beer and wine. Wheelchair accessible. Free parking in 
+lot behind the restaurant. Most major credit cards accepted. Dinner for two, food 
+only: $45&#150;$65. 
+<p align=right> &#151; Colleen Dunn Bates</i>
+<p>
+<!--end content--> 
+      <!--static footer--> 
+<P>
+<table border="0" cellpadding="10"><tr bgcolor="#FBF5EA" align="left" valign="top"><td><font size="1" face="Arial">
+You are reading the January/February 2000 issue of <i>Westways</i>. Some information contained in this publication is time-sensitive, and the terms of some offers (cruise or vacation packages, for example) or services (provisions for roadside assistance, for example) might have been superseded by subsequent information and might no longer apply.</font></td>
+</tr>
+</table>
+
+<!--END OF ARCHIVAL CONTENT-->	
+	
+ 
+	<p>
+
+	<hr size="1">
+	<span class="disclaim">
+	Copyright &copy; 1998 - 2006 Automobile Club of Southern California. All rights reserved.
+	</span>
+	
+<!--CLOSE WINDOW-->
+	<!--<span class="disclaim">
+	&gt;&gt; <a href="" onClick="self.close()">Close this window</a>.
+	</span>-->
+	
+	<div class="disclaim">
+	&nbsp;&nbsp;&gt;&gt; <a href="/index.asp">Return to Auto Club home</a>.
+	</div>
+<!--END CLOSE-->
+
+	</td>
+	</tr>
+</table>
+</body>
+</html>
+

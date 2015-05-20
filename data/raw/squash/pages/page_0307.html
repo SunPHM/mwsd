@@ -1,0 +1,229 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head> <LINK REL="SHORTCUT ICON" HREF="/Img/mvg.ico">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+   <meta name="Author" content="Peter Rogelj">  
+   <META name="DESCRIPTION" content="Machine Vision Group - Tracking Players in Sports Games ">
+   <title>Machine Vision Group - Tracking Players in Sports Games</title>   
+   
+   <style type="text/css">
+   <!-- 
+   A{text-decoration:none} 
+   -->
+   </style>
+
+<script ID="SQJumpOut"><!-- if (!parent.frames.length) ; else { window.open(location.href, 'noFramesWindow'); location.href = '/index.htm';} // --></script>
+<script language='JavaScript'>
+<!-- // Hide script from browsers which can't handle JavaScript
+
+  function img_A(imgName) {
+
+    if (document.images) { 
+        imgA = eval(imgName + "A.src"); 
+        document [imgName].src = imgA;
+    }
+  }
+
+  function img_B(imgName) {
+
+    if (document.images) {
+        imgB = eval(imgName + "B.src");
+        document [imgName].src = imgB;
+    }
+  }
+
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF" link="#000077" vlink="#000066" alink="#FF0000" background="/img/bg.gif">
+&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0">
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="85">
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH="85" >
+
+<tr>
+<td ALIGN=CENTER HEIGHT="85">
+<a href="/index.html" onMouseOver="img_A('logo')" onMouseOut="img_B('logo')"><img SRC="/img/MVGmaliK.gif" NAME="logo" ALT="Home" BORDER=0 height=85 width=85></a>
+</td>
+</tr>
+
+<tr>
+<td HEIGHT="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="51">
+<a href="/people.html" onMouseOver="img_A('people')" onMouseOut="img_B('people')"><img SRC="/img/peopleB.gif" NAME="people" ALT="People" BORDER=0 height=51 width=51></a></td>
+</tr>
+
+<tr>
+<td HEIGHT="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="51">
+<a href="/research.html" onMouseOver="img_A('research')" onMouseOut="img_B('research')"><img SRC="/img/researchB.gif" NAME="research" ALT="Research" BORDER=0 height=51 width=51></a></td>
+</tr>
+
+<tr>
+<td HEIGHT="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="51">
+<a href="/publications.html" onMouseOver="img_A('publications')" onMouseOut="img_B('publications')"><img SRC="/img/publicationsB.gif" NAME="publications" ALT="Publications" BORDER=0 height=51 width=51></a></td>
+</tr>
+
+<tr>
+<td HEIGHT="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="51">
+<a href="/events.html" onMouseOver="img_A('events')" onMouseOut="img_B('events')"><img SRC="/img/eventsB.gif" NAME="events" ALT="Events" BORDER=0 height=51 width=51></a></td>
+</tr>
+
+<tr>
+<td HEIGHT="20"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="51">
+<a href="/links.html" onMouseOver="img_A('links')" onMouseOut="img_B('links')"><img SRC="/img/linksB.gif" NAME="links" ALT="Links" BORDER=0 height=51 width=51></a></td>
+</tr>
+</table>
+
+</td>
+
+<td VALIGN=TOP WIDTH="50">
+<img SRC="/img/nopix.gif" BORDER=0 height=1 width=25>
+</td>
+
+<td id="CellA" >     
+<script language='JavaScript'>
+<!-- // Hide script from browsers which can't handle JavaScript           
+if (navigator.appName!="Netscape") document.all.CellA.width=String(document.body.scrollWidth-85-50); 
+//document.write(String(top.innerWidth));
+//-->
+</script>
+    
+<!-- Zacetek osebne streni -->   
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 ><tr><td ALIGN=LEFT VALIGN=TOP WIDTH="80">
+<img SRC="../trackp.gif" BORDER=0></td><td VALIGN=TOP>
+<font face="verdana,arial,helvetica,sans-serif" color="#F4B000" size="6">
+<b>Tracking Players in Sports Games</b><br>Individual sports (Squash)</font></td>
+</tr></table><p>
+
+&nbsp;<p><font size="3" face="verdana,arial,helvetica,sans-serif" color="#000000"><b>Overview</b></font>
+
+<font face="verdana,arial,helvetica,sans-serif" color="#000000" size="2">
+
+<p>In presented work, we focus on tracking the participants (players) in
+individual sports. In contrast to team sports, there are only a few players
+visible in the observed scene. Therefore more basic tracking algorithms can be
+employed, which results in fast (near real-time) image processing. The system
+presented here was developed by using the recordings of a squash matches,
+however, it could be adapted to many other sports (for example tennis,
+one-on-one basketball and similar). The whole match is videotaped using single
+stationary camera. The video is digitized to M-JPEG format using inexpensive
+consumer-grade video acquisition hardware. Player tracking and motion analysis
+are done offline.</font><font size="3" face="verdana,arial,helvetica,sans-serif" color="#000000"><b><br>
+<br>
+<br>
+<br>
+User
+interface</b></font>
+<p><font face="verdana,arial,helvetica,sans-serif" color="#000000" size="2">The
+system for tracking players in individual sports been developed to the phase of
+working prototype, which is routinely used at Faculty of Sports at University of
+Ljubljana for squash analysis. To enable routine use, an user interface,
+which is shown below, was developed. The application runs under the Microsoft
+Windows operating system.</font></p>
+<p><img border="0" src="squash1.jpg" width="545" height="362"></p>
+<p><font size="3" face="verdana,arial,helvetica,sans-serif" color="#000000"><b><br>
+<br>
+Performance</b></font></p>
+<p><font face="verdana,arial,helvetica,sans-serif" color="#000000" size="2">Simple
+algorithms for player tracking are implemented in this prototype, which enabled
+us to use highly optimized <a href="http://developer.intel.com/software/products/perflib/">Intel
+Image Processing Library</a> for video data manipulation. This results in near
+real-time processing speed, which reaches 15-20 frames per second on Intel
+Pentium III class PC. System is supervised by human operator during the tracking
+process, but needs little intervention if proper precautions were taken before
+and during the video recording. This way, several hours of sport video can be
+processed in single workday.</font></p>
+<p>
+<font size="3" face="verdana,arial,helvetica,sans-serif" color="#000000"><b><br>
+<br>
+Results</b></font>
+
+</p>
+
+<font face="verdana,arial,helvetica,sans-serif" color="#000000" size="2">
+
+<p>Results, provided by our system can be exported in the form of tab-separated
+text files, which ensures easy integration with other applications, which can be
+used for further analysis. Alternatively, results can be presented in illustrative and visually
+attractive manner, for easier analysis by sport experts. Some examples are shown
+below.
+
+<p><img border="0" src="squash2.jpg" width="390" height="280"> <img border="0" src="squash3.jpg" width="390" height="280">
+
+<br> 
+
+       
+    
+</font>
+
+<p><font size="3" face="verdana,arial,helvetica,sans-serif" color="#000000"><b>Contact</b></font><p><font face="verdana,arial,helvetica,sans-serif" color="#000000" size="2"><a href="mailto:janez.pers@fe.uni-lj.si">Janez
+Perš</a> or <a href="mailto:stanislav.kovacic@fe.uni-lj.si">Stanislav Kovačič</a></font>
+
+</td>
+</table>
+
+
+<script language='JavaScript'>
+<!-- // Hide script from browsers which can't handle JavaScript    
+  if (document.images) {
+
+    logoA = new Image ();
+    logoA.src = "/img/MVGmaliKA.gif";
+    logoB = new Image ();
+    logoB.src = "/img/MVGmaliK.gif";
+
+    peopleA = new Image ();
+    peopleA.src = "/img/peopleA.gif";
+    peopleB = new Image ();
+    peopleB.src = "/img/peopleB.gif";
+    
+    researchA = new Image ();
+    researchA.src = "/img/researchA.gif";
+    researchB = new Image ();
+    researchB.src = "/img/researchB.gif";
+
+    publicationsA = new Image ();
+    publicationsA.src = "/img/publicationsA.gif";
+    publicationsB = new Image ();
+    publicationsB.src = "/img/publicationsB.gif";
+
+    eventsA = new Image ();
+    eventsA.src = "/img/eventsA.gif";
+    eventsB = new Image ();
+    eventsB.src = "/img/eventsB.gif";
+
+
+    linksA = new Image ();
+    linksA.src = "/img/linksA.gif";
+    linksB = new Image ();
+    linksB.src = "/img/linksB.gif";
+
+
+  }
+//-->
+</script>
+
+</body>
+</html>

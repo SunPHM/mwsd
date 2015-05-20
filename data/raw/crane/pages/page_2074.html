@@ -1,0 +1,317 @@
+
+<script language="javascript">
+<!--
+function check_email (form_name, element) {
+   var email = document.forms[form_name].elements[element].value;
+   var at_pos = email.indexOf ('@');
+   var period = email.lastIndexOf ('.');
+   var space = email.indexOf (' ');
+   var length = email.length - 1;
+   var badspace = false;
+
+   if (space == 0) {
+      email = email.substring(1);
+   } else if (space == length) {
+      email = email.substring(0,length);
+   } else if (space != -1) {
+      badspace = true;
+   }
+
+   if ((at_pos < 1) || (period <= at_pos+1) || (period == length) || badspace) {
+      alert('Please recheck your e-mail address to make sure it is correct and that the e-mail address does not include blank spaces.');
+      return false;
+   }
+   document.forms[form_name].elements[element].value = email;
+   return true;
+}
+// -->
+</script>
+
+
+<html><head>
+<style type="text/css">
+<!--
+A:link {color:blue}
+A:visited {color:#0000FF}
+A:hover {color:#000000}
+A:active {color:#0000FF}
+-->
+</style><script language="javascript">
+<!--
+function check_email (form_name, element)
+{
+   var email    = document.forms[form_name].elements[element].value
+   var at_pos   = email.indexOf ('@')
+   var period   = email.lastIndexOf ('.')
+   var space    = email.indexOf (' ')
+   var length   = email.length - 1 
+
+   if ((at_pos < 1) || 
+       (period <= at_pos+1) || 
+       (period == length ) || 
+       (space  != -1)) 
+   {
+      alert('Please enter a valid e-mail address!')
+      return false;
+   }
+   return true;
+}
+// --></script>
+
+<title>U.S. PIRG</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/uspirgStyle.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+  <tr valign="top"> 
+    <td width="345" height="40"><img src="images/uslogo3small.gif" width="600" height="46" usemap="#Map2" border="0"><map name="Map2"><area shape="rect" coords="-2,-1,165,37" href="http://www.uspirg.org"></map></td>
+
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+  <tr> 
+    <td height="23" valign="top" colspan="2"><img src="images/top_navbar3.gif" width="600" height="15" usemap="#Map" border="0">
+      <map name="Map"><area shape="rect" coords="2,2,66,15" href="http://www.pirg.org/alerts/route.asp?id2=10115"><area shape="rect" coords="71,2,188,14" href="http://uspirg.org/uspirg.asp?id3=USPIRG&amp;id5=US&amp;"><area shape="rect" coords="194,2,277,13" href="https://www.oursecureserver.org/uspirg/membership.html"><area shape="rect" coords="281,2,353,12" href="http://www.pirg.org/alerts/route.asp?id2=5429"><area shape="rect" coords="360,2,415,13" href="http://www.pirg.org/alerts/route.asp?id2=5663"><area shape="rect" coords="422,2,582,14" href="http://uspirg.org/uspirg.asp?id2=17974&id3=USPIRG&">
+    </map> 
+      <!-- fwtable fwsrc="home_navbar.png" fwbase="top_navbar" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" --> 
+      <map name="m_top_navbarMap"> <area shape="rect" coords="332,1,486,15" href="http://www.pirg.org/score2002/" > 
+        <area shape="rect" coords="278,1,327,16" href="http://www.pirg.org/alerts/route.asp?id2=5663" > 
+        <area shape="rect" coords="198,1,272,13" href="http://www.pirg.org/alerts/route.asp?id2=5429" > 
+        <area shape="rect" coords="117,1,190,14" href="https://www.oursecureserver.org/uspirg/membership.html" > 
+        <area shape="rect" coords="42,-1,113,13" href="http://www.pirg.org/alerts/route.asp?id2=5268" > 
+        <area shape="rect" coords="3,-1,38,14" href="http://www.pirg.org/jobs/" > 
+    </map> </td>
+  </tr>
+  <tr> 
+    <td height="25" valign="middle" width="130"><img src="images/issueupdates.gif" width="130" height="10"></td>
+    <td height="15" valign="top" width="470"> 
+      <form name="info" action="http://www.pirg.org/alerts/get_list_info.asp"
+method="post" onSubmit="return check_email ('info', 'email')">
+        <font color="#FFFFFF">x</font> <font color="#336699"> </font> 
+        <input type="text" name="email" value="e-mail address" size="18">
+        <input type="hidden" name="id4" value="POHP">
+        <font color="#FFFFFF">x</font> <font color="#336699"> 
+        <select name="list_id">
+          <option value="32" selected>State</option>
+          <option value="32">AL</option>
+          <option value="32">AK</option>
+          <option value="32">AR</option>
+          <option value="32">AZ</option>
+          <option value="12">CA</option>
+          <option value="13">CO</option>
+          <option value="14">CT</option>
+          <option value="32">DC</option>
+          <option value="32">DE</option>
+          <option value="15">FL</option>
+          <option value="16">GA</option>
+          <option value="32">HI</option>
+          <option value="17">IA</option>
+          <option value="32">ID</option>
+          <option value="18">IL</option>
+          <option value="32">IN</option>
+          <option value="32">KS</option>
+          <option value="32">KY</option>
+          <option value="32">LA</option>
+          <option value="19">MA</option>
+          <option value="20">MD</option>
+          <option value="32">ME</option>
+          <option value="21">MI</option>
+          <option value="32">MN</option>
+          <option value="22">MO</option>
+          <option value="32">MS</option>
+          <option value="32">MT</option>
+          <option value="23">NC</option>
+          <option value="32">ND</option>
+          <option value="32">NE</option>
+          <option value="24">NH</option>
+          <option value="25">NJ</option>
+          <option value="26">NM</option>
+          <option value="32">NV</option>
+          <option value="32">NY</option>
+          <option value="27">OH</option>
+          <option value="32">OK</option>
+          <option value="28">OR</option>
+          <option value="29">PA</option>
+          <option value="32">PR</option>
+          <option value="32">RI</option>
+          <option value="32">SC</option>
+          <option value="32">SD</option>
+          <option value="32">TN</option>
+          <option value="32">TX</option>
+          <option value="32">UT</option>
+          <option value="32">VA</option>
+          <option value="32">VI</option>
+          <option value="32">VT</option>
+          <option value="30">WA</option>
+          <option value="31">WI</option>
+          <option value="32">WV</option>
+          <option value="32">WY</option>
+        </select>
+        </font> <font color="#FFFFFF">xx</font> 
+        <input type="submit" value="Sign Up" name="submit">
+        <div align="right"></div>
+      </form>
+    </td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="2" colspan="2"><img src="images/blackbar.gif" width="600" height="2"></td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="10" align="center" bgcolor="#FFFFFF">
+  <tr valign="top"> 
+    <td width="20%"> 
+      <p><font size="2" face="Arial, Helvetica, sans-serif"><b><a href="index.htm"><br>
+        Home </a></b></font></p>
+      <p><b><font face="Arial, Helvetica, sans-serif" size="2">Environment</font></b><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <font face="Arial, Helvetica, sans-serif" size="1"><a href="passthrus/arcticpassthru.html">Arctic 
+        Wilderness</a> <br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="passthrus/cleanairpassthru.html">Clean 
+        Air</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> </font><font face="Arial, Helvetica, sans-serif" size="1"><a href="http://www.pirg.org/alerts/route.asp?id2=5191">Clean 
+        Water</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> </font><font face="Arial, Helvetica, sans-serif" size="1"><a href="http://www.pirg.org/alerts/route.asp?id2=8588">Endangered 
+        Species</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="passthrus/energypassthru.html">Energy</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="passthrus/enviroprotectionthru.html">Environmental 
+        Protection</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="passthrus/forestspassthru.html">Forests 
+        Protection</a> <br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=5235">Global 
+        Warming</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=11251">Oceans</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=5238">Polluter 
+        Pork</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=7982">Public 
+        Lands Project</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="passthrus/toxics.html">Toxics &amp; Superfund</a></font><font face="Arial, Helvetica, sans-serif" size="1"><br>
+        <a href="http://www.pirg.org/consumer"><font color="#FF0000"><br>
+        </font></a></font><a href="http://www.pirg.org/consumer"><font face="Arial, Helvetica, sans-serif" size="2" color="#FF0000"><b>Consumer</b></font></a><font face="Arial, Helvetica, sans-serif" size="2"><b> 
+        </b></font><font face="Arial, Helvetica, sans-serif" size="1"><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://pirg.org/consumer/">Bank 
+        & ATM Fees</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://pirg.org/alerts/route.asp?id2=16544">Social 
+        Security </a> <br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.enronwatchdog.org">Enron 
+        Watchdog</a> <br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/ge/">Genetically 
+        Modified Food</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/healthcare/">Health 
+        Care</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/consumer/media/index.htm">Media 
+        Ownership </a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=7219">Playground 
+        Safety</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/consumer/banks/action/privacy.htm">Privacy 
+        &amp; I.D. Theft</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.toysafety.net/">Toy 
+        Safety</a></font><br>
+        <br>
+        <font size="2" face="Arial, Helvetica, sans-serif"><b><a href="http://www.pirg.org/democracy"><font color="#FF0000">Democracy</font></a></b></font><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <font size="1" face="Arial, Helvetica, sans-serif"> <a href="http://www.pirg.org/alerts/route.asp?id2=18149">Campaign Finance<br>
+        </a></font><font size="1" face="Arial, Helvetica, sans-serif"><img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=18150">Representative Elections<br>
+        </a></font><font size="1" face="Arial, Helvetica, sans-serif"><img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=18152">Voting Procedures &amp; Election Administration<br>
+        </a></font><img src="images/small-bullet.gif" width="4" height="5"> <font size="1" face="Arial, Helvetica, sans-serif"> <a href="http://www.pirg.org/alerts/route.asp?id2=18149"></a></font><font size="1" face="Arial, Helvetica, sans-serif"><a href="http://www.pirg.org/alerts/route.asp?id2=18155">Ethical &amp; Transparent Government<br>
+        </a></font><img src="images/small-bullet.gif" width="4" height="5"> <font size="1" face="Arial, Helvetica, sans-serif"> <a href="http://www.pirg.org/alerts/route.asp?id2=18149"></a></font><font size="1" face="Arial, Helvetica, sans-serif"><a href="http://www.pirg.org/alerts/route.asp?id2=18156">Self Governance Through Direct Democracy</a></font><font size="1" face="Arial, Helvetica, sans-serif"></font><font size="1" face="Arial, Helvetica, sans-serif"><br>
+        </font><br>
+        <b><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.pirg.org/highered"><font color="#FF0000">Higher 
+        Education</font></a></font></b><font face="Arial, Helvetica, sans-serif" size="1"><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/highered/">Student 
+        Aid</a><br>
+        <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.truthaboutcredit.com/">Student 
+        Consumer</a> <br>
+        </font></p>
+    </td>
+    <td>
+      <table width="450" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td><font face="Arial, Helvetica, sans-serif" color="#000000"><font face="Arial, Helvetica, sans-serif" color="#000000" size="4"><b>Endangered Species</b><p></font><font face="Arial, Helvetica, sans-serif" color="#000000"><html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<font face="Arial, Helvetica, sans-serif" size="2"> <b>Grus Americana: Whooping 
+Crane </b><br>
+<br>
+<img src="images/wildlife/cranes.jpg" width="160" height="105" align="left" alt="Photo courtesy of the U.S. Fish and Wildlife Service">Called 
+viejos del agua or &quot;old men of the water,&quot; whooping cranes are the tallest 
+bird in North America, standing five feet high with a wing span of about seven 
+feet. Whooping cranes are graceful looking birds with long, sinuous necks and 
+long legs. Their snowy white body feathers are accented by jet-black wingtips 
+and a red and black head with a long, pointed beak. The whooping crane's call 
+is a shrill, bugle-like trumpeting. <br>
+<br>
+Before settlers moved west, whooping cranes nested from Illinois to southern Canada, 
+sharing their nesting grounds with the grizzly, bison and gray wolf. Whooping 
+cranes migrated to areas extending from the Carolinas to Mexico to spend their 
+winter. However, with the arrival of settlers moving west, much of the crane's 
+nesting grounds were converted to pasture and agricultural lands and, like the 
+grizzly, bison and wolf, the crane's numbers plummeted.</font> 
+<p><font face="Arial, Helvetica, sans-serif" size="2">By 1937, only two small 
+  breeding populations of the whooping crane remained&#151;a nonmigratory population 
+  in southwestern Louisiana, and a migratory population that nested in Canada 
+  and wintered on the Texas Coast. By 1967, with the crane on the brink of extinction, 
+  the U.S. Fish and Wildlife Service designated the crane as endangered (under 
+  a law that preceded the Endangered Species Act).</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">Today there are approximately 
+  350 whooping cranes&#151;220 in three wild populations and the rest in four 
+  captive populations. The Aransas/Wood Buffalo population is the only self-sustaining 
+  natural wild population of cranes, containing 165 individuals that nest in the 
+  Northwest Territories and adjacent areas of Alberta, Canada, primarily within 
+  the boundaries of Wood Buffalo National Park. This flock migrates to its wintering 
+  grounds along the central Texas Gulf of Mexico coast at Aransas National Wildlife 
+  Refuge and adjacent areas.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">The Fish and Wildlife Service 
+  has been attempting to bring the crane back from the edge of extinction through 
+  a captive breeding program. The main recovery goal for the service was to establish 
+  a second migratory group of whooping cranes in case a natural or man-made disaster 
+  wiped out the Aransas flock. In 1975, the FWS attempted to reintroduce whooping 
+  cranes to their historic range in the Rocky Mountains by placing a number of 
+  whooping crane eggs with sandhill cranes, using them as &quot;foster parents.&quot; 
+  <br>
+  <br>
+  Unfortunately, this effort failed because these whooping cranes became so accustomed 
+  to their sandhill parents they wouldn't mate with other whooping cranes. Though 
+  similar efforts to establish a second migratory flock were also undertaken in 
+  Florida, this goal continues to elude the Service.</font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="2">Since reintroduction efforts 
+  have yet to be successful, the protection of the last remaining wild breeding 
+  population is imperative to preventing the crane from going extinct. Thus, preservation 
+  and protection of the whooping crane's habitat is essential since it continues 
+  to face threats from the decline in wetlands due to development and dams and 
+  irrigation projects, natural catastrophe, a red tide outbreak or contaminant 
+  spill.</font></p>
+<p></p>
+</body>
+</html>
+
+<p></font></font><p></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div align="center"><font size="1"><br>
+  <font face="Arial, Helvetica, sans-serif">U.S. PIRG </font></font><font size="1" face="Arial, Helvetica, sans-serif"><img src="images/small-bullet.gif" width="4" height="5"></font> 
+  <font size="1" face="Arial, Helvetica, sans-serif">218 D St., SE <img src="images/small-bullet.gif" width="4" height="5"></font> 
+  <font size="1" face="Arial, Helvetica, sans-serif">Washington, D.C. </font><font size="1" face="Arial, Helvetica, sans-serif">20003 
+  <img src="images/small-bullet.gif" width="4" height="5"></font> <font size="1" face="Arial, Helvetica, sans-serif">202-546-9707 
+  ph <img src="images/small-bullet.gif" width="4" height="5"></font> <font size="1" face="Arial, Helvetica, sans-serif">202-546-2461 
+  fax </font> <font size="1" face="Arial, Helvetica, sans-serif"><img src="images/small-bullet.gif" width="4" height="5"></font> 
+  <font size="1" face="Arial, Helvetica, sans-serif"><a href="mailto:uspirg@pirg.org"><u>uspirg@pirg.org</u></a><a href="http://pirg.org/privacy.html"><br>
+  <br>
+  </a></font><font size="1" face="Arial, Helvetica, sans-serif"><a href="http://uspirg.org/uspirg.asp?id2=10359">Contact 
+  Us</a> <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/jobs">Jobs</a> 
+  <img src="images/small-bullet.gif" width="4" height="5"> <a href="http://www.pirg.org/alerts/route.asp?id2=5268">Internships</a> 
+  <a href="http://www.uspirg.org/uspirg.asp?id2=1906"></a> <img src="images/small-bullet.gif" width="4" height="5"> 
+  <a href="http://www.uspirg.org/uspirg.asp?id2=1906"></a><a href="http://www.uspirg.org/uspirg.asp?id2=1906">Privacy 
+  Policy</a> <a href="http://www.uspirg.org/uspirg.asp?id2=1906"></a> <img src="images/small-bullet.gif" width="4" height="5"> 
+  <a href="http://uspirg.org/sitemap.html">Site Map</a></font><font size="2" face="Arial, Helvetica, sans-serif"> 
+  </font><font size="2" face="Arial, Helvetica, sans-serif"><br>
+  <br>
+  <font size="1">© 2001-2005 Public Interest Research Groups</font>&nbsp;&nbsp; 
+  </font><font size="1" face="Arial, Helvetica, sans-serif">ALL RIGHTS RESERVED</font></div>
+</body>
+</html>

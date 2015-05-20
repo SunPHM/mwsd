@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="description" content="Timelapse videos and photos of the Lillis Business Complex construction." />
+<meta name="keywords" content="lillis, timelapse, video, construction, ribboncutting, ribbon cutting, building complex, building, complex, lillis business complex" />
+<title>LCB - Lillis Complex Timelapse</title>
+<meta name="author" content="" />
+	
+	
+	<script type="text/javascript">
+	<!--
+	var loaded=0;
+	var lastMenu="";
+	var lastSubMenu="";
+	var lastButton="";
+	var counter;
+	var countDownInterval=5;
+	var countDownTime=countDownInterval+1;
+	var timeout=5; 
+	
+	
+	
+	function swap(name) {
+	
+		// Close the last menu opened	
+		if( lastMenu != "" && lastMenu != name ) {
+			document.getElementById(lastMenu+"Menu").style.visibility = "hidden"; // turn off last popup
+		}
+		
+		// Close the last sub menu opened	
+		if( lastSubMenu != "" && lastSubMenu != name ) {
+			document.getElementById(lastSubMenu+"SubMenu").style.visibility = "hidden"; // turn off last popup
+		}
+		
+		// Change background of current nav button
+		document.getElementById(name+"Button").style.backgroundColor = "#006600";
+		
+		if( document.getElementById(name+"Menu") ) { 
+			document.getElementById(name+"Menu").style.visibility = "visible"; // show current pop up menu
+			lastMenu = name; // reset var to match the current popup layer
+			// alert(name);
+		}
+		
+		return lastMenu;
+	}
+	
+	
+	function subSwap(name) {
+		
+		// Change background of current nav button
+		document.getElementById(name+"Button").style.backgroundColor = "#006600";
+		
+		if( document.getElementById(name+"Menu") ) { 
+			document.getElementById(name+"Menu").style.visibility = "visible"; // show current pop up menu
+			lastMenu = name; // reset var to match the current popup layer
+		}
+		
+		return lastMenu;
+	}
+	
+	
+	function subNavSwap(name) {
+		
+		// Keep parent menu visible
+		document.getElementById(lastMenu+"Menu").style.visibility = "visible";
+		
+		if( lastSubMenu != "" && lastSubMenu != name ) {
+			document.getElementById(lastSubMenu+"SubMenu").style.visibility = "hidden";
+		}
+		
+		// Change background of current nav button
+		document.getElementById(name+"Button").style.backgroundColor = "#006600";
+	
+		if( document.getElementById(name+"SubMenu") ) { 
+			document.getElementById(name+"SubMenu").style.visibility = "visible"; // show current pop up menu
+			lastSubMenu = name; // reset var to match the current popup layer
+		}
+		
+		return lastSubMenu;
+	}
+	
+	
+	
+	
+	function hideMenus() {
+	
+		// Hide last drop down menu
+		if( document.getElementById(lastMenu+"Menu") ) {
+			document.getElementById(lastMenu+"Menu").style.visibility = "hidden";
+		}
+		
+		// Hide last sub menu dropdown
+		if( document.getElementById(lastSubMenu+"SubMenu") ) {
+			document.getElementById(lastSubMenu+"SubMenu").style.visibility = "hidden";
+		}
+		
+		// Reset vars
+		lastMenu = "";
+		lastSubMenu = "";
+	}
+	
+	
+	function ns4swap(name) {
+		if( lastButton != "" ) {
+			document.images[lastButton].src = "/new_venture_images/buttons/"+lastButton+"_off.gif"; // turn off last image
+		}
+		
+		document.images[name].src = eval(name+"_on.src"); // change the moused-over image
+		lastButton = name; // reset var to match the current image mouseover
+		
+		return lastButton;
+	}
+	
+	function popupSwap(name) {
+		document.images[name].src = eval(name+"_on.src");
+	}
+	
+	function restore(name) {
+		document.getElementById(name+"Button").style.backgroundColor = "#003300";
+	}
+	
+	
+	function menuOn(name) {
+		document.getElementById(name+"Menu").style.visibility = "visible";
+	}
+	
+	function menuOff(name) {
+		document.getElementById(name+"Menu").style.visibility = "hidden";
+	}
+	
+	
+	function ns4restore(name) {
+		document.images[name].src = "/new_venture_images/buttons/"+name+"_off.gif";
+	}
+	
+	
+	function niceRestore() {
+		if( lastMenu != "" ) {
+			document.getElementById(lastMenu+"Menu").style.visibility = "hidden"; // turn off last popup
+		}
+		
+		if( lastButton != "" ) {
+			document.images[lastButton].src = "/new_venture_images/buttons/"+lastButton+"_off.gif"; // turn off last image
+		}
+	}
+	
+	// -->
+</script>
+	
+</head>
+	
+	
+<body onload=" "><a name="top"></a>
+	
+		
+	<!-- HEADER LOGO, GRAPHIC, SEARCH -->
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="pageBackground">
+	  <tr>
+		<td width="384" height="64" valign="bottom"><a href="http://lcb.uoregon.edu"><img src="/images/template/logo.gif" alt="Lundquist College of Business | University of Oregon" width="383" height="64" border="0" /></a></td>
+		<td width="248" align="center" valign="bottom"><img src="/images/template/future_leaders.gif" id="header_photo" name="header_photo" alt="Future Leaders" width="255" height="67" border="0" /></td>
+		<td>&nbsp;</td>
+		<td width="150" align="center"><table border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td align="right"><table border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td align="right">
+<form id="simple_search" name="simple_search" method="get" action="/search/index.html">
+	<input type="text" size="15" name="words" value="" /><br />
+<a href="#" onclick="document.simple_search.submit()"><img src="/images/template/search.gif" alt="Search" width="64" height="15" /></a></form></td></tr></table>
+
+</td>
+		  </tr>
+		</table>      
+		</td>
+	  </tr>
+	</table>
+	
+	
+	<!-- HEADER NAVIGATION -->
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="headerBackground">
+	  <tr>
+		<td valign="bottom" class="leftHeaderSplit" colspan="2"><img src="/images/space.gif" border="0" width="281" height="66" alt=" " align="left" /><table border="0" cellpadding="0" cellspacing="0">
+	<tr valign="top"><td colspan="2"><table width="420" border="0" cellpadding="5" cellspacing="1" class="navBackground"><tr><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="about_usButton"><a href="/welcome/" id="about_usLink" class="navLink">about us</a></td><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="studentsButton"><a href="/students.html" id="studentsLink" class="navLink">students</a></td><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="programsButton"><a href="/divisions.html" id="programsLink" class="navLink">programs</a></td><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="facultyButton"><a href="/faculty/" id="facultyLink" class="navLink">faculty</a></td><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="researchButton"><a href="/faculty/research.html" id="researchLink" class="navLink">research</a></td><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="alumniButton"><a href="/alumni/" id="alumniLink" class="navLink">alumni</a></td><td class="navButtonBack" align="center" nowrap="nowrap" width="60" id="careerButton"><a href="/career/" id="careerLink" class="navLink">career</a></td></tr></table></td></tr><tr valign="middle"><td><img src="/images/space.gif" width="1" height="40" border="0" alt=" " /></td><td><span class="breadcrumb">:: <a href="http://lcb.uoregon.edu/">LCB Home</a>&nbsp;/&nbsp;<a href="http://lcb.uoregon.edu/ribboncutting/">Lillis Business Complex</a>&nbsp;/&nbsp;Building Timelapse</span>
+</td></tr></table></td>
+		<td width="81" rowspan="3" valign="top" class="headerBackground"><img src="/images/template/sidebar_cushion.gif" alt=" " width="81" height="12" id="sidebar_cushion" border="0" /><img src="/images/template/houser.jpg" alt="Greg Houser '70" width="81" height="144" /></td>
+	  </tr>	
+	
+	  <tr valign="top"><td colspan="2">
+		
+	  
+	<!-- MAIN BODY TABLE -->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="pageBackground">
+	  <tr valign="top"><td width="12">&nbsp;</td>
+
+<!-- SIDEBAR NAVIGATION -->
+<td width="150" align="center" class="whiteBackground"><table width="150" border="0" cellpadding="5" cellspacing="0"><tr><td colspan="2" align="left" class="headerBackground"><span class="sidebarHeader">Lillis Business Complex</span></td></tr>
+<tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/index.html">Lillis Business Complex</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/news.html">Latest News</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">&gt;</span></td><td align="left" class="whiteBackground"><span class="sidebarItem">Building Timelapse</span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/photos.html">Photos</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/video.html">Video</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/timeline.html">Historical Timeline</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/sustain.html">Sustainability</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/architecture.html">Architecture</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/donors.html">Donor Profiles</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/support.html">Support and Giving</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/ribboncutting/floorPlans.html">Floor Plans</a></span></td>
+</tr><tr>
+	<td colspan="2" class="whiteBackground"><img src="/images/space.gif" width="1" height="3" alt=" " border="0" /></td>
+</tr>
+<tr><td colspan="2" align="left" class="headerBackground"><span class="sidebarSubHeader">Related Sites:</span></td></tr>
+<tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="/news/">LCB News</a></span></td>
+</tr><tr>
+	<td width="7" class="whiteBackground"><span class="sidebarItem">::</span></td><td align="left" class="whiteBackground"><span class="sidebarItem"><a href="http://comm.uoregon.edu/">UO News</a></span></td>
+</tr></table></td>
+<td width="1"><img src="/images/space.gif" width="1" height="1" alt=" " border="0" /></td>
+
+<td width="20" class="whiteBackground"><img src="/images/space.gif" width="20" height="1" alt=" " border="0" /></td>		
+		
+		<!-- MAIN BODY CONTENT -->			<td align="left" class="whiteBackground" onmouseover="hideMenus()">
+			<a id="body" name="body"></a>
+<h2>Timelapse Video</h2><p>Timelapse photos were taken from web cameras strategically positioned around  the construction site. Timelapse videos from the south and crane camera are  currently available.</p><h3>South Camera</h3><table width="100%"  border="0" cellspacing="0" cellpadding="8">  <tr valign="top">    <td width="260"><img src="/images/ribboncutting/south_cam_cap.jpg" alt="South Camera Timelapse" width="260" height="195" border="1"></td>    <td><p><a href="/ribboncutting/timelapse/south_cam_timelapse1_ren.avi">Demolition</a> (2 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse2_ren.avi">Site        Preparation 1</a> (2MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse3_ren.avi">Site        Preparation 2</a> (2.3 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse4_ren.avi">Steel        Raising 1</a> (3 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse5_ren.avi">Steel        Raising 2</a> (3 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse6_ren.avi">Steel        Raising 3</a> (3.6 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse7_ren.avi">Finishing        1</a> (3.6 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse8_ren.avi">Finishing        2</a> (2.8 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse9_ren.avi">Finishing        3</a> (3.1 MB)<br>        <a href="/ribboncutting/timelapse/south_cam_timelapse10_ren.avi">Finished</a> (3.1 MB) </p>      <p><a href="/ribboncutting/timelapse/south_cam_timelapse_ren.avi">Watch      the entire timelapse</a> (29.5 MB)</p></td>  </tr></table><h3>Crane Camera</h3><table width="100%"  border="0" cellspacing="0" cellpadding="8">  <tr valign="top">    <td width="260"><img src="/images/ribboncutting/crane_cam_cap.jpg" alt="Crane Camera Timelapse" width="260" height="195" border="1"></td>    <td><p><a href="/ribboncutting/timelapse/crane_cam_timelapse1.avi">Foundation</a> (2.8        MB)<br>            <a href="/ribboncutting/timelapse/crane_cam_timelapse2.avi">Flooring 1</a> (3.2            MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse3.avi">Flooring                2</a> (3.4                MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse4.avi">Flooring                3</a> (3.3                MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse5.avi">Roofing                1</a> (2.8                MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse6.avi">Roofing                2</a> (3.2                MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse7.avi">Roofing                3</a> (2.9                MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse8.avi">Roofing                4</a> (3.1                MB)<br>                <a href="/ribboncutting/timelapse/crane_cam_timelapse9.avi">Roofing                5</a> (1.9                MB)    </p>      <p><a href="/ribboncutting/timelapse/crane_cam_timelapse.avi">Watch              the entire timelapse</a> (22.5 MB)</p></td>  </tr></table><p>&nbsp;</p><p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<hr width="100%" size="1" noshade="noshade" />
+
+<p><small> Copyright &copy; 2000 - 2006 by Charles H. Lundquist College of Business, University of Oregon.<br />
+<a href="/contact.html">Contact us</a>&nbsp;&nbsp;&nbsp;<a href="/maps.html">How to get here</a>&nbsp;&nbsp;&nbsp;<a href="/privacy_policy.html">Privacy Policy</a>
+</small>
+</p>
+
+<p>&nbsp;</p>
+
+</td>
+
+<td width="20" class="whiteBackground"><img src="/images/space.gif" width="20" height="1" alt=" " border="0" /></td>
+
+  </tr>
+</table>
+</td>
+</tr>
+
+<tr valign="top">
+  <td colspan="4"><img src="/images/space.gif" width="1" height="1" border="0" alt=" " /></td>
+</tr>
+
+</table>
+</body>
+</html>
+

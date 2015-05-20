@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Gantry Crane - Overhead Cranes - Engineered Material Handling</title>
+
+
+<link rel="STYLESHEET" type="text/css" href="includes/stylesheet.css">
+<SCRIPT type="text/javascript" language="javaScript" src="includes/pop-up2.js"></SCRIPT>
+<script language="JavaScript">
+
+emh1_Off = new Image(); emh1_Off.src = "images/menu/emh_single-girder-off.gif";
+emh1_On = new Image(); emh1_On.src = "images/menu/emh_single-girder-on.gif";
+
+emh2_Off = new Image(); emh2_Off.src = "images/menu/emh_double-girder-off.gif";
+emh2_On = new Image(); emh2_On.src = "images/menu/emh_double-girder-on.gif";
+
+emh3_Off = new Image(); emh3_Off.src = "images/menu/emh_under-running-off.gif";
+emh3_On = new Image(); emh3_On.src = "images/menu/emh_under-running-on.gif";
+
+emh4_Off = new Image(); emh4_Off.src = "images/menu/emh_gantry-off.gif";
+emh4_On = new Image(); emh4_On.src = "images/menu/emh_gantry-on.gif";
+
+emh5_Off = new Image(); emh5_Off.src = "images/menu/emh_wall-traveling-off.gif";
+emh5_On = new Image(); emh5_On.src = "images/menu/emh_wall-traveling-on.gif";
+
+emh6_Off = new Image(); emh6_Off.src = "images/menu/emh_special-off.gif";
+emh6_On = new Image(); emh6_On.src = "images/menu/emh_special-on.gif";
+
+emh8_Off = new Image(); emh8_Off.src = "images/menu/emh_select2-off.gif";
+emh8_On = new Image(); emh8_On.src = "images/menu/emh_select2-on.gif";
+
+emh9_Off = new Image(); emh9_Off.src = "images/menu/quote-off.gif";
+emh9_On = new Image(); emh9_On.src = "images/menu/quote-on.gif";
+
+emh10_Off = new Image(); emh10_Off.src = "images/menu/styles-off.gif";
+emh10_On = new Image(); emh10_On.src = "images/menu/styles-on.gif";
+
+emh11_Off = new Image(); emh11_Off.src = "images/menu/proper-config-off.gif";
+emh11_On = new Image(); emh11_On.src = "images/menu/proper-config-on.gif";
+
+emh12_Off = new Image(); emh12_Off.src = "images/menu/girder-process-off.gif";
+emh12_On = new Image(); emh12_On.src = "images/menu/girder-process-on.gif";
+
+
+hz1_Off = new Image(); hz1_Off.src = "images/top_menu/home_off.gif";
+hz1_On = new Image(); hz1_On.src = "images/top_menu/home_on.gif";
+
+hz2_Off = new Image(); hz2_Off.src = "images/top_menu/products_off.gif";
+hz2_On = new Image(); hz2_On.src = "images/top_menu/products_on.gif";
+
+hz3_Off = new Image(); hz3_Off.src = "images/top_menu/whatsnew_off.gif";
+hz3_On = new Image(); hz3_On.src = "images/top_menu/whatsnew_on.gif";
+
+hz4_Off = new Image(); hz4_Off.src = "images/top_menu/about_emh_off.gif";
+hz4_On = new Image(); hz4_On.src = "images/top_menu/about_emh_on.gif";
+
+hz5_Off = new Image(); hz5_Off.src = "images/top_menu/feedback_off.gif";
+hz5_On = new Image(); hz5_On.src = "images/top_menu/feedback_on.gif";
+
+hz6_Off = new Image(); hz6_Off.src = "images/top_menu/sitemap_off.gif";
+hz6_On = new Image(); hz6_On.src = "images/top_menu/sitemap_on.gif";
+
+hz7_Off = new Image(); hz7_Off.src = "images/top_menu/contact_off.gif";
+hz7_On = new Image(); hz7_On.src = "images/top_menu/contact_on.gif";
+
+hz8_Off = new Image(); hz8_Off.src = "images/top_menu/dealer_off.gif";
+hz8_On = new Image(); hz8_On.src = "images/top_menu/dealer_on.gif";
+
+
+/* Right side menu -- cranes*/
+cranes1_Off = new Image(); cranes1_Off.src = "images/right_menu/auto_off.jpg";
+cranes1_On = new Image(); cranes1_On.src = "images/right_menu/auto_on.jpg";
+
+cranes2_Off = new Image(); cranes2_Off.src = "images/right_menu/avi_off.jpg";
+cranes2_On = new Image(); cranes2_On.src = "images/right_menu/avi_on.jpg";
+
+cranes3_Off = new Image(); cranes3_Off.src = "images/right_menu/heavy_off.jpg";
+cranes3_On = new Image(); cranes3_On.src = "images/right_menu/heavy_on.jpg";
+
+cranes4_Off = new Image(); cranes4_Off.src = "images/right_menu/metal_off.jpg";
+cranes4_On = new Image(); cranes4_On.src = "images/right_menu/metal_on.jpg";
+
+cranes5_Off = new Image(); cranes5_Off.src = "images/right_menu/plastic_off.jpg";
+cranes5_On = new Image(); cranes5_On.src = "images/right_menu/plastic_on.jpg";
+
+cranes6_Off = new Image(); cranes6_Off.src = "images/right_menu/power_off.jpg";
+cranes6_On = new Image(); cranes6_On.src = "images/right_menu/power_on.jpg";
+
+cranes7_Off = new Image(); cranes7_Off.src = "images/right_menu/waste_off.jpg";
+cranes7_On = new Image(); cranes7_On.src = "images/right_menu/waste_on.jpg";
+
+cranes8_Off = new Image(); cranes8_Off.src = "images/right_menu/concrete_off.jpg";
+cranes8_On = new Image(); cranes8_On.src = "images/right_menu/concrete_on.jpg";
+
+cranes9_Off = new Image(); cranes9_Off.src = "images/right_menu/general_off.jpg";
+cranes9_On = new Image(); cranes9_On.src = "images/right_menu/general_on.jpg";
+
+function MouseOn(imageName, replaceName)
+{
+	objImage = eval("document." + imageName)
+	objReplace = eval(replaceName + "_On")
+	
+	objImage.src = objReplace.src
+}
+
+
+function MouseOff(imageName, replaceName)
+{
+	objImage = eval("document." + imageName)
+	objReplace = eval(replaceName + "_Off")
+	
+	objImage.src = objReplace.src
+}
+
+function changepage(objSelect){
+	strURL = objSelect.options[objSelect.selectedIndex].value
+	if(strURL != ""){
+		location.href = strURL
+	}
+}
+
+function OpenWin(strURL, intWidth, intHeight){
+	//if(newwin!=null){
+	//	newwin.close()
+	//}
+	newwin = window.open(strURL,'newwin','width=' + intWidth + ',height=' + intHeight + ',scrollbars=no');
+	newwin.focus()
+}
+    </script>
+
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="white">
+<form id=form1 name=form1>
+<table border=0 cellspacing=0 cellpadding=0 width=100%>
+<tr>
+	<td colspan=2 width=100% height=151 background="images/headers/emh_overhead_cranes.gif" valign=top align=right><br>
+								<p align="right"><a href="default.htm" onmouseover="MouseOn('hz1', 'hz1')" onmouseout="MouseOff('hz1','hz1')">
+									<img src="images/top_menu/home_off.gif" border="0" alt="" name="hz1" width="45" height="13"></a>
+								<a href="products.htm" onmouseover="MouseOn('hz2', 'hz2')" onmouseout="MouseOff('hz2','hz2')">
+									<img src="images/top_menu/products_off.gif" border="0" alt="" name="hz2" width="70" height="13"></a>
+								<a href="new.asp" onmouseover="MouseOn('hz3', 'hz3')" onmouseout="MouseOff('hz3','hz3')">
+									<img src="images/top_menu/whatsnew_off.gif" border="0" alt="" name="hz3" width="79" height="13"></a>
+								<a href="about.htm" onmouseover="MouseOn('hz4', 'hz4')" onmouseout="MouseOff('hz4','hz4')">
+									<img src="images/top_menu/about_emh_off.gif" border="0" alt="" name="hz4" width="75" height="13"></a>
+								<a href="feedback.htm" onmouseover="MouseOn('hz5', 'hz5')" onmouseout="MouseOff('hz5','hz5')">
+									<img src="images/top_menu/feedback_off.gif" border="0" alt="" name="hz5" width="70" height="13"></a>
+								<a href="sitemap.htm" onmouseover="MouseOn('hz6', 'hz6')" onmouseout="MouseOff('hz6','hz6')">
+									<img src="images/top_menu/sitemap_off.gif" border="0" alt="" name="hz6" width="62" height="13"></a>
+								<a href="contact.htm" onmouseover="MouseOn('hz7', 'hz7')" onmouseout="MouseOff('hz7','hz7')">
+									<img src="images/top_menu/contact_off.gif" border="0" alt="" name="hz7" width="62" height="13"></a>
+								<a href="dealer.htm" onmouseover="MouseOn('hz8', 'hz8')" onmouseout="MouseOff('hz8','hz8')">
+									<img src="images/top_menu/dealer_off.gif" border="0" alt="" name="hz8" width="128" height="13"></a>
+							</p>
+	</td>	
+	<td valign=top width=211 height=151>
+	<!---select menu---->
+	<table cellspacing=0 cellpadding=0 border=0>
+<tr>
+	<td valign=top height=75 width=211 background="images/emh-right.gif"><a href="feedback.htm" onmouseover="MouseOn('emh8', 'emh8')" onmouseout="MouseOff('emh8','emh8')">
+    <img src="images/menu/emh_select2-off.gif" border="0" alt="" name="emh8" width="211" height="28"></a></td>
+</tr>
+<tr>
+	<td valign=top><img src="images/pulley.gif" border="0" alt="" width="211" height="76"></td>
+</tr>
+</table>	
+</td>
+</tr>
+<tr>
+	<td valign=top width=190 height=100% background="images/emh_menuBG.jpg">
+	<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+	<td colspan="2" valign=top><a href="oc_main-sg.htm" onmouseover="MouseOn('emh1', 'emh1')" onmouseout="MouseOff('emh1','emh1')">
+    <img src="images/menu/emh_single-girder-off.gif" border="0" alt="" name="emh1" width="190" height="24"></a></td>	
+</tr>
+<tr>
+	<td colspan="2" valign=top><a href="oc_main-dg.htm" onmouseover="MouseOn('emh2', 'emh2')" onmouseout="MouseOff('emh2','emh2')">
+    <img src="images/menu/emh_double-girder-off.gif" border="0" alt="" name="emh2" width="190" height="18"></a></td>
+</tr>
+<tr>
+	<td colspan="2" valign=top><a href="oc_main-ur.htm" onmouseover="MouseOn('emh3', 'emh3')" onmouseout="MouseOff('emh3','emh3')">
+    <img src="images/menu/emh_under-running-off.gif" border="0" alt="" name="emh3" width="190" height="18"></a></td>
+</tr>
+<tr>
+	<td colspan="2" valign=top><a href="oc_main-gc.htm" onmouseover="MouseOn('emh4', 'emh4')" onmouseout="MouseOff('emh4','emh4')">
+    <img src="images/menu/emh_gantry-off.gif" border="0" alt="" name="emh4" width="190" height="18"></a></td>
+</tr>
+<tr>
+	<td colspan="2" valign=top><a href="oc_main-jib.htm" onmouseover="MouseOn('emh5', 'emh5')" onmouseout="MouseOff('emh5','emh5')">
+    <img src="images/menu/emh_wall-traveling-off.gif" border="0" alt="" name="emh5" width="190" height="18"></a></td>
+</tr>
+<tr>
+	<td colspan="2" valign=top><a href="oc_main-sc.htm" onmouseover="MouseOn('emh6', 'emh6')" onmouseout="MouseOff('emh6','emh6')">
+    <img src="images/menu/emh_special-off.gif" border="0" alt="" name="emh6" width="190" height="25"></a></td>
+</tr>
+<tr>
+<td colspan="2" background="images/white.gif"><!----swap images go here----><div align="center"><table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" height="150"><a href="feedback.htm">
+    <img src="images/oc_book.jpg" width="91" border="0" width="91" height="118"></a></td>
+  </tr>
+  <tr>
+    <td>
+      <div align="center"><font color="#00287A"><a href="feedback.htm" webstripperlinkwas="feedback.htm" target="_top" style="text-decoration:none;">Order<br>
+        &quot;OVERHEAD CRANES <br>
+        AND COMPONENTS&quot;</a><br>
+        Brochure</font></div>
+    </td>
+  </tr>
+</table>
+<table width="146" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+  	<td align="center"><br><p><a href="ovrhdcrane_gloss.htm">Glossary of Crane Terminology</a></p></td>
+  	</tr>
+   	<tr> 
+    <td align="center" valign="bottom" height="39"><a href="inquiry.htm" onmouseover="MouseOn('emh9', 'emh9')" onmouseout="MouseOff('emh9','emh9')">
+    <img src="images/menu/quote-off.gif" border="0" alt="overhead cranes" name="emh9" width="90" height="16"></a></td>
+  	</tr>
+	</table>
+</div>&nbsp;</td>
+</tr>
+	<tr>
+		<td width="7">&nbsp;</td>
+		<td><br>
+		<div class="address_left">
+		<strong><a href="/contact.htm" class="contact">Engineered Material Handling</a></strong><br>
+		550 Crane Dr.<br>
+		Valley City, OH 44280<br>
+		<br>
+		Phone: (330) 220-8600<br>
+		Toll Free: (800) 283-8025<br>
+		Fax: (330) 220-0204</div></td>
+	</tr>
+</table>
+
+	</td>
+	<td valign=top width=100%><p>&nbsp;</p><!---copy and Text here------><blockquote>
+<table border="0" cellspacing="0" cellpadding="0" width=82%>
+<tr><td><span class="head"><font size=3><b>Gantry Cranes - Applications</b></font></span><br><br></td></tr>
+  <tr> 
+    <td valign="top">
+    <a href="javascript:popcontact('/industry/power2.htm')"><img src="images/app_gantry90t.gif" border="1" align=left hspace=4 width="166" height="127"></a>
+      <div align="left">
+        <p>A 90 ton gantry with a 14 ton auxiliary hoist at a New England power plant.<br><br>
+      </div>
+    </td>
+  </tr>
+ <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td  align="left" valign="top"><a href="javascript:popcontact('/industry/general2.htm')"><img src="images/app_1gc.jpg" width="166" height="166" border="1" align="left" hspace=4></a>
+      <div align="left"><p>A Double Leg Gantry with torsion box girder construction in a midwestern steel facility. Note the use of a saddle-trolley hoist to maximize lift and minimize overall crane height.<br><br>
+      </div>
+    </td>
+  </tr>
+ <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td  align="left" valign="top"><a href="javascript:popcontact('/industry/aviation1.htm')"><img src="images/app_2gc.jpg" width="166" height="110" border="1" align="left" hspace=4></a>
+      <div align="left"><p>This gantry at a western aircraft manufacturing plant has a span of 133 feet and a height of 40 feet. Lifting is performed by an EMH 20 Ton Custom Engineered Hoist.<br><br>
+      </div>
+    </td>
+  </tr>
+ <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td  align="left" valign="top"><a href="javascript:popcontact('/industry/general3.htm')"><img src="images/app_3gc.jpg" width="166" height="132" border="1" align="left" hspace=4></a>
+      <div align="left"><p>This Single Leg, Double Girder Gantry has a pass-through cantilever that allows hoist movement beyond the wall on the left. A fully enclosed cab controls all crane functions.<br><br>
+      </div>
+    </td>
+  </tr>
+ <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td  align="left" valign="top"><a href="javascript:popcontact('/industry/gantry1.htm')"><img src="images/app_4gc.jpg" width="166" height="121" border="1" align="left" hspace=4></a>
+      <div align="left"><p>Gantry Crane with telescoping Double Girder<br><br>
+      </div>
+    </td>
+  </tr>
+   <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+    <tr align="center" valign="middle"> 
+    <td align="left" valign="top"><a href="javascript:popcontact('/industry/power3.htm')"><img src="images/crane_images/power_plants/powerplantgantry.jpg" width="143" height="174" border="0" align="left" hspace=4></a>
+      <div align="left">
+	  This 130/25/15 ton, 105 foot span, double girder gantry crane is used to install and service turbines at an overseas power plant. 
+	  <br><br>
+		The crane uses  three EMH engineered hoists. Two are mounted on a double girder trolley with service walkways and a torsion mounted hoist runs along the side of one girder.
+		<br><br>
+		The crane uses eight bridge drives. The all-inverter controls are mounted in a stainless steel enclosure, covered by a sun shade, and air conditioned.
+		</div>
+    </td>
+  </tr>
+   <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+   <tr align="center" valign="middle"> 
+    <td align="left" valign="top"><a href="javascript:popcontact('/industry/concrete2.htm')"><img src="images/crane_images/concrete/gate-precast-gantry2.jpg" width="166" height="116" border="0" align="left" hspace=4></a>
+      <div align="left">
+	  A 25 ton, 120 foot outdoor gantry loads wall panels onto flat bed trucks. A single rotating, &quot;hammerhead&quot; hoist, designed and manufactured by EMH, provides precise positioning of the load.
+      </div>
+    </td>
+  </tr>
+ <tr> 
+    <td height="5"><br><font size="-2">(Click on the photo above to see an enlarged version.)</font> 
+      <hr size="5"><br>
+    </td>
+  </tr>
+</table>
+ <br><br><br><br><br><br><br><br><br><br>
+<div align="center">
+<a href="hb_main-sg.htm">Single Girder System</a> | <a href="hb_main-dg.htm">Double Girder System</a> | <a href="hb_main-cm.htm">HB Components</a> | <a href="hb_main-sp.htm">Suspensions</a><br> <a href="ovrhdcrane.htm">Overhead Cranes</a> | <a href="movomech.htm">NOMAD AL</a> | <!-- <a href="hb.htm">HB Crane System</a> |  --><a href="nomad.htm">NOMAD</a> | <a href="endtrck.htm">EMH Endtrucks</a> | <a href="2000.htm">System 2000 Kits</a> | <a href="default.htm">Home</a> | <a href="products.htm">Products</a> | <a href="new.asp">What's New</a> | <a href="about.htm">About EMH</a> | <a href="feedback.htm">Feedback</a> | <a href="feedback.htm">Literature</a> | <a href="sitemap.htm">Site Map</a> | <a href="contact.htm">Contact EMH</a> | <a href="dealer.htm">Dealer Information</a> | <a href="products.htm">Material Handling Equipment</a> | <a href="ehoist.htm">Hoists</a> | <a href="oc_main-gc.htm">Gantry Cranes</a> | <a href="oc_main-dg.htm">Bridge Cranes</a> | <a href="about.htm">Cranes & Hoists</a> 
+									<br><br><br><br>
+									<!-- 550 Crane Dr. - Valley City, OH 44280<br>
+									Phone: (330) 220-8600 - Toll Free: (800) 283-8025 - Fax: (330) 220-0204 -->
+</div></blockquote>
+				</td>
+	<td valign=top width=211 background="images/right-column.gif">
+	    <table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+			<td><img src="images/right_menu/users_emh_top.jpg" border="0" alt="" width="211" height="38"></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_auto.htm" onmouseover="MouseOn('cranes1', 'cranes1')" onmouseout="MouseOff('cranes1','cranes1')"><img src="images/right_menu/auto_off.jpg" name="cranes1" border="0" alt="" width="211" height="17"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_avi.htm" onmouseover="MouseOn('cranes2', 'cranes2')" onmouseout="MouseOff('cranes2','cranes2')"><img src="images/right_menu/avi_off.jpg" name="cranes2" border="0" alt="" width="211" height="19"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_heavy.htm" onmouseover="MouseOn('cranes3', 'cranes3')" onmouseout="MouseOff('cranes3','cranes3')"><img src="images/right_menu/heavy_off.jpg" name="cranes3" border="0" alt="" width="211" height="31"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_metal.htm" onmouseover="MouseOn('cranes4', 'cranes4')" onmouseout="MouseOff('cranes4','cranes4')"><img src="images/right_menu/metal_off.jpg" name="cranes4" border="0" alt="" width="211" height="18"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_plastic.htm" onmouseover="MouseOn('cranes5', 'cranes5')" onmouseout="MouseOff('cranes5','cranes5')"><img src="images/right_menu/plastic_off.jpg" name="cranes5" border="0" alt="" width="211" height="32"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_power.htm" onmouseover="MouseOn('cranes6', 'cranes6')" onmouseout="MouseOff('cranes6','cranes6')"><img src="images/right_menu/power_off.jpg" name="cranes6" border="0" alt="" width="211" height="18"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_waste.htm" onmouseover="MouseOn('cranes7', 'cranes7')" onmouseout="MouseOff('cranes7','cranes7')"><img src="images/right_menu/waste_off.jpg" name="cranes7" border="0" alt="" width="211" height="31"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_concrete.htm" onmouseover="MouseOn('cranes8', 'cranes8')" onmouseout="MouseOff('cranes8','cranes8')"><img src="images/right_menu/concrete_off.jpg" name="cranes8" border="0" alt="" width="211" height="33"></a></td>
+			</tr>
+			<tr>
+			<td><a href="cranes_general.htm" onmouseover="MouseOn('cranes9', 'cranes9')" onmouseout="MouseOff('cranes9','cranes9')"><img src="images/right_menu/general_off.jpg" name="cranes9" border="0" alt="" width="211" height="24"></a></td>
+			</tr>
+			<tr>
+			<td><img src="images/right_menu/bottom_blue.jpg" border="0" alt="" width="211" height="20"></td>
+			</tr>
+		</table>
+	<br>
+    <img src="images/emh_right2.jpg" border="0" alt="" width="211" height="723"></td>
+</tr>
+</table>
+</form>
+</body>
+
+</html>

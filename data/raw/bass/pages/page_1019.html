@@ -1,0 +1,725 @@
+
+
+<!--Beginning of POPUP script-->
+
+<script>
+// Set the horizontal and vertical position for the popup
+
+PositionX = 50;
+PositionY = 50;
+
+// Set these value approximately 20 pixels greater than the
+// size of the largest image to be used (needed for Netscape)
+
+defaultWidth  = 500;
+defaultHeight = 500;
+
+// Set autoclose true to have the window close automatically
+// Set autoclose false to allow multiple popup windows
+
+var AutoClose = true;
+
+// Do not edit below this line...
+// ================================
+
+if (parseInt(navigator.appVersion.charAt(0))>=4){
+var isNN=(navigator.appName=="Netscape")?1:0;
+var isIE=(navigator.appName.indexOf("Microsoft")!=-1)?1:0;}
+var optNN='scrollbars=no,width='+defaultWidth+',height='+defaultHeight+',left='+PositionX+',top='+PositionY;
+var optIE='scrollbars=no,width=150,height=100,left='+PositionX+',top='+PositionY;
+function popImage(imageURL,imageTitle){
+if (isNN){imgWin=window.open('about:blank','',optNN);}
+if (isIE){imgWin=window.open('about:blank','',optIE);}
+with (imgWin.document){
+writeln('<html><head><title>Loading........</title><style>body{margin:0px;}</style>');
+writeln('<sc'+'ript>');
+writeln('var isNN,isIE;');
+writeln('if (parseInt(navigator.appVersion.charAt(0))>=4){');
+writeln('isNN=(navigator.appName=="Netscape")?1:0;');
+writeln('isIE=(navigator.appName.indexOf("Microsoft")!=-1)?1:0;}');
+writeln('function reSizeToImage(){');
+writeln('if (isIE){');
+writeln('window.resizeTo(100,100);');
+writeln('width=100-(document.body.clientWidth-document.images[0].width);');
+writeln('height=100-(document.body.clientHeight-document.images[0].height);');
+writeln('window.resizeTo(width,height);}');
+writeln('if (isNN){');       
+writeln('window.innerWidth=document.images["George"].width;');
+writeln('window.innerHeight=document.images["George"].height;}}');
+writeln('function doTitle(){document.title="'+imageTitle+'";}');
+writeln('</sc'+'ript>');
+if (!AutoClose) 
+writeln('</head><body bgcolor=000000 scroll="no" onload="reSizeToImage();doTitle();self.focus()">')
+else 
+writeln('</head><body bgcolor=#FFFFFF scroll="no" onload="reSizeToImage();doTitle();self.focus()" onClick="window.close()">');
+writeln('<img alt="Click to close" name="George" src='+imageURL+' style="display:block"></body></html>');
+close();		
+}}
+
+</script>
+  <!--End of POPUP script-->
+
+
+<html>
+<head>
+
+
+<title>Guitars, Gear & Accessories for Musicians. USA Arbor, Dillion, and Tokai Dealer : Electric Bass :The Guitar Cellar</title>	
+	
+<meta name="keywords"    content="online store,shopping cart">
+	
+<meta name="description" content="Online Store">
+	
+<link rel="stylesheet" type="text/css" href="../UserMods/_INCstyles_.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFC56E" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+          
+    <td background="../images/GC_grey_nav_bar.gif"><table width="100%" height="19" border="0" cellpadding="0">
+              
+        <tr>
+                
+          <td width="52%" align=left valign=top class="CPbox1a">&nbsp;&nbsp;<a href="http://www.theguitarcellar.com/scripts/default.asp">Home</a>&nbsp;&nbsp; 
+			<img src="../images/GC_grey_divider.gif" width="1" height="17" border=0 align="absmiddle"></td>
+          <td width="48%" align=right valign=top class="CPbox1a">
+			      
+            <!-- Affiliate Link
+			<a href="http://www.theguitarcellar.com/scripts/05_Gateway.asp?action=logonaff">Affiliate</a> 
+			<img src="../UserMods/misc_dot.gif" border=0> 
+			-->
+			<a href= "http://www.theguitarcellar.com/scripts/policies.asp">Policies</a>&nbsp;&nbsp; 
+			<img src="../images/GC_grey_divider.gif" width="1" height="17" border=0 align="absmiddle">&nbsp;
+			<a href="http://www.theguitarcellar.com/scripts/contactUs.asp">Contact Us</a>&nbsp;&nbsp; 
+			<img src="../images/GC_grey_divider.gif" width="1" height="17" border=0 align="absmiddle">&nbsp;
+			<a href="http://www.theguitarcellar.com/scripts/05_Gateway.asp?action=logon">Your Account</a>&nbsp;&nbsp; 
+			<img src="../images/GC_grey_divider.gif" width="1" height="17" border=0 align="absmiddle">&nbsp;&nbsp; 
+			<a href="http://www.theguitarcellar.com/scripts/cart.asp">Cart</a>&nbsp;&nbsp; 
+			<img src="../images/GC_grey_divider.gif" width="1" height="17" border=0 align="absmiddle">&nbsp;&nbsp; 
+			<a href="http://www.theguitarcellar.com/scripts/05_Gateway.asp?action=checkout">Checkout</a>&nbsp;&nbsp;<img src="../images/GC_grey_divider.gif" width="1" height="17" border=0 align="absmiddle">&nbsp;&nbsp;<a href= "http://www.theguitarcellar.com/scripts/links.asp">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+        </tr>
+            </table></td>
+    <td background="../images/GC_grey_nav_bar.gif"><img src="../images/spacer.gif" width="1" height="20" border="0"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="99%">
+        
+  <!--DWLayoutTable-->
+        
+  <!-- fwtable fwsrc="Untitled" fwbase="GC.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        
+  <tr> 
+          
+    <td bgcolor="#C5C5C5"><img src="../images/spacer.gif" width="257" height="1" border="0"></td>
+    <td width="100%" bgcolor="#C5C5C5"><img src="../images/spacer.gif" width="500" height="1" border="0"></td>
+  </tr>
+        
+        
+  <tr> 
+          
+    <td background="../images/GC_stripe_top.gif"><a href="http://www.theguitarcellar.com/scripts/default.asp"><img name="GC_r2_c1" src="../images/GC_r2_c1.gif" width="257" height="99" border="0"></a></td>
+    <td valign="top" background="../images/GC_stripe_top.gif"><table width="100%" height="99" border="0" cellpadding="0" cellspacing="0">
+              
+        <tr>
+                
+          <td height="37" align="right" valign="top">
+                  
+                                    
+			      <table width=140 border=0 cellPadding=0 cellSpacing=0 bgcolor="#FFC56E">
+				    
+              <tr>
+                      
+                <td align=left nowrap><img src="../images/GC_cart_tab.gif" width="47" height="23"></td>
+                <td height="23" align=right nowrap bgcolor="#FFC76B"><b>Shopping Cart</b>&nbsp;&nbsp;&nbsp;Total($)&nbsp;<b>0.00</b>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+				    </table></td>
+        </tr>
+              
+        <tr>
+                
+          <td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="1">
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td align="right"><img src="/images/ccbar.gif" height="31"></td>
+              </tr>
+            </table>
+		 </td>
+        </tr>
+            </table></td>
+  </tr>
+        
+  <tr> 
+          
+    <td colspan="2" bgcolor="#CCCCCC"><img name="GC_r3_c1" src="../images/GC_mid_bar.gif" width="257" height="4" border="0"></td>
+  </tr>
+      
+</table>
+<table width="99%" border="0" cellspacing="0" cellpadding="0">
+  <!--DWLayoutTable-->
+  
+  <tr> 
+    <td width="200" align="left" valign="top" bgcolor="#FFFFFF" class="CPleftnavbar"><br>
+<table width="193" height="100%" border="0" cellpadding="0" cellspacing="0">
+      
+        <tr> 
+          <td align="center" valign="top">
+            <!-- Search Form -->
+		    <form action="http://www.theguitarcellar.com/scripts/prodList.asp" method="post" id="searchBox" name="searchBox">
+              <table width="175" border="0" cellpadding="3" cellspacing="0">
+	            <tr>
+		          <td align="left" valign="middle">
+			<input name="strSearch" size="15" value="Search" align=absmiddle onFocus="javascript:if (this.value=='Search') {this.value='';}">
+		</td>
+                </tr>
+                <tr>
+                  <td align="right" valign="top" class="CPboxleftA"><input name="SubSearch" type="image" src="../images/GC_go_button.gif" align="absmiddle" border="0">
+                    <br>
+           <a href="http://www.theguitarcellar.com/scripts/prodSearch.asp">Advanced Search</a></td>
+                </tr>
+              </table>
+            </form>
+	        <!-- Categories -->
+			<table width=175 border=0 cellPadding=0 cellSpacing=0>
+			<tr>
+			  <td align=left valign="middle" nowrap class="catname">
+				&nbsp;&nbsp;&nbsp;Categories
+				</td>
+              </tr>
+		      <tr>
+			 <td><table width="160" border="0" align="center" cellpadding="5">
+                    <tr>
+					
+                
+                      <td class="CPboxleft">
+						      	<a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=15">Electric Guitars</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=21">Electric Bass</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=17">Acoustics</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=22">Acoustic Bass</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=19">Value Packages</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=20">Cases/Gigbags</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=23">Replacement Parts</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=24">Strings/Accessories</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=34">Effects</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=30">Amplifiers</a><br><a href="http://www.theguitarcellar.com/scripts/prodList.asp?idCategory=32">Recording/Microphones</a><br>
+						<a href="http://www.theguitarcellar.com/scripts/prodList.asp">All Categories</a>&nbsp;<br>
+						<a href="http://www.theguitarcellar.com/scripts/prodList.asp?special=Y">Specials</a>&nbsp;
+					</td>
+                    </tr>
+                    
+        
+                  </table></td>
+              </tr>
+              
+			</table>
+            <br>
+			
+			<!-- What's New -->
+            <table width=175 border=0 cellPadding=0 cellSpacing=0>
+				
+              <tr>
+					
+                <td align=left valign="middle" nowrap class="catname">
+						&nbsp;&nbsp;&nbsp;<b>What's New</b>
+					</td>
+              </tr>
+				
+              <tr>
+					
+                <td><table width="175" border="0" align="left" cellpadding="5">
+                    <tr>
+					
+                
+                      <td class="CPboxleft">
+						1. <a href="http://www.theguitarcellar.com/scripts/prodView.asp?idProduct=222">Pickups for 57/62 Strat®, Set of 3</a><br>2. <a href="http://www.theguitarcellar.com/scripts/prodView.asp?idProduct=221">Fender Aged White Accessory Kit</a><br>3. <a href="http://www.theguitarcellar.com/scripts/prodView.asp?idProduct=220">Dillion DIM 50X</a><br>4. <a href="http://www.theguitarcellar.com/scripts/prodView.asp?idProduct=219">Arbor Double Cutaway Antique Sunburst Finish Elect</a><br>5. <a href="http://www.theguitarcellar.com/scripts/prodView.asp?idProduct=218">Leo Quan Badass Guitar Bridge</a><br>
+</td>
+                    </tr>
+                    
+        
+                  </table></td>
+              </tr>
+              
+			</table>
+            <img src="../UserMods/misc_cleardot.gif" border=0 width=1 height=8><br>
+            </td>
+        </tr>
+        
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+        
+      </table></td>
+    <td width="100%" align="center" valign="top" bgcolor="#FFFFFF">
+	<!--
+<div align="right">
+      Already our customer? <a href="http://www.theguitarcellar.com/scripts/05_Gateway.asp?action=logon">Click here to login.</a>
+	    &nbsp;&nbsp;<br>
+        <br>
+      </div>
+-->
+      <!-- Main Shopping Cart Area -->
+			        
+		<table width="100%" border="0" cellspacing="0" cellpadding="2">
+			<tr><td valign=middle class="CPpageHead">
+				<b>You are at : </b> <a href="prodList.asp?idCategory=1">The Guitar Cellar</a> > <a href="prodList.asp?idCategory=21">Electric Bass</a><br>
+			</td></tr>
+		</table>
+		<img src="../UserMods/misc_cleardot.gif" height=4 width=1><br>
+
+		<table width="100%" border="0" cellspacing="0" cellpadding="4" class="CPpageNav">
+		<form name="selectPageTopForm">
+			<tr>
+				<td nowrap align=left valign=middle>
+&nbsp;
+				</td>
+				<td nowrap align=right valign=middle>
+					<b>Sort : 
+	<select onChange="location.href=this.options[selectedIndex].value" name="sortPageTop" style="FONT-SIZE: 8pt">
+		<option value="prodList.asp?idcategory=21&sortField=description"  selected >Item Description</option>
+		<option value="prodList.asp?idcategory=21&sortField=price" >Price</option>
+		<option value="prodList.asp?idcategory=21&sortField=sku" >SKU</option>
+	</select>
+</b>
+				</td>
+			</tr>
+		</form>
+		</table>
+		<img src="../UserMods/misc_cleardot.gif" height=4 width=1><br>
+
+		<table width="100%" border="0" cellspacing="2" cellpadding="4">
+
+					<tr>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=124"><img src="../ProdImages/jbb115-5mrsmall.jpg" border=0 alt="&quot;MM&quot; Style 5-STRING BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">"MM" Style 5-STRING BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">A classic bass design at a bargain price. 
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.00</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=124"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="124">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=123"><img src="../ProdImages/jbb115bksmall.jpg" border=0 alt="&quot;MM&quot; Style BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">"MM" Style BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">A classic bass design at a bargain price. 
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.00</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=123"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="123">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					</tr>
+
+					<tr>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=122"><img src="../ProdImages/jbb115mblsmall.jpg" border=0 alt="&quot;MM&quot; Style BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">"MM" Style BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">A classic bass design at a bargain price. 
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.00</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=122"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="122">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=121"><img src="../ProdImages/jbb113bksmall.jpg" border=0 alt="&quot;P-STYLE&quot; ELECTRIC BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">"P-STYLE" ELECTRIC BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">A classic with classic styling.</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.99</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=121"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="121">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					</tr>
+
+					<tr>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=213"><img src="../ProdImages/DMB7504-sbS.jpg" border=0 alt="Dillion DMB7504 MOSRITE"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">Dillion DMB7504 MOSRITE</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">FREE SHIPPING!</span>
+<br><br>
+						<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=213"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top></td>
+						</tr>
+						</table>
+					</td>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=214"><img src="../ProdImages/vxbsaS.jpg" border=0 alt="DILLION VXB4A / 5A / 5AF ELECTRIC BASSES"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">DILLION VXB4A / 5A / 5AF ELECTRIC BASSES</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">THESE ARE HIGH QUALITY BASSES...JUST LOOK & SEE!</span>
+<br><br>
+						<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=214"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top></td>
+						</tr>
+						</table>
+					</td>
+
+					</tr>
+
+					<tr>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=139"><img src="../ProdImages/bass-gig-pack.jpg" border=0 alt="HARTKE&#174; BASS &amp; AMP COMBO"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">HARTKE® BASS & AMP COMBO</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">Convenience and value is the name of the game with this all-inclusive package. 
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$239.99</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=139"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="prodView.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="139">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=120"><img src="../ProdImages/jbb117bksmall.jpg" border=0 alt="JBP HIGHWAY 1 &quot;J&quot; STYLE BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">JBP HIGHWAY 1 "J" STYLE BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">This Bass goes back to its American roots. HOW BOUT' GEDDY LEE!
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.00</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=120"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="120">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					</tr>
+
+					<tr>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=119"><img src="../ProdImages/jbb117pwsmall.jpg" border=0 alt="JBP HIGHWAY 1 &quot;J&quot; STYLE BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">JBP HIGHWAY 1 "J" STYLE BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">This Bass goes back to its American roots. 
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.00</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=119"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="119">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					<td align=left valign=top width="50%" class="CPcolsView">
+						
+	<table border=0 cellspacing=0 cellpadding=3 align=right>
+	<tr><td align=center valign=top>
+
+			<a href="prodView.asp?idproduct=118"><img src="../ProdImages/jbb117sbsmall.jpg" border=0 alt="JBP HIGHWAY 1 &quot;J&quot; STYLE BASS"></a><br>
+
+	</td></tr>
+	</table>
+
+	<b class="CPprodDesc">JBP HIGHWAY 1 "J" STYLE BASS</b> 
+<br><br>
+						
+	<span class="CPprodDescLong">This Bass goes back to its American roots. 
+
+</span>
+<br><br>
+						
+		<b class=CPprodPriceT>Our Price:</b> 
+		<b class=CPprodPriceV>$179.00</b><br>
+<br>
+						<table border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td align=left valign=top>
+	<a href="prodView.asp?idproduct=118"><img src="../UserMods/butt_view.gif" border="0" vspace=4></a><br>
+</td>
+							<td align=left valign=top>&nbsp;&nbsp;</td>
+							<td align=left valign=top>
+		<table border=0 cellspacing=0 cellpadding=0>
+		<form method="post" action="cart.asp" name="additem">
+		<tr><td>
+			<input type="hidden" name="action" value="additem">
+			<input type="hidden" name="idProduct" value="118">
+			<input type="image"  name="add" src="../UserMods/butt_add.gif" border="0" vspace="4"><br>
+		</td></tr>
+		</form>
+		</table>
+</td>
+						</tr>
+						</table>
+					</td>
+
+					</tr>
+
+		</table>
+		<img src="../UserMods/misc_cleardot.gif" height=4 width=1><br>
+
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="left" valign="bottom" bgcolor="#FFFFFF" class="CPleftnavbar"><img src="../images/GC_left_menu_bottom6.gif" width="200" height="40"></td>
+    <td width="100%" align="left" valign="middle" bgcolor="#FFFFFF"><p>&nbsp;</p><table width="75%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td align="center"><a href="http://www.theguitarcellar.com/scripts/default.asp">&nbsp;Home</a> | <a href="http://www.theguitarcellar.com/scripts/policies.asp">Policies</a> | <a href="http://www.theguitarcellar.com/scripts/05_Gateway.asp?action=logon">Your Account</a> | <a href="http://www.theguitarcellar.com/scripts/cart.asp">Cart</a> | <a href="http://www.theguitarcellar.com/scripts/05_Gateway.asp?action=checkout">Checkout</a> | <a href="http://www.theguitarcellar.com/scripts/contactUs.asp">Contact Us</a> | <a href="http://www.theguitarcellar.com/scripts/links.asp">Links</a></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td height="1"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    <td><p><br>
+        Entire contents Copyright &copy; 2003 The Guitar Cellar, Inc.<br>
+      <br>
+      Publisher does not accept liability for incorrect spelling, printing errors (including prices), incorrect manufacturer's specifications or changes, or grammatical inaccuracies in any product included in the The Guitar Cellar Website. Prices subject to change without notice.</p>
+      <p><br>
+      <br>
+    </p></td>
+  </tr>
+</table>
+</body>
+</html>

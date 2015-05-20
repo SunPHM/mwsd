@@ -1,0 +1,402 @@
+<HTML>
+<HEAD>
+ 
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+var SymRealWinOpen = window.open;
+
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+
+window.open = SymWinOpen;
+
+//-->
+</script>
+
+<script language="JavaScript1.2">
+ <!--
+
+ /* Zooming link script by Paul Anderson, copyright 2001 CNET Builder.com.
+    May be freely used with attribution. Not for resale. All rights reserved. 
+  onclick="zoomBox(event,this);return false"
+   onclick="zoomBox(event,this,400,300,100,100);return false"
+    */
+
+ var maxW,maxH,fromX,fromY,toX,toY,adjX,adjY,zBox,zStep=0,zLink,zNew;
+
+ function zoomBox(evt,zlink,maxw,maxh,tox,toy) {
+ if (arguments.length > 2) zNew=1;
+ scrollH=(window.pageYOffset!=null)?window.pageYOffset:document.body.scrollTop;
+ maxW=maxw?maxw:window.innerWidth?innerWidth:document.body.clientWidth;
+ maxH=maxh?maxh:window.innerHeight?innerHeight:document.body.clientHeight;
+ toX=tox?tox:0;
+ toY=(toy?toy:0)+scrollH;
+ fromX=evt.pageX?evt.pageX:evt.clientX;
+ fromY=(evt.pageY?evt.pageY:evt.clientY)+(document.all?scrollH:0);
+ adjX=toX+evt.screenX-fromX;
+ adjY=toY+evt.screenY-fromY;
+ if (document.createElement && document.body.appendChild && !zBox) {
+         zBox=document.createElement("div");
+         zBox.style.position="absolute";
+         document.body.appendChild(zBox);
+ } else if (document.all && !zBox) {
+         document.all[document.all.length-1].outerHTML+='<div id="zBoxDiv" style="position:absolute"></div>';
+         zBox=document.all.zBoxDiv;
+ } else if (document.layers && !zBox) {
+         zBox=new Layer(maxW);
+         zBox.style=zBox;
+         }
+ zLink=zlink;
+ doZoom();
+ }
+
+ function doZoom() {
+ zStep+=1;
+ zPct=(10-zStep)/10
+ if (document.layers) {
+         zBox.moveTo(toX+zPct*(fromX-toX),toY+zPct*(fromY-toY));
+         zBox.document.open();
+         zBox.document.write("<table width='"+maxW*(1-zPct)+"' height="+maxH*(1-zPct)+" border=2 cellspacing=0><tr><td></td></tr></table>");
+         zBox.document.close();
+         } else {
+         zBox.style.border="2px solid #999999";
+         zBox.style.left=toX+zPct*(fromX-toX);
+         zBox.style.top=toY+zPct*(fromY-toY);
+         zBox.style.width=maxW*(1-zPct);
+         zBox.style.height=maxH*(1-zPct);
+         }
+ zBox.style.visibility="visible";
+ if (zStep < 10) setTimeout("doZoom("+fromX+","+fromY+","+toX+","+toY+")",30);
+ else {
+         zBox.style.visibility='hidden';
+         zStep=0;
+         if (zLink && !zNew) location.href=zLink.href;
+         else if (zLink && zNew) {
+                 var w=window.open(zLink.href,'','width='+maxW+',height='+maxH+',left='+adjX+',top='+adjY+',scrollbars,resizable');
+                 zNew=null;
+                 }
+         }
+ }
+
+ //-->
+ </script>
+  <META NAME="state" CONTENT="CT">
+  <META NAME="description" CONTENT="Integrated Pest Management (IPM) for Vegetables in Connecticut">
+  <META NAME="keywords" CONTENT="IPM,vegetables,squash,peppers,corn,tomatoes,lettuce,
+cucurbits,cucumbers,beans,cole crops,cabbage,sweet corn,pest management, integrated pest management, UConn">
+		<TITLE>VEGETABLE IPM-UCONN</TITLE>
+	</HEAD>
+<BODY BACKGROUND="styles/skbk0001.gif" VLINK="purple" ALINK="#228b22"
+BGCOLOR="#ffffff" LINK="#000099" text="#191970">
+		<div align="center">
+			<P>			<img src="gifs/banner2.gif" width="432" height="82" border="0">
+		</div>
+		<CENTER>
+			<h2><strong><font color="#228b22">VEGETABLES<br>
+					<a href="veg/croptalk/croptalk1_1/croptalkintro.html"><img src="gifs/croptalkintro.gif" width="360" height="97" border="0"></a><br>
+					</font></strong><strong><font color="#228b22"><a href="veg/htms/pestmsg.htm" title="Vegetable Pest Message"><img src="styles/vgpsmsgblgr.gif" width="360" height="97" border="0"><br>
+						</a></font></strong><strong><font color="#228b22"><a href="foodsafety/index.htm" title="Good Agricultural Practices GAP"><img src="foodsafety/images/neefsc_gap.gif" width="360" height="97" border="0"></a><a href="foodsafety/index.htm" title="January Vegetable &amp; Small Fruit Growers conference"><br>
+						</a></font></strong></h2>
+		</CENTER>
+		<div align="left">
+			<font color="#063479" size="-1">This site provides information for growers. Pest identification information may benefit the homeowner, but control methods will apply to the commercial scale grower. Look for the most recently posted articles marked </font><strong><font size="-1"><a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a></font></strong></div>
+		<CENTER>
+				<A HREF="general/edops/veged.htm"><FONT SIZE="-1"><b>VEGETABLE
+IPM EDUCATIONAL OPPORTUNITIES AT UCONN<br>
+					</b></FONT></A></CENTER>
+		<h1>
+			<center>
+				<a href="general/edops/veged.htm"><font size="-1">
+						<table border="1" cellpadding="2" cellspacing="2" width="430" bgcolor="#dc143c">
+							<tr bgcolor="#dc143c">
+								<td bgcolor="white">
+									<div align="center">
+										<a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a> <font color="#dc143c"><b>2004 - 2005 VEGETABLE&nbsp;MANAGEMENT&nbsp;GUIDE</b></font><font color="#dc143c" size="-1"><b> </b><b><a href="http://137.99.85.230/FMPro?-db=products.fp3&-format=detail.htm&-lay=cgi&Order%20ID=53&-op=neq&Category=merchandise&keyword=vegetable%20management%20guide&Order%20ID=53&-recid=33275&-token.0=53&-find="><img src="veg/pics/FMPro.jpeg" width="100" height="133" border="0" align="middle"></a></b></font></div>
+								</td>
+							</tr>
+						</table>
+					</font></a></center>
+		</h1>
+		<p><font color="#dc143c"><b>GENERAL</b></font> <strong><font color="#DC143C">ARTICLES<br>
+				</font></strong></p>
+		<DIR>
+			<LI><font size="-1"><b><a href="veg/pics/suckinginsects/index.htm">Sucking Insects: Aphids &amp; Potato Leafhopper  Slide Show</a> </b></font><font size="-2" color="#228b22"> January 2005</font>
+			<li><b><font size="-1"><a href="veg/htms/vegipmgenl.htm" title="Integrated Pest Management Fundamentals">Integrated Pest Management</a></font></b> <font size="-2" color="#228b22"> January 2004 </font><font color="#191970" size="-1"><b>Increase your understanding of IPM Basics</b></font>
+			<li><b><font size="-1"><a href="veg/htms/2003insecticid.htm">New Insecticide Registrations for Vegetable Crops for 2003</a> </font></b>
+			<li><a href="veg/htms/ptcworks.htm"><b><font size="-1">Perimeter Trap Cropping Works!</font></b> </a>
+			<li><font size="-1"><b><a href="veg/htms/deerfence.htm">Constructing a Deer Fence at the Cecarelli Farm</a></b></font>
+			<li><A HREF="greenhs/htms/vegbedpl.htm" TARGET="_self"><B><FONT
+   SIZE="-1">Pest Management for Vegetable Bedding Plants</FONT></B></A>
+			<LI><A HREF="weeds/htms/cvrcrps.htm"><B><FONT SIZE="-1">Contribution
+  of Cover Crop Mulches to Weed Management</FONT></B></A>
+  <LI><A HREF="weeds/htms/culttools.htm"><B><FONT SIZE="-1">Innovative
+  Cultivating Tools</FONT></B></A>
+  <LI><A HREF="weeds/htms/schedcult.htm"><B><FONT SIZE="-1">Scheduling
+  Cultivation</FONT></B></A>
+  <LI><A HREF="general/htms/spinosad.htm"><B><FONT SIZE="-1">Spinosad:
+  The First Selective, Broad-Spectrum Insecticide</FONT></B></A>
+  <LI><A HREF="general/htms/composts.htm"><B><FONT SIZE="-1">Composts
+  for Disease Suppression</FONT></B></A>
+  <LI><A HREF="general/htms/bassiana.htm"><B><FONT SIZE="-1">Using
+  <I>Beauveria Bassiana</I> for Insect Management</FONT></B></A>
+  <LI><A HREF="veg/htms/trichoderma.htm"><B><I><FONT SIZE="-1">Trichoderma</FONT></I><FONT
+   SIZE="-1"> for Control of Soil Pathogens</FONT></B></A>
+  <LI><A HREF="veg/htms/colrmlch.htm"><B><FONT SIZE="-1">The Use
+  of Different Colored Mulches for Yield and Earliness</FONT></B></A>
+  <LI><A HREF="veg/htms/ipmprofit.htm"><B><FONT SIZE="-1">Is IPM
+  Profitable?...A Case Study: Connecticut's Sweet Corn IPM</FONT></B></A>
+  <LI><A HREF="veg/htms/econthresh.htm"><B><FONT SIZE="-1">Who
+  Needs Economic Thresholds?</FONT></B></A>
+  <LI><A HREF="veg/htms/hydlime.htm"><B><FONT SIZE="-1">Hydrated
+  Lime as an Insect Repellent</FONT></B></A>
+  <LI><A HREF="general/htms/orgpest.htm"><U><STRONG><FONT SIZE="-1">Pesticides
+  for Organic Growers</FONT></STRONG></U></A>
+  <LI><A HREF="general/htms/cvercrop.htm"><U><STRONG><FONT SIZE="-1">Use
+  of Cover Crops and Green Manures to Attract Beneficial Insects</FONT></STRONG></U></A>
+  <LI><A HREF="veg/htms/rotate.htm"><U><STRONG><FONT SIZE="-1">Having
+  Problems Controlling Vegetable Crop Disease? Try Rotation.</FONT></STRONG></U></A>
+  <LI><A HREF="weeds/htms/galnsoga.htm"><U><STRONG><FONT SIZE="-1">Vegetable
+  Pest Message- Galinsoga</FONT></STRONG></U></A>
+</DIR>
+		<p><font color="#dc143c"><b>CROP SPECIFIC</b></font> <strong><font color="#DC143C">ARTICLES<br>
+				</font></strong></p>
+		<p><strong><font color="#339966" size="-1">ASPARAGUS:</font></strong></p>
+		<menu>
+			<li><b><font size="-1"><a href="veg/htms/asparaphid.htm" title="article: Asparagus aphid">Sucking Insects: Asparagus Aphid</a> </font></b><a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a><font size="-2" color="#228b22"> January 2005</font>
+		</menu>
+		<p><a name="anchor180206"></a><b><font color="#339966" size="-1">BEANS AND OTHER&nbsp;LEGUMES:</font></b></p>
+		<menu>
+			<li><b><font size="-1"><a href="veg/htms/peaaphid.htm" title="article: Pea Aphid">Sucking Insects: Pea Aphid</a> </font></b><a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a><font size="-2" color="#228b22"> January 2005</font>
+			<li><a href="veg/htms/bnanthr.htm" target="_self"><b><font size="-1">Anthracnose of Bean</font></b></a>
+			<li><a href="veg/htms/bnwtmld.htm"><b><font size="-1">Molds and Mildews of Beans in Connecticut</font></b></a>
+			<li><a href="veg/htms/bnvirus.htm"><b><font size="-1">Bean Viruses</font></b></a>
+			<li><a href="veg/htms/bnrust.htm"><b><font size="-1">Bean Rust</font></b></a>
+			<li><a href="veg/htms/btbnbl.htm"><b><font size="-1">Bacterial Bean Blights</font></b></a>
+		</menu>
+		<p><a name="anchor199063"></a><b><font color="#339966" size="-1">COLE CROPS:</font></b></p>
+		<menu>
+			<li><font size="-1"><b><a href="veg/htms/ptrpcrop.htm">Perimeter Trap Cropping for Cole Crops</a> </b></font>
+			<li><a href="veg/htms/ccworms.htm" target="_self"><b><font size="-1">Cole Crop &quot;Worms&quot;</font></b></a>
+			<li><a href="veg/htms/crucblkrt.htm" target="_self"><b><font size="-1">Black Rot of Crucifers</font></b></a>
+			<li><a href="veg/htms/crucclbrt.htm" target="_self"><b><font size="-1">Club Root of Crucifers</font></b></a>
+			<li><a href="veg/htms/coledis.htm" target="_self"><b><font size="-1">Two Common, Late-Season, Cole Crop Diseases</font></b></a>
+			<li><b><font size="-1"><a href="veg/htms/ccroppsts.html">Cole Crop Pests (Insects)</a></font></b>
+		</menu>
+		<p><a name="anchor203472"></a><strong><font color="#339966" size="-1">CORN:</font></strong></p>
+		<menu>
+			<li><b><font size="-1"><a href="veg/htms/cornleafaphid.htm" title="article: Corn Leaf Aphid">Sucking Insects: Corn Leaf Aphid </a></font></b><a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a><font size="-2" color="#228b22"> January 2005</font>
+			<li><font size="-1"><b><a href="veg/htms/sctransp.htm">Transplanting Sweet Corn at Cold Spring Brook Farm</a></b></font>
+			<li><font color="#228b22" size="-1"><b><a href="veg/htms/redrisk.htm">Reduced Risk Pesticide Program for Sweet Corn</a> </b></font>
+			<li><a href="veg/htms/ecbtrich.htm"><b><font size="-1">Using Trichogramma and Bt for European Corn Borer Control</font></b></a>
+			<li><a href="veg/htms/scpltsched.htm"><b><font size="-1">Scheduling Sweet Corn Plantings</font></b></a>
+			<menu>
+				<li><a href="veg/htms/andrsn.htm"><b><font size="-1">Scheduling Sweet Corn Plantings -- The Anderson Farm Way</font></b></a>
+			</menu>
+			<li><a href="veg/htms/cornpest.htm" target="_blank"><b><font size="-1">Pictorial Comparison of Sweet Corn Pests</font></b></a>
+			<li><b><font color="#000099" size="-1">UConn's Sweet Corn IPM</font><font size="-1"> <a href="veg/htms/actthresh.htm" target="_self">Action Thresholds</a> </font><font color="#000099" size="-1">are now online</font></b>
+			<li><a href="veg/htms/stwwilt.htm"><strong><font size="-1">Stewart's Wilt Warning for Southern New England Sweet Corn Growers</font></strong></a>
+			<li><a href="veg/htms/corndis.htm"><strong><font size="-1">Common Diseases of Corn in Connecticut</font></strong></a>
+			<li><a href="veg/htms/crows.htm"><u><strong><font size="-1">Corn Rootworm or Crow Damage?</font></strong></u></a>
+			<li><a href="general/htms/pirbug.htm"><u><strong><font size="-1">Minute Pirate Bugs--Tiny Takers</font></strong></u></a>
+		</menu>
+		<p><a name="anchor163227"></a><strong><font color="#339966" size="-1">CUCURBITS:</font></strong></p>
+		<menu>
+			<li><b><font size="-1"><a href="veg/htms/cucrbinct.htm" title="Cucurbit Yellow Vine Disease in CT">Cucurbit Yellow Vine Disease in Connecticut</a>  </font></b><a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a><font size="-2" color="#228b22"> May 2005</font>
+			<li><font size="-1"><b><a href="veg/htms/directptc.htm">Directions for Using a Perimeter Trap Crop Strategy to Protect Cucubit Crops</a> </b></font><a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a><font size="-2" color="#228b22"> April 2005</font>
+			<li><b><font color="#228b22" size="-1"><a href="veg/htms/plectosp.htm" title="plectosporium blight">Plectosporium Blight &amp; New Spray Recommendations for 2005</a> </font></b><img src="gifs/Updated_2.gif" width="44" height="12" border="0"><font color="#228b22" size="-2">January 2005</font>
+			<li><font color="#228b22" size="-1"><a href="veg/htms/Ptccukes.htm"><b>Protecting Cucumbers From Beetles and Wilt With Perimeter Trap Cropping</b></a></font><font size="-2" color="#228b22"> Jan 2004<br>
+				</font>
+			<li><font size="-1"><b><a href="veg/htms/sumsqshptc.htm">Perimeter Trap Cropping for Yellow and Green Summer Squash </a></b></font>
+			<li><b><font size="-1"><a href="veg/htms/cukbtltcrop.htm" title="Striped Cucumber Beetle">Striped Cucumber Beetles, <i>Acalymma vittata</i>, (Coleoptera:Chrysomelidae) </a></font></b>
+			<li><a href="veg/htms/maxpumprod.htm" target="_self"><b><font size="-1">Maximizing Pumpkin Production Through Spacing, Fertilizer, Irrigation, and Varietal Selection</font></b></a>
+			<li><a href="veg/htms/presidrs.htm" target="_self"><b><font size="-1">Using the Pre-Sidedress Nitrate Test for Pumpkins</font></b></a>
+			<li><a href="veg/htms/sprtechn.htm" target="_self"><b><font size="-1">Techniques for Improving Spray Coverage in Pumpkins and Winter Squash</font></b></a>
+			<li><a href="veg/htms/sqdistol.htm" target="_self"><strong><font size="-1">Disease Tolerance of Zucchini and Yellow Squash Varieties/Varieties to Choose for Late Season Production</font></strong></a>
+			<li><a href="veg/htms/brfpump.htm" target="_self"><strong><font size="-1">Characterization of the Black Rot Fungus &amp; An Update on Bacterial Wilt</font></strong></a>
+			<li><a href="veg/htms/sqshvbrer.htm" target="_self"><strong><font size="-1">Squash Vine Borer Control</font></strong></a>
+			<li><a href="veg/htms/lffrcui.htm" target="_self"><strong><font size="-1">Leaf and Fruit Diseases of Cucurbits I - Diseases Accompanied by Fruit Rots</font></strong></a>
+			<li><a href="veg/htms/lffrcuii.htm" target="_self"><strong><font size="-1">Leaf and Fruit Diseases of Cucurbits II - Diseases Accompanied by Fruit Spots</font></strong></a>
+			<li><a href="veg/htms/mildwcuc.htm" target="_self"><strong><font size="-1">Mildew Diseases of Cucurbits</font></strong></a>
+			<li><a href="veg/htms/blkrtcuc.htm" target="_self"><strong><font size="-1">Black Rot of Cucurbits</font></strong></a>
+			<li><a href="veg/htms/viruscuc.htm" target="_self"><u><strong><font size="-1">Viruses of Cucurbits</font></strong></u></a>
+			<li><a href="veg/htms/cucbwilt.htm"><u><strong><font size="-1">Bacterial Wilt</font></strong></u></a>
+			<li><a href="fruit/htms/gummy.htm"><u><strong><font size="-1">Managing Fungicide Resistance for Powdery Mildew, Gummy Stem Blight &amp; Downy Mildew</font></strong></u></a>
+			<li><a href="veg/htms/squash.htm"><strong><font size="-1">Consider Planting Disease Resistant Summer Squash and Zucchini</font></strong></a>
+		</menu>
+		<p><strong><font color="#339966" size="-1">EGGPLANT:</font></strong></p>
+		<menu>
+			<li><a href="veg/htms/cpbipm.htm" target="_self"><strong><font size="-1">Using IPM on CPB Saves Money, Insecticides</font></strong></a>
+		</menu>
+		<p><a name="anchor249583"></a><strong><font color="#339966" size="-1">LETTUCE:</font></strong></p>
+		<menu>
+			<li><a href="veg/htms/lettuce.htm"><strong><font size="-1">Lettuce Diseases in Connecticut</font></strong></a>
+		</menu>
+		<p><A NAME="anchor188191"></A><STRONG><FONT COLOR="#339966" SIZE="-1">PEPPERS:</FONT></STRONG></p>
+		<DIR>
+  <LI><a href="veg/htms/trpcrops.htm"><b><font size="-1">Perimeter Trap Crop Recommendations for Pepper Maggots </font></b></a>
+			<li><A HREF="veg/htms/pprsumm.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Summary: Pepper Integrated Pest Management Options
+</FONT></STRONG></A><STRONG><FONT SIZE="-1">&nbsp;&nbsp;</FONT></STRONG>
+			<LI><A HREF="veg/htms/wdactthrppr.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Action Thresholds for Weeds in Peppers</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/mnrdisppr.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Minor Diseases of Pepper</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/blsponpeps.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Bacterial Leaf Spot of Peppers</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/catchfly.htm"><B><FONT SIZE="-1">How to
+  catch a fly! (pepper maggot)</FONT></B></A>
+  <LI><A HREF="veg/htms/aphids.htm"><U><STRONG><FONT SIZE="-1">Aphids</FONT></STRONG></U></A>
+  <LI><A HREF="veg/htms/pepvrus.htm"><U><STRONG><FONT SIZE="-1">Aphids
+  and Viruses</FONT></STRONG></U></A>
+  <LI><A HREF="veg/htms/pprborer.htm"><U><STRONG><FONT SIZE="-1">European
+  Corn Borer</FONT></STRONG></U></A>
+  <LI><A HREF="veg/htms/nmbbrer.htm"><STRONG><FONT SIZE="-1">European
+  Corn Borer Management in Peppers</FONT> <FONT SIZE="-1">OR, No
+  More Boring Borers</FONT></STRONG></A>
+  <LI><strong><font size="-1"><a href="veg/htms/blspep2.htm">Managing Bacterial Leaf Spot in Pepper</a> </font></strong><img src="gifs/Updated_2.gif" width="44" height="12" border="0">
+  <LI><A HREF="veg/htms/pprmag.htm"><STRONG><FONT SIZE="-1">Pepper
+  Maggot: Damage, Detection, Monitoring and Management</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/phytomgt.htm"><STRONG><FONT SIZE="-1">Phytophthora
+  Management</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/ppripm.htm"><U><STRONG><FONT SIZE="-1">Genetic
+  Control of Phytophthora</FONT></STRONG></U></A>
+  <LI><A HREF="homegrnd/htms/54sedtrt.htm"><U><STRONG><FONT SIZE="-1">Preventing
+  Bacterial Disease of Vegetables with Hot Water Seed Treatment</FONT></STRONG></U></A>
+  <LI><A HREF="veg/htms/phyrota.htm"><U><STRONG><FONT SIZE="-1">One
+  Darn Good Reason to Rotate: Phytophthora</FONT></STRONG></U></A>
+  <LI><A HREF="veg/htms/tolvar.htm"><B><FONT SIZE="-1">Resistant/Tolerant
+  Vegetable Varieties Are Worth A Try</FONT></B></A>
+</DIR>
+
+<P><A NAME="anchor172227"></A><STRONG><FONT COLOR="#339966" SIZE="-1">TOMATOES:</FONT></STRONG></P>
+
+<MENU>
+  <LI><A HREF="veg/htms/pmildtom.html"><B><FONT SIZE="-1">Powdery
+  Mildew: A New Disease of Tomato</FONT></B></A>
+  <LI><A HREF="veg/htms/tombacdis.htm"><B><FONT SIZE="-1">Bacterial
+  Disease of Tomato</FONT></B></A>
+  <LI><A HREF="veg/htms/ebfrshtom.htm"><STRONG><FONT SIZE="-1">Early
+  Blight Management in Fresh Market Tomatoes</FONT></STRONG></A>
+  <LI><A HREF="greenhs/htms/bcanker.htm"><U><STRONG><FONT SIZE="-1">Managing
+  Bacterial Canker in Tomato: Key Strategies</FONT></STRONG></U></A>
+  <LI><A HREF="greenhs/htms/bpcsigt.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Biological Pest Control in Greenhouse Tomatoes</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/bacspto.htm"><STRONG><FONT SIZE="-1">Bacterial
+  Leaf and Fruit Spots of Tomato</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/tomdis.htm"><STRONG><FONT SIZE="-1">Fungal
+  Leaf/Fruit Spots of Tomato</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/tomdis2.htm"><STRONG><FONT SIZE="-1">Fungal
+  Leaf/Fruit Spots of Tomato II</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/mosvirto.htm"><STRONG><FONT SIZE="-1">Mosaic
+  Diseases of Tomato</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/tspwltv.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Tomato Spotted Wilt Virus</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/wilttom.htm" TARGET="_self"><STRONG><FONT
+   SIZE="-1">Vascular Wilts of Tomato</FONT></STRONG></A>
+</MENU>
+		<P><A NAME="anchor306592"></A><B><STRONG><FONT COLOR="#339966"
+ SIZE="-1">POTATOES:</FONT></STRONG></B></P>
+		<MENU>
+  <LI><font size="-1"><b><a href="veg/htms/plh.htm" title="Article: Potato Leafhopper">Sucking Insects: Potato Leafhopper</a></b></font> <a href="general/htms/orgprod.htm" target="_top"><img src="animate/gifs/3d-new1.gif" width="33" height="16" align="BOTTOM" border="0" naturalsizeflag="0" alt="new gif"></a><font size="-2" color="#228b22"> January 2005</font>
+			<li><A HREF="veg/htms/potwilt.htm" TARGET="_self"><B><FONT SIZE="-1">Vascular
+  Wilts of Potato</FONT></B></A>
+			<LI><A HREF="veg/htms/viruspot.htm"><B><FONT SIZE="-1">Potato
+  Viruses</FONT></B></A>
+  <LI><A HREF="veg/htms/scabpot.htm"><STRONG><FONT SIZE="-1">Common
+  Scab</FONT></STRONG></A>
+  <LI><A HREF="veg/htms/bltpot.htm"><STRONG><FONT SIZE="-1">Early
+  Blight and Late Blight of Potato</FONT></STRONG></A>
+</MENU>
+		<P><B><FONT COLOR="#339966" SIZE="-1">VEGETABLE IPM LINKS</FONT></B></P>
+		<MENU>
+  <LI><A HREF="http://www.nysaes.cornell.edu/ipmnet/websites.neipm.html"
+  TARGET="_self"><B><FONT SIZE="-1">Northeast IPM Websites</FONT></B></A>
+</MENU>
+		<P><STRONG><FONT COLOR="#339966" SIZE="-1">OTHER IPM</FONT></STRONG><B><FONT
+ SIZE="-1"> </FONT></B><STRONG><FONT COLOR="#339966" SIZE="-1">LINKS</FONT></STRONG></P>
+
+<UL>
+  <LI><A HREF="ipmmisc.htm" TARGET="_blank"><B><FONT SIZE="-1">IPM
+  Links</FONT></B></A>
+			<LI><font size="-1"><a href="http://dep.state.ct.us/wtr/nps/succstor/qripmicm.pdf"><b>Connecticut DEP Quinnipiac River Watershed ICM/IPM Success Story</b></a><b> </b></font><font size="-2"><b>(this report is a 179 kb .pdf file and requires Adobe Reader.)<a href="http://www.adobe.com/prodindex/acrobat/readstep.html" target="_blank"><img src="styles/getacro.gif" width="71" height="25" align="TOP" border="0" naturalsizeflag="3" alt="get acrobat reader"></a></b></font>
+		</UL>
+
+<P><CENTER><TABLE BORDER="0" WIDTH="71%" CELLPADDING="0" CELLSPACING="0">
+  <TR VALIGN="TOP">
+    <TD ALIGN="CENTER" WIDTH="33%" BGCOLOR="#99cc99" background="gifs/bluegreensm.gif">
+    <STRONG><FONT COLOR="#063479" SIZE="-1">VEGETABLE IPM COORDINATOR<BR>
+    </FONT></STRONG><FONT COLOR="#DC143C" SIZE="-2">(commercial interests
+    or growers)</FONT></TD> 
+    <TD ALIGN="CENTER" WIDTH="33%" BGCOLOR="#99cc99" background="gifs/bluegreensm.gif">
+    <STRONG><FONT SIZE="-1"><A HREF="mailto:jude.boucher@uconn.edu">T.
+    JUDE BOUCHER</A></FONT></STRONG></TD> 
+    <TD ALIGN="CENTER" WIDTH="34%" BGCOLOR="#99cc99" background="gifs/bluegreensm.gif">
+    <STRONG><FONT COLOR="#063479" SIZE="-1">860-875-3331</FONT></STRONG></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%" BGCOLOR="#cccccc" background="gifs/bluegreensm.gif">
+						<div align="center">
+							<P><B><FONT COLOR="#063479" SIZE="-1">VEGETABLE QUESTIONS
+<BR>
+									</FONT></B><FONT COLOR="#DC143C" SIZE="-2">(homeowners)</FONT>
+						</div>
+						<CENTER>
+							</CENTER>
+					</TD>
+    <TD WIDTH="33%" BGCOLOR="#cccccc" background="gifs/bluegreensm.gif">
+						<div align="center">
+							<P>&nbsp;<B><FONT SIZE="-1"><A HREF="http://www.canr.uconn.edu/HomeGard/index.html"
+    TARGET="_blank">UCONN HOME &amp; GARDEN INFORMATION CENTER</A></FONT></B>
+						</div>
+					</TD>
+    <TD WIDTH="34%" BGCOLOR="#cccccc" background="gifs/bluegreensm.gif">
+						<div align="center">
+							<P><B><FONT COLOR="#063479" SIZE="-1">phone&nbsp;toll free <br>
+										1-877-486-6271<br>
+										or </FONT><FONT SIZE="-1"><A HREF="mailto:ladybug@uconn.edu?subject=IPM question"
+    TARGET="_blank">email</A></FONT></B>
+						</div>
+						<CENTER></CENTER>
+					</TD>
+  </TR>
+</TABLE><B><FONT SIZE="-2"><A HREF="styles/menu.htm">menu</A></FONT></B></CENTER>
+
+</BODY>
+</HTML>
+<script language="JavaScript">
+<!--
+var SymRealOnLoad;
+var SymRealOnUnload;
+
+function SymOnUnload()
+{
+  window.open = SymWinOpen;
+  if(SymRealOnUnload != null)
+     SymRealOnUnload();
+}
+
+function SymOnLoad()
+{
+  if(SymRealOnLoad != null)
+     SymRealOnLoad();
+  window.open = SymRealWinOpen;
+  SymRealOnUnload = window.onunload;
+  window.onunload = SymOnUnload;
+}
+
+SymRealOnLoad = window.onload;
+window.onload = SymOnLoad;
+
+//-->
+</script>
+

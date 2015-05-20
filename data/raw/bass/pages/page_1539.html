@@ -1,0 +1,366 @@
+<html>
+<head>
+<title>Music Park - Guitar Photo Page</title>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<script language="JavaScript1.2" src="coolmenus3.js">
+/*****************************************************************************
+Copyright (c) 2001 Thomas Brattli (www.bratta.com)
+
+eXperience DHTML coolMenus - Get it at www.bratta.com
+Version 3.02
+This script can be used freely as long as all copyright messages are
+intact. 
+******************************************************************************/
+</script>
+<script language="JavaScript">
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion; this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0;
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom)?1:0;
+	this.ie4=(document.all && !this.dom)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.opera5=this.agent.indexOf("Opera 5")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5 || this.dom)
+	return this
+}
+var bw=new lib_bwcheck() //Making browsercheck object
+
+var mDebugging=2 //General debugging variable. Set to 0 for no debugging, 1 for alerts or 2 for status debugging.
+
+oCMenu=new makeCoolMenu("oCMenu") //Making the menu object. Argument: menuname
+oCMenu.useframes=0 //Do you want to use the menus as coolframemenu or not? (in frames or not) - Value: 0 || 1
+oCMenu.frame="frmMain" //The name of your main frame (where the menus should appear). Leave empty if you're not using frames - Value: "main_frame_name"
+
+oCMenu.useclick=0 //If you want the menu to be activated and deactivated onclick only set this to 1. - Value: 0 || 1
+
+/*If you set this to 1 you will get a "hand" cursor when moving over the links in NS4. 
+NOTE: This does not apply to the submenus if the menu is used in frames due some mayor problems with NS4*/
+oCMenu.useNS4links=1  
+
+//After adding the "hover effect" for netscape as well, all styles are lost. But if you want padding add it here.
+oCMenu.NS4padding=2 
+
+//If you have select boxes close to your menu the menu will check for that and hide them if they are in the way of the menu.
+//This feature does unfortunatly not work in NS4!
+oCMenu.checkselect=0
+
+/*If you choose to have this code inside a linked js, or if your using frames it's important to set these variables. 
+This will help you get your links to link to the right place even if your files are in different folders.
+The offlineUrl variable is the actual path to the directory where you js file are locally. 
+This is just so you can test it without uploading. Remember to start it with file:/// and only use slashes, no backward slashes!
+Also remember to end with a slash                                                                                                 */
+oCMenu.offlineUrl="file:///C|/Inetpub/wwwroot/dhtmlcentral/" //Value: "path_to_menu_file_offline/"
+//The onlineUrl variable is the online path to your script. Place in the full path to where your js file is. Remember to end with a slash.
+oCMenu.onlineUrl="http://www.dhtmlcentral.com/coolmenus/examples/withoutframes/" //Value: "path_to_menu_file_online/"
+
+oCMenu.pagecheck=1 //Do you want the menu to check whether any of the subitems are out of the bouderies of the page and move them in again (this is not perfect but it hould work) - Value: 0 || 1
+oCMenu.checkscroll=0 //Do you want the menu to check whether the page have scrolled or not? For frames you should always set this to 1. You can set this to 2 if you want this feature only on explorer since netscape doesn't support the window.onscroll this will make netscape slower (only if not using frames) - Value: 0 || 1 || 2
+oCMenu.resizecheck=1 //Do you want the page to reload if it's resized (This should be on or the menu will crash in Netscape4) - Value: 0 || 1
+oCMenu.wait=600 //How long to wait before hiding the menu on mouseout. Netscape 6 is a lot slower then Explorer, so to be sure that it works good enough there you should not have this lower then 500 - Value: milliseconds
+
+//Background bar properties
+oCMenu.usebar=1 //If you want to use a background-bar for the top items set this on - Value: 1 || 0
+oCMenu.barcolor="black" //The color of the background bar - Value: "color"
+oCMenu.barwidth="450" //The width of the background bar. Set this to "menu" if you want it to be the same width as the menu. (this will change to match the border if you have one) - Value: px || "%" || "menu"
+oCMenu.barheight="24" //The height of the background bar. Set this to "menu" if you want it to be the same height as the menu. (this will change to match the border if you have one) - Value: px || "%" || "menu"
+oCMenu.barx=0 //The left position of the bar. Set this to "menu" if you want it be the same as the left position of the menu. (this will change to match the border if you have one)  - Value: px || "%" || "menu"
+oCMenu.bary=91 //The top position of the bar Set this to "menu" if you want it be the same as the top position of the menu. (this will change to match the border if you have one)  - Value: px || "%" || "menu"
+oCMenu.barinheritborder=0 //Set this to 1 if you want the bar to have the same border as the top menus - Value: 0 || 1
+
+//Placement properties
+oCMenu.rows=1 //This controls whether the top items is supposed to be laid out in rows or columns. Set to 0 for columns and 1 for row - Value 0 || 1
+oCMenu.fromleft=30 //This is the left position of the menu. (Only in use if menuplacement below is 0 or aligned) (will change to adapt any borders) - Value: px || "%"
+oCMenu.fromtop=91 //This is the left position of the menu. (Only in use if menuplacement below is 0 or aligned) (will change to adapt any borders) - Value: px || "%"
+oCMenu.pxbetween=0 //How much space you want between each of the top items. - Value: px || "%"
+
+oCMenu.menuplacement=new Array(30,160,290) 
+
+
+
+//TOP LEVEL PROPERTIES - ALL OF THESE MUST BE SPESIFIED FOR LEVEL[0]
+oCMenu.level[0]=new Array() //Add this for each new level
+oCMenu.level[0].width=130 //The default width for each level[0] (top) items. You can override this on each item by spesifying the width when making the item. - Value: px || "%"
+oCMenu.level[0].height=24 //The default height for each level[0] (top) items. You can override this on each item by spesifying the height when making the item. - Value: px || "%"
+oCMenu.level[0].bgcoloroff="black" //The default background color for each level[0] (top) items. You can override this on each item by spesifying the backgroundcolor when making the item. - Value: "color"
+oCMenu.level[0].bgcoloron="black" //The default "on" background color for each level[0] (top) items. You can override this on each item by spesifying the "on" background color when making the item. - Value: "color"
+oCMenu.level[0].textcolor="white" //The default text color for each level[0] (top) items. You can override this on each item by spesifying the text color when making the item. - Value: "color"
+oCMenu.level[0].hovercolor="White" //The default "on" text color for each level[0] (top) items. You can override this on each item by spesifying the "on" text color when making the item. - Value: "color"
+oCMenu.level[0].style="padding:2px; font-family:tahoma,arial,helvetica; font-size:12px; font-weight:bold" //The style for all level[0] (top) items. - Value: "style_settings"
+oCMenu.level[0].border=0 //The border size for all level[0] (top) items. - Value: px
+oCMenu.level[0].bordercolor="black" //The border color for all level[0] (top) items. - Value: "color"
+oCMenu.level[0].offsetX=0 //The X offset of the submenus of this item. This does not affect the first submenus, but you need it here so it can be the default value for all levels. - Value: px
+oCMenu.level[0].offsetY=-1 //The Y offset of the submenus of this item. This does not affect the first submenus, but you need it here so it can be the default value for all levels. - Value: px
+oCMenu.level[0].NS4font="tahoma,arial,helvetica"
+oCMenu.level[0].NS4fontSize="2"
+
+/*New: Added animation features that can be controlled on each level.*/
+oCMenu.level[0].clip=0 //Set this to 1 if you want the submenus of this level to "slide" open in a animated clip effect. - Value: 0 || 1
+oCMenu.level[0].clippx=0 //If you have clip spesified you can set how many pixels it will clip each timer in here to control the speed of the animation. - Value: px 
+oCMenu.level[0].cliptim=0 //This is the speed of the timer for the clip effect. Play with this and the clippx to get the desired speed for the clip effect (be carefull though and try and keep this value as high or possible or you can get problems with NS4). - Value: milliseconds
+//Filters - This can be used to get some very nice effect like fade, slide, stars and so on. EXPLORER5.5+ ONLY - If you set this to a value it will override the clip on the supported browsers
+oCMenu.level[0].filter=0 //VALUE: 0 || "filter specs"
+
+oCMenu.level[0].align="bottom" //Value: "top" || "bottom" || "left" || "right" 
+
+//EXAMPLE SUB LEVEL[1] PROPERTIES - You have to spesify the properties you want different from LEVEL[0] - If you want all items to look the same just remove this
+oCMenu.level[1]=new Array() //Add this for each new level (adding one to the number)
+oCMenu.level[1].width=oCMenu.level[0].width-2
+oCMenu.level[1].height=22
+oCMenu.level[1].bgcoloroff="#CCCCCC"
+oCMenu.level[1].bgcoloron="lightSlateGray"
+oCMenu.level[1].textcolor="black" 
+oCMenu.level[1].hovercolor="black" 
+oCMenu.level[1].style="padding:2px; font-family:tahoma, arial,helvetica; font-size:11px; font-weight:bold"
+oCMenu.level[1].align="bottom" 
+oCMenu.level[1].offsetX=-(oCMenu.level[0].width-2)/2+50
+oCMenu.level[1].offsetY=0
+oCMenu.level[1].border=1 
+oCMenu.level[1].bordercolor="black"
+
+//EXAMPLE SUB LEVEL[2] PROPERTIES - You have to spesify the properties you want different from LEVEL[1] OR LEVEL[0] - If you want all items to look the same just remove this
+oCMenu.level[2]=new Array() //Add this for each new level (adding one to the number)
+oCMenu.level[2].width=150
+oCMenu.level[2].height=20
+oCMenu.level[2].bgcoloroff="#CCCCCC"
+oCMenu.level[2].bgcoloron="lightSlateGray"
+oCMenu.level[2].textcolor="black" 
+oCMenu.level[2].hovercolor="black" 
+oCMenu.level[2].style="padding:2px; font-family:tahoma, arial,helvetica; font-size:11px; font-weight:bold"
+oCMenu.level[2].align="bottom" 
+oCMenu.level[2].offsetX=0
+oCMenu.level[2].offsetY=0
+oCMenu.level[2].border=1 
+oCMenu.level[2].bordercolor="black"
+oCMenu.level[2].NS4font="tahoma,arial,helvetica"
+oCMenu.level[2].NS4fontSize="1"
+
+
+oCMenu.makeMenu('top0','','<img src="Graphics/But_MP.gif" border=0>','index.html','')
+	oCMenu.makeMenu('sub00','top0','&nbsp;P.A. Dept')
+		oCMenu.makeMenu('sub001','sub00','- Speakers','PASpeakers.html','',160,0)
+		oCMenu.makeMenu('sub002','sub00','- Powered Speakers','PA_PSpeakers.html','',160,0)
+		oCMenu.makeMenu('sub003','sub00','- Sub Woofers','PA_Subs.html','',160,0)
+		oCMenu.makeMenu('sub004','sub00','- Mixers','PAMixers.html','',160,0)
+		oCMenu.makeMenu('sub005','sub00','- Powered Mixers','PA_PMixers.html','',160,0)
+		oCMenu.makeMenu('sub006','sub00','- Amplifiers','PAAmp.html','',160,0)
+		oCMenu.makeMenu('sub007','sub00','- Packages','PAPkge.html','',160,0)
+		oCMenu.makeMenu('sub008','sub00','- Microphones','PAMic.html','',160,0)
+		oCMenu.makeMenu('sub009','sub00','- Wireless Microphones','PA_W_Mic.html','',160,0)
+		oCMenu.makeMenu('sub010','sub00','- Processors & Cables','PAProcessor.html','',160,0)
+		oCMenu.makeMenu('sub011','sub00','- Installations','PA_install.html','',160,0)
+	oCMenu.makeMenu('sub01','top0','&nbsp;D.J. Dept')
+		oCMenu.makeMenu('sub012','sub01','- Mixers','DJ Mixer.htm','',160,0)
+		oCMenu.makeMenu('sub013','sub01','- Premium Mixers','DJ Premium_mix.htm','',160,0)
+		oCMenu.makeMenu('sub014','sub01','- Audiophile Mixers','DJ Audiophile_mix.htm','',160,0)
+		oCMenu.makeMenu('sub015','sub01','- Synth Modules','DJ Modules.htm','',160,0)
+		oCMenu.makeMenu('sub016','sub01','- Turntables & CD Players','DJ Turntables.htm','',160,0)
+	oCMenu.makeMenu('sub02','top0','&nbsp;Hi Tech Dept','')
+		oCMenu.makeMenu('sub021','sub02','- Synths','Synths.html','',160,0)
+		oCMenu.makeMenu('sub022','sub02','- Stage Pianos','StagePnos.html','',160,0)
+		oCMenu.makeMenu('sub023','sub02','- Recording-Multitrack','Rec_WS.html','',160,0)
+		oCMenu.makeMenu('sub024','sub02','- Recording-Software','Software.html','',160,0)
+		oCMenu.makeMenu('sub025','sub02','- Recording-Digital Mixers','Rec_digmix.html','',160,0)
+		oCMenu.makeMenu('sub026','sub02','- Recording-Microphones','Rec_mic.html','',160,0)
+		oCMenu.makeMenu('sub027','sub02','- Mic Pre-amps','Mic_Pre.html','',160,0)
+		oCMenu.makeMenu('sub028','sub02','- Soundcards','Soundcards.html','',160,0)
+		oCMenu.makeMenu('sub029','sub02','- Monitor Speakers','Mon_Spkrs.html','',160,0)
+		oCMenu.makeMenu('sub030','sub02','- Educational Software','Ed_software.html','',160,0)
+		oCMenu.makeMenu('sub031','sub02','- MIDI Interfaces','Midi_Interface.htm','',160,0)
+		oCMenu.makeMenu('sub032','sub02','- Support','Supportlink.htm','',160,0)
+	oCMenu.makeMenu('sub03','top0','&nbsp;Guitar Dept','')
+		oCMenu.makeMenu('sub034','sub03','- Acoustic Guitars','Ac_Guitars.html','',160,0)
+		oCMenu.makeMenu('sub035','sub03','- Acoustic Electric Guitars','AcElec_Guitars.html','',160,0)
+		oCMenu.makeMenu('sub036','sub03','- Semi Acoustic Guitars','SemiAc_Guitars.html','',160,0)
+		oCMenu.makeMenu('sub037','sub03','- Electric Guitars','Guitars.html','',160,0)
+		oCMenu.makeMenu('sub038','sub03','- Bass Guitars','B_Guitars.html','',160,0)
+		oCMenu.makeMenu('sub039','sub03','- Electric Guitar Amplifiers','Amps.html','',160,0)
+		oCMenu.makeMenu('sub040','sub03','- Acoustic Guitar Amplifiers','Ac_Amps.html','',160,0)
+		oCMenu.makeMenu('sub041','sub03','- Bass Amplifiers','B_Amps.html','',160,0)
+		oCMenu.makeMenu('sub042','sub03','- Effects','Effects.html','',160,0)
+	oCMenu.makeMenu('sub04','top0','&nbsp;Drum Dept','')
+		oCMenu.makeMenu('sub043','sub04','- Kits','kits.htm','',160,0)
+		oCMenu.makeMenu('sub044','sub04','- Electronic Kits','Electronic.htm','',160,0)
+		oCMenu.makeMenu('sub045','sub04','- Snares','Snares.htm','',160,0)
+		oCMenu.makeMenu('sub046','sub04','- Cymbals','Cymbals.htm','',160,0)
+		oCMenu.makeMenu('sub047','sub04','- Hardware','Hardware.htm','',160,0)
+		oCMenu.makeMenu('sub048','sub04','- Accessories','Accessories.htm','',160,0)
+		oCMenu.makeMenu('sub049','sub04','- Percussion','Percussion.htm','',160,0)
+	oCMenu.makeMenu('sub05','top0','&nbsp;Violins, Brass, etc','brs_stg_acc.htm')
+	oCMenu.makeMenu('sub06','top0','&nbsp;Second Hand Gear','')
+		oCMenu.makeMenu('sub061','sub06','- Guitars','2ndHandGtrs.html','',160,0)
+		oCMenu.makeMenu('sub062','sub06','- Amplifiers','2ndHandAmps.html','',160,0)
+		oCMenu.makeMenu('sub063','sub06','- Hi Tech','2ndHandHiTech.html','',160,0)
+		oCMenu.makeMenu('sub064','sub06','- PA Gear','2ndHand_PA.html','',160,0)
+		oCMenu.makeMenu('sub065','sub06','- Drums','2ndHand_Drums.html','',160,0)
+	oCMenu.makeMenu('sub07','top0','&nbsp;Schools & Education','Education.html')
+	oCMenu.makeMenu('sub08','top0','&nbsp;Service & Support','Supportlink.htm')
+	oCMenu.makeMenu('sub09','top0','&nbsp;About Us','MPAbout.html')
+	
+oCMenu.makeMenu('top1','','<img src="Graphics/But_PP.gif" border=0>','PPAbout.html')
+	oCMenu.makeMenu('sub10','top1','&nbsp;Pianos','')
+		oCMenu.makeMenu('sub101','sub10','- Upright Pianos','Upright.html','',160,0)
+		oCMenu.makeMenu('sub102','sub10','- Grand Pianos','Grand.html','',160,0)
+		oCMenu.makeMenu('sub103','sub10','- Digital Pianos','Digital.html','',160,0)
+	oCMenu.makeMenu('sub11','top1','&nbsp;Portable Keyboards','Keyb.html')
+	oCMenu.makeMenu('sub12','top1','&nbsp;Sheet & Print Music','Sheetm.html')
+	oCMenu.makeMenu('sub13','top1','&nbsp;Second Hand Pianos','P_2ndHand.html')
+	oCMenu.makeMenu('sub14','top1','&nbsp;S/H Kbds & Organs','P_2ndHand.html#keyboards')	
+	oCMenu.makeMenu('sub15','top1','&nbsp;Schools & Education','Education.html')
+	oCMenu.makeMenu('sub16','top1','&nbsp;About Us','PPAbout.html')
+	
+	
+oCMenu.makeMenu('top2','','<img src="Graphics/But_NM.gif" border=0>','N_About.html')
+	oCMenu.makeMenu('sub20','top2','&nbsp;Store','')
+		oCMenu.makeMenu('sub201','sub20','- Guitars and Amps','N_Guitars.html','',160,0)
+		oCMenu.makeMenu('sub202','sub20','- Drums Dept','N_Drums.html','',160,0)
+		oCMenu.makeMenu('sub203','sub20','- Pianos','N_Keyb.html','',160,0)
+		oCMenu.makeMenu('sub204','sub20','- Keyboards','N_PortKeyb.html','',160,0)
+		oCMenu.makeMenu('sub205','sub20','- Brass and Wind','N_Brass.html','',160,0)
+		oCMenu.makeMenu('sub206','sub20','- Strings','N_Strings.html','',160,0)
+		oCMenu.makeMenu('sub207','sub20','- PA Dept','N_PA.html','',160,0)
+		oCMenu.makeMenu('sub208','sub20','- Sheet Music','N_Sheetm.html','',160,0)
+	oCMenu.makeMenu('sub21','top2','&nbsp;School','')
+		oCMenu.makeMenu('sub211','sub21','- Yamaha Music Courses','N_Yamaha.html','',160,0)
+		oCMenu.makeMenu('sub212','sub21','- Private Tuition','N_Private.html','',160,0)
+	oCMenu.makeMenu('sub22','top2','&nbsp;Second Hand','N_2ndHand.html')
+		
+//Leave these two lines! Making the styles and then constructing the menu
+oCMenu.makeStyle(); oCMenu.construct()			
+</script>
+<div id="Search" style="position:absolute; left:550px; top:10px; width:210px; height:20px; z-index:1; visibility:visible; overflow: visible"> 
+  <!--<input type=submit value="Search">-->
+  <table width="210" border="0" cellspacing="0" cellpadding="0" height="20">
+        <!-- Atomz Search HTML for Music Park -->
+    <form method="get" action="http://search.atomz.com/search/">
+      <tr> 
+        <td height="20" width="56"><font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">search:&nbsp;</font> 
+        </td>
+        <td height="20" width="106"> <font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF"> 
+          <input size=15 name="sp-q">
+          </font></td>
+        <td height="20" width="48"> <font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF"> 
+          &nbsp; 
+          <input alt="Search" border=0 name=go src="Graphics/Go_But.gif" type=image width="23" height="18" align="middle">
+          </font></td>
+      </tr>
+    <input type=hidden name="sp-a" value="sp100220d3">
+	<input type=hidden name="sp-f" value="iso-8859-1">
+	</form>
+  </table>
+  <input type=hidden name="sp-a" value="sp1001846b">
+</div>
+<table width="100%" height="*" border="0" cellspacing="0" cellpadding="0" align="left" valign="top">
+  <tr background="Graphics/Top_6.gif" > 
+	  
+        <tr align="left" valign="top"> 
+          
+    <td width="780" height="115" background="Graphics/Top_6.gif"> 
+      <table width="780" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="170"><img src="Graphics/Top_1.gif" width="170" height="115"></td>
+                <td width="250"><img src="Graphics/Top_2.gif" width="250" height="115"></td>
+                
+          <td width="130"><img src="Graphics/Top_3.gif" width="130" height="115" usemap="#Map" border="0"></td>
+                
+          <td width="100"><img src="Graphics/Top_4.gif" width="100" height="115" usemap="#Map2" border="0"></td>
+                
+          <td width="130"><img src="Graphics/Top_5.gif" width="130" height="115" usemap="#Map3" border="0"></td>
+              </tr>
+            </table>
+          
+    </td>
+  
+  </tr>
+  <tr> 
+    <td height="20"></td>
+  </tr>
+  <tr>
+    <td valign="middle" align="left"> 
+      <div align="center">
+        <p><font face="Arial, Helvetica, sans-serif" size="6">Welcome to the Guitar 
+          Dept</font></p>
+        <p><img src="Graphics/Guitar/Mesa-Home.gif" width="250" height="100"></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/080904/Floor_Acoustics.jpg" width="350" height="263">&nbsp;&nbsp;<img src="Graphics/Store%20Shots/Gtrs/080904/Counter.jpg" width="350" height="263"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">We have had an enormous 
+          interest in our extensive acoustic guitar range, which now includes 
+          the wonderful <b><a href="http://www.musicpark.com.au/Ac_Guitars.html#COLE">Cole 
+          Clark</a> </b>range of guitars,<br>
+          </font><font face="Arial, Helvetica, sans-serif" size="2">many crafted 
+          from exotic Australian Native Timbers. </font></p>
+        <p>&nbsp;<img src="Graphics/Store%20Shots/Gtrs/0504/Bass-Gtrs-Wall.jpg" width="700" height="393">&nbsp;</p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">We have guitars 
+          and basses from some of the world's most prestigious manufacturers, 
+          including PRS, Warwick, Godin, Seagull, Takamine, Yamaha,<br>
+          Amplifiers from Mesa Boogie, Eden, Aguilar, Warwick, Hartke, Hughes 
+          &amp; Kettner, Marshall, and more. We also have packages featuring guitars 
+          and ampliers from <br>
+          beginners packs to a package that suits YOUR requirements.</font></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/241003/Lee_2.jpg" width="337" height="280" align="middle">&nbsp;&nbsp;&nbsp; 
+          &nbsp;<img src="Graphics/Store%20Shots/Gtrs/220903/Paul.jpg" width="350" height="263" align="middle"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">And if your guitar 
+          needs a minor or major service, string change, or new pick-ups, Lee(left) 
+          is the man. And speaking of pick-ups,<br>
+          Lee is a guru in this department - he is a pick-up nut. So if you want 
+          advice on pick-ups (no NOT girls and trucks), give Lee a call.<br>
+          The man who is our bass guru is pictured on the right - he is Paul Sweeney, 
+          who will make sure that YOUR new bass will play and sound <br>
+          better than when it left the factory.</font></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/0504/PRS-Wall.jpg" width="700" height="278"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Just SOME of our 
+          PRS guitars.</font></p>
+        <p>&nbsp;&nbsp;<img src="Graphics/Store%20Shots/Gtrs/0504/guitar-wall.jpg" width="700" height="396"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">We have a huge range 
+          of guitars - this is just a few.</font></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/0504/H&K-display_sml.jpg" width="350" height="263"> 
+          &nbsp;&nbsp;&nbsp;<img src="Graphics/Store%20Shots/Gtrs/0504/Aria-Acoustics_sml.jpg" width="350" height="263"> 
+        </p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Hughes &amp; Kettner 
+          - quality German Engineering - Seagull Acoustics - Canadian quality 
+          - crafted from 800 year old timbers</font></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/121203/Acoust1_TN.jpg" width="373" height="497">&nbsp;&nbsp;<img src="Graphics/Store%20Shots/Gtrs/121203/AcoustPlyr.jpg" width="373" height="497"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">We have an area 
+          dedicated totally to Acoustic Guitars and Acoustic Amplifiers.</font></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">However, most of 
+          the noise in the shop eminates from a small 12 X 8 room, which is our<br>
+          </font><font face="Arial, Helvetica, sans-serif" size="4" color="#FF0000"><b><a name="AmpRoom"></a>AMP 
+          ROOM<br>
+          </b></font></p>
+        <p><img src="Graphics/Guitar/Amplifiers/Amp%20Room%200904/AR1.jpg" width="300" height="225">&nbsp;&nbsp;<img src="Graphics/Guitar/Amplifiers/Amp%20Room%200904/AR2.jpg" width="300" height="225"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">In here, you can 
+          plug YOUR guitar, or one of our stock models into any one of a number 
+          of amps<br>
+          and look for that elusive sound. Having found it, we are only too happy 
+          to help you load YOUR new amp<br>
+          and/or guitar into your car.</font></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/241003/Amprm1.jpg" width="373" height="280">&nbsp;&nbsp;<img src="Graphics/Guitar/Amplifiers/Amp%20Room%200904/AR3.jpg" width="300" height="225"></p>
+        <p><img src="Graphics/Store%20Shots/Gtrs/0504/Warp.jpg" width="350" height="479" align="middle"> 
+          &nbsp;&nbsp;&nbsp; <img src="Graphics/Store%20Shots/Gtrs/241003/Amprm3.jpg" width="373" height="280" align="middle"></p>
+        <p><font face="Arial, Helvetica, sans-serif" size="2">Call in and see 
+          us soon</font></p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<map name="Map">
+  <area shape="rect" coords="26,77,120,97" href="Register.html">
+</map>
+<map name="Map2">
+  <area shape="rect" coords="4,79,83,97" href="Specials.html">
+</map>
+<map name="Map3">
+  <area shape="rect" coords="3,79,110,96" href="SpecialEvent.html">
+</map>
+<a href="Amps.html"></a> <a href="DrumDept.html"></a> <a href="PADept.html"></a> 
+<a href="Synths.html"></a> <a href="Rec.html"></a> <a href="Effects.html"></a> 
+<a href="Guitars.html"></a> 
+</body>
+</html>

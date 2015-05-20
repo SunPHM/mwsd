@@ -1,0 +1,262 @@
+
+<html>
+<head>
+<title>Koor Metals Ltd.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<META NAME = "Keywords" CONTENT="">
+<META NAME = "Description" CONTENT="">
+<meta name="Author" content="PionetWebs">
+<STYLE>
+a{font-family:arial;font-size:10pt;}
+a:hover{font-family:arial;color:#CC0000;font-size:10pt;}
+a.menu{font-family:arial;color:#FFCC99;font-size:10pt;font-weight:bold;text-decoration:none;}
+a.menu:hover{font-family:arial;color:#FFFFFF;font-size:10pt;font-weight:bold;text-decoration:none;}
+.whiteMenu{font-family:arial;color:#FFFFFF;font-size:10pt;font-weight:bold;}
+.sended{font-family:arial;color:#CC0000;font-size:14pt;font-weight:bold;}
+.blackTextReg{font-family:arial;font-size:10pt;}
+.blackTextBold{font-family:arial;font-size:10pt;font-weight:bold;}
+.copy{font-family:arial;color:#666666;font-size:9pt;}
+.pionet{font-size:8pt;}
+.textDiv{padding: 0px 10px 0px 10px;font-family:arial;font-size:10pt;}
+.newsDiv{padding: 10px 10px 10px 10px;width:160;height:136;font-family:arial;font-size:10pt;}
+</STYLE>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" rightmargin="0" leftmargin="0" marginwidth="0" marginheight="0" link="#0033CC" vlink="#993399" alink="#FF0000">
+
+<style>
+code,pre{
+  color:red;
+}
+/* CoolMenus 4 - default styles - do not edit */
+.clCMAbs{position:absolute; visibility:hidden; left:0; top:0}
+/* CoolMenus 4 - default styles - end */
+  
+/*Style for the background-bar*/
+.clBar{position:absolute; width:0; height:0; background-color:Navy; layer-background-color:Navy; visibility:hidden}
+
+
+.clLevel0, .clLevel0over{position:absolute; padding:4px; font-family:arial,helvetica; font-size:11px; font-weight:bold;}
+.clLevel0{background-color:#990000; layer-background-color:#990000; color:#FFCC99;}
+.clLevel0over{background-color:#FFCC99; layer-background-color:#FFCC99; color:#990000; cursor:pointer; cursor:hand; }
+.clLevel0border{position:absolute; visibility:hidden; background-color:#990000; layer-background-color:#990000}
+
+/*Styles for level 1*/
+.clLevel1, .clLevel1over{position:absolute; padding:4px; font-family:arial,helvetica; font-size:11px; font-weight:bold}
+.clLevel1{background-color:#FFCC99; layer-background-color:#FFCC99; color:#990000;}
+.clLevel1over{background-color:#990000; layer-background-color:#990000; color:#FFCC99; cursor:pointer; cursor:hand; }
+.clLevel1border{position:absolute; visibility:hidden; background-color:#660000; layer-background-color:#660000}
+
+
+</style>
+<script language="JavaScript1.2" src="/en/Modules/coolmenus4.js"></script>
+<script laguage="javascript1.2">
+
+
+//Menu object creation
+oCMenu=new makeCM("oCMenu") //Making the menu object. Argument: menuname
+
+oCMenu.fromLeft=!bw.ns4?cmpage.x2/2 - 364:cmpage.x2/2 - 372
+oCMenu.onresize="oCMenu.fromLeft=cmpage.x2/2 - 364;if (oCMenu.fromLeft<14){oCMenu.fromLeft=14};"
+
+
+if (oCMenu.fromLeft<14){oCMenu.fromLeft=14};
+
+//Menu properties   
+oCMenu.pxBetween=3
+oCMenu.fromTop= 70
+oCMenu.rows=0 
+oCMenu.menuPlacement="left"
+                                                             
+oCMenu.offlineRoot="" 
+oCMenu.onlineRoot="" 
+oCMenu.resizeCheck=1 
+oCMenu.wait=500 
+oCMenu.fillImg="/en/modules/cm_fill.gif"
+oCMenu.zIndex=1000
+
+//Background bar properties
+oCMenu.useBar=0
+oCMenu.barWidth="0"
+oCMenu.barHeight="menu" 
+oCMenu.barClass="clBar"
+oCMenu.barX=0 
+oCMenu.barY=0
+oCMenu.barBorderX=0
+oCMenu.barBorderY=0
+oCMenu.barBorderClass=""
+
+oCMenu.level[0]=new cm_makeLevel() //Add this for each new level
+oCMenu.level[0].width=185
+oCMenu.level[0].height=21 
+oCMenu.level[0].regClass="clLevel0"
+oCMenu.level[0].overClass="clLevel0over"
+oCMenu.level[0].borderX=1
+oCMenu.level[0].borderY=1
+oCMenu.level[0].offsetX=-8
+oCMenu.level[0].offsetY=+2
+oCMenu.level[0].rows=0
+oCMenu.level[0].arrow="templates/main/images/menu_arrow.gif"
+oCMenu.level[0].arrowWidth=9
+oCMenu.level[0].arrowHeight=5
+oCMenu.level[0].align="right"
+oCMenu.level[0].filter="progid:DXImageTransform.Microsoft.Fade(duration=0.3);" 
+oCMenu.level[0].borderClass="clLevel0border"
+
+
+oCMenu.level[1]=new cm_makeLevel() //Add this for each new level (adding one to the number)
+oCMenu.level[1].regClass="clLevel1"
+oCMenu.level[1].overClass="clLevel1over"
+oCMenu.level[1].arrow="templates/main/images/menu_arrow2.gif"
+oCMenu.level[1].borderClass="clLevel1border"
+
+
+
+oCMenu.makeMenu('m_1','m_1','HOME','page.aspx?section=1')
+oCMenu.makeMenu('m_2','m_2','ABOUT US','page.aspx?section=2')
+oCMenu.makeMenu('m_9','m_9','NEWS','page.aspx?section=9')
+oCMenu.makeMenu('m_5','m_5','Vulcan Engineering Works','page.aspx?section=5')
+oCMenu.makeMenu('m_73','m_5','About','page.aspx?section=73')
+oCMenu.makeMenu('m_111','m_5','Organization Structure','page.aspx?section=111')
+oCMenu.makeMenu('m_112','m_5','Scope of Activities','page.aspx?section=112')
+oCMenu.makeMenu('m_114','m_112','Crane Manufacturing ','page.aspx?section=114')
+oCMenu.makeMenu('m_125','m_112','Bridges','page.aspx?section=125')
+oCMenu.makeMenu('m_115','m_112','Industrial Construction','page.aspx?section=115')
+oCMenu.makeMenu('m_116','m_112','Tanks and Pressure Vessels','page.aspx?section=116')
+oCMenu.makeMenu('m_117','m_112','Pressure Parts and Equipment','page.aspx?section=117')
+oCMenu.makeMenu('m_118','m_112','Electric Poles','page.aspx?section=118')
+oCMenu.makeMenu('m_119','m_112','Train Wagons','page.aspx?section=119')
+oCMenu.makeMenu('m_113','m_5','Contact us','page.aspx?section=113')
+oCMenu.makeMenu('m_15','m_15','Koor Projects Management','page.aspx?section=15')
+oCMenu.makeMenu('m_74','m_15','About','page.aspx?section=74')
+oCMenu.makeMenu('m_106','m_15','Organization Structure','page.aspx?section=106')
+oCMenu.makeMenu('m_98','m_15','Scope of Activities','page.aspx?section=98')
+oCMenu.makeMenu('m_99','m_98','Steel Structure ','page.aspx?section=99')
+oCMenu.makeMenu('m_124','m_98','Bridges','page.aspx?section=124')
+oCMenu.makeMenu('m_126','m_98','Transportation','page.aspx?section=126')
+oCMenu.makeMenu('m_120','m_98','Power Plants','page.aspx?section=120')
+oCMenu.makeMenu('m_100','m_98','Petrochemical Facilities','page.aspx?section=100')
+oCMenu.makeMenu('m_101','m_98','Piping','page.aspx?section=101')
+oCMenu.makeMenu('m_102','m_98','Sea and Offshore Works','page.aspx?section=102')
+oCMenu.makeMenu('m_103','m_98','Port Cranes','page.aspx?section=103')
+oCMenu.makeMenu('m_104','m_98','Steam Boilers and Power St.','page.aspx?section=104')
+oCMenu.makeMenu('m_105','m_98','Overhaul of Energy Facilities','page.aspx?section=105')
+oCMenu.makeMenu('m_108','m_98','Storage Tank Farms','page.aspx?section=108')
+oCMenu.makeMenu('m_109','m_98','Industrial Buildings','page.aspx?section=109')
+oCMenu.makeMenu('m_110','m_98','Complex Engineering Projects','page.aspx?section=110')
+oCMenu.makeMenu('m_107','m_15','Contact us','page.aspx?section=107')
+oCMenu.makeMenu('m_11','m_11','Ramim Engineering Works','page.aspx?section=11')
+oCMenu.makeMenu('m_76','m_11','About','page.aspx?section=76')
+oCMenu.makeMenu('m_77','m_11','Project','page.aspx?section=77')
+oCMenu.makeMenu('m_64','m_64','Koor Metal Labs','page.aspx?section=64')
+oCMenu.makeMenu('m_78','m_64','About','page.aspx?section=78')
+oCMenu.makeMenu('m_79','m_64','Project','page.aspx?section=79')
+oCMenu.makeMenu('m_65','m_65','Simat Industries','page.aspx?section=65')
+oCMenu.makeMenu('m_80','m_65','About','page.aspx?section=80')
+oCMenu.makeMenu('m_81','m_65','Project','page.aspx?section=81')
+oCMenu.makeMenu('m_121','m_121','Koor Metals Communication Product','page.aspx?section=121')
+oCMenu.makeMenu('m_122','m_121','About','page.aspx?section=122')
+oCMenu.makeMenu('m_123','m_121','Projects','page.aspx?section=123')
+oCMenu.makeMenu('m_18','m_18','CONTACT US','page.aspx?section=18')
+oCMenu.makeMenu('m_88','m_88','Hebrew','page.aspx?section=88')
+
+oCMenu.construct()		
+</script>
+
+<form name="__aspnetForm" method="post" action="page.aspx?section=73" id="__aspnetForm">
+<input type="hidden" name="__VIEWSTATE" value="dDw1MzgxO3Q8O2w8aTwwPjs+O2w8dDw7bDxpPDM+Oz47bDx0PDtsPGk8MT47PjtsPHQ8O2w8aTwwPjs+O2w8dDxwPHA8bDxJbWFnZVVybDs+O2w8L2ZpbGVzL2Jhbm5lcnMvdG9wX3Z1bGNhbi5qcGc7Pj47Pjs7Pjs+Pjs+Pjs+Pjs+Pjs+E2h5qMKzGQTdlkCpdS6Hj9pi9ks=" />
+
+<table align="center" border="0" cellpadding="0" cellspacing="2">
+  <tr valign="top">
+    <td width="206" bgcolor="#CCCCCC" align="left"><img src="images/logotype.gif" width="206" height="66" border="0" alt="Koor Metals Ltd.">
+      <img src="modules/cm_fill.gif" width="145" height="280">
+			<!--<img src="images/null.gif" width="10" height="1" border="0" alt=""><a href="/he/page.aspx"><img src="images/heb.gif" width="68" height="23" border="0" alt=""></a><br><br>-->
+    <div class="textDiv">
+		  A multidisciplinary contractor incorporating leading industrial companies, for 50 years Koor Metals has been a key partner in Israel's most ambitious infrastructure projects.<br>
+      <p align="right"><img src="images/link.gif" width="20" height="11" border="0" alt=""> <a href="page.aspx?section=1"><b>more...</b></a></p>
+    </div>
+		<img src="images/grayshadow.gif" width="206" height="22" border="0" alt=""><br>
+    <div class="textDiv">
+		  <font class="copy">Copyright  KOOR METALS Ltd.<br>2002 All rights reserved.</font><br>
+		  <a href="http://www.pionet.co.il/" target="_blank"><font class="pionet">Created by PionetWebs Ltd.</font></a><br><br>
+    </div>
+		</td>
+    <td>
+      		  <table width="100%" bgcolor="#CCCCCC" border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td>
+		        <table width="100%" border="0" cellpadding="1" cellspacing="1">
+		      	  <tr valign="top">
+		      		  <td bgcolor="#FFFFFF"><img id="_ctl0_pagebanner_Image1" src="/files/banners/top_vulcan.jpg" alt="" border="0" /></td>
+                </td>
+		      		</tr>
+	      		</table>
+					</td>
+				</tr>
+			</table>
+			<img src="images/null.gif" width="1" height="1" border="0" alt=""><br>
+			<div id="_ctl0_contentPane"><table id="_ctl0__ctl1_t1" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td id="_ctl0__ctl1_TitleHolder" class="htmltitle"><p align="justify"></p></td>
+	</tr>
+	<tr valign="top" class="text">
+		<td id="_ctl0__ctl1_HtmlHolder"><IMG src="/files/banners/title_vulcan_about.gif"><BR></td>
+	</tr>
+</table>
+
+
+<img src="images/null.gif" width="1" height="10" border="0" alt=""><br>
+<table id="_ctl0__ctl2_t1" width="538" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td id="_ctl0__ctl2_TitleHolder" class="blackTextBold"><img src="images/bullet.gif" width="20" height="20" border="0" alt="">&nbsp;Vulcan Engineering Works</td>
+	</tr>
+	<tr valign="top" class="blackTextReg">
+		<td id="_ctl0__ctl2_HtmlHolder">
+            <IMG height=134 alt="" src="images/vulcan1.jpg" width=200 align=right border=0>is one of the largest and most experienced industrial manufacturing concerns in Israel. Active in numerous projects throughout the country, Vulcan specializes in cranes, construction, pressure parts & equipment, tanks & pressure vessels, electric poles and train wagons. Vulcan is dedicated to maintaining the highest international quality levels in all its products and processes. The company holds a number of quality certifications, including ISO 9002, and is authorized to use the U and S ASME stamps.</P></td>
+	</tr>
+</table>
+
+
+<img src="images/null.gif" width="1" height="10" border="0" alt=""><br>
+<table id="_ctl0__ctl3_t1" width="538" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td id="_ctl0__ctl3_TitleHolder" class="blackTextBold"><img src="images/bullet.gif" width="20" height="20" border="0" alt="">&nbsp;Timely Delivery Time and Again</td>
+	</tr>
+	<tr valign="top" class="blackTextReg">
+		<td id="_ctl0__ctl3_HtmlHolder">
+            Throughout the years, Vulcan has become known in Israel and internationally for its reliability. In project after project during the past 50 years, Vulcan has been able to draw together the required combination of resources - know-how, modern equipment and facilities, expert professionals and qualified workers - to complete hundreds of successful projects in a timely manner. <BR><P class=blackTextReg><IMG height=134 alt="" src="images/vulcan2.jpg" width=200 align=right border=0> The core staff includes a wide range of expert designers, detailers, quality control engineers, welders, fitters, assemblers CNC operators, mechanics and electricians. This valuable group of professionals is supplemented by teams of hundreds of workers, who are employed as required to meet the needs of each project.</P></td>
+	</tr>
+</table>
+
+
+<img src="images/null.gif" width="1" height="10" border="0" alt=""><br>
+<table id="_ctl0__ctl4_t1" width="538" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td id="_ctl0__ctl4_TitleHolder" class="blackTextBold"><img src="images/bullet.gif" width="20" height="20" border="0" alt="">&nbsp;Extensive Manufacturing Capabilities Under One Roof</td>
+	</tr>
+	<tr valign="top" class="blackTextReg">
+		<td id="_ctl0__ctl4_HtmlHolder">
+            <P>Vulcan is located in Haifa Bay, a short ride from Haifa Port and Haifa Airport, and with links to the national railroad network. The company's large modern facilities span 44,000 square meters, including 15,000 square meters of indoor areas. Vulcan also counts with a wide range of complex machinery, among the most modern in the country. These resources enable Vulcan to provide immediate solutions to sophisticated requirements - all under one roof.</P>
+<P> </P></td>
+	</tr>
+</table>
+
+<table id="_ctl0__ctl5_t1" cellspacing="0" cellpadding="5" width="538" bgcolor="#efefef" border="0">
+	<tr valign="top">
+		<td id="_ctl0__ctl5_TitleHolder" class="blackTextBold"></td>
+	</tr>
+	<tr valign="top" class="blackTextReg">
+		<td id="_ctl0__ctl5_HtmlHolder">
+            Few Israeli companies can match Vulcan's production facilities. This translates into unparalleled flexibility and the ability to provide immediate solutions to sophisticated requirements - all under one roof.</td>
+	</tr>
+</table>
+
+
+</div>
+    </td>
+    <td bgcolor="#CCCCCC"><img src="images/null.gif" width="1" height="1" border="0" alt=""></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

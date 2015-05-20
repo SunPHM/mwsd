@@ -1,0 +1,197 @@
+<html>
+        <head> <title>Lehigh University Campus Square Construction</title> </head>
+        <body>
+	        <font color=blue><h1 align=center>Lehigh University Campus Square Construction</h1></font>
+
+		Here you can view live video of the Campus Square
+		construction. The motion JPEG images are 704 x 480
+		pixels and are delivered at ten frames per second. To
+		view these videos you need a fast network connection
+		like a 10 Mb/s LAN, so don't even bother from a home
+		dialup line.  Results are marginal even with a
+		cable/DSL connection.
+
+		<p>
+
+		The camera is located on the EWFM Libary and
+		Computing Center. The camera
+		looks down at the central plaza and
+		entrance of the new bookstore.
+
+                <font color=blue><h2>Live Motion-JPEG Videos</h2></font>
+                <ul>
+                        <li><a href="csc1.shtml">Camera 1</a>
+                </ul>
+
+		<p>
+
+		When the project started we only made available <a
+		href=stills.html> sequential still images</a> captured
+		using simple USB web cameras connected to PCs running
+		Windows 98.  They've since been replaced by higher
+		quality network cameras running an embedded version of
+		Linux. Since the network cameras can efficiently
+		provide a series of high-resolution JPEG stills, we
+		use Perl to grab the JPEGs and produce the motion JPEG
+		video.  Web browsers can also fetch a still image at
+		any time for display over the Internet.
+
+		<p><font color=blue><h2>Archived Time-Lapse MPEG Movies</h2></font>
+
+		Once a minute we also stash images on the SGI compute
+		sever, Rigel.  Using standard multimedia tools
+		provided with IRIX, we've created humongous movies
+		that show construction at an accelerated rate.
+		Camera 1 movies are <a href="ccmovies/cc1.html">here</a>, and
+		Camera 2 movies are <a href="ccmovies/cc2.html">here</a>.
+
+		<p>
+
+		These movies are known as "fast start" or "progressive
+		download" movies.  This simply means that the client
+		application - typically Netscape, Internet Explorer,
+		QuickTime Player or RealPlayer - begins to upload the
+		entire movie, and once enough of the movie has arrived
+		the client begins playback. 
+
+		<p>
+
+		We also have streaming QuickTime versions of some of
+		these movies available <a href="rtsp/index.html">here</a>.
+
+		<p>
+
+		With the exception of each camera's first movie, most of
+		the MPEG movies cover a week, which works out to be
+		less than two minutes of realtime video.  All these
+		movies are comprised of images from the new network
+		cameras, featuring better color rendition and a larger
+		field of view than the original Win32 web cameras.
+
+		<p>
+
+		Both camera's first (and rather large) movie is
+		comprised of all the images from the original web
+		cameras - you'll note that these movies are of lower
+		quality and have a restricted field of view.
+
+		<p><font color=blue><h2>Self-Updating Sequential Still Images</h2></font>
+
+                As we noted earlier, all the above work was derived
+		from the simple idea of periodically displaying images
+		of the Campus Square construction.  The images are
+		still available, of course - you can view them <a
+		href=stills.html> here </a>. The unexpected
+		side-effect was the generation of yet another project,
+		which took a fair amount of time and involved many IR
+		staff members!
+
+		<p><font color=blue><h2>Miscellaneous Digital Images </h2></font>
+
+		We have to start with a picture of
+		<a href="images/leroy-conduitbuster.JPG">Leroy</a>, one
+		of the hardest workers on the site. He drives the
+		dozers and backhoes, moves tons of dirt, and is darn
+		good at it. Nobody knew Lehigh's fiber link to the
+		world was where he was digging, but as soon as he saw
+		orange interduct, digging stopped and Lehigh was saved.
+		The conduit was <a href="images/conduits-busted3-0701.JPG">
+		damaged</a> but nothing was severed. The crack Structured
+		Cable team snapped into action, and
+		<a href="images/conduits-repaired-0701.JPG">Pat and Dave</a>
+		effected the required repairs. Roy gives his nodding approval
+		of a job well done.
+
+		<p>
+		
+		The monster <a href="images/crane2.JPG">red crane</a> is
+		a Manitowic M250, it's been doing the heavy lifting work. Just
+		one of those floor panels weighs 65,000 pounds. Here is
+		<a href="images/craneoperator.JPG">Bill</a>, the operator,
+		he's mighty proud of his rig. When he saw us trying in vain
+		to get a picture up the boom, he grabbed the camera
+		and took this <a href="images/crane-operatorview.JPG"
+		width=640 height=480>picture</a> looking though the cab's
+		top window.
+		
+		<p>
+
+		<font color=red>M250 BONUS!</font> Although I missed the
+		disassembly of the boom proper,
+		<a href="rtsp/m250-disassembly.html">here</a> is
+		streaming QuickTime, time-lapse, footage of the crane itself
+		being taken apart and trucked away.
+		Can't handle streaming QuickTime, or you want a larger
+		frame size?
+		<a href="ccmovies/m250.web/m250.html"> Here</a> is
+		a selection of (large) QuickTime download movies.
+
+		<p><font color=blue><h2>Resource Utilization</h2></font>
+
+		Each Axis video camera produces a data stream of
+		approximately 2 Mb/s (million bits per second), about
+		1/5 of a normal LAN connection. Compare this to a 56
+		Kb/s (thousand bits per second) dialup line, and you
+		can see why it's impractical for the average person to
+		view the motion JPEGs from home.
+		
+		<p>
+		
+		On a normal day we collect around 660 JPEG images from
+		each camera, or about 40 MB of raw data daily, per
+		camera, all stored on Rigel. At 17:05 the job that
+		creates the time-lapse movies begins.  The first day
+		it reduces the 40 MB of raw data to an MPEG movie of
+		about 3 MB - a rather substantial savings.  This takes
+		about 12 CPU minutes on a single processor.  By the
+		end of the week the raw data is approaching 200 MB and
+		the CPU time to create a 16 MB time-lapse movie is
+		over an hour. At 19:01 the movies are transferred to
+		the Campus Square Construction web server for viewing,
+		and a Perl program updates the web pages to reflect
+		the presence of the new movies. All of this is done
+		completely autonomously.
+
+		<p>
+
+		Currently, the disk space utilization for the
+		time-lapse MPEG movies on the web server is:
+<pre>
+    Camera 1 :              68 movies totaling     954,426,216 bytes
+    Camera 2 :              68 movies totaling     970,392,568 bytes
+</pre>
+and the disk space utilization for the raw JPEG still images on Rigel is:
+<pre>
+    Camera 1 :         211,595 images totaling  12,890,354,187 bytes
+    Camera 2 :         199,416 images totaling  11,065,451,248 bytes
+</pre>
+
+<!--		
+		<p>
+
+		Needless to say, we've had to move some of the raw data
+		from Rigel to offline storage. So, in addition to the above,
+		this information has been archived to DAT tape:
+		<p>
+<pre>
+    Camera 1 :          31,446 images totaling   1,659,679,798 bytes
+    Camera 2 :          18,645 images totaling   1,108,507,020 bytes
+</pre>
+
+-->
+
+		<p><font color=blue><h2>Epilogue</h2></font>
+
+		The behind-the-scenes technical people involved in
+		bringing the Campus Square to you, Live (and not just
+		Saturday Night), are Jim Eshleman, Jon Hutchinson,
+		Carol and Steve Lidie, Keith Meeker, Mark Miller, Bill
+		Mitchell, Dan Moyer, Brad Price, Doug Reese, Dan
+		Schwartz, and John Troiano.
+
+		<p><img src="http://www.lehigh.edu/cgi-bin/counter.xbm?csc_home"><p>
+
+        </BODY>
+</HTML>
+
+

@@ -1,0 +1,551 @@
+<HTML>
+<HEAD>
+<!-- Head -->
+<TITLE>
+Honolulu Club Classes</TITLE>
+<LINK REL="SHORTCUT ICON" HREF="https://www.wellbridge.com/favicon.ico">
+<!--
+	Copyright 2001 - The Wellbridge Company
+
+	Site Design and Programming By Montana Connect  http://www.mtconnect.com :-)
+-->
+<META name="Author" content="www.mtconnect.com">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="stylesheet" href="http://www.wellbridge.com/style.css"><script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+var beenAlerted = 0;
+
+function teaserLimiter(field, maxlimit) {
+	if (field.value.length > maxlimit){
+		field.value = field.value.substring(0, maxlimit);
+		if (beenAlerted == 0){
+			alert("Teaser Limited to "+maxlimit+" Characters");
+			beenAlerted = 1;
+		}
+	} 
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</script>
+<meta name="description" content="Health club offering exercise equipment, multiple aerobics studios, court sports, swimming and day spa.  IHRSA member.">
+<meta name="keywords" content="health, aerobics, cardiovascular, athletic, social, exercise, tennis, IHRSA, club, free weights, Hawaii, racquetball, fitness, pool, day spa, Wellbridge, clubs, sport, sports, wellness, lifestyle, nutrition, racquet, swim, swimming, pools, weights, gym, court sports, exercise, activities, affluent, facilities, athletic facility, athletics, basketball, Baywatch, body, body treatments, care, centers, competitive, conditioning, corporate, credibility, Cybex, Hammerstrength, endurance, enthusiasts, equipment, equipment vendors, exclusive, exercising, experiences, facials, facilities, fit, fitness testing, games, glowing, good shape, group exercise, gymnasium, happiness, healthy, high standards, hospitable, IHRSA clubs, innovative, international, kids, living fit, management, massage, membership, mind, motivate, muscles, official, personal train, personal trainers, personal training, physical, physical fitness, physical therapy, proshop, product, professional, programs, quality, recreation, relaxing, running, saunas, service, shape, shape up, shapely, soul, spa, spas, specialized, spinning, squash,  stretch, sweat, tone, toning, treatments, upscale, volleyball, Waikiki, weight ,weight loss, weightlifting, weights, whirlpool, work out, workout">
+</HEAD>
+<BODY>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="buildNav(); isDocLoaded=true;MM_preloadImages('/globalimages/nav_home_over.gif','/globalimages/nav_info_over.gif','/globalimages/nav_programs_over.gif','/globalimages/nav_membership_over.gif','/globalimages/driving_over.gif', 'images/url_over.gif','/globalimages/regional_over.gif','/globalimages/button_email_over.gif');preload_nav();">
+
+<script language="javascript">
+<!-- Begin
+
+// var that is set to true in the body onload tag. templates that include this file may reference this variable inorder to run javascript onload.
+var isDocLoaded = false;
+var FilePath = "";
+
+// Browser sniffing variables
+var ns4 = document.layers ? 1 : 0;
+var ie4 = document.all ? 1 : 0;
+var ns6 = document.getElementById && !document.all ? 1 : 0;
+
+
+
+// dhtml layer variables for cross-browser compatability
+if (document.layers) {	// Netscape 4
+	doc = "document[";
+	conDoc = "document";
+	sty = "]";
+	htm = ".document";
+} else if (document.getElementById) {	// NS 6 or IE 5 and up (W3C compliant browsers).
+	doc = "document.getElementById(";
+	conDoc = "document.getElementById(";
+	sty = ").style";
+	htm = ".document";
+} else if (document.all) {	// IE 4
+	doc = "document.all[";
+	conDoc = "document.all[";
+	sty = "].style";
+	htm = "";
+}
+
+// vars for dropdown menus
+var navTimer = null;
+var currNav = null;
+var navHideDelay = 500;
+var isNavLoaded = false;
+
+// build dropdown objects (run onload)
+function buildNav() {
+	navClubInfoObj = eval(doc + '"ClubInfo"' + sty);
+	navProgramInfoObj = eval(doc + '"ProgramInfo"' + sty);
+	navMembershipInfoObj = eval(doc + '"MembershipInfo"' + sty);
+	navContactInfoObj = eval(doc + '"ContactInfo"' + sty);
+	
+	isNavLoaded = true;
+}
+
+// shows a dropdown menu, hides any other dropdown that is currently showing
+function showNav(which) {
+	if (isNavLoaded) {
+		if ((currNav != null) && (currNav != which)) {
+			eval("nav" + currNav + "Obj.visibility = 'hidden'");
+		}
+		currNav = which;
+		eval("nav" + currNav + "Obj.visibility = 'visible'");
+		clearTimeout(navTimer);
+		navTimer = null;
+	}
+}
+// hides a dropdown menu on a time delay
+function hideNav(which) {
+	if (isNavLoaded) {
+		navTimer = setTimeout("nav" + which + "Obj.visibility = 'hidden'", navHideDelay);
+	}
+}
+
+
+// End -->
+</script>
+
+<div id="ClubInfo" style="position:absolute; z-index:100; left:59px; top:28px; visibility:hidden;">
+	<table border="0" cellspacing="0" cellpadding="2" bgcolor="#2F4F9F">
+	<tr>
+		<td align="left">
+		<a class="droplinks" href="info.php" onMouseOver="showNav('ClubInfo')" onMouseOut="hideNav('ClubInfo')" target="_top">General Information</a><a class="droplinks" href="reciprocal.php" onMouseOver="showNav('ClubInfo')" onMouseOut="hideNav('ClubInfo')" target="_top">National Reciprocal Program</a><a class="droplinks" href="newsletter_form.php" onMouseOver="showNav('ClubInfo')" onMouseOut="hideNav('ClubInfo')" target="_top">Register for Member Newsletter</a><a class="droplinks" href="connections.php" onMouseOver="showNav('ClubInfo')" onMouseOut="hideNav('ClubInfo')" target="_top">Club Connections</a>			
+		</td>	
+	</tr>
+	</table>
+</div>
+<div id="ProgramInfo" style="position:absolute; z-index:100; left:176px; top:28px; visibility:hidden;">
+	<table border="0" cellspacing="0" cellpadding="0" bgcolor="#2F4F9F">
+	<tr>
+		<td align="left">
+		<a class="droplinks" href="program.php?category=1" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Aquatics</a><a class="droplinks" href="program.php?category=3" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Children's Programs</a><a class="droplinks" href="program.php?category=12" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Club Run</a><a class="droplinks" href="program.php?category=51" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Fitness / Wellness Programs</a><a class="droplinks" href="program.php?category=56" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">General Services</a><a class="droplinks" href="program.php?category=6" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Group Fitness</a><a class="droplinks" href="program.php?category=59" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Gym Activities</a><a class="droplinks" href="program.php?category=7" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Massage</a><a class="droplinks" href="program.php?category=52" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Outdoor Activities</a><a class="droplinks" href="program.php?category=9" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Personal Training</a><a class="droplinks" href="program.php?category=10" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Pilates</a><a class="droplinks" href="program.php?category=11" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Racquetball</a><a class="droplinks" href="program.php?category=15" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Spa Services</a><a class="droplinks" href="program.php?category=16" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Squash</a><a class="droplinks" href="program.php?category=18" onMouseOver="showNav('ProgramInfo')" onMouseOut="hideNav('ProgramInfo')" target="_top">Tennis</a>				
+		</td>	
+	</tr>
+	</table>
+</div>
+<div id="MembershipInfo" style="position:absolute; z-index:100; left:312px; top:28px; visibility:hidden;">
+	<table border="0" cellspacing="0" cellpadding="2" bgcolor="#2F4F9F">
+	<tr>
+		<td align="left">	
+		<a class="droplinks" href="membership.php" onMouseOver="showNav('MembershipInfo')" onMouseOut="hideNav('MembershipInfo')" target="_top">General Membership Information</a><a class="droplinks" href="corporate_page.php" onMouseOver="showNav('MembershipInfo')" onMouseOut="hideNav('MembershipInfo')" target="_top">Corporate Wellness Program</a><a class="droplinks" href="referral_form.php" onMouseOver="showNav('MembershipInfo')" onMouseOut="hideNav('MembershipInfo')" target="_top">Refer A Friend</a> 	
+		</td>	
+	</tr>
+	</table>
+</div>
+<div id="ContactInfo" style="position:absolute; z-index:100; left:467px; top:28px; visibility:hidden;">
+	<table border="0" cellspacing="0" cellpadding="2" bgcolor="#2F4F9F">
+	<tr>
+		<td align="left">	
+			<a class="droplinks" href="accountservices_form.php?confirm=true&service_type=general" onMouseOver="showNav('ContactInfo')" onMouseOut="hideNav('ContactInfo')" target="_top">Customer Service</a><a class="droplinks" href="contactus.php" onMouseOver="showNav('ContactInfo')" onMouseOut="hideNav('ContactInfo')" target="_top">Contact The Club</a><a class="droplinks" href="http://www.wellbridge.com/privacypolicy.html" target="_BLANK" onMouseOver="showNav('ContactInfo')" onMouseOut="hideNav('ContactInfo')" target="_top">Privacy Policy</a><a class="droplinks" href="employment.php" onMouseOver="showNav('ContactInfo')" onMouseOut="hideNav('ContactInfo')" target="_top">Employment Opportunities</a>		
+		</td>	
+	</tr>
+	</table>
+</div>
+
+<a name="top"></a>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="184" align="center">
+<tr> <td colspan="2" align="left" valign="top" height="28" bgcolor="#2F4F9F">
+<!-- TOP NAV BAR -->
+
+<table border="0" cellspacing="0" cellpadding="0" height="28">
+	<tr align="center" valign="top">
+<td><a href="index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('home','','/globalimages/nav_home_over.gif',1)"><img src="/globalimages/nav_home.gif" width="64" height="28" alt="Home" border="0" name="home"></a></td>
+<td><a href="info.php" onMouseOut="hideNav('ClubInfo');MM_swapImgRestore()" onMouseOver="showNav('ClubInfo');MM_swapImage('info','','/globalimages/nav_info_over.gif',1)"><img src="/globalimages/nav_info.gif" width="119" height="28" alt="Club Information" border="0" name="info"></a></td>
+<td><a href="program.php" onMouseOut="hideNav('ProgramInfo');MM_swapImgRestore()" onMouseOver="showNav('ProgramInfo');MM_swapImage('serv','','/globalimages/nav_programs_over.gif',1)"><img src="/globalimages/nav_programs.gif" width="136" height="28" alt="Programs and Services" border="0" name="serv"></a></td>
+<td><a href="membership.php" onMouseOut="hideNav('MembershipInfo');MM_swapImgRestore()" onMouseOver="showNav('MembershipInfo');MM_swapImage('member','','/globalimages/nav_membership_over.gif',1)"><img src="/globalimages/nav_membership.gif" width="154" height="28" alt="Membership Information" border="0" name="member"></a></td>
+<td><a href="contactus.php" onMouseOut="hideNav('ContactInfo');MM_swapImgRestore()" onMouseOver="showNav('ContactInfo');MM_swapImage('contact','','/globalimages/nav_contact_over.gif',1)"><img src="/globalimages/nav_contact.gif" width="81" height="28" alt="Contact Us" border="0" name="contact"></a></td>
+</tr>
+</table>
+
+<!-- END TOP NAV BAR -->
+ </td>
+<td rowspan="3" align="left" valign="top" height="185" width="195">
+<img src="images/clubphoto_top.jpg" width="195" height="185" alt="Club Photo"></td>
+</tr>
+<tr height="139"> <td width="151" bgcolor="8aa2dc" height="139" align="left" valign="middle"> 
+<!--LEFT ADDRESS-->
+<table width="171" border="0" cellspacing="0" cellpadding="0" height="99">
+        <tr>
+          <td height="17" align="left" valign="top" width="151"><a href="http://www.honoluluclub.com" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('url','','images/url_over.gif',1)"><img src="images/url.gif" width="151" height="17" border="0" alt="www.honoluluclub.com" name="url"></a></td>
+        </tr>
+        <tr> 
+          <td width="151" height="62"><img src="images/address.gif"  border="0" width="151" alt="932 Ward Avenue, Honolulu, HI 96814, phone: 808-543-3910"></td>
+        </tr>
+        <tr> 
+          <td height="20"><a href="mapquest.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('drive','','/globalimages/driving_over.gif',1)"><img src="/globalimages/driving.gif" width="151" height="20" alt="Driving Directions" border="0" name="drive"></a></td>
+        </tr>
+        <tr height="20">
+	<td>
+</td>
+	</tr>
+      </table>
+</td>
+<!-- CENTER LOGO -->
+<td width="100%" bgcolor="8aa2dc" height="139" align="center" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="left" valign="top"><img src="/globalimages/transparent.gif" width="405" height="1"></td>
+        </tr>
+        <tr>
+          <td align="center" valign="top"><a href="index.php"><img src="images/logo.gif" alt="Honolulu Club" border="0"></a></td>
+        </tr>
+      </table>
+      
+    </td>
+   </td>
+  </tr>
+  <tr> 
+    <td width="151" height="18" align="left" valign="top"><img src="/globalimages/placeholder_left.gif" width="151" height="18"></td>
+    <td width="404" height="18" align="center" valign="top"><img src="/globalimages/transparent.gif" width="5" height="5"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr> 
+<td align="left" valign="top" bgcolor="2f4f9f" width="151"> 
+
+<!--LEFT MENU START -->
+<script>
+	function ClearSearch()
+		{
+			if (window.document.searchForm.search.value == 'Search') 
+				window.document.searchForm.search.value = '';
+		}
+</script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+<!--
+
+HM_PG_MenuWidth = 150;
+HM_PG_FontFamily = "Arial,sans-serif";
+HM_PG_FontSize = 8;
+HM_PG_FontBold = 0;
+HM_PG_FontItalic = 0;
+HM_PG_FontColor = "white";
+HM_PG_FontColorOver = "white";
+HM_PG_BGColor = "#2F4F9F";
+HM_PG_BGColorOver = "#6984C9";
+HM_PG_ItemPadding = 2;
+
+HM_PG_BorderWidth = 2;
+HM_PG_BorderColor = "#6984C9";
+HM_PG_BorderStyle = "solid";
+HM_PG_SeparatorSize = 2;
+HM_PG_SeparatorColor = "#6984C9";
+
+HM_PG_ImageSrc = "HM_More_black_right.gif";
+HM_PG_ImageSrcLeft = "HM_More_black_left.gif";
+HM_PG_ImageSrcOver = "HM_More_white_right.gif";
+HM_PG_ImageSrcLeftOver = "HM_More_white_left.gif";
+
+HM_PG_ImageSize = 5;
+HM_PG_ImageHorizSpace = 0;
+HM_PG_ImageVertSpace = 2;
+
+HM_PG_KeepHilite = true; 
+HM_PG_ClickStart = 0;
+HM_PG_ClickKill = false;
+HM_PG_ChildOverlap = 20;
+HM_PG_ChildOffset = 10;
+HM_PG_ChildPerCentOver = null;
+HM_PG_TopSecondsVisible = .5;
+HM_PG_StatusDisplayBuild =0;
+HM_PG_StatusDisplayLink = 0;
+HM_PG_UponDisplay = null;
+HM_PG_UponHide = null;
+HM_PG_RightToLeft = 0;
+
+HM_PG_CreateTopOnly = 0;
+HM_PG_ShowLinkCursor = 1;
+HM_PG_NSFontOver = true;
+
+//HM_a_TreesToBuild = [2];
+
+
+//-->
+</SCRIPT>
+
+<table width="151" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center" valign="top">
+ <tr class="menuoff"> 
+ <td align="left" valign="middle">
+ 	<form name="searchForm" action="search.php" method="GET">
+ 	<table cellpadding="0" cellspacing="0" align="center">
+ 	<tr><td valign="middle">
+ 	<input type="text" name="search" size="12" value="Search" onFocus="ClearSearch()"></td><td valign="middle">&nbsp;<input type="image" src="/globalimages/go.gif"> 	</td></tr></table>
+ 	</form>
+ 	<div class="menu"><img src="/globalimages/menurule.gif"> 	
+ 	<span title=""><a class="menulink2" href="promo.php?promo=9001&sidebar=true"><img src="images/promotions/sidebar_9001.jpg" border="0"></a></span><span title="Corporate Wellness Program"><a href="corporate_page.php" class="menulink2"><img border="0" src="/globalimages/corp_wellness_sidebar.gif" alt="Corporate Wellness Program"></a></span><span title="Employment Opportunities"><a href="employment.php" class="menulink2"><img border="0" src="/globalimages/employment_sidebar.jpg" alt="Employment Opportunities"></a></span><img src="/globalimages/menurule.gif">
+ 	 	 <!--<a href="programs.php" class="menulink">Programs & Services</a>-->
+ 		<a href="program.php?category=1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav1','','/globalimages/nav_sid_aquatics_over.gif',1)"><img src="/globalimages/nav_sid_aquatics.gif" alt="Aquatics" border="0" name="nav1"></a><BR><a href="program.php?category=3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav3','','/globalimages/nav_sid_children_over.gif',1)"><img src="/globalimages/nav_sid_children.gif" alt="Children's Programs" border="0" name="nav3"></a><BR><a href="program.php?category=12" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav12','','/globalimages/nav_sid_clubrun_over.gif',1)"><img src="/globalimages/nav_sid_clubrun.gif" alt="Club Run" border="0" name="nav12"></a><BR><a href="program.php?category=51" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav51','','/globalimages/nav_sid_fitness_over.gif',1)"><img src="/globalimages/nav_sid_fitness.gif" alt="Fitness / Wellness Programs" border="0" name="nav51"></a><BR><a href="program.php?category=56" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav56','','/globalimages/nav_sid_general_over.gif',1)"><img src="/globalimages/nav_sid_general.gif" alt="General Services" border="0" name="nav56"></a><BR><a href="program.php?category=6" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav6','','/globalimages/nav_sid_group_over.gif',1)"><img src="/globalimages/nav_sid_group.gif" alt="Group Fitness" border="0" name="nav6"></a><BR><a href="program.php?category=59" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav59','','/globalimages/nav_sid_gym_over.gif',1)"><img src="/globalimages/nav_sid_gym.gif" alt="Gym Activities" border="0" name="nav59"></a><BR><a href="program.php?category=7" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav7','','/globalimages/nav_sid_massage_over.gif',1)"><img src="/globalimages/nav_sid_massage.gif" alt="Massage" border="0" name="nav7"></a><BR><a href="program.php?category=52" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav52','','/globalimages/nav_sid_outdoor_over.gif',1)"><img src="/globalimages/nav_sid_outdoor.gif" alt="Outdoor Activities" border="0" name="nav52"></a><BR><a href="program.php?category=9" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav9','','/globalimages/nav_sid_pt_over.gif',1)"><img src="/globalimages/nav_sid_pt.gif" alt="Personal Training" border="0" name="nav9"></a><BR><a href="program.php?category=10" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav10','','/globalimages/nav_sid_pilates_over.gif',1)"><img src="/globalimages/nav_sid_pilates.gif" alt="Pilates" border="0" name="nav10"></a><BR><a href="program.php?category=11" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav11','','/globalimages/nav_sid_rball_over.gif',1)"><img src="/globalimages/nav_sid_rball.gif" alt="Racquetball" border="0" name="nav11"></a><BR><a href="program.php?category=15" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav15','','/globalimages/nav_sid_spa_over.gif',1)"><img src="/globalimages/nav_sid_spa.gif" alt="Spa Services" border="0" name="nav15"></a><BR><a href="program.php?category=16" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav16','','/globalimages/nav_sid_squash_over.gif',1)"><img src="/globalimages/nav_sid_squash.gif" alt="Squash" border="0" name="nav16"></a><BR><a href="program.php?category=18" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav18','','/globalimages/nav_sid_tennis_over.gif',1)"><img src="/globalimages/nav_sid_tennis.gif" alt="Tennis" border="0" name="nav18"></a><BR> 	  <SCRIPT TYPE="text/javascript">
+ 	    function preload_nav(){
+ 	      MM_preloadImages('/globalimages/nav_sid_aquatics_over.gif', '/globalimages/nav_sid_children_over.gif', '/globalimages/nav_sid_clubrun_over.gif', '/globalimages/nav_sid_fitness_over.gif', '/globalimages/nav_sid_general_over.gif', '/globalimages/nav_sid_group_over.gif', '/globalimages/nav_sid_gym_over.gif', '/globalimages/nav_sid_massage_over.gif', '/globalimages/nav_sid_outdoor_over.gif', '/globalimages/nav_sid_pt_over.gif', '/globalimages/nav_sid_pilates_over.gif', '/globalimages/nav_sid_rball_over.gif', '/globalimages/nav_sid_spa_over.gif', '/globalimages/nav_sid_squash_over.gif', '/globalimages/nav_sid_tennis_over.gif');
+ 	    }
+ 	  </SCRIPT>
+ 	 <img src="/globalimages/menurule.gif">
+      	<a href="newsletter_form.php" class="menulink">Register for our Member Newsletter </a> <a href="gift_form.php" class="menulink">Gift Certificates</a> <a href="referral_form.php" class="menulink">Refer a Friend </a> 
+    	<!--<a href="employment.php" class="menulink">Employment Opportunities</a>-->
+ 	
+  	<img src="/globalimages/menurule.gif">
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="HM_Loader.js" TYPE='text/javascript'></SCRIPT>
+</td>
+<td width="21" align="center" valign="top">
+<img src="/globalimages/transparent.gif" width="21" height="5">
+</td>
+<td align="center" valign="top" width="100%"> 
+<table border="0" cellspacing="0" cellpadding="0" width="99%" align="center">
+<!--Top Banner -->
+		<tr align="center" valign="top"> <td> <a class="articlelink" 		href="banner.php?banner=12532&from=class_type.php&place=top">
+		<img src="images/promotions/banner_12532.GIF" border="0"></a> <br><br></td>
+		</tr>
+		<!--End Top Banner -->
+	<tr align="left" valign="top"> 
+		<td valign="top" class="main"> 
+
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+        <tr> 
+          <td  align="left" valign="top"><img src="/globalimages/header_gym.gif" height="39" alt="Gym Activities"></td>
+          <td background="/globalimages/rule_header.gif" width="100%" align="left" valign="top"><img src="/globalimages/transparent.gif" width="5" height="5"></td>
+        </tr>
+	  	<tr><td class="admin" colspan="2" valign="middle" align="center" nowrap>
+  		<table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+			<td class="ps_header_off" onMouseOver="this.className='ps_header_on'" onMouseOut="this.className='ps_header_off'" align="center" valign="middle" width="25%" nowrap onClick="window.location='program.php?category=59'">
+	<a class="ps_header_link" href="program.php?category=59">&nbsp;Main&nbsp;</a>
+	</td>
+		<td width="1" nowrap bgcolor="white"></td>
+    		<td class="ps_header_on" align="center" valign="middle" width="25%" nowrap onClick="window.location='classes.php?category=59'">
+	<a class="ps_header_link" href="classes.php?category=59">&nbsp;Activities/Classes&nbsp;</a>
+	</td>
+		<td width="1" nowrap bgcolor="white"></td>
+    		<td class="ps_header_off" onMouseOver="this.className='ps_header_on'" onMouseOut="this.className='ps_header_off'" align="center" valign="middle" width="25%" nowrap onClick="window.location='schedule.php?category=59'">
+	<a class="ps_header_link" href="schedule.php?category=59">&nbsp;Schedule&nbsp;</a>
+	</td>
+		<td width="1" nowrap bgcolor="white"></td>
+    		<td class="ps_header_off" onMouseOver="this.className='ps_header_on'" onMouseOut="this.className='ps_header_off'" align="center" valign="middle" width="25%" nowrap onClick="window.location='staff.php?category=59'">
+	<a class="ps_header_link" href="staff.php?category=59">&nbsp;Staff&nbsp;</a>
+	</td>
+	</tr></table></td></tr>	<tr><td colspan="2">&nbsp;</td></tr>
+	</table>	<table>
+		<tr>
+			<td align="left" valign="top">
+			<img src="/globalimages/balancephotos/02017Squash.jpg" align="left" border="0" class="bp"><b><span class="main">Honolulu Club April Fools Squash Tournament</span></b><BR><span class="main">Honolulu Club Squash Tournament.  Join us for a fun afternoon of competitive squash play.  Round Robin Format.  Lunch and Prizes provided for all participants.  Pick up your entry form TODAY at the Hospitality Desk or call Scott Kato,Honolulu Club Program Coordinator at 543-3974.<BR></span>
+	
+			</td>
+		</tr>
+	</table>
+			
+		<table>
+			<tr><td>&nbsp;</td></tr>
+		<tr>
+			<td class="main">Please <a href="programs_form.php?category=59&page=Class Type Page&class_type=4263" class="articlelink2">Contact Us</a> for more information.</td>
+			</tr></table>
+	
+	<table width="100%">
+	<tr><td>&nbsp;</td></tr>
+	<tr><td width="100%">
+			<table width="100%">
+			<tr>
+		<td align="center" class="main"><a href="#" onClick="javascript:window.open('/honolulu/class_type.php?category=59&class_type=4263&printable_version=true','printable_version','scrollbars,resizable,menubar,status=no,toolbar=no,width=600,height=400');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Printable','','/globalimages/icon-printover.gif',1)"><img src="/globalimages/icon-print.gif" width="176" height="26" alt="Printable Version" border="0" name="Printable"></a></td><td align="center" class="main">
+				<a href="friend.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('friend','','/globalimages/icon-emailover.gif',1)"><img src="/globalimages/icon-email.gif" width="176" height="24" alt="Email this article to a friend" border="0" name="friend"></a>
+				</td>
+						<td align="center" class="main"><a href="programs_form.php?category=59&page=Class Type Page&class_type=4263" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ContactUs','','/globalimages/icon-contactover.gif',1)"><img src="/globalimages/icon-contact.gif" width="176" height="26" alt="Contact Us For More Information" border="0" name="ContactUs"></a>
+		</td>
+		</tr>
+		</table>
+		</td></tr>
+		<tr><td>	<table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+			<td class="ps_header_off" onMouseOver="this.className='ps_header_on'" onMouseOut="this.className='ps_header_off'" align="center" valign="middle" width="25%" nowrap onClick="window.location='program.php?category=59'">
+	<a class="ps_header_link" href="program.php?category=59">&nbsp;Main&nbsp;</a>
+	</td>
+		<td width="1" nowrap bgcolor="white"></td>
+    		<td class="ps_header_on" align="center" valign="middle" width="25%" nowrap onClick="window.location='classes.php?category=59'">
+	<a class="ps_header_link" href="classes.php?category=59">&nbsp;Activities/Classes&nbsp;</a>
+	</td>
+		<td width="1" nowrap bgcolor="white"></td>
+    		<td class="ps_header_off" onMouseOver="this.className='ps_header_on'" onMouseOut="this.className='ps_header_off'" align="center" valign="middle" width="25%" nowrap onClick="window.location='schedule.php?category=59'">
+	<a class="ps_header_link" href="schedule.php?category=59">&nbsp;Schedule&nbsp;</a>
+	</td>
+		<td width="1" nowrap bgcolor="white"></td>
+    		<td class="ps_header_off" onMouseOver="this.className='ps_header_on'" onMouseOut="this.className='ps_header_off'" align="center" valign="middle" width="25%" nowrap onClick="window.location='staff.php?category=59'">
+	<a class="ps_header_link" href="staff.php?category=59">&nbsp;Staff&nbsp;</a>
+	</td>
+	</tr></table></td></tr>
+			</table>
+	<BR></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<form name="srchForm" action="search.php" method="GET">
+<tr align="center" valign="bottom" height="5"> <td background="/globalimages/rule.gif"><img src="/globalimages/rule.gif" width="416" height="7"></td>
+</tr>
+<!--
+<tr align="center" valign="middle"> <td> 
+<table>
+<tr> <td align="right"> <input type="text" name="search" size="30" >
+</td>
+<td align="left"> <input type="image" src="/globalimages/search.gif" border="0" align="absmiddle" name="image2" width="65" height="21">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="center" valign="top" height="5"> <td background="/globalimages/rule.gif"> <img src="/globalimages/rule.gif" width="416" height="7"></td>
+</tr>
+</form>
+-->
+<form>
+<!--Bottom Banner -->
+<!--End Bottom Banner -->
+</form>
+</table>
+<!--BOTTOM LINKS -->
+</p>
+<p><img src="/globalimages/transparent.gif" width="430" height="5"></p>
+</td>
+<td align="right" valign="top" width="149" background="/globalimages/bgright.gif">
+<img src="images/clubphoto_bottom.jpg" width="149" height="39"><img src="/globalimages/final_latestnews.gif" width="149" height="30" alt="Latest News"> 
+<table width="126" border="0" cellspacing="0" cellpadding="5" bgcolor="#8AA2DC">
+	<tr>
+          <td bgcolor="#8AA2DC" background="/globalimages/bgright2.gif" >
+    	<p align="left" ><span class="newhead"><font color="#cc0000"><b>Message From The General Manager</b></font></span><br>
+				<a class="newmenu" href="spot.php?id_num=7058&type=N">CLUB NEWSLETTER - February</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>General Services</b></font></span><br>
+				<a class="newmenu" href="spot.php?id_num=7041&type=N">Live Entertainment in the Bar & Lounge</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>Personal Training</b></font></span><br>
+				<a class="newmenu" href="class_type.php?class_type=6473&category=9">What's My Resting Metabolic Rate?</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>Personal Training</b></font></span><br>
+				<a class="newmenu" href="class_type.php?class_type=5114&category=9">Free Clinic:  New Equipment Orientation</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>Pilates</b></font></span><br>
+				<a class="newmenu" href="class_type.php?class_type=3080&category=10">FREE Pilates Clinics:  1)  Discover Pilates Orientation and 2)  Mat Class</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>Pilates</b></font></span><br>
+				<a class="newmenu" href="class_type.php?class_type=471&category=10">Intro to Pilates Class</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>Aquatics</b></font></span><br>
+				<a class="newmenu" href="class_type.php?class_type=5479&category=1">Keiki Swimming Lessons</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>Club News</b></font></span><br>
+				<a class="newmenu" href="spot.php?id_num=7064&type=N">Bridal Event</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>General Services</b></font></span><br>
+				<a class="newmenu" href="spot.php?id_num=7065&type=N">Valentine Jazz & Dance</a></p>
+			<p align="left" ><span class="newhead"><font color="#cc0000"><b>General Services</b></font></span><br>
+				<a class="newmenu" href="spot.php?id_num=7061&type=N">Ski Vacations 2006</a></p>
+					</td></tr>	
+</table>
+		<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</td>
+</tr>
+</table>
+<table align="center" border="0" width="100%"><tr><td>
+<p align="center"><br>
+</p>
+<p align="center" class="articlelink"><a href="index.php" class="articlelink">Home</a> | <a href="info.php" class="articlelink">Club Information</a> | <a href="programs.php" class="articlelink">Programs 
+        and Services</a> | <a href="membership.php" class="articlelink">Membership Info</a> | <a href="contactus.php" class="articlelink">Contact Us</a></p>
+<p align="center" class="articlelink"><a href="http://www.wellbridge.com"><img src="/globalimages/mission.gif" border="0" alt="Wellbridge"></p>
+<p align="center" class="articlelink">&copy; Wellbridge 2001</a></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- START OF WEBTRENDS LIVE TAG -->
+<!-- Copyright 1999-2000 WebTrends Corporation -->
+<!-- eCommerce Revenue Tracking (patent pending) -->
+
+<!-- Visit us at http://www.webtrendslive.com -->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// You may customize the values of the variables below to suit your website.
+// Simply insert your own values between the double-quotes.
+// Here are some examples:
+//   var ORDER= "D2,Business to Consumer,Pocket FM Radio,Audio Products,10,499.99;";
+//   var SERVER= "MyServerName";
+//   var CONTENTGROUP= "ContentGroupOfThisPage";
+
+var ORDER= "";
+var SERVER= "www.wellbridge.com";
+var CONTENTGROUP= "Honolulu ";
+//-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// SiteName: www.wellbridge.com
+var W="tagver=3&SiteId=20846&Sid=002-00-8-1-169441-20846&Tz=-700&firstwkday=sunday&Edition=enterprise&Button=";
+W+="&server="+escape(SERVER);
+W+="&order="+escape(ORDER);
+W+="&Group="+escape(CONTENTGROUP);
+W+="&browserDate="+escape(new Date());
+W+="&title="+escape(document.title);
+W+="&url="+window.document.URL;
+W+="&referrer="+window.document.referrer;
+W+="&appname="+escape(navigator.appName);
+W+="&appversion="+escape(navigator.appVersion);
+W+="&cookieOK="+(navigator.cookieEnabled?"Yes":"No");
+W+="&userLanguage="+(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+W+="&platform="+navigator.platform;
+W+="&bgColor="+escape(document.bgColor);
+W+="&javaOK=Yes";
+if(typeof(screen)=="object")
+{
+W+="&screenResolution="+screen.width+"x"+screen.height;
+W+="&colorDepth="+screen.colorDepth;
+W+="&NSpluginList=";
+for( var i=0; i< navigator.plugins.length; i++)
+W+=escape(navigator.plugins[i].name)+";";
+}
+document.write('<A TARGET="_blank" HREF="http://www.webtrendslive.com/redirect.asp?siteID=20846">');
+document.write('<IMG BORDER="0" WIDTH="1" HEIGHT="1" SRC="http://statse.webtrendslive.com/S002-00-8-1-169441-20846/button3.asp?'+W+'">');
+document.write('</A>');
+//-->
+</SCRIPT>
+
+<NOSCRIPT>
+<A TARGET="_blank" HREF="http://www.webtrendslive.com/redirect.asp?siteID=20846">
+<IMG BORDER="0" WIDTH="1" HEIGHT="1" SRC="http://statse.webtrendslive.com/S002-00-8-1-169441-20846/button3.asp?tagver=3&SiteId=20846&Sid=001-00-3-10-6692-7351&Tz=-700&firstwkday=sunday&Edition=enterprise&Button=&title=NO%20SCRIPT&url=http://noscript&javaOK=No&">
+</A>
+</NOSCRIPT>
+<!-- END OF WEBTRENDS LIVE TAG -->
+</BODY>
+</HTML>

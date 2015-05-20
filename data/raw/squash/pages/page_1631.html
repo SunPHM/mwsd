@@ -1,0 +1,357 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="javascript">
+<!--
+var myVersion = navigator.appVersion.substring(0,1);
+var rollOverOK = 0;
+if (myVersion > 3)	{
+	var rollOverOK = 1;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function PlayMedia(file)  {
+	eval("window.open('../home/play_media.asp?file=" + file + "','mediaWnd','menubar=no,statusbar=no,resizable=no,scrollbars=no,height=100,width=200')");
+	return(false);
+}
+function launchWindow(myHeight,myWidth,myDoc) {
+window.open(myDoc,"launchWindow","scrollbars=0,resizeable=0,status=1,height=" + myHeight +",width=" + myWidth + ",top=0,left=0");
+}
+function ShowCalendar() {
+	window.open('calendar.asp','calendarWnd','resizable=yes,scrollbars=yes,height=600,width=300,left=' + (screen.availWidth-300)/2 + ',top=' + (screen.availHeight-600)/2);
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+
+if      (bName == "Netscape" && bVer >= 4) br = "n4";
+else if (bName == "Netscape" && bVer == 3) br = "n3";
+else if (bName == "Microsoft Internet Explorer" && bVer >= 4) br = "e4";
+else if (bName == "Microsoft Internet Explorer") br = "e3";
+else br = "n2";
+
+function SendMail(alias) {
+	alias = alias.replace(/'/g,"&#39;");
+	var mURL = 'send_mail.asp?alias=' + alias;
+	window.open(mURL,'mailWnd','resizable=yes,scrollbars=yes,height=440,width=480');
+}
+function isValidEmail(email) {
+	if (email=="") {
+		return false;
+	}
+	if (email.indexOf('@')<1) {
+		return false;
+	}
+	if (email.indexOf('.')==-1) {
+		return false;
+	}
+	if (email.indexOf('.')==(email.length -1)) {
+		return false;
+	}
+	if (email.indexOf('.')==(email.indexOf('@')+1)) {
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+
+
+<title>Groton / Return to Groton for Alumnae and Alumni Games Day 2004!</title>
+
+<script language="javascript">
+<!--
+if ((navigator.appVersion.indexOf("Mac")!= -1)) {
+		document.write("<link rel='stylesheet' href='../includes/displayMAC.css' type='text/css'>");
+} else {
+	if (navigator.appName == "Netscape") {
+		document.write("<link rel='stylesheet' href='../includes/displayPC_NS.css' type='text/css'>");
+	} else {
+ 		document.write("<link rel='stylesheet' href='../includes/displayPC_IE.css' type='text/css'>");
+ 	}
+}
+//-->
+</script>
+
+<link rel="stylesheet" href="../includes/Groton_Styles.css" type="text/css">
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+
+
+	</head>
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#8c9163">
+
+
+<table border="0" cellspacing="0" cellpadding="0" vspace="0" hspace="0">
+  <tr> 
+    <td colspan="5"><a href="home.asp" onmouseover="window.status='Back to home page';return true" title="Back to home page" onmouseout="window.status=''"><img src="../graphics/internal_pages/header.gif" border="0" WIDTH="744" HEIGHT="50"></a></td>
+  </tr>
+  <tr> 
+    <td width="131" height="400" valign="top" bgColor="C7CC9A" style="background-image:url(../graphics/homepage/nav_background.gif);background-repeat:no-repeat;">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr> 
+          <td colspan="2"><img src="../graphics/spacer.gif" border="0" width="131" height="10"></td>
+        </tr>
+        
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=1'"><a href="content.asp?id=1" class="leftNav">Why Groton</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=2'"><a href="content.asp?id=2" class="leftNav">Admission</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=3'"><a href="content.asp?id=3" class="leftNav">St John's Chapel</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=4'"><a href="content.asp?id=4" class="leftNav">Academics</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=5'"><a href="content.asp?id=5" class="leftNav">The Arts</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=282'"><a href="content.asp?id=282" class="leftNav">Athletics</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=12'"><a href="content.asp?id=12" class="leftNav">Student Life</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=13'"><a href="content.asp?id=13" class="leftNav">Alumni</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=476'"><a href="content.asp?id=476" class="leftNav">Parents</a></td>
+					</tr>
+				
+					<tr> 
+					  <td><img src="../graphics/spacer.gif" border="0" width="15" height="20"></td>
+					  <td onclick="location.href='content.asp?id=281'"><a href="content.asp?id=281" class="leftNav">MyGroton</a></td>
+					</tr>
+				
+
+		<tr> 
+          <td><img src="../graphics/spacer.gif" width="15" height="20"></td>
+          <td><a href="news_list.asp" class="leftNav">News and Events<a></td>
+        </tr>
+
+        <tr> 
+          <td><img src="../graphics/spacer.gif" width="15" height="20"></td>
+          <td><a href="form.asp?id=318" class="leftNav">Online Giving <br>to Groton<a></td>
+        </tr>
+
+		<tr> 
+          <td colspan="2"><img src="../graphics/spacer.gif" border="0" width="131" height="20"></td>
+        </tr>
+      </table>
+      </td>
+		<td width="1" valign="top" bgcolor="669999"><img src="../graphics/spacer.gif" border="0" width="1" height="1"></td>
+		<td width="4" valign="top" bgcolor="C7CC9A"><img src="../graphics/spacer.gif" border="0" width="4" height="1"></td>
+		<td width="1" valign="top" bgcolor="669999"><img src="../graphics/spacer.gif" border="0" width="1" height="1"></td>      
+		<td width="590" valign="top" style="padding-top:15px" bgcolor="faffeb">
+
+
+
+<!-- #Page content -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr><td colspan="2" class="pageHeader" style="padding-left:12px">Groton News</td></tr>
+	<tr valign="top"> 
+    <td class="bodytext" style="padding-left:12px;padding-right:10px"> 
+	  <font class="bodytext_bold">Return to Groton for Alumnae and Alumni Games Day 2004!</font>
+	  <br><br>
+		<table border='0' cellspacing='0' cellpadding='6' align='center'><tr><td><img src='../images/small games day.jpg' border='0' alt='Small Games Day 2004'></td></tr></table><br>
+<b>Sunday, January 18</b><br>
+<br>
+    You and your family are invited to visit the Athletic Center on January 18 for a game of basketball or hockey, or for a squash match.  Play with or against your former coaches, current students, and alumnae and alumni.<br>
+    Childcare is available from 1:00 p.m. to 3:00 p.m.  (Pre-registration is required.)  Activities for your children include swimming, arts and crafts, and caricature drawings.<br>
+<br>
+We look forward to seeing you on January 18.<br>
+<br>
+Please <a class='bodytext' target='_blank' href='send_mail.asp?alias=Adams, Joshua' onmouseover="window.status='contact Joshua Adams '96';return true" onmouseout="window.status=''" title='contact Joshua Adams '96';>contact Joshua Adams '96</a> by January 9 if you wish to attend.<br>
+<br><br><i>Schedule</i><br>
+<br>
+11:30 a.m. - 1:00 p.m.     Lunch in the Dining Hall<br>
+1:00 p.m. - 3:00 p.m.        Alumnae/i Games:  Basketball, Hockey, and Squash<br>
+1:00 p.m. - 3:00 p.m.        Wallace Natatorium and fitness center open<br>
+3:00 p.m. - 4:00 p.m.        Free Skate<br>
+3:30 p.m. – 4:30 p.m.      Refreshments in the lobby of the Athletic Center<br>
+<br>
+<br><br>
+			<b>Date:</b> 1/6/2004 &nbsp;&nbsp;&nbsp;
+										
+															
+	</td>
+	<td valign="top" style="border-left:1px solid #8c9163" width="150px">
+		<table width="90%" border="0" cellpadding="0" cellspacing="0" vspace="0" hspace="0" style="margin-left:10px">
+			<tr><td class="pageHeader">News Items<td></tr>
+			<tr><td class='bodytext_gold' align='left'>home<td></tr>
+			<tr><td><hr width="95%" noshade size="1" color="#8c9163"></td></tr>
+			
+		
+			<tr><td><a href="news_item.asp?id=266&newsArea=home" class="pageContentLink">Saturday's Varsity Sports Results</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=270&newsArea=home" class="pageContentLink">2006 Winter Recital Series</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=268&newsArea=home" class="pageContentLink">BRAVE ART Exhibition at the DeMenil Gallery</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=226&newsArea=home" class="pageContentLink">Student-Athlete Form Assists 2006 Admission Candidates</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=264&newsArea=home" class="pageContentLink">Cornell University Glee Club will Perform</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=262&newsArea=home" class="pageContentLink">Girls Hockey Wins St. Paul's Christmas Tournament</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=261&newsArea=home" class="pageContentLink">Christmas Tournament Results</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=259&newsArea=home" class="pageContentLink">Groton Women's Network at On the Rise</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=257&newsArea=home" class="pageContentLink">Globalization and Fighting Terrorism Discussed</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td><a href="news_item.asp?id=254&newsArea=home" class="pageContentLink">Groton Harriers Take Second Championship</a></td></tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="6"></td></tr>
+		
+			<tr><td class="newsevents" align="right"><font color="red"><b>&raquo;&nbsp;</b></font><a href="news_list.asp?moreEvents=1&moreNews=" class="newsevents" style="text-decoration: underlined;">more</a></td></tr>
+			
+		</table>		
+	</td>
+  </tr>
+</table>
+		 <table width="607" border="0" cellspacing="0" cellpadding="0" vspace="0" hspace="0">
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="15"></td></tr>
+			<tr>
+				<td valign="bottom" align="center" class="bodytext_gold">
+					
+					<a class="bodytext" href="/home/news_item.asp?id=120&newsArea=home&printVer=true" target="_blank" onmouseover="window.status='Display printer-friendly page';return true" title="Display printer-friendly page" onmouseout="window.status=''">
+					<img src="../graphics/icon_print.gif" border="0" WIDTH="24" HEIGHT="11">
+					Print version of page</a>
+					&nbsp;:&nbsp;
+					<a class="bodytext" href="email_friend.asp?id=120&amp;title=Return to Groton for Alumnae and Alumni Games Day 2004!&amp;pxLoc=%2Fhome%2Fnews%5Fitem%2Easp%3Fid%3D120%26newsArea%3Dhome" target="_blank" onmouseover="window.status='Send this page to a friend';return true" title="Send this page to a friend" onmouseout="window.status=''">
+					<img src="../graphics/icon_mail.gif" border="0" WIDTH="24" HEIGHT="11">
+					Email page to a friend</a>
+				</td>
+			</tr>
+			<tr> 
+				<td valign="bottom" align="center" class="bodytext_gold">
+										
+				</td>
+			</tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="15"></td></tr>
+		</table>
+		</td>
+	  </tr>
+	</table>
+	</td>
+  </tr>
+  <tr> 
+    <td colspan="5">
+		<table width="744" border="0" cellspacing="0" cellpadding="0" style="border-top:2px solid #921422">
+        <tr bgColor="C7CC9A">
+          <td>	
+				&nbsp;&nbsp;<a href="calendar.asp" class="lowerBarInfo">calendar</a>
+				&nbsp;&nbsp;<span class="lowerBarInfo">|</span>
+				&nbsp;&nbsp;<a href="content.asp?id=51" class="lowerBarInfo">contact us</a>
+				&nbsp;&nbsp;<span class="lowerBarInfo">|</span>
+				&nbsp;&nbsp;<a href="content.asp?id=53" class="lowerBarInfo">directions</a>
+				&nbsp;&nbsp;<span class="lowerBarInfo">|</span>
+				&nbsp;&nbsp;<a href="search_site.asp" class="lowerBarInfo">search</a>
+				&nbsp;&nbsp;<span class="lowerBarInfo">|</span>
+				&nbsp;&nbsp;<a href="site_map.asp" class="lowerBarInfo">site map</a></td>
+          <td><div align="right"><span class="lowerBarInfo">P.O. Box 991, Groton, 
+              Massachusetts 01450&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (978) 448-7510&nbsp;</span></div></td>
+        </tr>
+		</table>
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>

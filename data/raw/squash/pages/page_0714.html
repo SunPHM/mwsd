@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Natures Way Gardens.com </TITLE>
+<LINK REL='stylesheet' TYPE='text/css' HREF='includes/stylesheet.css' TITLE='style'>
+<SCRIPT LANGUAGE="JavaScript" SRC="includes/common.js"></SCRIPT>
+<script type="text/javascript" language="JavaScript">
+
+function doGetGroup()
+{
+  document.frmMain.action.value = "getVegies";
+  document.frmMain.submit();
+}
+</script>
+</HEAD>
+
+<BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<form action="mainservlet.do" method="post" name="frmMain">
+<!-- jsp header -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#E1DDC9" height="72">
+	<tr>
+		<td align="left">
+			<table cellpadding="0" cellspacing="0" border="0" width="729">
+				<tr>
+					<td width="144">
+                                                <a href="mainservlet.do">
+						<IMG SRC="images/logo.gif" WIDTH="144" HEIGHT="72" BORDER="0" ALT="Natures Way Gardens"></a><br>
+					</td>
+                                        <td width="585" align="right">
+                                                <a href="mainservlet.do">
+						<IMG SRC="images/logo2.gif" WIDTH="230" HEIGHT="72" BORDER="0" ALT="Natures Way Gardens"></a><br>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#000000" height="1">
+	<tr>
+		<td align="left">
+			<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#628B2E">
+	<tr>
+		<td align="left">
+			<table cellpadding="0" cellspacing="0" border="0" width="729">
+				<tr>
+					<td width="143">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+					<td width="1" bgcolor="#ffffff">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+					<td width="585" valign="top" align="left">
+						<table cellpadding="0" cellspacing="0" border="0" width="585">
+							<tr>
+								<td width="106">
+                                                                  <a href="https://www.natures-way-gardens.com/customerservlet.do?action=si" onmouseover="imgOn('img5')" onmouseout="imgOff('img5')">
+                                                                  <IMG SRC="images/my_account_nav_off.gif" name="img5" WIDTH="106" HEIGHT="21" BORDER="0" ALT=""></a><br>
+                                                                </td>
+								<td width="90">
+                                                                    <a href="mainservlet.do?action=an" onmouseover="imgOn('img7')" onmouseout="imgOff('img7')">
+                                                                    <IMG SRC="images/about_nwg_nav_off.gif" name="img7" WIDTH="90" HEIGHT="21" BORDER="0" ALT=""></a><br>
+                                                                </td>
+                                                                <td width="68">
+                                                                  <a href="mainservlet.do?action=cu" onmouseover="imgOn('img6')" onmouseout="imgOff('img6')">
+                                                                  <IMG SRC="images/contact_us_off.gif" name="img6" WIDTH="68" HEIGHT="21" BORDER="0" ALT=""></a><br>
+                                                                </td>
+								<td width="321">
+                                                                  <a href="basketservlet.do" onmouseover="imgOn('img8')" onmouseout="imgOff('img8')">
+                                                                  <IMG SRC="images/view_basket_nav_off.gif" name="img8" WIDTH="90" HEIGHT="21" BORDER="0" ALT=""></a><br>
+                                                                </td>
+							</tr>
+						</table>
+						<table cellpadding="0" cellspacing="0" border="0" width="585" bgcolor="#ffffff" height="1">
+							<tr>
+								<td align="left">
+									<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+								</td>
+							</tr>
+						</table>
+						<table cellpadding="0" cellspacing="0" border="0" width="585">
+							<tr>
+                                                            <td width="133">
+                                                                <a href="productdisplayservlet.do?action=tw&type=vegetable" onmouseover="imgOn('img1')" onmouseout="imgOff('img1')">
+                                                                <IMG SRC="images/vegtables_nav_off.gif" name="img1" WIDTH="133" HEIGHT="40" BORDER="0" ALT=""></a></td>
+							    <td width="90">
+                                                                  <a href="productdisplayservlet.do?action=tw&type=herb" onmouseover="imgOn('img2')" onmouseout="imgOff('img2')">
+                                                                  <IMG SRC="images/herbs_nav_off.gif" name="img2" WIDTH="90" HEIGHT="40" BORDER="0" ALT=""></a></td>
+                                                            <td width="108">
+                                                                  <a href="productdisplayservlet.do?action=tw&type=flower" onmouseover="imgOn('img3')" onmouseout="imgOff('img3')">
+                                                                  <IMG SRC="images/flowers_nav_off.gif" name="img3" WIDTH="108" HEIGHT="40" BORDER="0" ALT=""></a></td>
+                                                            <td width="254">
+                                                                  <a href="productdisplayservlet.do?action=tw&type=fruit" onmouseover="imgOn('img4')" onmouseout="imgOff('img4')">
+                                                                  <IMG SRC="images/fruit_nav_off.gif" name="img4" WIDTH="80" HEIGHT="40" BORDER="0" ALT=""></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#000000" height="1">
+	<tr>
+		<td align="left">
+			<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+		</td>
+	</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="729">
+	<tr>
+		<td align="left" width="143" bgcolor="#939377" valign="top">
+                        <!-- jsp nav bar -->
+			
+<table cellpadding="0" cellspacing="0" border ="0" width="143">
+  <tr>
+    <td>
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="15" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <IMG SRC="images/nav_avail_this_week.gif" WIDTH="143" HEIGHT="20" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#E1DDC9" valign="top">
+    <a href="productdisplayservlet.do?action=atw" class="navlinkwhite">
+      <IMG SRC="images/this_weeks_items.gif" WIDTH="143" HEIGHT="37" BORDER="0" ALT=""></a><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="15" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <IMG SRC="images/nav_navigation.gif" WIDTH="143" HEIGHT="20" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="2" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <table cellpadding="0" cellspacing="0" border="0" width="143">
+          <tr>
+            <td width="10">
+              <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+            </td>
+            <td width="140">
+              <a href="mainservlet.do" class="navlinkwhite">Home</a>
+            </td>
+          </tr>
+          <tr>
+            <td width="10">
+              <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+            </td>
+            <td width="140">
+              <a href="mainservlet.do?action=an" class="navlinkwhite">About NWG.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td width="10">
+              <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+            </td>
+            <td width="140">
+              <a href="mainservlet.do?action=di" class="navlinkwhite">Delivery Information</a>
+            </td>
+          </tr>
+          <tr>
+            <td width="10">
+              <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+            </td>
+            <td width="140">
+              <a href="mainservlet.do?action=nl" class="navlinkwhite">Coming Events</a>
+            </td>
+          </tr>
+          <tr>
+            <td width="10">
+              <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+            </td>
+            <td width="140">
+              <a href="mainservlet.do?action=ff" class="navlinkwhite">Fresh Facts</a>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="10" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <IMG SRC="images/nav_newsletter.gif" WIDTH="143" HEIGHT="20" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#E1DDC9" valign="top">
+    <a href="customerservlet.do?action=nl" class="navlinkwhite">
+      <IMG SRC="images/nav_newsletter_text.gif" WIDTH="143" HEIGHT="37" BORDER="0" ALT=""></a><br>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000">
+      <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+    </td>
+  </tr>
+
+</table>
+			<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="30" BORDER="0" ALT=""><br>
+		</td>
+		<td align="left" width="1" bgcolor="#000000">
+			<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+		</td>
+		<td align="right" width="585" bgcolor="#ffffff" valign="top">
+                <!--page content -->
+			<table cellpadding="0" cellspacing="0" border="0" width="585" bgcolor="#ffffff">
+				<tr>
+					<td align="right">
+						<IMG SRC="images/banner_image.jpg" WIDTH="585" HEIGHT="140" BORDER="0" ALT=""><br>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" border="0" width="585">
+				<tr>
+					<td align="center" width="384" bgcolor="#E1DDC9">
+						<IMG SRC="images/nav_highlights.gif" ALT=""><br>
+					</td>
+					<td align="left" width="1" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+					<td align="center" width="200" bgcolor="#939377">
+						<IMG SRC="images/nav_featured_products.gif" BORDER="0" ALT=""><br>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="384" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+					<td align="left" width="1" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+					<td align="left" width="200" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="384" bgcolor="#ffffff" valign="top">
+                                            <table width="384" cellspacing="0" cellpadding="0" border="0">
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="164">
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                    <span class="green_text"><a href="mainservlet.do?action=ff" class="navlinkgreen">Why Choose Fresh</a><br></span>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="5" BORDER="0" ALT=""></div>
+                                                    <div class="regular_text"><a href="mainservlet.do?action=ff" class="navlinkgreen"><IMG SRC="images/group_sunflower_pic.gif" BORDER="0" ALT="" align="left"></a>Why choose Natures Way Gardens versus the supermarket<br></div>
+                                                </td>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="164">
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                    <span class="green_text"><a href="mainservlet.do?action=sr" class="navlinkgreen">Recipe</a><br></span>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="5" BORDER="0" ALT=""></div>
+                                                    <div class="regular_text"><a href="mainservlet.do?action=r" class="navlinkgreen"><IMG SRC="images/beet_recipe_pic.jpg" BORDER="0" ALT="" align="left"></a>Click here for a great beet recipe<br></div>
+                                                </td>
+                                                <td width="16">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="164">
+                                                      <div><IMG SRC="images/spacer.gif" WIDTH="164" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                    <div><IMG SRC="images/spacer_grey.gif" WIDTH="164" HEIGHT="1" BORDER="0" ALT=""></div>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="164" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                </td>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="164">
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="164" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                    <div><IMG SRC="images/spacer_grey.gif" WIDTH="164" HEIGHT="1" BORDER="0" ALT=""></div>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="164" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                </td>
+                                                <td width="16">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="164">
+                                                    <span class="green_text"><a href="mainservlet.do?action=di" class="navlinkgreen">Delivery Info</a><br></span>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="5" BORDER="0" ALT=""></div>
+                                                    <div class="regular_text"><a href="mainservlet.do?action=di"><IMG SRC="images/delivery_pic.gif" BORDER="0" ALT="" align="left"></a>Look at how Natures Way Gardens schedules delivery and drop off<br></div>
+                                                </td>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="164">
+                                                    <span class="green_text"><a href="mainservlet.do?action=nl" class="navlinkgreen">News</a><br></span>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="5" BORDER="0" ALT=""></div>
+                                                    <div class="regular_text"><a href="mainservlet.do?action=nl"><IMG SRC="images/growing_tips_pic.gif" BORDER="0" ALT="" align="left"></a>See whats "sprouting" at Natures Way Gardens<br></div>
+                                                </td>
+                                                <td width="16">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                              </tr>
+                                            </table>
+					</td>
+					<td align="left" width="1" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+					</td>
+					<td align="left" width="200" bgcolor="#ffffff" valign="top">
+                                            <!--featured items go here -->
+                                            <table width="200" cellspacing="0" cellpadding="0" border="0">
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="180" align="left">
+                                                  <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="180" align="left">
+                                                    <span class="green_text"><a href="productdisplayservlet.do?action=f&fpid=1" class="navlinkgreen">Garlic</a><br></span>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="5" BORDER="0" ALT=""></div>
+                                                    <div class="regular_text"><a href="productdisplayservlet.do?action=f&fpid=5" class="navlinkgreen"><IMG SRC="images/sm_garlic_wildfire.jpg" BORDER="0" ALT="" align="left"></a>Click here to view our featured selection of Garlic<br></div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="180" align="left">
+                                                  <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                  <div><IMG SRC="images/spacer_grey.gif" WIDTH="180" HEIGHT="1" BORDER="0" ALT=""></div>
+                                                  <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="10" BORDER="0" ALT=""></div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td width="20">
+						  <IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+                                                </td>
+                                                <td width="180" align="left">
+                                                    <span class="green_text"><a href="productdisplayservlet.do?action=f&fpid=2" class="navlinkgreen">Squash</a><br></span>
+                                                    <div><IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="5" BORDER="0" ALT=""></div>
+                                                    <div class="regular_text"><a href="productdisplayservlet.do?action=f&fpid=4"><IMG SRC="images/featured_product_squash_p.jpg" BORDER="0" ALT="" align="left"></a>Click here to view our featured selection of summer squash.<br></div>
+                                                </td>
+                                              </tr>
+                                            </table>
+					</td>
+				</tr>
+                                <tr>
+					<td align="left" width="384">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="20" BORDER="0" ALT=""><br>
+					</td>
+					<td align="left" width="1" bgcolor="#000000">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="20" BORDER="0" ALT=""><br>
+					</td>
+					<td align="left" width="200">
+						<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="20" BORDER="0" ALT=""><br>
+					</td>
+				</tr>
+			</table>
+                <!-- End Page Content -->
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#000000" height="1">
+	<tr>
+		<td align="left">
+			<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#E1DDC9" height="20">
+	<tr>
+		<td align="left">
+			<IMG SRC="images/spacer.gif" WIDTH="1" HEIGHT="1" BORDER="0" ALT=""><br>
+		</td>
+	</tr>
+</table>
+<input type="hidden" name="action">
+</form>
+</BODY>
+</HTML>

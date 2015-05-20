@@ -1,0 +1,583 @@
+<html>
+
+<head>
+<title>Water A-Live - Garden Growth August 16, 2002</title>
+<meta NAME="keywords"
+CONTENT="Water Alive, Water of Life, Alkaline Water, Alkaline Body pH, Water Revitalizer and Restructurer, DIA-Aquakaline 888, Hexahderon 999, DIA-Aquakaline 777, Unified Field, Sprouts, Increase Sprout Growth, Sprouting Breakthrough, Revitalized Water, pH, Whole House Water Revitalizer, Excelex, Light-Life Polarization, Live Essence Technologies">
+<meta NAME="description"
+CONTENT="Water A-Live offers ... a Whole House Water Revitalizer, an Alkaline-Adjusting Drinking Water Additive, and a Water Additive to Enhancer the Rooting and Growth of Plants">
+<meta NAME="author" CONTENT="Excelex">
+<meta NAME="copyright" CONTENT="2002 by Excelex">
+<meta NAME="revisit-after" CONTENT="2 weeks">
+<meta NAME="distribution" CONTENT="Global">
+<meta NAME="robots" CONTENT="All">
+<meta NAME="rating" CONTENT="General">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<script LANGUAGE="JavaScript" FPTYPE="dynamicanimation">
+<!--
+  // If you want to change this script, you must also make the following
+  // changes so that FrontPage will not overwrite your new script.
+  // In the script tag, change type="dynamicanimation" to type="mydynamicanimation"
+  // In the first script statement, change "dynamicanimation" to "mydynamicanimation"
+  // Throughout the HTML content, change dynamicanimation= to mydynamicanimation=
+  // Change function dynAnimation to function mydynAnimation
+  // In the body tag, change onload="dynAnimation()" to onload="mydynAnimation()"
+  dynamicanimAttr = "dynamicanimation"
+  animateElements = new Array()
+  currentElement = 0
+  speed = 0
+  stepsZoom = 8
+  stepsWord = 8
+  stepsFly = 12
+  stepsSpiral = 16
+  steps = stepsZoom
+  step = 0
+  outString = ""
+  function dynAnimation()
+  {
+    var ms = navigator.appVersion.indexOf("MSIE")
+    ie4 = (ms>0) && (parseInt(navigator.appVersion.substring(ms+5, ms+6)) >= 4)
+    if(!ie4)
+    {
+      if((navigator.appName == "Netscape") &&
+         (parseInt(navigator.appVersion.substring(0, 1)) >= 4))
+      {
+        for (index=document.layers.length-1; index >= 0; index--)
+        {
+            layer=document.layers[index]
+            if (layer.left==10000)
+                layer.left=0
+        }
+      }
+      return
+    }
+    for (index=document.all.length-1; index >= document.body.sourceIndex; index--)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if(null != animation)
+      {
+        if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        {
+          ih = el.innerHTML
+          outString = ""
+          i1 = 0
+          iend = ih.length
+          while(true)
+          {
+            i2 = startWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, false, "")
+            if(i2 == iend)
+              break
+            i1 = i2
+            i2 = endWord(ih, i1)
+            if(i2 == -1)
+              i2 = iend
+            outWord(ih, i1, i2, true, animation)
+            if(i2 == iend)
+              break
+            i1 = i2
+          }
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+        if(animation == "zoomIn" || animation == "zoomOut")
+        {
+          ih = el.innerHTML
+          outString = "<SPAN " + dynamicanimAttr + "=\"" + animation + "\" style=\"position: relative; left: 10000;\">"
+          outString += ih
+          outString += "</SPAN>"
+          document.all[index].innerHTML = outString
+          document.all[index].style.posLeft = 0
+          document.all[index].setAttribute(dynamicanimAttr, null)
+        }
+      }
+    }
+    i = 0
+    for (index=document.body.sourceIndex; index < document.all.length; index++)
+    {
+      el = document.all[index]
+      animation = el.getAttribute(dynamicanimAttr, false)
+      if (null != animation)
+      {
+        if(animation == "flyLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyRight")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = 0
+        }
+        else if(animation == "flyTop" || animation == "dropWord")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottom")
+        {
+          el.style.posLeft = 0
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyTopLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyTopRight" || animation == "flyTopRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "flyBottomLeft")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "flyBottomRight" || animation == "flyBottomRightWord")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)+document.body.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)+document.body.offsetHeight
+        }
+        else if(animation == "spiral")
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = document.body.scrollTop-offsetTop(el)-el.offsetHeight
+        }
+        else if(animation == "zoomIn")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else if(animation == "zoomOut")
+        {
+          el.style.posLeft = 10000
+          el.style.posTop = 0
+        }
+        else
+        {
+          el.style.posLeft = 10000-offsetLeft(el)-el.offsetWidth
+          el.style.posTop = 0
+        }
+        el.initLeft = el.style.posLeft
+        el.initTop = el.style.posTop
+        animateElements[i++] = el
+      }
+    }
+    window.setTimeout("animate();", speed)
+  }
+  function offsetLeft(el)
+  {
+    x = el.offsetLeft
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      x += e.offsetLeft;
+    return x
+  } 
+  function offsetTop(el)
+  {
+    y = el.offsetTop
+    for (e = el.offsetParent; e; e = e.offsetParent)
+      y += e.offsetTop;
+    return y
+  } 
+  function startWord(ih, i)
+  {
+    for(tag = false; i < ih.length; i++)
+    {
+      c = ih.charAt(i)
+      if(c == '<')
+        tag = true
+      if(!tag)
+        return i
+      if(c == '>')
+        tag = false
+    }
+    return -1
+  }
+  function endWord(ih, i)
+  {
+    nonSpace = false
+    space = false
+    while(i < ih.length)
+    {
+      c = ih.charAt(i)
+      if(c != ' ')
+        nonSpace = true
+      if(nonSpace && c == ' ')
+        space = true
+      if(c == '<')
+        return i
+      if(space && c != ' ')
+        return i
+      i++
+    }
+    return -1
+  }
+  function outWord(ih, i1, i2, dyn, anim)
+  {
+    if(dyn)
+      outString += "<SPAN " + dynamicanimAttr + "=\"" + anim + "\" style=\"position: relative; left: 10000;\">"
+    outString += ih.substring(i1, i2)
+    if(dyn)
+      outString += "</SPAN>"
+  }
+  function animate()
+  {
+    el = animateElements[currentElement]
+    animation = el.getAttribute(dynamicanimAttr, false)
+    step++
+    if(animation == "spiral")
+    {
+      steps = stepsSpiral
+      v = step/steps
+      rf = 1.0 - v
+      t = v * 2.0*Math.PI
+      rx = Math.max(Math.abs(el.initLeft), 200)
+      ry = Math.max(Math.abs(el.initTop),  200)
+      el.style.posLeft = Math.ceil(-rf*Math.cos(t)*rx)
+      el.style.posTop  = Math.ceil(-rf*Math.sin(t)*ry)
+    }
+    else if(animation == "zoomIn")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(50+50*step/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else if(animation == "zoomOut")
+    {
+      steps = stepsZoom
+      el.style.fontSize = Math.ceil(100+200*(steps-step)/steps) + "%"
+      el.style.posLeft = 0
+    }
+    else
+    {
+      steps = stepsFly
+      if(animation == "dropWord" || animation == "flyTopRightWord" || animation == "flyBottomRightWord")
+        steps = stepsWord
+      dl = el.initLeft / steps
+      dt = el.initTop  / steps
+      el.style.posLeft = el.style.posLeft - dl
+      el.style.posTop = el.style.posTop - dt
+    }
+    if (step >= steps) 
+    {
+      el.style.posLeft = 0
+      el.style.posTop = 0
+      currentElement++
+      step = 0
+    }
+    if(currentElement < animateElements.length)
+      window.setTimeout("animate();", speed)
+  }
+//-->
+</script></head>
+
+<body background="../navy_background.JPG" bgcolor="#FFFFFF" vlink="#0000FF"
+onload="dynAnimation()">
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="664"
+style="border-left: thin none rgb(0,0,160); border-right: thin none rgb(0,0,160); border-bottom: thin none rgb(0,0,160)">
+  <tr>
+    <td width="730" background="198.jpg"><p align="left"><font color="#0000FF"
+    face="GoudyHandtooled BT"><br>
+    </font><strong><font size="7" color="#0000A0" face="Lucida Handwriting">&nbsp; Water
+    A-Live</font><font color="#0000A0" size="3" face="Andale Mono"> </font><font
+    face="Lucida Handwriting" color="#0000A0" size="3">&nbsp; </font><font color="#0000A0"
+    size="3">&#153;</font><font size="7" color="#0000A0" face="Lucida Handwriting"> </font></strong><font
+    face="Arial" color="#0000A0" size="3"><br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em><font color="#400080" face="Arial"><strong><small>:Excelex
+    Light-Life Polarization Live Essence Technologies</small><br>
+    </strong></font></em><font color="#0000FF" face="GoudyHandtooled BT"><br>
+    </font></td>
+    <td width="218" background="198.jpg"><p align="center"><img src="yantra12.gif" width="85"
+    height="114" alt="yantra12.gif (47242 bytes)"></td>
+  </tr>
+  <tr>
+    <td width="658" colspan="2" bgcolor="#FFFFFF"><div align="center"><center><table
+    border="1" cellpadding="2" cellspacing="5" width="664" background="jade.jpg"
+    bgcolor="#C6FFF8" height="99">
+      <tr>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="19"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../index.html" target="_self">HOME</a></strong></font></td>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="19"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../hexahedron/hexahedron999_wa.htm" target="_self">Hexahedron 999</a></strong></font></td>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="19"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../aquakaline/aquakaline888_wa.htm" target="_self">Aquakaline 888</a></strong></font></td>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="19"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../aquakaline777/aquakaline777_main.htm" target="_self">Aquakaline 777</a></strong></font></td>
+      </tr>
+      <tr>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="22"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../contact_us.htm" target="_self">CONTACT US</a></strong></font></td>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="22"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../alkalinesalt/happymood_main.htm" target="_self">Alkaline Salt</a></strong></font></td>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="22"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../articles/articles.htm" target="_self">Articles &amp; INFO</a></strong></font></td>
+        <td width="25%" bgcolor="#0000A0" background="water_aqua.jpg" height="22"><p
+        align="center"><font face="Arial Narrow" size="3" color="#0000FF"><strong><a
+        href="../../order_form.htm" target="_self">ORDER</a></strong></font></td>
+      </tr>
+      <tr>
+        <td width="100%" bgcolor="#0000A0" colspan="4" height="22" dynamicanimation="dropWord"
+        style="position: relative !important; left: 10000 !important"><strong><font
+        color="#0000FF" face="Kabel Bk BT" size="4"><p align="center"></font><font color="#FFFFFF"
+        face="Kabel Bk BT" size="4">Life Goes On Forever ... Forever ... Forever ... Forever ...
+        Forever</font></strong></td>
+      </tr>
+    </table>
+    </center></div><b><div align="center"><center><table border="0" cellpadding="0"
+    width="662" bgcolor="#FFFFFF" cellspacing="0">
+      <tr>
+        <td width="13" background="198.jpg" bgcolor="#FFFFFF"><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</td>
+        <td width="639"><font SIZE="4">&nbsp;<p ALIGN="CENTER"></font></b><strong><font color="#000080"
+        face="Times New Roman" size="6">Hexahedron 999</font><font color="#000080"
+        face="Times New Roman" size="1">&#153; </font><font color="#000080" face="Times New Roman"
+        size="6">&nbsp; &amp; DIA-Aquakaline 777</font><font color="#000080"
+        face="Times New Roman" size="1">&#153; </font></strong><font size="3"></p>
+        </font><p ALIGN="CENTER"><b><strong><font FACE="Monotype Corsiva" size="6" color="#008000">A
+        Major Breakthrough In Gardening</font></strong></p>
+        <p ALIGN="CENTER"><font face="Times New Roman" size="5" color="#FF00FF">More Amazing
+        Results ... Photos taken August 16, 2002<br>
+        </font></b><font face="Times New Roman" size="4" color="#FF00FF">This may take a few
+        minutes to load (there are 16 pictures) ... Please Be Patient</font></p>
+        <p><b>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="191"><img src="mullien1.jpg" width="170" height="281"
+            alt="mullien2.jpg (264461 bytes)"></td>
+            <td width="174"><img src="mullien2x.jpg" width="172" height="282"
+            alt="mullien x.jpg (262144 bytes)"></td>
+            <td width="14"></td>
+            <td width="171"></b><font size="4">We have been watering this Mullein Plant with the
+            Hexahedron 999 Water ... nothing else.&nbsp; The main flower head is 44 inches long ...
+            with 13 additional flower heads.&nbsp; The height of the plant is 8' 3&quot; (99 in.)
+            high. &nbsp; Mr. Excelex is standing next to the plant his height is 5' 10&quot;.</font></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="594"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="196"><font size="4">Burdock Leaf <br>
+            (first year plant) ...<br>
+            just over 3 feet long ... watered with the Hexahedron 999</font></td>
+            <td width="398"><blockquote>
+              <p><img src="burdock_leaf.jpg" width="369" height="281"
+              alt="burdock leaf2.jpg (255592 bytes)"></p>
+            </blockquote>
+            </td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="402"><img src="squash_leaf.jpg" width="377" height="266"
+            alt="squash leaf.jpg (254858 bytes)"></td>
+            <td width="148"><font size="4">Squash Leaf ... measuring 18 inches across ... watered with
+            the Hexahedron 999 and 3 applications of Aquakaline 777 in the early stages of growth</font></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0" height="196">
+          <tr>
+            <td width="50%" height="196"><font size="4">Squash Flower ... 6.5 inches</font></td>
+            <td width="50%" height="196"><img src="squash_flower.jpg" width="174" height="199"
+            alt="squash flower.jpg (257691 bytes)"></td>
+          </tr>
+        </table>
+        </center></div><p><br>
+        </p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="313"><img src="rubarb_leaf1xl.jpg" width="294" height="221"
+            alt="rubarb leaf1.jpg (251321 bytes)"></td>
+            <td width="237"><font size="4">Rhubarb Leaf 27 inches long ... watered with Hexahedron 999
+            and 3 applications of Aquakaline 777 late spring/early summer.&nbsp; The Rhubarb has been
+            harvested once ... these leaves are from its second growth cycle.</font></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="243"><font size="4">Another Rhubarb Leaf ... 33 inches wide</font></td>
+            <td width="307"><img src="rubarb_leaf2xw.jpg" width="287" height="215"
+            alt="rubarb leaf3.jpg (242774 bytes)" align="right"></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="315"><img src="horseradish_x.jpg" width="294" height="236"
+            alt="horseradish x.jpg (252774 bytes)"></td>
+            <td width="235"><font size="4">Horseradish Leaves ... 4.5 feet high</font></td>
+          </tr>
+        </table>
+        </center></div><p><br>
+        </p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="50%"><font size="4">Green Bean Leaf ... 9 inches long ... this plant is still
+            very young it has not yet reached 12 inches in height ... the seed was planted 4 weeks
+            ago.</font></td>
+            <td width="50%"><blockquote>
+              <p><img src="bean_leaf.jpg" width="205" height="245" alt="bean leaf.jpg (244434 bytes)"></p>
+            </blockquote>
+            </td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="443"><img src="pickle_cuc_leaf.jpg" width="430" height="327"
+            alt="pickle cuc leaf.jpg (246932 bytes)"></td>
+            <td width="107"><font size="4">Pickle cucumber Leaf ... over 12 inches wide</font></td>
+          </tr>
+        </table>
+        </center></div><p><br>
+        </p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="162"><font size="4">Pickle Seed Cucumbers ... more than twice the size of
+            normal mature seed pickle cucumbers at 658 g.</font></td>
+            <td width="388"><img src="pickle_cuc_seed.jpg" width="375" height="176"
+            alt="pickle cuc seed.jpg (243153 bytes)" align="right"></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="280"><img src="cucseeds234.jpg" width="247" height="214"
+            alt="Image001.jpg (265242 bytes)"></td>
+            <td width="270"><font size="4">560 g Pickle Cucumber when harvested ... yielding 234
+            seeds.&nbsp; Seed average length 1.1 to 1.2 cm and width .45 to .5 cm&nbsp; The seeds
+            which result from this fruit will be termed &quot;Structured Seeds</font><font size="2">
+            &#153;</font><font size="4">&quot; ... thus, we are taking the Heritage Seeds to a new
+            dimension (see below)</font></td>
+          </tr>
+        </table>
+        </center></div><p><br>
+        </p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="249"><font size="4">This is NOT an English Cucumber ... it is a Straight 8
+            Cucumber which should grow to about 8 inches long.&nbsp; This cucumber is now reaching 13
+            inches.</font></td>
+            <td width="301"><img src="straight_8_a.jpg" width="254" height="304"
+            alt="straight 8 a.jpg (257227 bytes)" align="right"></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="318"><img src="straight8_2.jpg" width="288" height="239"
+            alt="straight 8 c.jpg (256908 bytes)"></td>
+            <td width="232"><font size="4">Another Straight 8 Cucumber ... just over 12 inches long</font></td>
+          </tr>
+        </table>
+        </center></div><p>&nbsp;</p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="50%"><font size="4">Geraniums are now over 4.5 feet high and still growing</font></td>
+            <td width="50%"><img src="geraniums2.jpg" width="218" height="297"
+            alt="geraniums2.jpg (255095 bytes)" align="right"></td>
+          </tr>
+        </table>
+        </center></div><p><br>
+        </p>
+        <div align="center"><center><table border="0" cellpadding="0" width="550"
+        bgcolor="#FFFFFF" cellspacing="0">
+          <tr>
+            <td width="374"><img src="greenhouse_no2view.jpg" width="356" height="282"
+            alt="greenhouse3.jpg (251314 bytes)"></td>
+            <td width="176"><font size="4">This is our second greenhouse which we finished building in
+            mid-July.&nbsp; It was covered with plastic around the 24th of July at which time the
+            plants in this view were all bedding sizes of around 1 foot high or less. Amazing growth
+            rate in the last three weeks.&nbsp; All plants are being watered with the Hexahedron 999
+            and Aquakaline 777 (every 2nd or 3rd watering) ... also using 1/4 the amount of
+            recommended plant nutrients every 2nd or 3rd watering.</font></td>
+          </tr>
+        </table>
+        </center></div><blockquote>
+          <p><font size="4" face="Times New Roman">Although the growth and size of these plants is
+          impressive ... the one thing that stands out the most for all who have toured these
+          facilities ... is the TASTE of the produce.&nbsp; The cucumbers are sweet with no
+          bitterness and taste similar to melon.&nbsp; The lettuce leaves, even when the plant has
+          gone to seed ... are not bitter.&nbsp; The tomatoes are aromatic and exquisitely
+          flavorful.</font></p>
+          <p><font size="4" face="Times New Roman" color="#008000">Structured Seeds</font><font
+          face="Times New Roman" color="#008000" size="3">&#153;</font><font size="4"
+          face="Times New Roman" color="#008000"> </font><font size="4" face="Times New Roman">...
+          We used Heritage Seeds for all of our greenhouse plants ... and we will be collecting
+          their seeds this fall.&nbsp; The resulting seeds will be termed &quot;Structured Seeds</font><font
+          face="Times New Roman" size="2"> &#153;</font><font size="4" face="Times New Roman">&quot;
+          ... and limited quantities will be made publicly available.</font></p>
+        </blockquote>
+        <blockquote>
+          <font size="4"><p ALIGN="left"></font><font size="4" face="Times New Roman">Our second
+          greenhouse is 20 feet wide by 32 feet long ... we have planted therein .. 36 tomato
+          plants, 24 cucumber plants, 28 assorted peppers, 250 onions, 200 parsley, 40 celery, 2
+          beds of lettuce, 1 bed of fine herbs, 26 arugula plants, 10 bean plants, 20 pea plants, 1
+          kale and 20 everbearing strawberry plants.</font><font SIZE="5"></p>
+          </font><p ALIGN="right"><font face="Times New Roman"><br>
+          </font><font face="Kabel Bk BT" size="4" color="#0000FF"><strong>... <a
+          href="../tobacco_aug02/tobacco_aug02.htm" target="_self">Next</a><br>
+          ... <a href="../../aquakaline777/more_results777.htm" target="_self">Previous</a><br>
+          </strong><b>... <a href="../gallery_main.htm" target="_self">Title Page</a></b></font></p>
+          <p ALIGN="left">&nbsp;</p>
+        </blockquote>
+        <font SIZE="5"><p ALIGN="center"><img src="flower_bottompage_contact.jpg" width="193"
+        height="31" alt="flower_bottompage_contact.jpg (2169 bytes)"></p>
+        <p ALIGN="center"></font><font size="2"><em>Copyright/Copyclaim ©&nbsp; 2002-2006
+        :Excelex&nbsp; All Rights Reserved</em></font><b></p>
+        <p ALIGN="center"><font face="Modern" size="5"><br>
+        </font></b></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>
+<!-- text below generated by server. PLEASE REMOVE --><!-- Counter/Statistics data collection code --><script language="JavaScript" src="http://hostingprod.com/js_source/geov2.js"></script><script language="javascript">geovisit();</script><noscript><img src="http://visit.webhosting.yahoo.com/visit.gif?us1139329331" alt="setstats" border="0" width="1" height="1"></noscript>
+<IMG SRC="http://geo.yahoo.com/serv?s=76001405&t=1139329331" ALT=1 WIDTH=1 HEIGHT=1>

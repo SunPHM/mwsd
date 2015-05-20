@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Vegetables - Winter Squash</TITLE>
+	
+					<SCRIPT LANGUAGE="JavaScript">
+<!-- hide this script from non-javascript-enabled browsers
+<!------------------------------BEGIN ROLLOVER SCRIPTS---------------------->
+if (document.images) {
+LNB_fruits = new Image(147,39); LNB_fruits.src ="/images/nav_fruits_off_a.gif";
+LNB_fruits_on = new Image(147,39); LNB_fruits_on.src ="/images/nav_fruits_on_a.gif";
+LNB_vegetables = new Image(147,39); LNB_vegetables.src ="/images/nav_vegetables_off_a.gif";
+LNB_vegetables_on = new Image(147,39); LNB_vegetables_on.src ="/images/nav_vegetables_on_a.gif";
+LNB_herbs = new Image(147,39); LNB_herbs.src ="/images/nav_herbs_off_a.gif";
+LNB_herbs_on = new Image(147,39); LNB_herbs_on.src ="/images/nav_herbs_on_a.gif";
+LNB_recipes = new Image(147,39); LNB_recipes.src ="/images/nav_recipes_off_a.gif";
+LNB_recipes_on = new Image(147,39); LNB_recipes_on.src ="/images/nav_recipes_on_a.gif";
+LNB_findtony = new Image(147,39); LNB_findtony.src ="/images/nav_findtony_off_a.gif";
+LNB_findtony_on = new Image(147,39); LNB_findtony_on.src ="/images/nav_findtony_on_a.gif";
+LNB_referenceshelf = new Image(147,39); LNB_referenceshelf.src ="/images/nav_referenceshelf_off_a.gif";
+LNB_referenceshelf_on = new Image(147,39); LNB_referenceshelf_on.src ="/images/nav_referenceshelf_on_a.gif";
+LNB_search = new Image(147,39); LNB_search.src ="/images/nav_search_off_a.gif";
+LNB_search_on = new Image(147,39); LNB_search_on.src ="/images/nav_search_on_a.gif";
+LNB_home = new Image(147,39); LNB_home.src ="/images/nav_home_off_a.gif";
+LNB_home_on = new Image(147,39); LNB_home_on.src ="/images/nav_home_on_a.gif";
+}
+
+/* This function swaps images. */
+
+function swapImage(id, newSrc) {
+    var theImage = FWFindImage(document, id, 0);
+    if (theImage) {
+        theImage.src = newSrc;
+    }
+}
+				   
+/* These functions track and set toggle group button states. */
+
+function FWFindImage(doc, name, j) {
+    var theImage = false;
+    if (doc.images) {
+        theImage = doc.images[name];
+    }
+    if (theImage) {
+        return theImage;
+    }
+    if (doc.layers) {
+        for (j = 0; j < doc.layers.length; j++) {
+            theImage = FWFindImage(doc.layers[j].document, name, 0);
+            if (theImage) {
+                return (theImage);
+            }
+        }
+    }
+    return (false);
+}
+
+// stop hiding -->
+<!------------------------------END ROLLOVER SCRIPTS---------------------->
+</SCRIPT>
+
+<style>
+
+
+.menuskin{
+position:absolute;
+width:160px;
+background-color:#336633;
+border:2px solid green;
+font:normal 12px Arial;
+line-height:12px;
+z-index:100;
+visibility:hidden;
+}
+
+.menuskin a{
+text-decoration:none;
+color:white;
+padding-left:10px;
+padding-right:10px;
+}
+
+#mouseoverstyle{
+background-color:#669966;
+}
+
+#mouseoverstyle a{
+color:white;
+}
+-->
+</style>
+
+<script language="JavaScript1.2">
+
+//Pop-it menu- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[0]='<div class="menuitems"><strong><font color="#FFFFFF">Safeway</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/seattle_news.html">-Washington</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/portland_news.html">-Oregon</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/colorado_news.html">-Colorado</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/ncal_news.html">-Northern California</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/ncal_news.html">-Hawaii</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/phoenix_news.html">-Arizona</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/east_news.html">-East Coast/Maryland</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Vons</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/vons_news.html">-Southern California</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/vons_news.html">-Las Vegas</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Genuardis</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/gen_news.html">-Philadelphia</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Dominicks</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/dom_news.html">-Illinios</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Randalls</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/randalls_news.html">-Texas</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Tom Thumb</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/tomthumb_news.html">-Texas</a></div>'
+
+linkset[1]='<div class="menuitems"><a href="http://www.tonytantillo.com/find_tony/">Television</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.tonytantillo.com/find_tony/">Radio</a></div>'
+
+////No need to edit beyond here
+
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+var ns6=document.getElementById&&!document.all
+var ns4=document.layers
+
+function showmenu(e,which){
+
+if (!document.all&&!document.getElementById&&!document.layers)
+return
+
+clearhidemenu()
+
+menuobj=ie4? document.all.popmenu : ns6? document.getElementById("popmenu") : ns4? document.popmenu : ""
+menuobj.thestyle=(ie4||ns6)? menuobj.style : menuobj
+
+if (ie4||ns6)
+menuobj.innerHTML=which
+else{
+menuobj.document.write('<layer name=gui bgColor=#E6E6E6 width=165 onmouseover="clearhidemenu()" onmouseout="hidemenu()">'+which+'</layer>')
+menuobj.document.close()
+}
+
+menuobj.contentwidth=(ie4||ns6)? menuobj.offsetWidth : menuobj.document.gui.document.width
+menuobj.contentheight=(ie4||ns6)? menuobj.offsetHeight : menuobj.document.gui.document.height
+eventX=ie4? event.clientX : ns6? e.clientX : e.x
+eventY=ie4? event.clientY : ns6? e.clientY : e.y
+
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie4? document.body.clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie4? document.body.clientHeight-eventY : window.innerHeight-eventY
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX-menuobj.contentwidth : ns6? window.pageXOffset+eventX-menuobj.contentwidth : eventX-menuobj.contentwidth
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX : ns6? window.pageXOffset+eventX : eventX
+
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.thestyle.top=ie4? document.body.scrollTop+eventY-menuobj.contentheight : ns6? window.pageYOffset+eventY-menuobj.contentheight : eventY-menuobj.contentheight
+else
+menuobj.thestyle.top=ie4? document.body.scrollTop+event.clientY : ns6? window.pageYOffset+eventY : eventY
+menuobj.thestyle.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.thestyle.visibility=(ie4||ns6)? "hidden" : "hide"
+}
+
+function dynamichide(e){
+if (ie4&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+if (ie4||ns6||ns4)
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function highlightmenu(e,state){
+if (document.all)
+source_el=event.srcElement
+else if (document.getElementById)
+source_el=e.target
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+else{
+while(source_el.id!="popmenu"){
+source_el=document.getElementById? source_el.parentNode : source_el.parentElement
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+}
+}
+}
+
+if (ie4||ns6)
+document.onclick=hidemenu
+
+</script>
+
+
+<style>
+
+
+.menuskin{
+position:absolute;
+width:160px;
+background-color:#336633;
+border:2px solid green;
+font:normal 12px Arial;
+line-height:12px;
+z-index:100;
+visibility:hidden;
+}
+
+.menuskin a{
+text-decoration:none;
+color:white;
+padding-left:10px;
+padding-right:10px;
+}
+
+#mouseoverstyle{
+background-color:#669966;
+}
+
+#mouseoverstyle a{
+color:white;
+}
+-->
+</style>
+
+<script language="JavaScript1.2">
+
+//Pop-it menu- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[0]='<div class="menuitems"><strong><font color="#FFFFFF">Safeway</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/seattle_news.html">-Washington</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/portland_news.html">-Oregon</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/colorado_news.html">-Colorado</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/ncal_news.html">-Northern California</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/ncal_news.html">-Hawaii</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/phoenix_news.html">-Arizona</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/east_news.html">-East Coast/Maryland</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Vons</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/vons_news.html">-Southern California</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/vons_news.html">-Las Vegas</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Genuardis</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/gen_news.html">-Philadelphia</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Dominicks</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/dom_news.html">-Illinios</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Randalls</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/randalls_news.html">-Texas</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Tom Thumb</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/tomthumb_news.html">-Texas</a></div>'
+
+linkset[1]='<div class="menuitems"><a href="http://www.tonytantillo.com/find_tony/">Television</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.tonytantillo.com/find_tony/">Radio</a></div>'
+
+////No need to edit beyond here
+
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+var ns6=document.getElementById&&!document.all
+var ns4=document.layers
+
+function showmenu(e,which){
+
+if (!document.all&&!document.getElementById&&!document.layers)
+return
+
+clearhidemenu()
+
+menuobj=ie4? document.all.popmenu : ns6? document.getElementById("popmenu") : ns4? document.popmenu : ""
+menuobj.thestyle=(ie4||ns6)? menuobj.style : menuobj
+
+if (ie4||ns6)
+menuobj.innerHTML=which
+else{
+menuobj.document.write('<layer name=gui bgColor=#E6E6E6 width=165 onmouseover="clearhidemenu()" onmouseout="hidemenu()">'+which+'</layer>')
+menuobj.document.close()
+}
+
+menuobj.contentwidth=(ie4||ns6)? menuobj.offsetWidth : menuobj.document.gui.document.width
+menuobj.contentheight=(ie4||ns6)? menuobj.offsetHeight : menuobj.document.gui.document.height
+eventX=ie4? event.clientX : ns6? e.clientX : e.x
+eventY=ie4? event.clientY : ns6? e.clientY : e.y
+
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie4? document.body.clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie4? document.body.clientHeight-eventY : window.innerHeight-eventY
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX-menuobj.contentwidth : ns6? window.pageXOffset+eventX-menuobj.contentwidth : eventX-menuobj.contentwidth
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX : ns6? window.pageXOffset+eventX : eventX
+
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.thestyle.top=ie4? document.body.scrollTop+eventY-menuobj.contentheight : ns6? window.pageYOffset+eventY-menuobj.contentheight : eventY-menuobj.contentheight
+else
+menuobj.thestyle.top=ie4? document.body.scrollTop+event.clientY : ns6? window.pageYOffset+eventY : eventY
+menuobj.thestyle.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.thestyle.visibility=(ie4||ns6)? "hidden" : "hide"
+}
+
+function dynamichide(e){
+if (ie4&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+if (ie4||ns6||ns4)
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function highlightmenu(e,state){
+if (document.all)
+source_el=event.srcElement
+else if (document.getElementById)
+source_el=e.target
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+else{
+while(source_el.id!="popmenu"){
+source_el=document.getElementById? source_el.parentNode : source_el.parentElement
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+}
+}
+}
+
+if (ie4||ns6)
+document.onclick=hidemenu
+
+</script>
+
+
+
+<!-- Start Superstats code version 3.0b. http://v2.superstats.com -->
+     <script language="JavaScript">
+     /* You may give each page an identifying name, server, and channel
+     on the next lines. */
+     var pageName = "WinterSquash";
+     /**** DO NOT ALTER ANYTHING BELOW THIS LINE! ****/
+     var code = ' ';
+	 </script>
+     <script src="http://code.superstats.com/code/ss/jbfarrell/0/30b">
+     </script><script language="JavaScript">
+     br = navigator.appName + parseInt(navigator.appVersion);
+     if (code != ' ' || br == 'Netscape2') document.write(code);
+     else document.write('<a' + ' href="http://stats.superstats.com/c/ss/jbfarrell" target="_top"><img' + ' src="http://stats.superstats.com/b/ss/jbfarrell/1' + '?pageName=' + escape(pageName) + '" border=0></a>');
+     document.write('<'); document.write('!-- ');
+     </script>
+	 <noscript><img src="http://stats.superstats.com/b/ss/jbfarrell/1" border=0>
+	 </noscript>
+     <script language="JavaScript">
+     document.write(' --'); document.write('>');
+     </script>
+	 <!-- End Superstats tracking code. -->
+</HEAD>
+
+<BODY background="/images/background_strip.gif" link="#336633" vlink="#669966">
+
+<table width="640" border="0" cellpadding="0" cellspacing="0">
+
+<tr><td>
+
+<table width="167" border="0" cellpadding="0" cellspacing="0" align="LEFT">
+
+<tr><td>
+<br><br>
+
+<!-------------------- begin nav ------------------------>
+<a href="/index.html" onMouseOut="swapImage('LNB_home','/images/nav_home_off_a.gif');"  onMouseOver="swapImage('LNB_home','/images/nav_home_on_a.gif');"  target="_top"><img src="/images/nav_home_off_a.gif" name="LNB_home" width=147 height=31 border=0></a><br>
+
+<a href="/fruits/index.html" onMouseOut="swapImage('LNB_fruits','/images/nav_fruits_off_a.gif');"  onMouseOver="swapImage('LNB_fruits','/images/nav_fruits_on_a.gif');"  target="_top"><img src="/images/nav_fruits_off_a.gif" name="LNB_fruits" width=147 height=24 border=0></a><br>
+
+<a href="/vegetables/index.html" target="_top"><img src="/images/nav_vegetables_on_a.gif" name="LNB_vegetables" width=147 height=24 border=0></a><br>
+
+
+<a href="/herbs/index.html" onMouseOut="swapImage('LNB_herbs','/images/nav_herbs_off_a.gif');"  onMouseOver="swapImage('LNB_herbs','/images/nav_herbs_on_a.gif');"  target="_top"><img src="/images/nav_herbs_off_a.gif" name="LNB_herbs" width=147 height=24 border=0></a><br>
+
+<a href="/recipes/index.html" onMouseOut="swapImage('LNB_recipes','/images/nav_recipes_off_a.gif');"  onMouseOver="swapImage('LNB_recipes','/images/nav_recipes_on_a.gif');"  target="_top"><img src="/images/nav_recipes_off_a.gif" name="LNB_recipes" width=147 height=24 border=0 alt=""></a><br>
+
+<a href="/find_tony/index.html" onMouseOut="swapImage('LNB_findtony','/images/nav_findtony_off_a.gif');"  onMouseOver="swapImage('LNB_findtony','/images/nav_findtony_on_a.gif');"  target="_top"><img src="/images/nav_findtony_off_a.gif" name="LNB_findtony" width=147 height=24 border=0 alt=""></a><br>
+
+<a href="/reference/index.html" onMouseOut="swapImage('LNB_referenceshelf','/images/nav_referenceshelf_off_a.gif');"  onMouseOver="swapImage('LNB_referenceshelf','/images/nav_referenceshelf_on_a.gif');"  target="_top"><img src="/images/nav_referenceshelf_off_a.gif" name="LNB_referenceshelf" width=147 height=24 border=0 alt=""></a><br>
+
+<div id="popmenu" class="menuskin" onMouseover="clearhidemenu();highlightmenu(event,'on')" onMouseout="highlightmenu(event,'off');dynamichide(event)">
+</div>
+
+
+<a href="#" onMouseover="showmenu(event,linkset[0]); swapImage('LNB_newsletter','/images/nav_newsletter_on_a.gif');" onMouseout="delayhidemenu(); swapImage('LNB_newsletter','/images/nav_newsletter_off_a.gif');"><img src="/images/nav_newsletter_off_a.gif" name="LNB_newsletter" width=147 height=24 border=0></a><br>
+
+<a href="/search/index.html" onMouseOut="swapImage('LNB_search','/images/nav_search_off_a.gif');"  onMouseOver="swapImage('LNB_search','/images/nav_search_on_a.gif');"  target="_top"><img src="/images/nav_search_off_a.gif" name="LNB_search" width=147 height=86 border=0 alt=""></a><br><br>
+
+<!------------------------ end nav ------------------------>
+</td></tr>
+
+</table>
+
+<table width="480" border="0" cellspacing="0" cellpadding="0" valign="top">
+<br>
+<tr>
+
+<td align="right"><img src="/images/header_veg_wintersquash.gif" width=480 height=28 border=0 alt="" align="right"></td></tr>
+
+</table>
+
+<table width="480" border="0" cellpadding="10" cellspacing="0" align="right">
+<tr><td>
+
+<img src="/images/pic_winter_squash.jpg" width=155 height=155 border=0 align="right" alt="Winter Squash" hspace="7" vspace="5">
+
+<font face="Arial" size="2">
+Most of us have grown up with a pretty limited view of squash. Zucchini from our garden in the summer,
+and Halloween jack-o'-lanterns and holiday pumpkin pie in the fall and winter Oh, we might have an acorn
+squash here and there, but that's about it. One of the reasons we might not appreciate squash comes from
+not knowing how to cook it, which means we usually overcook it. <p></p>
+
+Squash is a gourd, (a fleshy vegetable protected by a rind,) and some grow on a vine and others on a
+bush. Squash is normally divided into winter and summer varieties, but since both types are now
+available almost year round, it makes more sense to divide them into soft (summer) and hard-shelled
+(winter) varieties. Did you know that both summer and winter squash have edible flowers? Find out more
+about these delicate and delicious squash blossoms under selection, storage, and varieties. <p></p>
+
+Hard-shelled squash has grown to maturity with thicker, harder, inedible skins and firm, fully developed
+seeds. The flesh is a yellow or orange color that is darker than the soft-shelled varieties with more
+nutrients and a higher amount of complex carbohydrates. There is also more variety in color, size,
+shape, and flavor than the soft-shelled varieties. They can range in size from a small acorn squash,
+which can weigh not much more than a Rome apple, to the banana squash that can weigh 70 pounds.<p></p>
+
+Florida is the largest producer of squash, followed closely by California. Georgia and New Jersey are
+also large squash-producing states. <p></p>
+
+<img src="/images/nutritional_squash_winter.gif " width=155 height=325 border=0 align="right" alt="Winter Squash Nutrition" hspace="7" vspace="5">
+
+<a name="select"><font face="Arial" color="#336633" size="2"><b> Storage &amp; Selection</b></font></a><br>
+Winter squash is more difficult to select because any defects are harder to spot. Squash that is heavy
+for its size is a good indicator of quality, because it will have more moisture and less of a tendency
+to be dry and stringy. The shells should have a deep color, but not shiny, and hard without cracks or
+soft spots. A shiny skin means that it was picked too early, and won't have the sweet flavor it would if
+picked when mature. Ideally it should have the stem still attached. Look for a stem that is rounded and
+dry, not collapsed, blackened, or moist. Winter squash should also be true to its color, i.e. butternut
+squash that is a deep orange instead of a light tan on the outside should be avoided. If you buy precut
+quarters or chunks wrapped in plastic, look for good interior color and fine-grained flesh.<p></p>
+
+Winter squash should not be refrigerated unless cut. Stored at 50°F to 55°F away from light in a well
+ventilated spot with low humidity,  it will keep for up to three months. Cut squash will keep about one
+week when wrapped tightly and refrigerated. <p></p>
+
+Squash Blossoms are naturally soft and somewhat limp, but select those with closed buds, that look
+fresh. They are usually found from late spring through early fall in specialty produce markets. They
+should only be stored in the refrigerator one day as they are very perishable.<p></p>
+
+ 
+
+<a name="prep"><font face="Arial" color="#336633" size="2"><b>Preparation</b></font></a><br>
+Winter squash is not usually peeled before cooking although there is no reason why it can't be. The best
+way to accomplish this is to take a butternut squash, for example, halve it lengthwise, then put it cut
+side down on a work surface, and peel the skin with a sturdy vegetable peeler. To peel a round squash,
+leave it whole. If you want the squash to be more stable on the work surface, cut a small slice off the
+bottom to keep it from rolling.<p></p>
+
+Cut the peeled squash in half and remove the seeds and any stringy fiber. Then halve again and cut into
+cubes or other desired shapes for steaming, boiling, or baking. Although it is more common to sauté
+shredded or small pieces of cut,  soft-shelled squash until tender, there isn't any reason you can't do
+it with hard-shelled squash as well. Add a splash of stock or water if the pan dries out before the
+squash is completely cooked.<p></p>
+
+Squash is usually steamed or baked unpeeled. Take an acorn squash, for example, halve it lengthwise,
+remove the seeds, and put it cut side down in a shallow baking pan with half an inch of water. It will
+cook in a 375°F oven in about 45 to 55 minutes, depending on its size. Steaming will take about the same
+amount of time, while cooking in a microwave uncovered at full power takes about 10 minutes. The flesh
+can then be scooped out for purée, or the skin can be peeled off (a lot easier than when raw.) This is
+particularly true with acorn and butternut varieties. <p></p>
+
+The cavities of some squash are perfect for stuffing. Acorn squash offers the most variety in size and
+you can probably get ones small enough to make two servings when the halves are stuffed. Delicata squash
+is another one with a good cavity for stuffing.<p></p>
+<img src="/images/seasonal_wintersquash.gif" width=155 height=305 border=0 align="right" alt="Winter Squash Seasons">
+Seasonings used with winter squash are similar to what goes well with sweet potatoes: brown sugar,
+vanilla, cinnamon, nutmeg, allspice, cloves, and ginger (fresh, powdered, or candied.) Cooked garlic
+adds a nutty mellowness and Chinese five-spice powder adds an exotic note. Spaghetti squash is the
+exception, which in many ways can be treated like pasta with the same kinds of sauces, especially tomato
+sauce.<p></p>
+
+Squash blossoms are prepared most often coated with a light batter, and sautéed. They can also be
+stuffed with ingredients such as soft cheese and then baked, or dipped in batter and fried.  <p></p>
+
+
+<font face="Arial" color="#d14719" size="2"><b>Tony's Tip</b><br>
+To toast the seeds of winter squash, rinse them well in a colander and let them dry. Spread on an oiled
+sheet pan and bake at 250°F for 1 hour, raising the temperature to 400°F during the last 5 minutes to
+brown lightly. Salt if desired and store in an airtight container.</font> <p></p> 
+
+<font face="Arial" color="#336633" size="2"><b>Tony's Favorite Recipe </b></font><br>
+<a href="/recipes/vegsides_rec.html#acorn" target="_new">Baked Acorn Squash Rings</a> <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Varieties</b></font> <br>
+<a name="acorn" id="acorn"><font face="Arial" color="#336633" size="2"><b>Acorn </b></font></a> squash (also called table queen,
+Des Moines, and Danish) has an acorn shape with distinct furrows. It is mostly dark green, although
+there is a golden acorn that can range from yellow to orange in color. (Some green acorn squash will
+ have yellow or orange blotches and, in fact, this is desirable as long as it does not cover more than
+ half the surface.) The flesh of both is yellow-orange and the flavor is mild and sweet. <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Banana</b></font>  squash is creamy white to pale orange
+in color, tubular shaped with tapered ends with a golden flesh that is hearty and moist. <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Butternut</b></font>  squash (also called an African
+bell) is a light tan color, and bell-shaped with a very flavorful deep orange flesh.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Hubbard </b></font> squash has a bumpy, thick skin with a
+golden, bluish-gray or green color. The flesh is rich and slightly sweeter than the banana.<p></p>
+
+<a name="deli" id="deli">The <font face="Arial" color="#336633" size="2"><b>Delicata </b></font></a> is also called a sweet potato or
+bohemian squash. It is somewhat cylindrical, although the base may flare out a bit. The yellow shell has
+furrows with green stripes and reddish-brown mottling. The flesh is pale yellow-orange, with an aroma
+and mild flavor reminiscent of fresh corn. <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Sweet Dumpling</b></font>  looks like a squatter cousin
+to the Delicata with a pale yellow, green-streaked colored skin, flesh that is a deeper, richer orange
+and an exceptionally sweet flavor.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Japanese or Kabocha </b></font> squash is round with a
+flattened top and dark green color punctuated by white streaks. The deep orange flesh is flavorful but
+less moist than most other squash, akin to the fluffiness of a Russet potato. <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Calabaza </b></font> is the generic Spanish term for
+squash (usually from Mexico or the Caribbean.) Squash available commercially under that name is usually
+round and tan with a mild yellow-orange flesh.<p></p>
+
+<a name="spaghetti"><font face="Arial" color="#336633" size="2"><b>Spaghetti </b></font></a> squash is noted for its cooked
+flesh that turns into spaghetti-like strands when scooped out. It is large, yellow, oval, and looks
+more like a melon than a squash. <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Mediterranean </b></font> squash looks like a large
+butternut on the outside with a similar flesh; it weighs 8 to 10 pounds.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Turban </b></font> squash looks as if it is wrapped in
+layers. It is mostly red-orange with green and white accents. Though most turban squash, particularly
+the larger varieties, are better to look at than to eat, the smaller, dark green buttercup has a nutty,
+sweet, deep orange flesh with a mealy texture that is good for pies.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Squash Blossoms</b></font>  are the flowers from both
+soft and hard-shelled squash. They come in varying shades of yellow and orange, with a flavor similar
+to the squash itself. Use as a garnish, either slivered or whole, for almost everything from soup to
+main dishes, or use them to add color and flavor to salads. <p></p><br><br>
+
+
+
+</font>
+</td></tr>
+
+</table>
+
+</td></tr>
+
+</table>
+
+<table width="630" border="0" cellpadding="0" cellspacing="0">
+
+<tr><td width="157">&nbsp;</td>
+
+<td valign="bottom"><font face="Arial" size="1">website owned &amp; syndicated by Farm Fresh, LLC all rights reserved</font></td>
+
+<td valign="top" rowspan="1"><a href="/index.html"><img src="../images/farmfresh_logo.gif" width=145 height=39 border=0 align="top" alt="Logo"></a></td></tr>
+
+<tr><td colspan="8" align="right" valign="top"><img src="/images/bottom_bar.gif" width=579 height=5 border=0 alt="bar"></td></tr>
+
+</Table>
+
+<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+
+<tr>
+
+<td width="6%" align="center"><font face="Arial" size="1" color="#336600"><a href="/index.html">Home</a></font></td>
+
+<td width="8%" align="center"><font face="Arial" size="1" color="#336600"><a href="/fruits/index.html">Fruits</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/vegetables/index.html">Vegetables</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/herbs/index.html">Herbs</a></font></td>
+
+<td width="8%" align="center"><font face="Arial" size="1" color="#336600"><a href="/recipes/index.html">Recipes</a></font></td>
+
+<td width="11%" align="center"><font face="Arial" size="1" color="#336600"><a href="/find_tony/index.html">Find Tony</a></font></td>
+
+<td width="15%" align="center"><font face="Arial" size="1" color="#336600"><a href="/reference/index.html">Reference Shelf</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/reference/ncal_news.html">Newsletters</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/search/index.html">Search</a></font></td></tr>
+
+</table>
+</BODY>
+</HTML>

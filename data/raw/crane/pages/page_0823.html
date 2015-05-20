@@ -1,0 +1,505 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=GB2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Crane_files/filelist.xml">
+<link rel=Edit-Time-Data href="./Crane_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Determine Weight and Location of Counterweight for Tower Crane</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Fengfeng Zhou</o:Author>
+  <o:LastAuthor>Fengfeng Zhou</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>2468</o:TotalTime>
+  <o:Created>2003-12-12T04:39:00Z</o:Created>
+  <o:LastSaved>2003-12-12T05:05:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1064</o:Words>
+  <o:Characters>6067</o:Characters>
+  <o:Lines>50</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>7450</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-fareast-language:ZH-CN;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-fareast-language:ZH-CN;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-fareast-language:ZH-CN;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:67847208;
+	mso-list-type:hybrid;
+	mso-list-template-ids:127063026 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:374358380;
+	mso-list-type:hybrid;
+	mso-list-template-ids:467718416 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1135684045;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-818402066 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1507598138;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1383601984 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body style='tab-interval:.5in' lang=EN-US onLoad="MM_preloadImages('Media/HomeLink.gif','Media/ResumeLink.gif','Media/ReflecLink.gif','Media/MagLink.gif')">
+<div class=Section1> 
+  <table width="600" border="0" align="center" cellspacing="0">
+    <tr>
+      <td><div align="center"><a href="lecture2.htm"><img src="Media/Lecturebutton.gif" width="120" height="55" border="0"></a></div></td>
+      <td><div align="center"><a href="lecture2.htm"><img src="Media/Assessbutton.gif" width="120" height="55" border="0"></a></div></td>
+      <td><div align="center"><a href="evaluation2.htm"><img src="Media/Evaluationbutton.gif" width="120" height="55" border="0"></a></div></td>
+    </tr>
+  </table>
+  <p class=MsoTitle>&nbsp;</p>
+  <p class=MsoTitle>Lesson Plan --- Cranes</p>
+
+<p class=MsoTitle align=left style='text-align:left'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><i>Subject and Grade Level:</i> Physics for seniors</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><i>Objectives:<o:p></o:p></i></p>
+
+<p class=MsoNormal><i><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></i></p>
+
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'> 
+    <![if !supportLists]>
+    1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+    <![endif]>
+    Students will be able to experimentally determine the minimum force in the 
+    string which holds the jib of a model crane in place.<span
+style="mso-spacerun: yes">&nbsp; </span>They will also be able to solve the same 
+    problem mathematically.</p>
+
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'> 
+    <![if !supportLists]>
+    2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+    <![endif]>
+    Students will learn how to improve the design of a given model crane.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Students will be able to solve a practical problem ---
+determine the weight and location of counterweight of a model tower crane.<span
+style="mso-spacerun: yes">&nbsp; </span>They will also be able to
+mathematically solve the same problem.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Students will understand the concept of critical state and
+small disturbance.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'><![if !supportLists]>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Students will be able to find experimentally the gravity
+center of the model tower crane.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'><![if !supportLists]>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Students will know the scientific way to evaluate their
+findings.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .25in'><![if !supportLists]>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Students will understand how the technology of designing,
+constructing, and erecting huge cranes is driven and developed by human needs.</p>
+
+  <p class=MsoNormal>
+    <![if !supportEmptyParas]>
+    &nbsp;
+    <![endif]>
+  </p>
+  <table width="100%" border="0" cellspacing="5">
+    <tr>
+      <td><img src="Media/Crane1-1.jpg" width="590" height="422"></td>
+      <td><img src="Media/Crane2-1.jpg" width="590" height="422"></td>
+    </tr>
+  </table><br>
+  <p class=MsoNormal><i>Standards addressed:</i></p>
+<br>
+<p class=MsoNormal><b>Science:<o:p></o:p></b></p>
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Construct, interpret and apply physical and conceptual models
+that represent or explain systems, objects, events or concepts.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Identify a problem or need, propose designs and choose among
+alternative solutions for the problem.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Describe how a physical, chemical or ecological system in
+equilibrium may return to the same state of equilibrium if the disturbances it
+experiences are small.<span style="mso-spacerun: yes">&nbsp; </span>Large
+disturbances may cause it to escape that equilibrium and eventually settle into
+some other state of equilibrium.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Research how scientific inquiry is driven by the desire to
+understand the natural world and how technological design is driven by the need
+to meet human needs and solve human problems.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b>Math:<o:p></o:p></b></p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal>Use trigonometric relationships to verify and determine
+solutions in problem situation.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b>Technology:<o:p></o:p></b></p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal>Students will develop abilities to apply the design process.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><i>Materials:<o:p></o:p></i></p>
+
+<p class=MsoNormal><i><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></i></p>
+
+<p class=MsoNormal>Each group of students need:</p>
+
+  <p class=MsoBodyText>Two model cranes as shown in the following figure, a pulley, 
+    a spring scale, some weights, a protractor, a ruler, and pieces of string.</p>
+  <p class=MsoBodyText>&nbsp;</p>
+  <table width="575" border="0" align="center" cellspacing="0">
+    <tr>
+      <td><img src="Media/modelCrane.gif" width="575" height="277"></td>
+    </tr>
+  </table>
+  <p class=MsoBodyText>&nbsp;</p>
+
+<p class=MsoNormal>Students will be put in groups with 2 or 3 students in a
+group.<span style="mso-spacerun: yes">&nbsp; </span>Note: the bar with a pulley
+at one end will not be given to students until Step 6 of Activity one.</p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>Activity One:</b></p>
+
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'> 
+    <![if !supportLists]>
+    1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+    <![endif]>
+    Show students pictures about crane.<span style="mso-spacerun:
+yes">&nbsp; </span>Ask students to hold the jib of the given crane in a position 
+    such that the angle θ between the jib and the pedestal is 60<a
+name="OLE_LINK1">&#730;</a>.<span style="mso-spacerun: yes">&nbsp; </span>The 
+    string attached to one end of the jib is the control to change this angle.<span
+style="mso-spacerun: yes">&nbsp; </span>Ask students to put a load of 100 grams 
+    at the free end of the jib.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to attach the other end of the string to points
+at different positions either on the pedestal or the wall (such as those
+indicated in the figure).<span style="mso-spacerun: yes">&nbsp; </span>Ask them
+to record the force F in the string on their worksheet.<span
+style="mso-spacerun: yes">&nbsp; </span>The purpose of this step is to find the
+minimum value of F.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to mathematically determine the minimum value of
+F.<span style="mso-spacerun: yes">&nbsp; </span>Ask them to record their
+solutions on the worksheet, compare the mathematical and experiment results, and
+calculate the relative error.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to repeat Step 2 but vary angle θ to different
+values such as 30&#730;, 45&#730;, and 75&#730;.<span style="mso-spacerun: yes">&nbsp;
+</span>Ask them to record the value of F for each case.<span
+style="mso-spacerun: yes">&nbsp; </span>Ask them how the variation of θ affects
+F.</p>
+
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'> 
+    <![if !supportLists]>
+    5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+    <![endif]>
+    Suppose angle θ is 60&#730;, ask students to figure out a way to improve the 
+    design of the given crane without using the wall (There is not a wall in a 
+    real hoist.) so that the force in the string will still be the minimum.<span style="mso-spacerun: yes">&nbsp; 
+    </span>Ask students to draw their improved design, if any, on the worksheet.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'><![if !supportLists]>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Give students the bar with a pulley on one end.<span
+style="mso-spacerun: yes">&nbsp; </span>Tell them they may use it to reduce the
+force in the string.</p>
+
+  <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l3 level1 lfo3;
+tab-stops:list .25in'> 
+    <![if !supportLists]>
+    7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span> 
+    <![endif]>
+    With their improved crane, ask students to repeat Step 4.<span
+style="mso-spacerun: yes">&nbsp; </span>Ask them to compare the magnitude of F 
+    with that they got in Step 4.<span style="mso-spacerun: yes">&nbsp; </span>They 
+    should get better results (smaller F).<span style="mso-spacerun: yes">&nbsp; 
+    </span>This step serves as a confirmation that the performance of their cranes 
+    is indeed improved.</p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>Activity Two:<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Show students pictures about tower crane.<span
+style="mso-spacerun: yes">&nbsp; </span>Tell them the basic parts of a tower
+crane such as jib and mast.<span style="mso-spacerun: yes">&nbsp;
+</span>Emphasize that preventing a tower crane from toppling is an important
+issue to be considered when designing and erecting a tower crane.<span
+style="mso-spacerun: yes">&nbsp; </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Guide students to experimentally determine the weight of the
+counterweight of the model tower crane and the exact location where the
+counterweight should be hung on the jib of the crane.<span style="mso-spacerun:
+yes">&nbsp; </span>Tell students that some specifications of a crane should be
+determined as the first step of designing the crane according to customer
+demand.<span style="mso-spacerun: yes">&nbsp; </span>These specifications
+include maximum reach (R) and maximum lifting power (P) of the crane.<span
+style="mso-spacerun: yes">&nbsp; </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to hang 500 grams of weight at the end of the
+longer arm of the jib and balance the crane with <u>minimum</u> weight on the
+shorter arm of the jib.<span style="mso-spacerun: yes">&nbsp; </span>Ask them
+to move the counterweight as <u>close</u> to the mast as possible while keeping
+the crane in balance.<span style="mso-spacerun: yes">&nbsp; </span>Ask them to
+record on the worksheet the total weight they added on the shorter arm and the
+location where the weight hangs on.<span style="mso-spacerun: yes">&nbsp;
+</span>Origin of the coordinate system is at the conjunction of the centerlines
+of the mast and jib.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Tell students the crane is in critical equilibrium
+(state).<span style="mso-spacerun: yes">&nbsp; </span>If more weight is added
+on the longer arm, the crane will topple.<span style="mso-spacerun: yes">&nbsp;
+</span>However, if a trivial weight is added on the longer arm, the crane may
+rotate a little and remain in equilibrium.<span style="mso-spacerun:
+yes">&nbsp; </span>The trivial load is a small disturbance.<span
+style="mso-spacerun: yes">&nbsp; </span>A physical, chemical, or ecological
+system in critical equilibrium may remain in equilibrium when it experiences a
+small disturbance.<span style="mso-spacerun: yes">&nbsp; </span>Give students
+several examples of critical equilibrium and small disturbance.<span
+style="mso-spacerun: yes">&nbsp; </span>Ask students to give examples, too and
+record their examples on the worksheet.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to remove the load on the longer arm of the jib
+and adjust, if necessary, the weight and location of the counterweight to
+balance the crane.<span style="mso-spacerun: yes">&nbsp; </span>Tell them this
+is another critical state of the crane.<span style="mso-spacerun: yes">&nbsp;
+</span>Ask them to record on the worksheet the adjusted weight and location of
+the counterweight, if any.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to determine the minimum weight and distance of
+the counterweight such that the crane can maintain equilibrium in both critical
+states.<span style="mso-spacerun: yes">&nbsp; </span>Ask them to record on
+their worksheet the final values of the weight and location of the
+counterweight.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to try some middle states which lie between the
+two critical states.<span style="mso-spacerun: yes">&nbsp; </span>The crane
+should not topple in these middle states.<span style="mso-spacerun: yes">&nbsp;
+</span>Tell students a system will be in equilibrium in any other states as
+long as it can keep its equilibrium in any critical states.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Tell students the self-weight of the crane.<span
+style="mso-spacerun: yes">&nbsp; </span>Ask them to find the gravity center of
+the crane themselves.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Ask students to determine the weight and location of the
+counterweight mathematically, then compare the mathematical results with the
+experimental results and calculate the errors, if any.<span
+style="mso-spacerun: yes">&nbsp; </span>The errors should not exceed 5%.<span
+style="mso-spacerun: yes">&nbsp; </span>Ask them to write their solutions on
+the worksheet.<span style="mso-spacerun: yes">&nbsp; </span>Tell students that
+acceptable errors are problem-dependent.<span style="mso-spacerun: yes">&nbsp;
+</span>For some engineering problems, the error may be as large as 15% and
+still be considered as good due the complexity of the problem and related
+limitations.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo1;
+tab-stops:list .25in'><![if !supportLists]>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><![endif]>Tell students how a tower crane is fixed on the ground in
+reality.<span style="mso-spacerun: yes">&nbsp; </span>Instead of using a
+pedestal, a real tower crane is anchored on a heavy concrete pad by large bolts
+to maintain its stability.<span style="mso-spacerun: yes">&nbsp; </span>Tell students
+there may be one or two mobile counterweight in addition to fixed counterweight
+for large capacity tower crane.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+  <p class=MsoNormal><i>Assessment:<o:p></o:p></i> Check students’ worksheet.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <table width="600" border="0" align="center">
+    <tr> 
+      <td><div align="center"><a href="index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('homeLink','','Media/HomeLink.gif',1)"><img src="Media/Button.gif" name="homeLink" width="140" height="61" border="0"></a></div></td>
+      <td><div align="center"><a href="MagneticField.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('magnetLink','','Media/MagLink.gif',1)"><img src="Media/Button.gif" name="magnetLink" width="140" height="61" border="0"></a></div></td>
+      <td><div align="center"><a href="RESUME.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bottomLink3','','Media/ResumeLink.gif',1)"><img src="Media/Button.gif" name="bottomLink3" width="140" height="61" border="0"></a></div></td>
+      <td><div align="center"><a href="reflection.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bottomLink4','','Media/ReflecLink.gif',1)"><img src="Media/Button.gif" name="bottomLink4" width="140" height="61" border="0"></a></div></td>
+    </tr>
+  </table>
+  <p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>Threatened and Endganered Species</title>
+		<csscriptdict>
+			<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+CSIsW3CDOM = ((document.getElementById) && !(IsIE()&&CSBVers<6)) ? true : false;
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { if (CSIsW3CDOM) return document.getElementById(s).style; else return CSFindElement(s,0);  }
+CSIImg=false;
+function CSInitImgID() {if (!CSIImg && document.images) { for (var i=0; i<document.images.length; i++) { if (!document.images[i].id) document.images[i].id=document.images[i].name; } CSIImg = true;}}
+function CSFindElement(n,ly) { if (CSBVers<4) return document[n];
+	if (CSIsW3CDOM) {CSInitImgID();return(document.getElementById(n));}
+	var curDoc = ly?ly.document:document; var elem = curDoc[n];
+	if (!elem) {for (var i=0;i<curDoc.layers.length;i++) {elem=CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSGetImage(n) {if(document.images) {return ((!IsIE()&&CSBVers<5)?CSFindElement(n,0):document.images[n]);} else {return null;}}
+CSDInit=false;
+function CSIDOM() { if (CSDInit)return; CSDInit=true; if(document.getElementsByTagName) {var n = document.getElementsByTagName('DIV'); for (var i=0;i<n.length;i++) {CSICSS2Prop(n[i].id);}}}
+function CSICSS2Prop(id) { var n = document.getElementsByTagName('STYLE');for (var i=0;i<n.length;i++) { var cn = n[i].childNodes; for (var j=0;j<cn.length;j++) { CSSetCSS2Props(CSFetchStyle(cn[j].data, id),id); }}}
+function CSFetchStyle(sc, id) {
+	var s=sc; while(s.indexOf("#")!=-1) { s=s.substring(s.indexOf("#")+1,sc.length); if (s.substring(0,s.indexOf("{")).toUpperCase().indexOf(id.toUpperCase())!=-1) return(s.substring(s.indexOf("{")+1,s.indexOf("}")));}
+	return "";
+}
+function CSGetStyleAttrValue (si, id) {
+	var s=si.toUpperCase();
+	var myID=id.toUpperCase()+":";
+	var id1=s.indexOf(myID);
+	if (id1==-1) return "";
+	s=s.substring(id1+myID.length+1,si.length);
+	var id2=s.indexOf(";");
+	return ((id2==-1)?s:s.substring(0,id2));
+}
+function CSSetCSS2Props(si, id) {
+	var el=document.getElementById(id);
+	if (el==null) return;
+	var style=document.getElementById(id).style;
+	if (style) {
+		if (style.left=="") style.left=CSGetStyleAttrValue(si,"left");
+		if (style.top=="") style.top=CSGetStyleAttrValue(si,"top");
+		if (style.width=="") style.width=CSGetStyleAttrValue(si,"width");
+		if (style.height=="") style.height=CSGetStyleAttrValue(si,"height");
+		if (style.visibility=="") style.visibility=CSGetStyleAttrValue(si,"visibility");
+		if (style.zIndex=="") style.zIndex=CSGetStyleAttrValue(si,"z-index");
+	}
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+function CSButtonReturn () { return !CSClickReturn(); }
+CSIm=new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img=CSGetImage(n);
+			if (img&&typeof(CSIm[n][i].src)!="undefined") {img.src=CSIm[n][i].src;}
+			if(i!=0) self.status=CSIm[n][3]; else self.status=" ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im=action[1];
+	if (document.images) {
+		CSIm[im]=new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i]!='') {CSIm[im][i-2]=new Image(); CSIm[im][i-2].src=action[i];}
+			else CSIm[im][i-2]=0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}			
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+function CSSetImageURL(action) {
+	var img=CSGetImage(action[1]);
+	if (img) img.src=action[2];
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_04',/*URL*/'../../images/ccnavbar_04.gif',/*URL*/'../../images/ccnavbar_04-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_05',/*URL*/'../../images/ccnavbar_05.gif',/*URL*/'../../images/ccnavbar_05-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_06',/*URL*/'../../images/ccnavbar_06.gif',/*URL*/'../../images/ccnavbar_06-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_07',/*URL*/'../../images/ccnavbar_07.gif',/*URL*/'../../images/ccnavbar_07-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_08',/*URL*/'../../images/ccnavbar_08.gif',/*URL*/'../../images/ccnavbar_08-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_09',/*URL*/'../../images/ccnavbar_09.gif',/*URL*/'../../images/ccnavbar_09-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbar_10',/*URL*/'../../images/ccnavbar_10.gif',/*URL*/'../../images/ccnavbar_10-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_01',/*URL*/'../../images/ccnavbr2_01.gif',/*URL*/'../../images/ccnavbr2_01-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_02',/*URL*/'../../images/ccnavbr2_02.gif',/*URL*/'../../images/ccnavbr2_02-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_03',/*URL*/'../../images/ccnavbr2_03.gif',/*URL*/'../../images/ccnavbr2_03-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_04',/*URL*/'../../images/ccnavbr2_04.gif',/*URL*/'../../images/ccnavbr2_04-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_05',/*URL*/'../../images/ccnavbr2_05.gif',/*URL*/'../../images/ccnavbr2_05-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_06',/*URL*/'../../images/ccnavbr2_06.gif',/*URL*/'../../images/ccnavbr2_06-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_07',/*URL*/'../../images/ccnavbr2_07.gif',/*URL*/'../../images/ccnavbr2_07-over.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'ccnavbr2_08',/*URL*/'../../images/ccnavbr2_08.gif',/*URL*/'../../images/ccnavbr2_08-over.gif',/*URL*/'','');
+CSAct[/*CMP*/ 'BA32262C172'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_01',/*URL*/ '../../images/ccnavbr2_01-over.gif');
+CSAct[/*CMP*/ 'BA32262C174'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_01',/*URL*/ '../../images/ccnavbr2_01.gif');
+CSAct[/*CMP*/ 'BA32262C176'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_02',/*URL*/ '../../images/ccnavbr2_02-over.gif');
+CSAct[/*CMP*/ 'BA32262C178'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_02',/*URL*/ '../../images/ccnavbr2_02.gif');
+CSAct[/*CMP*/ 'BA32262C180'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_03',/*URL*/ '../../images/ccnavbr2_03-over.gif');
+CSAct[/*CMP*/ 'BA32262C182'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_03',/*URL*/ '../../images/ccnavbr2_03.gif');
+CSAct[/*CMP*/ 'BA32262C184'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_04',/*URL*/ '../../images/ccnavbr2_04-over.gif');
+CSAct[/*CMP*/ 'BA32262C186'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_04',/*URL*/ '../../images/ccnavbr2_04.gif');
+CSAct[/*CMP*/ 'BA32262C188'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_05',/*URL*/ '../../images/ccnavbr2_05-over.gif');
+CSAct[/*CMP*/ 'BA32262C190'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_05',/*URL*/ '../../images/ccnavbr2_05.gif');
+CSAct[/*CMP*/ 'BA32262C192'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_06',/*URL*/ '../../images/ccnavbr2_06-over.gif');
+CSAct[/*CMP*/ 'BA32262C194'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_06',/*URL*/ '../../images/ccnavbr2_06.gif');
+CSAct[/*CMP*/ 'BA32262C196'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_07',/*URL*/ '../../images/ccnavbr2_07-over.gif');
+CSAct[/*CMP*/ 'BA32262C198'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_07',/*URL*/ '../../images/ccnavbr2_07.gif');
+CSAct[/*CMP*/ 'BA32262C200'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_08',/*URL*/ '../../images/ccnavbr2_08-over.gif');
+CSAct[/*CMP*/ 'BA32262C202'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbr2_08',/*URL*/ '../../images/ccnavbr2_08.gif');
+CSAct[/*CMP*/ 'BA32263B204'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_04',/*URL*/ '../../images/ccnavbar_04-over.gif');
+CSAct[/*CMP*/ 'BA32263B206'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_04',/*URL*/ '../../images/ccnavbar_04.gif');
+CSAct[/*CMP*/ 'BA32263B208'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_05',/*URL*/ '../../images/ccnavbar_05-over.gif');
+CSAct[/*CMP*/ 'BA32263B210'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_05',/*URL*/ '../../images/ccnavbar_05.gif');
+CSAct[/*CMP*/ 'BA32263B212'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_06',/*URL*/ '../../images/ccnavbar_06-over.gif');
+CSAct[/*CMP*/ 'BA32263B214'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_06',/*URL*/ '../../images/ccnavbar_06.gif');
+CSAct[/*CMP*/ 'BA32263B216'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_07',/*URL*/ '../../images/ccnavbar_07-over.gif');
+CSAct[/*CMP*/ 'BA32263B218'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_07',/*URL*/ '../../images/ccnavbar_07.gif');
+CSAct[/*CMP*/ 'BA32263B220'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_08',/*URL*/ '../../images/ccnavbar_08-over.gif');
+CSAct[/*CMP*/ 'BA32263B222'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_08',/*URL*/ '../../images/ccnavbar_08.gif');
+CSAct[/*CMP*/ 'BA32263B224'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_09',/*URL*/ '../../images/ccnavbar_09-over.gif');
+CSAct[/*CMP*/ 'BA32263B226'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_09',/*URL*/ '../../images/ccnavbar_09.gif');
+CSAct[/*CMP*/ 'BA32263B228'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_10',/*URL*/ '../../images/ccnavbar_10-over.gif');
+CSAct[/*CMP*/ 'BA32263B230'] = new Array(CSSetImageURL,/*CMP*/ 'ccnavbar_10',/*URL*/ '../../images/ccnavbar_10.gif');
+
+// --></script>
+		</csactiondict>
+		<csactions>
+			<csaction name="BA32262C172" class="Set Image URL" type="onevent" val0="ccnavbr2_01" val1="../../images/ccnavbr2_01-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C174" class="Set Image URL" type="onevent" val0="ccnavbr2_01" val1="../../images/ccnavbr2_01.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C176" class="Set Image URL" type="onevent" val0="ccnavbr2_02" val1="../../images/ccnavbr2_02-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C178" class="Set Image URL" type="onevent" val0="ccnavbr2_02" val1="../../images/ccnavbr2_02.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C180" class="Set Image URL" type="onevent" val0="ccnavbr2_03" val1="../../images/ccnavbr2_03-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C182" class="Set Image URL" type="onevent" val0="ccnavbr2_03" val1="../../images/ccnavbr2_03.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C184" class="Set Image URL" type="onevent" val0="ccnavbr2_04" val1="../../images/ccnavbr2_04-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C186" class="Set Image URL" type="onevent" val0="ccnavbr2_04" val1="../../images/ccnavbr2_04.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C188" class="Set Image URL" type="onevent" val0="ccnavbr2_05" val1="../../images/ccnavbr2_05-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C190" class="Set Image URL" type="onevent" val0="ccnavbr2_05" val1="../../images/ccnavbr2_05.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C192" class="Set Image URL" type="onevent" val0="ccnavbr2_06" val1="../../images/ccnavbr2_06-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C194" class="Set Image URL" type="onevent" val0="ccnavbr2_06" val1="../../images/ccnavbr2_06.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C196" class="Set Image URL" type="onevent" val0="ccnavbr2_07" val1="../../images/ccnavbr2_07-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C198" class="Set Image URL" type="onevent" val0="ccnavbr2_07" val1="../../images/ccnavbr2_07.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C200" class="Set Image URL" type="onevent" val0="ccnavbr2_08" val1="../../images/ccnavbr2_08-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32262C202" class="Set Image URL" type="onevent" val0="ccnavbr2_08" val1="../../images/ccnavbr2_08.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B204" class="Set Image URL" type="onevent" val0="ccnavbar_04" val1="../../images/ccnavbar_04-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B206" class="Set Image URL" type="onevent" val0="ccnavbar_04" val1="../../images/ccnavbar_04.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B208" class="Set Image URL" type="onevent" val0="ccnavbar_05" val1="../../images/ccnavbar_05-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B210" class="Set Image URL" type="onevent" val0="ccnavbar_05" val1="../../images/ccnavbar_05.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B212" class="Set Image URL" type="onevent" val0="ccnavbar_06" val1="../../images/ccnavbar_06-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B214" class="Set Image URL" type="onevent" val0="ccnavbar_06" val1="../../images/ccnavbar_06.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B216" class="Set Image URL" type="onevent" val0="ccnavbar_07" val1="../../images/ccnavbar_07-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B218" class="Set Image URL" type="onevent" val0="ccnavbar_07" val1="../../images/ccnavbar_07.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B220" class="Set Image URL" type="onevent" val0="ccnavbar_08" val1="../../images/ccnavbar_08-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B222" class="Set Image URL" type="onevent" val0="ccnavbar_08" val1="../../images/ccnavbar_08.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B224" class="Set Image URL" type="onevent" val0="ccnavbar_09" val1="../../images/ccnavbar_09-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B226" class="Set Image URL" type="onevent" val0="ccnavbar_09" val1="../../images/ccnavbar_09.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B228" class="Set Image URL" type="onevent" val0="ccnavbar_10" val1="../../images/ccnavbar_10-over.gif" urlparams="2"></csaction>
+			<csaction name="BA32263B230" class="Set Image URL" type="onevent" val0="ccnavbar_10" val1="../../images/ccnavbar_10.gif" urlparams="2"></csaction>
+		</csactions>
+	</head>
+
+	<body onload="CSScriptInit();" bgcolor="#ffffff" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" link="#8b4513" vlink="olive" alink="#f4a460">
+		<table cool width="753" height="3631" showgridx showgridy gridx="16" gridy="16" border="0" cellpadding="0" cellspacing="0">
+			<tr height="56">
+				<td width="752" height="56" valign="top" align="left" xpos="0">
+					<table width=750 border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td><img src="../../images/ccnavbar_01.gif" width=136 height=21 alt="White space"></td>
+							<td colspan=8><img src="../../images/ccnavbar_02.gif" width=614 height=21 alt="White space"></td>
+						</tr>
+						<tr>
+							<td><img src="../../images/ccnavbar_03.gif" width=136 height=35 alt="Pit River Watershed Alliance"></td>
+							<td><csobj w=59 h=35 t="Button" ht="../../images/ccnavbar_04-over.gif" al="Home" csover="BA32263B204" csout="BA32263B206"><a href="../../../index.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B204'));return CSIShow(/*CMP*/'ccnavbar_04',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B206'));return CSIShow(/*CMP*/'ccnavbar_04',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_04.gif" width="59" height="35" name="ccnavbar_04" border="0" alt="Home"></a></csobj></td>
+							<td><csobj w=89 h=35 t="Button" ht="../../images/ccnavbar_05-over.gif" al="Background" csover="BA32263B208" csout="BA32263B210"><a href="../../../backgrnd.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B208'));return CSIShow(/*CMP*/'ccnavbar_05',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B210'));return CSIShow(/*CMP*/'ccnavbar_05',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_05.gif" width="89" height="35" name="ccnavbar_05" border="0" alt="Background"></a></csobj></td>
+							<td><csobj w=81 h=35 t="Button" ht="../../images/ccnavbar_06-over.gif" al="Interactive Journey" csover="BA32263B212" csout="BA32263B214"><a href="../../../ijourn.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B212'));return CSIShow(/*CMP*/'ccnavbar_06',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B214'));return CSIShow(/*CMP*/'ccnavbar_06',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_06.gif" width="81" height="35" name="ccnavbar_06" border="0" alt="Interactive Journey"></a></csobj></td>
+							<td><csobj w=74 h=35 t="Button" ht="../../images/ccnavbar_07-over.gif" al="Resource Issues" csover="BA32263B216" csout="BA32263B218"><a href="../../../resource.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B216'));return CSIShow(/*CMP*/'ccnavbar_07',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B218'));return CSIShow(/*CMP*/'ccnavbar_07',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_07.gif" width="74" height="35" name="ccnavbar_07" border="0" alt="Resource Issues"></a></csobj></td>
+							<td><csobj w=85 h=35 t="Button" ht="../../images/ccnavbar_08-over.gif" al="Community Center" csover="BA32263B220" csout="BA32263B222"><a href="../../../commcntr.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B220'));return CSIShow(/*CMP*/'ccnavbar_08',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B222'));return CSIShow(/*CMP*/'ccnavbar_08',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_08.gif" width="85" height="35" name="ccnavbar_08" border="0" alt="Community Center"></a></csobj></td>
+							<td><csobj w=72 h=35 t="Button" ht="../../images/ccnavbar_09-over.gif" al="Partners" csover="BA32263B224" csout="BA32263B226"><a href="../../../partners.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B224'));return CSIShow(/*CMP*/'ccnavbar_09',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B226'));return CSIShow(/*CMP*/'ccnavbar_09',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_09.gif" width="72" height="35" name="ccnavbar_09" border="0" alt="Partners"></a></csobj></td>
+							<td><csobj w=68 h=35 t="Button" ht="../../images/ccnavbar_10-over.gif" al="Site Index" csover="BA32263B228" csout="BA32263B230"><a href="../../../siteindx.html" onmouseover="CSAction(new Array(/*CMP*/'BA32263B228'));return CSIShow(/*CMP*/'ccnavbar_10',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32263B230'));return CSIShow(/*CMP*/'ccnavbar_10',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbar_10.gif" width="68" height="35" name="ccnavbar_10" border="0" alt="Site Index"></a></csobj></td>
+							<td><img src="../../images/ccnavbar_11.gif" width=86 height=35 alt="Navigation bar."></td>
+						</tr>
+					</table>
+				</td>
+				<td width="1" height="56"><spacer type="block" width="1" height="56"></td>
+			</tr>
+			<tr height="17">
+				<td width="752" height="17" valign="top" align="left" xpos="0">
+					<table width=750 border=0 cellpadding=0 cellspacing=0>
+						<tr>
+							<td><csobj w=105 h=17 t="Button" ht="../../images/ccnavbr2_01-over.gif" al="Bulletin Board" csover="BA32262C172" csout="BA32262C174"><a href="../../bullbord.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C172'));return CSIShow(/*CMP*/'ccnavbr2_01',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C174'));return CSIShow(/*CMP*/'ccnavbr2_01',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_01.gif" width="105" height="17" name="ccnavbr2_01" border="0" alt="Bulletin Board"></a></csobj></td>
+							<td><csobj w=63 h=17 t="Button" ht="../../images/ccnavbr2_02-over.gif" al="Events" csover="BA32262C176" csout="BA32262C178"><a href="../../calendar.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C176'));return CSIShow(/*CMP*/'ccnavbr2_02',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C178'));return CSIShow(/*CMP*/'ccnavbr2_02',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_02.gif" width="63" height="17" name="ccnavbr2_02" border="0" alt="Events"></a></csobj></td>
+							<td><csobj w=92 h=17 t="Button" ht="../../images/ccnavbr2_03-over.gif" al="Volunteering" csover="BA32262C180" csout="BA32262C182"><a href="../../volunter.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C180'));return CSIShow(/*CMP*/'ccnavbr2_03',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C182'));return CSIShow(/*CMP*/'ccnavbr2_03',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_03.gif" width="92" height="17" name="ccnavbr2_03" border="0" alt="Volunteering"></a></csobj></td>
+							<td><csobj w=81 h=17 t="Button" ht="../../images/ccnavbr2_04-over.gif" al="Monitoring" csover="BA32262C184" csout="BA32262C186"><a href="../../monitor.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C184'));return CSIShow(/*CMP*/'ccnavbr2_04',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C186'));return CSIShow(/*CMP*/'ccnavbr2_04',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_04.gif" width="81" height="17" name="ccnavbr2_04" border="0" alt="Monitoring"></a></csobj></td>
+							<td><csobj w=92 h=17 t="Button" ht="../../images/ccnavbr2_05-over.gif" al="Public Forum" csover="BA32262C188" csout="BA32262C190"><a href="../../pubforum.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C188'));return CSIShow(/*CMP*/'ccnavbr2_05',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C190'));return CSIShow(/*CMP*/'ccnavbr2_05',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_05.gif" width="92" height="17" name="ccnavbr2_05" border="0" alt="Public Forum"></a></csobj></td>
+							<td><csobj w=80 h=17 t="Button" ht="../../images/ccnavbr2_06-over.gif" al="Education" csover="BA32262C192" csout="BA32262C194"><a href="../../edactive.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C192'));return CSIShow(/*CMP*/'ccnavbr2_06',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C194'));return CSIShow(/*CMP*/'ccnavbr2_06',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_06.gif" width="80" height="17" name="ccnavbr2_06" border="0" alt="Education"></a></csobj></td>
+							<td><csobj w=115 h=17 t="Button" ht="../../images/ccnavbr2_07-over.gif" al="Resource Sharing" csover="BA32262C196" csout="BA32262C198"><a href="../../resrtech.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C196'));return CSIShow(/*CMP*/'ccnavbr2_07',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C198'));return CSIShow(/*CMP*/'ccnavbr2_07',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_07.gif" width="115" height="17" name="ccnavbr2_07" border="0" alt="Resource Sharing"></a></csobj></td>
+							<td><csobj w=122 h=17 t="Button" ht="../../images/ccnavbr2_08-over.gif" al="Reference Library" csover="BA32262C200" csout="BA32262C202"><a href="../../library.html" onmouseover="CSAction(new Array(/*CMP*/'BA32262C200'));return CSIShow(/*CMP*/'ccnavbr2_08',1)" onmouseout="CSAction(new Array(/*CMP*/'BA32262C202'));return CSIShow(/*CMP*/'ccnavbr2_08',0)" onclick="return CSButtonReturn()"><img src="../../images/ccnavbr2_08.gif" width="122" height="17" name="ccnavbr2_08" border="0" alt="Reference Library"></a></csobj></td>
+						</tr>
+					</table>
+				</td>
+				<td width="1" height="17"><spacer type="block" width="1" height="17"></td>
+			</tr>
+			<tr height="3557">
+				<td width="752" height="3557" valign="top" align="left" xpos="0">
+					<table border="0" cellpadding="5" cellspacing="0" width="751">
+						<tr>
+							<td width="118"></td>
+							<td colspan="2" valign="top" width="613"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="../../library.html"><b>Reference Library</b></a> &gt; <a href="../fishlib.html"><b>Fish, Wildlife and Rare Plants</b></a> &gt; <b>Threatened &amp; Endangered Species</b></font></td>
+						</tr>
+						<tr>
+							<td width="118"></td>
+							<td width="379">
+								<p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="3"><b>Threatened and Endangered Species<br>
+										</b></font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="3"><b>of the Pit River Watershed</b></font></p>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"><img src="media/cranessm.jpg" width="118" height="160" border="0" alt="The greater sandhill crane is listed as threatened"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>The greater sandhill crane is listed as threatened</b></font></td>
+							<td width="379" valign="top">
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The Pit River Watershed is well known for supporting some of the best hunting and fishing in the state.&nbsp;It is less known, however, for the presence of several threatened and endangered (T&amp;E) fish, bird, mammal, plant, and invertebrate species.&nbsp;Some of these species can be found in other regions of the state or adjacent states (e.g., northern spotted owl, bank swallow, wolverine).&nbsp; Other species occur primarily in the watershed and in adjacent states, but are less frequent and abundant in other parts of California (e.g., greater sandhill crane).&nbsp;Finally, a handful of species are only found in the Pit River watershed (e.g., Modoc sucker, Goose Lake redband, Shasta crayfish).&nbsp;Depending on the species distribution in California and other states, the species may be listed under the federal Endangered Species Act (FESA) or California Endangered Species Act (CESA).&nbsp; Both Acts afford the species certain regulatory protection.&nbsp;&nbsp;</font></p>
+							</td>
+							<td valign="top" width="224">
+								<p></p>
+							</td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Six T&amp;E species occurring in the Pit River Watershed are birds.&nbsp; They include the greater sandhill crane, American peregrine falcon, bald eagle, Swainson&#146;s hawk, bank swallow, and northern spotted owl.&nbsp; Many other&nbsp;bird species occurring in the watershed are considered species of special-concern, and receive some regulatory protection.&nbsp;Historically, two state threatened mammals have occurred in the watershed, the Sierra Nevada red fox and California wolverine.&nbsp;The current distribution of these species in California, however, is not well known because they are difficult to locate when they occur in low numbers.&nbsp;Other special-status mammals that occur in the watershed&nbsp;include the American marten, pacific fisher, and Oregon snowshoehare.&nbsp;Two state endangered fish are present in the upper potions of the watershed, the Modoc sucker and Goose Lake redband, and one state threatened fish, the rough-skinnned sculpin occurs in the lower portion of the watershed.&nbsp; In addition, one aquatic invertebrate, the Shasta crayfish, is state and federally listed as endangered.&nbsp;Below are general descriptions for each of the threatened and/or endangered species.</font></td>
+							<td valign="top" width="224"><img src="media/sandhbig.jpg" width="225" height="150" border="0" alt="The greater sandhill crane nests in open areas of wet meadows"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>The greater sandhill crane nests in open areas of wet meadows</b></font></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"></td>
+							<td width="379" valign="top">
+								<hr>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"><img src="media/swainhwk.jpg" alt="Swainson&#146;s hawk" width="118" height="126" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Swainson&#146;s hawk</b></font></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>Swainson&#146;s hawk</b> (<i>Buteo swainsoni</i>) is a state-threatened species that breeds in North America and migrates to Mexico, Central and South America for the winter.&nbsp; In California, the Swainson&#146;s hawk nests in the Sacramento and San Joauin Valley, and in the intermountain valleys of northeastern California.</font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Swainson&#146;s hawks often nest in trees along riparian corridors or in isolated trees located near suitable foraging habitat (low growing agriculture crops and grassland vegetation).&nbsp;</font></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>northern spotted owl</b> is listed as threatened under federal Endangered Species Act (USDI 1990).&nbsp;The northern spotted owl is one of 3 subspecies of the Spotted Owl inhabiting western North America. The owl occurs in the mountains of northwestern California, western Oregon, western Washington, and southwestern British Columbia.&nbsp;The eastern edge of the range corresponds roughly with the eastern periphery of the Cascade range and the Central Valley in California (Gutierrez et al. 1995).&nbsp; In California, the range extends east to western Modoc County, south to Marin County, and north to the Oregon border (California Department of Forestry and Fire Protection 1992b).</font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Throughout its range, the northern spotted owl occurs primarily in late seral-stage conifer forests (Forsman et al. 1984, Gutierrez 1996).&nbsp;Studies of habitat use indicate that owls generally select late seral-stage forests equal to or more than expected, and early seral-stage forests less than expected, although individual owls and pairs sometimes deviate from this general pattern&nbsp; (Forsman 1980, Forsman et al. 1984, Sisco and Gutierrez 1990, Gutierrez 1996).&nbsp; At the landscape level, home range size was found to be negatively correlated with the proportion of late seral-stage forest in the home range, and breeding densities were negatively correlated with the amount of forest fragmentation (Carey et al. 1990,1992).</font></p>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The many forest types occupied by northern spotted owls, including Douglas-fir, western hemlock, grand fir, white fir, ponderosa pine, Shasta red fir, western red cedar, redwood, and mixed conifer and conifer/hardwood forests have led to an emphasis on forest structure in studies of habitat use.&nbsp; Thus, optimal northern spotted owl habitat has been characterized as uneven-aged forest with a multilayered canopy, high canopy closure, large overstory trees, and a considerable degree of decadence, such as trees with broken tops and cavities for nesting, dead snags, decaying logs, and woody debris on the forest floor (Dawson et al. 1987, LaHaye 1988, Thomas et al. 1990, Gutierrez 1996). </font></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"><img src="media/nspotowl.jpg" alt="Northern spotted owl" width="161" height="237" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Northern spotted owl</b></font></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top">
+								<div align="left">
+									<img src="media/wiloflyc.jpg" alt="Little willow flycatcher" width="100" height="172" border="0"><br>
+									<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Little willow flycatcher</b></font></div>
+							</td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>little willow flycatcher</b> is listed as endangered under the California Endangered Species Act (CESA), and is a federal species of concern.&nbsp; Historically, it was a common nesting species in the Sierra Nevada, Central Valley, and the central and northern Coast Ranges.&nbsp; Currently, it is found only in isolated populations in the Sierra Nevada and the Cascade Range and occasionally in the northern Coast Ranges (Harris et al. 1988, California Department of Fish and Game 1997).</font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The little willow flycatcher primarily nests in dense willow thickets in montane meadows and along streams.&nbsp; This species forages in riparian and meadow habitats during the nesting season.&nbsp; It arrives on the breeding grounds in May and June and migrates to southern Mexico and Central America in August (Harris et al. 1988, Zeiner et al. 1990).</font></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>greater sandhill crane</b> is listed as threatened under CESA.&nbsp; Historically, greater sandhill cranes nested in eastern Siskiyou County, northeastern Shasta County, and at Honey Lake in&nbsp; Lassen County (California Department of Fish and Game 1992).&nbsp; In the most recent study of crane reproduction in 1988, nesting populations were found in Lassen,&nbsp; Modoc, Plumas, Shasta, Sierra, and Siskiyou Counties (Littlefield 1989, Littlefield et al. 1994, California Department of Fish and Game 1997, Pacific Flyway Council 1997).&nbsp; </font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The greater sandhill crane nests in open areas of wet meadows.&nbsp; These areas are often interspersed with emergent marsh.&nbsp; Sandhill cranes usually build their nests over shallow water.&nbsp; This species forages in emergent marsh and meadow habitats during the nesting season (California Department of&nbsp; Fish and Game 1997).&nbsp; During winter, sandhill cranes forage in pastures, flooded grain fields, and seasonal wetlands (Zeiner et al. 1990a).&nbsp; Breeding activity begins in April and ends in August (Zeiner et al. 1990).&nbsp;</font></p>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">&nbsp;</font>&nbsp;&nbsp;</p>
+							</td>
+							<td valign="top" width="224"><img src="media/sandhcrn.jpg" alt="Greater sandhill crane" width="224" height="141" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Greater sandhill crane</b></font></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"><img src="media/bldeagle.jpg" alt="Bald eagle" width="118" height="167" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Bald eagle</b></font></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>bald eagle</b> is listed as endangered under ESA and CESA, and is federally proposed for delisting under ESA.&nbsp; Historically, the bald eagle bred throughout California; however, its current breeding distribution is restricted primarily to the mountainous habitats in the northern quarter of the state, including the Sierra Nevada, Cascade Range, and northern Coast Ranges (California Department of Fish and Game 1992).&nbsp; The bald eagle nesting population in the state has increased over the last 30 years, in response to reduction of DDT-based compounds in the environment and substantial management effort.</font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Bald eagle nesting territories in California are found primarily in ponderosa pine and mixed conifer forests.&nbsp; Nest sites are always associated with a lake, reservoir, river, or other large water body that supports abundant fish, waterfowl, or other water bird prey.&nbsp; Nest trees are usually located in mature and old-growth stands within 1 mile of water.&nbsp; Nests are constructed in trees that provide an unobstructed view of the water body; nest trees are typically the dominant or codominant tree in the surrounding stand (Lehman 1979).&nbsp; In California, breeding bald eagles are restricted primarily to northern counties.&nbsp; Bald eagles forage from hunting perches at large bodies of water or rivers with abundant fish.&nbsp; Breeding activity begins as early as February and ends in July (Zeiner et al. 1990).</font></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>American peregrine falcon</b> is listed as endangered under CESA, and has been delisted from the Federal Endangered Species Act.&nbsp; Historically, it was found throughout the Sierra Nevada and most of California (California Department of Fish and Game 1980, U.S. Fish and Wildlife Service 1982).&nbsp; Now, it is an uncommon as a breeding resident and uncommon as a migrant (Zeiner et al. 1990a).</font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The American peregrine falcon nests on vertical cliffs with large potholes or ledges that is inaccessible to land predators.&nbsp; Because this species preys primarily on birds, nest sites are usually located near areas that support large populations of birds, such as coastal areas or wetlands with (Monk and Walton 1988).&nbsp; Peregrine falcons may travel long distances from their nesting grounds to forage near or within forested habitat (Grinnell and Miller 1944, California Department of Fish and Game 1980).&nbsp; Breeding activity begins as early as March and ends in August (Zeiner et al. 1990a).</font></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"><img src="media/peregrin.jpg" alt="American peregrine falcon" width="157" height="209" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>American peregrine falcon</b></font></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"><img src="media/bnkswalo.jpg" alt="Bank swallow" width="118" height="112" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Bank swallow</b></font></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Bank swallows</b> are state threatened.&nbsp; They establish nesting colonies in eroding banks along rivers and streams.&nbsp; They are also known to establish colonies near rivers or lakes in vertical cutbanks created from road construction or mining activities.&nbsp; Approximately 70-80 percent of the California population of bank swallows nest along the Sacramento River, mainly south of Red Bluff and north of Colusa.&nbsp; Bank swallows were probably never abundant in the watershed because of the infrequent natural development of eroding banks.</font>
+								<p></p>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>California wolverine</b> is listed as threatened under the California Endangered Species Act and is a species of concern under the Federal Endangered Species Act.&nbsp; It is considered an extremely scarce resident in California, the known former habitat extending from Del Norte and Trinity counties east through Siskiyou and Shasta Counties, and south through the Sierra Nevada to Tulare County.&nbsp; In the Sierra Nevada, most sightings occur at mid-to-high elevations (Zeiner et al. 1990b), and the number of sightings has diminished over time.&nbsp; An extensive survey of previously occupied habitats, for example, failed to detect a single wolverine (Kucera and Barrett 1993).</font>
+								<p><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">In the northern Sierra Nevada wolverines inhabit mixed conifer, red fir, and lodgepole pine habitats and probably also uses subalpine conifer, alpine dwarf-shrub, wet meadows, and montane riparian habitats (White and Barrett 1979, Zeiner et al. 1990).&nbsp; In the southern Sierra Nevada, wolverines inhabit lodgepole pine, red fir, mixed conifer, subalpine conifer, alpine dwarf-shrub, barren, and probably wet meadows, montane chaparral, and Jeffrey pine habitats (Zeiner et al.1990).&nbsp; California wolverine use high elevation cirque basins for den sites and forage in open to sparse tree habitats on the ground, in trees, burrows, among rocks, and sometimes in shallow water (Copeland 1996, Zeiner et al. 1990b, Ruggiero et al. 1994).&nbsp; Wolverines are generally considered to avoid areas disturbed by logging, road building, and general human use.</font></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"><img src="media/cawolver.jpg" alt="California wolverine" width="159" height="224" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>California wolverine</b></font></td>
+						</tr>
+						<tr>
+							<td width="118" valign="top"><img src="media/snredfox.jpg" alt="Sierra Nevada red fox" width="118" height="180" border="0"><br>
+								<font size="1" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Sierra Nevada red fox</b></font></td>
+							<td width="379" valign="top"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">The <b>Sierra Nevada red fox</b> is a state threatened species and is considered a species of concern by the USFWS.&nbsp; In California, this species occurs in low numbers throughout the Sierra Nevada at high elevations (Schempf and White 1977).&nbsp; The Sierra Nevada red fox inhabits forested areas interspersed with riparian and meadow habitats, and brush fields.&nbsp; Preferred forest types include red fir, lodgepole pine, subalpine fir and mixed conifer types.&nbsp; They forage in these habitats and forest openings (Schempf and White 1977). </font>
+								<p></p>
+								<p></p>
+							</td>
+							<td valign="top" width="224"></td>
+						</tr>
+					</table>
+				</td>
+				<td width="1" height="3557"><spacer type="block" width="1" height="3557"></td>
+			</tr>
+			<tr height="1" cntrlrow>
+				<td width="752" height="1"><spacer type="block" width="752" height="1"></td>
+				<td width="1" height="1"></td>
+			</tr>
+		</table>
+		<p></p>
+	</body>
+
+</html>

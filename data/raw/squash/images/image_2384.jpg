@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="20;url=http://www.villagephotos.com/"> 
+<title>Village Photos - File Not Found</title>
+</head>
+
+<body>
+<p>
+<font size=4 face=verdana><b>File Not Found</b></font>
+<hr>
+<p>The file or directory could not be found.
+</font>
+</p>
+<center>
+<p>
+<a href="http://www.villagephotos.com"><img border=0 src="http://www.villagephotos.com/images2/headerlogo.gif"></a>
+
+
+<p>
+<script language="JavaScript">
+  rsi_pub = '422A6C8C4FCBF4302C4966D2476C2FF7';
+  rsi_site = '37CBFD91CF4EB30736147C47BF70C440';
+  rsi_width = '728';
+  rsi_height = '90';
+  rsi_color_border = 'CCCCCC';
+  rsi_color_cell = 'FFFFFF';
+  rsi_color_link = '0000FF';
+  rsi_color_text = '000000';
+  rsi_color_url = '009900';
+</script>
+<script language="JavaScript" src="http://ads.revsci.net:80/adserver/rsiads.js"></script>
+
+
+
+</center>
+</body>
+</html>

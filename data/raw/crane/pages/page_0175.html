@@ -1,0 +1,450 @@
+<script language="JavaScript1.2">
+
+//3-state Highlight menu effect script: By Dynamicdrive.com
+//For full source, Terms of service, and 100s DTHML scripts
+//Visit http://www.dynamicdrive.com
+
+function over_effect(e,state){
+if (document.all)
+source4=event.srcElement
+else if (document.getElementById)
+source4=e.target
+if (source4.className=="menulines")
+source4.style.borderStyle=state
+else{
+while(source4.tagName!="TABLE"){
+source4=document.getElementById? source4.parentNode : source4.parentElement
+if (source4.className=="menulines")
+source4.style.borderStyle=state
+}
+}
+}
+
+</script>
+
+
+<html>
+<head>
+	<Title>Oil States Industries</Title>
+<meta name="Keywords" content="Oil States Industries Nautilus offshore cranes manufacturing service Applied Hydraulic Systems">
+<meta http_equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" href="/CSS/oilstates.css" type="text/css">
+<script language="JavaScript" src="/includes/quicklinks.js"></script>
+</HEAD>
+
+
+<script language=JavaScript>
+var TableLength = 0;
+
+function writeTable () {
+	cities = new Array (
+		"8%0", "SINGAPORE",
+		"0%3", "ABERDEEN",
+		"1%3", "MARSEILLE",
+		"-3%0", "MACAÉ",
+		"-6%2", "HOUSTON"
+		); 
+
+	document.write ("<table cellpadding=0 cellspacing=0 border=0><FORM NAME=dynTimes>");
+	
+	for (var idx = 0; idx < cities.length; idx+=2) {
+		TableLength += 1;
+		var qGMTparse = parseFloat(cities[idx]);
+		var qGMToffset_hrs = parseInt(qGMTparse, 10) ; 
+		var qGMToffset_min= parseInt ( Math.round((qGMTparse-qGMToffset_hrs) * 100), 10);
+		var qDSTperiod = cities[idx].charAt (cities[idx].length - 1);
+		var relGMT = (qGMToffset_hrs * 60) + qGMToffset_min; 
+		if (dstZones [qDSTperiod]) {relGMT += 60};
+		TableTimes[idx/2] = relGMT;
+	
+		document.write ("<TR NOWRAP>"
+		+"<TD ALIGN=right><FONT FACE='verdana, arial, helvetica, sans-serif' size='1' color=white>" + cities[idx+1] 
+		+" ></FONT></TD>" 
+		+"<TD><INPUT TYPE=text style='width:90;text-align:right;height:10px;padding:0;border:0;"
+		+"background-color:transparent;color:white;font-family:Verdana;font-size:10px'></TD>"
+		+"</TR>");
+		};
+	
+	document.write (""
+//	+"<TR><TD ALIGN=right><FONT FACE='arial, helvetica' size='2'>Local</TD>"
+//	+"<TD><INPUT TYPE=text SIZE=8 style='border:0;font-color:white;bgcolor:black' name=currdate></TD></TR>"
+	+"</FORM></TABLE></CENTER>");
+	}
+
+//Globals
+	dstZones = new Array ();
+	qReport = new Array ();
+	TableTimes = new Array();
+	var NAV4 = (navigator.appVersion.charAt(0) == "4" && navigator.appName=="Netscape") ? true : false;
+	var timerID = null;
+	var timerRunning = false;
+	var Local = new Date();
+	var GMToffset = Local.getTimezoneOffset();
+	if (!(navigator.appName.charAt(0) == "M" && navigator.appVersion.charAt(0)==3))  {
+		if (GMToffset < 0) {GMToffset = Math.abs(GMToffset)}
+		else {GMToffset = GMToffset - (Math.abs(GMToffset) *2)};
+	};
+	var newline= (navigator.appVersion.lastIndexOf('Win') != -1) ? "\r\n" : "\n";
+	var months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+	var days = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+	var shortdays = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+
+function CurrDateTime() {
+	var currdate = new Date();
+	hrs = currdate.getHours();
+	mins = currdate.getMinutes();
+	secs = currdate.getSeconds();
+	currdate = days[currdate.getDay()] + ' ' + months[currdate.getMonth()] + ' ' + currdate.getDate()
+	+ ', ' + currdate.getYear();
+	if (hrs > 11) {ampm='PM'} else {ampm='AM'};
+	if (hrs > 12) {hrs = hrs-12};
+	if (hrs == 0)  {hrs = 12};
+	if (mins <= 9) {mins = "0" + mins}; 
+	if (secs <= 9) {secs = "0" + secs}; 
+	return currdate + ' ' + hrs + ':' + mins + ':' + secs + ' ' + ampm;
+	}
+
+function CheckDST () {
+	var uNow = new Date();	
+	var uYear = uNow.getYear();
+	var leap = ((uYear % 4 == 0 && uYear % 100 != 0) || uYear % 400 == 0 )? true : false;
+	MonthDays = new Array (0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334);
+	var TodayNum = MonthDays [uNow.getMonth()] + uNow.getDate();	
+	if (leap && TodayNum > 59) {TodayNum += 1};   
+	//FirstSun8Feb, FirstSun15Mar, LastSunMar, FirstSunApr, LastSunSep, FirstSunOct, FirstSun15Oct,LastSunOct, 
+	ChangeDays = new Array (43, 78, 85, 92, 274, 281, 295, 302); 
+	var NumChangeDays = ChangeDays.length;
+	if (leap) { for (var idx = 0; idx <= 6; idx++) {ChangeDays [idx] += 1} };
+	DSTdays = new Array ();
+	LastJan1 = new Date("Jan 1, " + uYear);
+	DayJan1 = LastJan1.getDay ();	
+	for (var idx2 = 0; idx2 < NumChangeDays; idx2++) {
+		DSTdays [idx2] = ( TodayNum >= ChangeDays [idx2] - DayJan1 ) ? true : false; 
+		};
+	dstZones[0] = null;
+	dstZones[1] = null;
+	dstZones[2] =  ( DSTdays[3] && !DSTdays[7] ) ? true : false;//usa/canada
+	dstZones[3] =  ( DSTdays[2] && !DSTdays[7] ) ? true : false;//uk/europe
+	dstZones[4] =  ( DSTdays[7] || !DSTdays[2] ) ? true : false;//aus	
+	dstZones[5] =  ( DSTdays[5] || !DSTdays[2] ) ? true : false;//aus-tasmania
+	dstZones[6] =  ( DSTdays[5] || !DSTdays[1] ) ? true : false;//nz
+	dstZones[7] =  ( DSTdays[2] && !DSTdays[4] ) ? true : false;//russia
+	}
+
+function writeClocks () {
+	document.all.currdate.value = CurrDateTime() +  " "; 
+
+	for (var idx = 0; idx < TableLength; idx++) {
+		var CurrDate = new Date();
+		CurrDate.setMinutes(CurrDate.getMinutes()-GMToffset+TableTimes[idx]);
+		hrs = CurrDate.getHours();
+		mins = CurrDate.getMinutes();
+		secs = CurrDate.getSeconds();
+		var currday = shortdays[CurrDate.getDay()];
+		if (hrs > 11) {ampm='PM'} else {ampm='AM'};
+		if (hrs > 12) {hrs = hrs-12};
+		if (hrs == 0)  {hrs = 12};
+		if (mins <= 9) {mins = "0" + mins}; 
+		if (secs <= 9) {secs = "0" + secs}; 
+		document.forms[0].elements[idx].value = currday + ' ' + hrs + ':' + mins + ' ' + ampm + " ";
+		};
+	}
+
+function stopclocks (){
+        if(timerRunning)
+                clearTimeout(timerID);
+        timerRunning = false;
+	}
+
+function showclocks () {
+	writeClocks();
+	timerID = setTimeout("showclocks()",1000);
+	timerRunning = true;
+	}
+
+function startClocks () {
+	if (NAV4) {writeClocks();
+		}
+	else {
+	stopclocks(); 
+	showclocks()};
+	}
+
+CheckDST();
+
+</script>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginwidth="0" marginheight="0" onload="startClocks();">
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 ><TBODY>  
+    <TD colSpan=5>
+
+      <table width="100%" height="71" border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+      <tr> 
+          
+        <td align="left" valign="middle" background="/images/offshoretopn.jpg" bgcolor="#000000"> 
+          <div align="right"> 
+            <script language=JavaScript>writeTable();</script>
+            </div>
+            <div align="right" class="times1"> </div></td>
+        </tr>
+      </table>
+
+    </TD>
+  </TR>
+
+  <TR bgColor=#000000 valign="bottom"> 
+    <TD colSpan=5> 
+      <TABLE cellSpacing=0 cellPadding=0 bgColor=#000000 border=0 width="100%" height="20">
+        <TBODY>
+          <TR valign="absmiddle" width="100%" bgcolor="#000000"> 
+            <TD width=16></TD>
+            
+          <TD valign="middle" bgcolor="#000000"class="topnav2"> <a class="topnav" href="/index.asp">Home</a> 
+            | <a class="topnav" href="/solutions.asp">Products</a> | <a class="topnav" href="/news.asp">News</a> 
+            | <a class="topnav" href="/corporate.asp">Corporate</a> | <a class="topnav" href="/contact.asp">Contact</a> 
+            | <a class="topnav" href="/register.asp">Register</a> | <a class="topnav" href="/search.asp">Search</a> 
+          </TD>
+			<TD align=right><INPUT 
+            style="BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 300px; COLOR: white; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: Verdana; HEIGHT: 14px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: right" 
+            name=currdate> </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+
+    
+  </TD>
+  </TR>
+ 
+  <TR> 
+    <TD width=183 bgColor=#cccccc><IMG height=20 alt="" 
+      src="/images/dropshadow_nav.gif" width=183></TD>
+    <TD align=left width="100%" background=/images/dropshadow_top.gif><IMG 
+      height=20 alt="" src="/images/dropshadow_topcorner.gif" width=59></TD>
+    <TD width="100%" background=/images/dropshadow_top.gif><IMG height=20 
+      alt="" src="/images/spacer.gif" width=50></TD>
+    <TD width="100%" background=/images/dropshadow_top.gif><IMG height=20 
+      alt="" src="/images/spacer.gif" width=50></TD>
+    <TD width="100%" background=/images/dropshadow_top.gif><IMG height=20 
+      alt="" src="/images/spacer.gif" width=422></TD>
+  </TR>
+  </TBODY> 
+</TABLE>
+<TABLE width="100%" height="80%" border=0 cellPadding=0 cellSpacing=0>
+  <TBODY>
+    <TR vAlign=top> 
+      <TD width=183 bgColor=#E5E5E5 rowSpan=7> 
+        <TABLE cellSpacing=0 cellPadding=0 width=100 border=0>
+          <TBODY>
+            <TR> 
+              <TD width=20><IMG height=1 src="/images/odot.gif" width=20></TD>
+              <TD width=149><IMG height=1 src="/images/odot.gif" width=11></TD>
+              <TD width=143><IMG height=1 src="/images/odot.gif" width=143></TD>
+              <TD width=15><IMG height=1 src="/images/odot.gif" width=9></TD>
+            </TR>
+<TR> 
+              <TD colspan="4"><p>&nbsp;&nbsp;&nbsp;&nbsp;<br></p></TD>
+            </TR>
+
+            <TR> 
+              <TD class="bodytext2-gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+              <TD class=bodytext2-gray colSpan=3><span class="navbar"> 
+
+<script language = "JavaScript">
+document.write('<FORM><SELECT NAME = "menu" onChange = "goPage(this.form)">');
+    for (var i = 0; i < pages.length; i++) {
+    document.write('<OPTION>' + pages[i]);
+    }
+document.write('</SELECT></FORM>');
+</script>
+                </span></TD>
+              <TD class="bodytext2-gray"></TD>
+            </TR>
+
+            <TR> 
+              <TD vAlign=center colSpan=4 height=0 class="bodytext2-gray"></TD>
+            </TR>
+<tr><td colspan="4">
+
+
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%"><TR><TD width=20 class=bodytext2-gray>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD width=154><a class='sidenav' href=" /solutions/offshore/cranes/file.asp?id=372 " > Introduction</a></TD><TD width=9 class=bodytext2-gray>&nbsp;&nbsp;</TD></TR><TR><TD vAlign=center colSpan=3 height=13 class=bodytext2-gray><IMG height=1 src="/images/nav_divider_666666.gif" width=183></TD></TR><TR><TD width=20 class=bodytext2-gray>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD width=154><a class='sidenav' href=" /solutions/offshore/cranes/file.asp?id=378 " > Contacts</a></TD><TD width=9 class=bodytext2-gray>&nbsp;&nbsp;</TD></TR><TR><TD vAlign=center colSpan=3 height=13 class=bodytext2-gray><IMG height=1 src="/images/nav_divider_666666.gif" width=183></TD></TR></table>
+
+
+
+</td></tr>
+            <TR>           </TR>
+        </TABLE>
+      </TD>
+      <TD width=12 background=/images/bkgd_dropshadow_12.gif><IMG height=1 
+      alt="" src="/images/spacer.gif" width=12></TD>
+      <TD vAlign=top class=Content> <TABLE class=Content cellSpacing=2 cellPadding=0 width="100%" border=0 
+      valign="top">
+          <TBODY>
+            <TR vAlign=top> 
+              <TD width=15 rowSpan=13><IMG height=1 src="/images/spacer.gif" 
+            width=15 border=0></TD>
+              <TD colspan="2" vAlign=top bgcolor="#E4E4E4"> <P class=small><NOBR><span class="vsmall"><a href="/index.asp">Home</a> 
+                  &gt; <a href="/solutions.asp">Solutions</a> > <a href="/Solutions/Offshore/file.asp">Offshore</a> 
+                  > <a href="/Solutions/Offshore/Cranes/file.asp">Cranes</a> &gt; 
+                  <b><font face="verdana">Introduction</font></b>
+                  </span></NOBR></P></TD>
+              <TD width=15 rowSpan=13><IMG height=1 src="/images/spacer.gif" 
+            width=15 border=0></TD>
+            </TR>
+            <TR vAlign=bottom> 
+              <TD colspan="2" bgcolor="#FFFFFF"><span class="vsmall"><img src="/images/wspacer.gif" width="400" height="17"></span></TD>
+            </TR>
+            <TR vAlign=bottom> 
+              <TD vAlign=top colspan="2"> <p></p>
+
+<table width="100%" align="left">
+<tbody>
+<tr>
+<td valign="top">
+<p align="justify"><font face="Arial" size="2"><strong>Cranes<br />
+</strong><font color="#000000"><em>Oil States Houma<br />
+<img height="10" alt="Paragraph Spacer" src="/uploadedimages/wspacer.gif" width="10" border="0" /></em></font></font></p>
+</td>
+<td valign="top"></td>
+<td valign="top"></td>
+</tr>
+
+<tr>
+<td valign="top">
+<p align="justify"><font face="Arial" size="2">Oil States Houma&#160;(Applied Hydraulic Systems) is located in Houma, Louisiana.&#160; Our Nautilus<sup>&#174;&#160;</sup> Marine Cranes are manufactured in strict accordance with current API Specifications, latest editions,&#160;and the corresponding Quality Assurance/Control Guidelines and Standards, as well as certification to&#160;ISO 9001:2000.&#160; Nautilus<sup>&#174;&#160;</sup> Marine Cranes have an extensive range of use from offshore marine platforms, TLPs, Spars,&#160;to marine vessels (workboats, jackups, barges, FPSOs, etc.) and dockside mount applications, in the Gulf of Mexico and around the world. All cranes manufactured bear the OFFICIAL API 2C MONOGRAM.</font></p>
+
+<p align="justify"><font face="Arial" size="2">Oil States Houma (&#160;Applied Hydraulic Systems)&#160;manufacturing facilities comprise&#160;forty acres of land.&#160; The 150,000 square foot manufacturing complex, includes crane fabrication, assembly,&#160;training facilities, a state of the art paint and sandblasting area&#160;as well as the engineering and administrative offices.&#160; Our complete crane service center includes&#160;covered&#160;refurbishment facilities and a large inventory of parts for Nautilus<sup>&#174;</sup>&#160;and other&#160;manufacturers' cranes.</font></p>
+
+<p align="justify"><font face="Arial" size="2">More than 1,500 hydraulic marine cranes have been manufactured and are presently in operation worldwide.&#160; Nautilus Marine Cranes are utilized on international offshore operations throughout the world.&#160; Locations include the African West Coast, Indonesia, Malaysia, Angola, Nigeria, Thailand, Mexico, Venezuela, Brunei, China, Trinidad,&#160;Canada and the Gulf of Mexico.</font></p>
+
+<p align="justify"><font face="Arial" size="2">Oil States Houma has approximately 250 employees who&#160;are principally professionals or skilled craftsmen. All welders are tested and certified in accordance with AWS D1.1, Latest Edition, Structural Welding Code. Additionally, we use third-party AWS-certifed welding inspectors and perform NDE inspection on &#160;100% of all critical welds on every Nautilus Marine Crane.</font></p>
+
+<p align="justify"><font face="Arial" size="2">The fabrication and assembly equipment includes the following:</font></p>
+
+<ul>
+<li>
+<div align="justify"><font face="Arial" size="2">Four&#160;Crane Test Pedestals for full function and load testing of every crane</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">Four&#160;17" X 60" Engine Lathes</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One CNC 28" x 120" Engine Lathe</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One 6' and One 36"&#160;Radial Arm Drill Press</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One 8' X 20' NC Plasma Torch Table</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">Nine Overhead Cranes (including two 100 ton and one 150 ton) with up to 35' under hook</font></div>
+</li>
+
+<li><font face="Arial" size="2">One &#160;5" Horizontal Boring Table</font></li>
+
+<li><font face="Arial" size="2">One 5-1/8" CNC Horizontal Boring Table</font></li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One 560 Ton X 18' Press Brake</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">Two 90 Ton&#160; Iron Workers</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">75&#160;Welding Machines</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One 10' Plate Shear</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">Three Automatic Sub-Arc Welders for Large Groove Welding</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">Two Bridgeport Mills</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One Key Seater (up to 1-1/2" keys)</font></div>
+</li>
+
+<li>
+<div align="justify"><font face="Arial" size="2">One FARO Arm Digital Measuring Device</font></div>
+</li>
+</ul>
+
+<p align="justify"><font face="Arial" size="2">In addition, direct access to the Intracoastal Canal exists for loading and unloading boats and barges.</font></p>
+
+<p align="justify"><font face="Arial" size="2">Oil States Houma (Applied Hydraulic Systems) has manufactured the Nautilus&#160;Marine Crane product line for all the major oil companies operating in the Gulf of Mexico. &#160;We are the world leader in the manufacture of offshore pedestal mounted hydraulic cranes producing more specialized hydraulic cranes than any other crane manufacturer in the world.</font></p>
+
+<p align="justify"><font face="Arial" size="2">NAUTILUS MARINE CRANES is a registered trademark of Oil States Industries, Inc.</font></p>
+</td>
+<td valign="top">
+<table cellspacing="5" cellpadding="5" width="100%">
+<tbody>
+<tr>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign="top" width="250">
+<p></p>
+
+<p><img height="59" alt="NautilusLogo" src="/uploadedimages/Nautilus%20Color%20Logo.bmp" width="250" border="0" /><img alt="Allegheni Nautilus Photo" src="/uploadedimages/Allegheni_Nautilus_Photo.jpg" border="0" /><br />
+<font face="Arial" size="1">Morpeth mini-TLP with two Nautilus box-boom cranes, Gulf of Mexico</font></p>
+
+<p align="center"><img alt="Jackup Crane Photo" src="/uploadedimages/Jackup_Crane_Photo.jpg" border="0" /><br />
+<font face="Arial" size="1">The Model 1100L-120 lattice-boom crane, rated at 200 tons, is the workhorse of the jack-up boat industry. Here it makes a lift once reserved for derrick<br />
+barges. Also shown: Model 180BT3-72 telescoping<br />
+box- boom crane with 72 feet of extended boom, rated at approximately 40 tons.</font></p>
+
+<p align="center"><img alt="Nautilus FPSO Photo" src="/uploadedimages/Nautilus_FPSO_Photo.jpg" border="0" /><br />
+<font face="Arial" size="1">Nautilus lattice-boom cranes on an FPSO off West Africa</font></p>
+</td>
+</tr>
+</tbody>
+</table>
+ </TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+        <IMG height=1 alt="" 
+      src="/images/spacer.gif" width=1 border=0> </TD>
+    </TR>
+    <TR vAlign=bottom height=1> 
+      <TD width=12 background=/images/bkgd_dropshadow_12.gif><IMG height=1 
+      alt="" src="/images/spacer.gif" width=12></TD>
+      <TD width="100%" background=/images/back_dots_gray.gif><IMG 
+      height=1 alt="" src="/images/spacer.gif" width=1 border=0></TD>
+    </TR>
+    <TR vAlign=bottom> 
+      <TD width=12 background=/images/bkgd_dropshadow_12.gif height="2"><IMG height=8 
+      alt="" src="/images/spacer.gif" width=12></TD>
+      <TD height="2"> <TABLE cellSpacing=8 cellPadding=0 width="100%" border=0>
+          <TBODY>
+            <TR> 
+              <TD class=footer vAlign=top colSpan=2>
+			  <font size="1"><a href="/About.asp">© 2002-2006 Oilstates Industries</a>. </font> 
+			  </TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=195 colSpan=4><IMG height=25 
+      src="/images/bkgd_dropshadow_bottom.gif" width=195 border=0></TD>
+    <TD colSpan=3>&nbsp;</TD></TR></TBODY></TABLE></BODY></HTML>

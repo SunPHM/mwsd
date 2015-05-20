@@ -1,0 +1,275 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<title>Philosopher Cafe</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="styles/StylePhilo.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body style="background: #FFF;">
+
+<div class="menubar">
+<img SRC="./graphics/platohead.jpg" BORDER=0 height="80px" align="left">
+  <table height="65px">
+    <tr height="45px"> 
+      <td colspan="6"> <a href="./index.html"> 
+        <h1 align="Left"><i>&nbsp;Philosopher Cafe</i></h1>
+        </a> </td>
+    </tr>
+    <tr height="20px"> 
+      <td class="menuitem" id="item0" onClick="menuClick(0);" onmouseover="this.className='menulight';menuOver(0);" onMouseOut="this.className='menuitem'">&nbsp;Cafe&nbsp;</td>
+      <td class="menuitem" id="item1" onClick="menuClick(1);" onmouseover="this.className='menulight';menuOver(1);" onMouseOut="this.className='menuitem'">&nbsp;Philosophers&nbsp;</td>
+      <td class="menuitem" id="item2" onClick="menuClick(2);" onmouseover="this.className='menulight';menuOver(2);" onMouseOut="this.className='menuitem'">&nbsp;Philosophy&nbsp;</td>
+      <td class="menuitem" id="item3" onClick="menuClick(3);" onmouseover="this.className='menulight';menuOver(3);" onMouseOut="this.className='menuitem'">&nbsp;Advice&nbsp;</td>
+      <td class="menuitem" id="item4" onClick="menuClick(4);" onmouseover="this.className='menulight';menuOver(4);" onMouseOut="this.className='menuitem'">&nbsp;About&nbsp;</td>
+      <td class="menuitem" id="item5" onClick="menuClick(5);" onMouseOver="this.className='menulight';menuOver(5);" onMouseOut="this.className='menuitem'"><a href="introspect.html">&nbsp;Introspect&nbsp;</a></td>
+      <td class="menuitem" id="item6" onClick="menuClick(6);" onMouseOver="this.className='menulight';menuOver(6);" onMouseOut="this.className='menuitem'"><a href="shop.html">&nbsp;Shop&nbsp;</a></td>
+    </tr>
+  </table></img>
+  </div>
+
+  
+
+  
+<table class="submenubar" id="sub0" onMouseOut="menuOut();" onclick="menuClear();" style='visibility:hidden;'>
+  <tr> 
+    <td colspan="3" class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'"><a href="onlinecafes.html">&nbsp;Online&nbsp;</a></td>
+    <td colspan="3" class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'"><a href="cafegroups.html">&nbsp;Cafe 
+      Groups&nbsp;</a></td>
+    <td colspan="3" class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'"><a href="radio.html">&nbsp;Radio&nbsp;</a></td>
+  </tr>
+</table>
+  
+<table class="submenubar" id="sub1" onMouseOut="menuOut();" onclick="menuClear();" style='visibility:hidden;'>
+  <tr> 
+    <td colspan="3"><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'"><a href="currentphilosophers.html">&nbsp;Current&nbsp;</a></div></td>
+    <td colspan="3"><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'"><a href="historical.html">&nbsp;Historical&nbsp;</a></div></td>
+  </tr>
+</table>
+
+  
+<div class="submenubar" id="sub2" style='visibility:hidden;' onMouseOut="menuOut();" onclick="menuClear();"> 
+  <table>
+    <tr> 
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="generalinfo.html">&nbsp;General&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="readphilosophy.html">&nbsp;Read&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="seminars.html">&nbsp;Seminars&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="links.html">&nbsp;Links&nbsp;</a></div></td>
+    </tr>
+  </table>
+</div>
+
+  
+<div class="submenubar" id="sub3" style='visibility:hidden;' onMouseOut="menuOut();" onclick="menuClear();"> 
+  <table>
+    <tr> 
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="counseling.html">&nbsp;Counseling&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="consulting.html">&nbsp;Consulting&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="exploring.html">&nbsp;Exploring&nbsp;</a></div></td>
+    </tr>
+  </table>
+</div>
+
+<div class="submenubar" id="sub4" style='visibility:hidden;' onMouseOut="menuOut();" onclick="menuClear();"> 
+  <table>
+    <tr> 
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="contact.html">&nbsp;Contact&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="faq.html">&nbsp;FAQ&nbsp;</a></div></td>
+      <td><div class="submenuitem" onMouseOver="this.className='submenulight'" onMouseOut="this.className='submenuitem'" onClick="this.className='submenuitem'"><a href="background.html">&nbsp;Background&nbsp;</a></div></td>
+    </tr>
+  </table>
+</div>
+
+<div class="background">
+	
+  <table width="100%" height="1576%" border="0px">
+    <tr>
+			
+      <td width="62" height="5590" bgcolor="#FFFFFF"></td>
+			<td width="785" bgcolor="#EEEEEE">&nbsp;</td>
+		</tr>
+	</table>
+</div>
+ 
+
+<div class="page" onclick="menuClear();"></div>
+
+  
+<div class="main"> <BR>
+  <p><font face="Arial, Helvetica, sans-serif"><b>Origami Cranes for Peace (currently 
+    discontinued, special requests may be considered)</b></font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Hand-made with 
+  imported Japanese silk screened paper folded using traditional Japanese techniques. 
+  Each crane is unique and features a Czech Republic Crystal. </font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Each crane comes 
+  attractively packaged with instructions on how to fold an origami crane as well 
+  as a description of the origins and meaning of the origami peace crane. </font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Makes a meaningful 
+  and special gift. Send in a card to friends and family, attach to bows on presents, 
+  or simply hang as a show of your support for peace. </font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Originally created 
+  to help support the local peace movement in Olympia, Washington. Similar Origami 
+  Crane Ornaments sell for up to $14.00 each! Shipping is $0.75 for one crane. 
+  Buy more than one and receive free shipping and handling.</font></p>
+ <!--   <font face="Arial, Helvetica, sans-serif"><b>Ordering</b></font> 
+  <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To order send 
+    email to <a href="mailto:java@mac.com">Sandra Dreisbach</a> specifying number 
+    and type of cranes as well as your address and form of payment. Cash, money 
+    order, personal check or paypal are current pay methods. Items shipped upon 
+    receipt of payment. -->
+   
+
+    </font></p>
+<p>&nbsp;</p>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="java@mac.com">
+<input type="image" src="https://www.paypal.com/images/view_cart.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="display" value="1">
+</form>
+<p><b><font face="Arial, Helvetica, sans-serif">Elegant Style $9.95 each</font></b></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="http://philosophercafe.com/ebay/cranestreeoutside1ok.jpg" width="185" height="232"></font><font face="Arial, Helvetica, sans-serif"><img src="http://philosophercafe.com/ebay/crane1.jpg" width="167" height="212"></font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This style has 
+  a very nice drop crystal and very elegant washi paper designs most highlighted 
+  with gold. To complement this, the ornament also features a gold or silver wire 
+  string and two metal fastening beads. Please specify Gold or Silver string and 
+  bead preference when ordering.</font><font face="Arial, Helvetica, sans-serif"> 
+  </font></p>
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/sc-but-03.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="java@mac.com">
+<input type="hidden" name="item_name" value="Elegant Crane">
+<input type="hidden" name="item_number" value="0101">
+<input type="hidden" name="amount" value="9.95">
+<input type="hidden" name="shipping" value="0.75">
+<input type="hidden" name="shipping2" value="0.00">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="USD">
+</form>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif"><b>Pattern Style $3.25 each</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="http://philosophercafe.com/ebay/cranestree2w.jpg" width="304" height="169"><img src="http://philosophercafe.com/ebay/crane2.jpg" width="162" height="168"></font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">This style has 
+  a small bead crystal and a simple washi pattern in one color with a white background. 
+  To complement this, the ornament also features a strong white nylon string knotted 
+  in place. </font></p>
+ <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/sc-but-03.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="java@mac.com">
+<input type="hidden" name="item_name" value="Pattern Crane">
+<input type="hidden" name="item_number" value="0102">
+<input type="hidden" name="amount" value="3.25">
+<input type="hidden" name="shipping" value="0.75">
+<input type="hidden" name="shipping2" value="0.00">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="USD">
+</form>
+<p>&nbsp;</p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Packaging</b></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><img src="http://philosophercafe.com/ebay/cranepackage1.jpg" width="288" height="251"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+  </font><font face="Arial, Helvetica, sans-serif"><i><img src="http://philosophercafe.com/ebay/cranepackage2.jpg" width="256" height="237"></i></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+  </font><font face="Arial, Helvetica, sans-serif"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+  </font><font face="Arial, Helvetica, sans-serif"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+  </font><font face="Arial, Helvetica, sans-serif"></font><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> 
+  </font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Description Reads:</font></p>
+<p><b><font face="Times New Roman, Times, serif">An Origami Crane for Peace</font></b></p>
+<p> <font face="Times New Roman, Times, serif"><i>This origami crane was folded 
+  as a wish for peace both within ourselves and in our world. May it bring you 
+  and others peace. </i></font></p>
+<p><font face="Times New Roman, Times, serif"><u>Origins and Meaning of Origami 
+  Peace Cranes</u></font></p>
+<p><font face="Times New Roman, Times, serif"> In Asia, the crane (tsuru) has 
+  long symbolized fortune, longevity, happiness, fidelity, and peace. The crane 
+  is an animal known to mate for life and Japanese legend says that the crane 
+  lives for a thousand years. Folding a thousand paper cranes (senbazuru) is a 
+  long standing tradition in Japan. It was said if you fold 1,000 origami cranes 
+  any wish made by the maker of the cranes would be granted. An additional crane 
+  is often folded for good fortune. A young Japanese girl, Sadako Sasaki, has 
+  inspired thousands to fold cranes for peace. Sadako was exposed to the atomic 
+  bomb dropped at Hiroshima when she was two years old and later developed leukemia 
+  at the age of twelve. She attempted to fold a thousand paper cranes so that 
+  her wish to get well would come true. She died before she could complete the 
+  cranes. However, her courage and faith inspired her friends and family to finish 
+  the cranes and to raise money for a memorial to all the children who were innocent 
+  victims of the atomic bomb at the Peace Park in Hiroshima where people every 
+  year continue to leave thousands of cranes for peace. The inscription on the 
+  monument reads: </font></p>
+<p><font face="Times New Roman, Times, serif"><i>"This is our cry. This is our 
+  prayer. Peace in the world."</i></font></p>
+<p>&nbsp; </p>
+
+</div>
+
+<BR><BR>
+<div class="footer">
+	<table width="100%" border="0px">
+		<tr>
+			<td width="55px" bgcolor="#FFFFFF"></td>
+			
+      <td bgcolor="#000000" align="center"> <font size=-1 color="#FFFFFF">Copyright 
+        &copy; 2000 - 2005 Philosopher Cafe, All rights reserved.</font> </td>
+		</tr>
+	</table>
+</div>
+
+  <script type="text/javascript">
+  
+	var menuVisible = false;
+	var thismenu;
+	var thisitem;
+	
+	function menuClick(menuid)
+	{
+		for (var i = 0; document.getElementById("sub" + i) != null; i++)
+		{
+			menuVisible = false;
+		
+			thismenu = document.getElementById("sub" + i);
+			if ((i == menuid) && (thismenu.style.visibility == 'hidden'))
+			{
+				menuVisible = true;
+				thismenu.style.visibility = '';
+			}
+			else
+			{
+				thismenu.style.visibility='hidden';
+			}
+		}
+	}
+	
+	function menuOver(menuid) {
+		if (menuVisible == true)
+		{
+					menuVisible = true;
+			menuClear();
+			thismenu = document.getElementById("sub" + menuid);
+			thismenu.style.visibility = '';
+		}
+	}
+
+	function menuClear() {
+		menuVisible = false;
+		for (var i = 0; document.getElementById("sub" + i) != null; i++)
+		{
+			thismenu = document.getElementById("sub" + i);
+			{
+				thismenu.style.visibility='hidden';
+			}
+		}
+		
+	}
+	
+	function menuOut() {
+	}
+	</script>
+
+</body></html>

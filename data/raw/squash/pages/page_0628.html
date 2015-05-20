@@ -1,0 +1,370 @@
+
+<HTML>
+<HEAD>
+
+<script language="javascript">
+<!--
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+
+if      (bName == "Netscape" && bVer >= 4) br = "n4";
+else if (bName == "Netscape" && bVer == 3) br = "n3";
+else if (bName == "Microsoft Internet Explorer" && bVer >= 4) br = "e4";
+else if (bName == "Microsoft Internet Explorer") br = "e3";
+else br = "n2";
+
+function SendMail(alias) {
+        alias = alias.replace(/'/g,"&#39;");
+	var mURL = 'send_mail.asp?alias=' + alias;
+	window.open(mURL,'mailWnd','resizable=yes,scrollbars=yes,height=440,width=480');
+}
+function isValidEmail(email) {
+	if (email=="") {
+		return false;
+	}
+	if (email.indexOf('@')<1) {
+		return false;
+	}
+	if (email.indexOf('.')==-1) {
+		return false;
+	}
+	if (email.indexOf('.')==(email.length -1)) {
+		return false;
+	}
+	if (email.indexOf('.')==(email.indexOf('@')+1)) {
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+
+		<title>Nobles&nbsp;-&nbsp;Athletics / Squash Boys Varsity
+		</title>
+		<meta name="keywords" content="Nobles,Noble and Greenough School">
+		</head>
+	
+		<script language="javascript">
+<!--
+var myVersion = navigator.appVersion.substring(0,1);
+var rollOverOK = 0;
+if (myVersion > 3)	{
+	var rollOverOK = 1;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function PlayMedia(file)  {
+	eval("window.open('../home/play_media.asp?file=" + file + "','mediaWnd','menubar=no,statusbar=no,resizable=no,scrollbars=no,height=100,width=200')");
+	return(false);
+}
+function launchWindow(myHeight,myWidth,myDoc) {
+window.open(myDoc,"launchWindow","scrollbars=0,resizeable=0,status=1,height=" + myHeight +",width=" + myWidth + ",top=0,left=0");
+}
+function ShowCalendar() {
+	window.open('calendar.asp','calendarWnd','resizable=yes,scrollbars=yes,height=600,width=300,left=' + (screen.availWidth-300)/2 + ',top=' + (screen.availHeight-600)/2);
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+if ((navigator.appVersion.indexOf("Mac")!= -1)) {
+		document.write("<link rel='stylesheet' href='../includes/displayMAC.css' type='text/css'>");
+} else {
+	if (navigator.appName == "Netscape") {
+		document.write("<link rel='stylesheet' href='../includes/displayPC_NS.css' type='text/css'>");
+	} else {
+ 		document.write("<link rel='stylesheet' href='../includes/displayPC_IE.css' type='text/css'>");
+ 	}
+}
+//-->
+</script>
+
+<link rel="stylesheet" href="../includes/Nobles_Styles.css" type="text/css">
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function FieldIsEmpty(Fld,FldName) {
+	if(Fld.value == "" || Fld.value == " ") {
+		window.alert("You must enter your " + FldName);
+		Fld.focus();
+		Fld.select();
+		return true;
+	}
+	else {return false;}
+}
+function validateLogin() {
+	var pw=document.PLForm.password;
+	if (FieldIsEmpty(document.PLForm.username,'Username')) {return;}
+	if (FieldIsEmpty(pw,'Password')) {return;}
+	var rEx=/^[a-zA-Z0-9]\w{5,20}$]/gi;
+	//if (rEx.test(pw.value)) {
+	if (pw == '') {
+		alert('Enter a valid password')
+		pw.select();
+		pw.focus();
+		return;
+	}
+	document.PLForm.submit();
+}
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+
+
+	</head>
+	<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+<table border="0" cellspacing="0" cellpadding="0" vspace="0" hspace="0">
+  <tr>
+    <td>
+	
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="58%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td background="../graphics/homepage/side_fill_boxes.gif"><img src="../graphics/spacer.gif" width="8" height="8"></td>
+          <td valign="top" bgcolor="B4C4D7">
+			<table width="5%" border="0" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td colspan="2"><img src="../graphics/homepage/topBar.jpg" width="123" height="1"></td>
+              </tr>
+              
+					<tr> 
+					  <td width="4%"><img src="../graphics/homepage/transparent_spacer.gif" width="5" height="25"></td>
+					  <td width="96%" onmouseover="this.background='../graphics/homepage/active_section_bg.jpg';this.bgColor='#ffffff'" onmouseout="this.background='../graphics/spacer.gif';this.bgColor='B4C4D7'" onclick="location.href='content.asp?id=2148'"><a href="content.asp?id=2148" class="navHeaders" onmouseover="this.style.color='254788'" onmouseout="this.style.color='423933'">2005 FOOTBALL</a></td>
+					</tr>
+					<tr><td colspan="2"><img src="../graphics/homepage/Menu_divider.gif" width="124" height="1"></td></tr>
+				
+		
+        <tr> 
+          <td colspan="2"><img src="../graphics/homepage/transparent_spacer.gif" width="120" height="15" border="0"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="center">
+		  <a href="/home/content.asp?id=1667"><img src="/graphics/oneNobles.jpg" alt="One Nobles" width="99" height="41" border="0"></a>&nbsp;&nbsp;&nbsp;<br>
+			<a href="content.asp?id=97" onmouseover="window.status='Contact information';return true" title="Contact information" onmouseout="window.status=''"><img src="../graphics/homepage/contactus.jpg" border="0" WIDTH="55" HEIGHT="16"></a>
+			<img src="../graphics/homepage/spacer_vert.jpg" border="0" WIDTH="1" HEIGHT="16">
+			<a href="site_map.asp" onmouseover="window.status='Site map';return true" title="Site map" onmouseout="window.status=''"><img src="../graphics/homepage/sitemap.jpg" border="0" WIDTH="46" HEIGHT="16"></a>
+          </td>
+        </tr>
+        <form name="searchForm" action="search_site.asp" method="POST">
+        <tr> 
+          <td colspan="2" align="left" style="padding-left:8px">
+			<img src="../graphics/homepage/search.jpg" border="0" WIDTH="31" HEIGHT="14"><br>
+			<input name="searchStr" type="text" class="navLevel2" size="10" maxlength="50" value>
+			<input type="hidden" name="action" value="search">
+			<a href="javascript: void document.searchForm.submit();" onmouseover="window.status='Search the site by keyword(s)';return true" title="Search the site" onmouseout="window.status=''"><img src="../graphics/internal_pages/go_sm.gif" border="0" WIDTH="15" HEIGHT="15"></a>
+          </td>
+        </tr>
+        </form>
+        <tr> 
+          <td colspan="2"><img src="../graphics/homepage/transparent_spacer.gif" width="120" height="10" border="0"></td>
+        </tr>
+      </table>
+      </td>
+	  <td valign="top" background="../graphics/internal_pages/Internal_left_divider.gif"><img src="../graphics/spacer.gif" width="1" height="1"></td>
+      <td valign="top">
+		<table border="0" cellspacing="0" cellpadding="0" vspace="0" hspace="0">
+			
+				<tr valign="top">
+					<td><img src="../graphics/internal_pages/Generic_Title.gif" border="0"></td>
+				</tr>
+			
+			<tr valign="top"> 
+				<td style="padding-top:15px">
+<!-- Layout 7 code begins -->
+<!-- Takes elements from their respective arrays and places them on the page --> 
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0" style="margin-left:12px">
+<tr>
+	<td align='left' valign='top' class='pageContent'>
+	<font class='pageHeader'>Squash Boys Varsity</font><br><br><table border='0' cellspacing='0' cellpadding='6' align='right'><tr><td><img src='../images/bvsq fri.jpg' border='0' alt='fine vs concord'></td></tr></table><B><font color=navy>The Program</B></font><br>
+The Nobles Boys Squash program sports some of the most rapidly improving teams in the school. The program features varsity and junior varsity squads, which compete against some of the top institutions in the country in the Independent School League, including Groton School, Milton Academy, and St. Paul's School. The squash program uses a ladder system in which the top seven players compete at the varsity level with the rest of the players competing at the junior varsity level.<br>
+<br>
+<B><font color=navy>The 2003 - 2004 Varsity Team</B></font><br>
+The team is coming off a re-building year in which team members were forced to play multiple positions on the ladder. Last season, the team finished with a 5-11 record, showing that there is room for improvement this year. After using a youthful and inexperienced lineup last year, this year's team comes back with nearly every member of the varsity squad returning. This year, the team has gotten off on the right foot with clutch 5-2 and 4-3 victories over highly touted St. Georges and Middlesex. <br>
+<br>
+Led by captain Eric Muther (N 04') and Senior leaders Will Kryder (N 04'), Zack Smith (N 04'), and John Hunter (N 04'), the team looks to improve on last year's record and this early season victory puts them on course for their ultimate goal, an ISL championship. <br>
+<br>
+<br><table border='0' cellspacing='0' cellpadding='6' align='left'><tr><td><img src='../images/bvsq fri 2.jpg' border='0' alt='squash vs concord'></td></tr></table><B><font color=navy>The Facilities</B></font><br>
+The <a href='../home/content.asp?id=629'>Morrison Athletic Center</a> boasts some of the finest squash facilities in the region with six international courts, a viewing deck, and located adjacent to the Rappaport Gymnasium. It has hosted multiple national-level squash events, including an exhibition match between two of the top ten women's squash players in the country. <br>
+<br>
+<B><font color=navy>The Coach</B></font><br>
+The varsity team may have a similar look on its ladder this year, but it has a different man at the helm. The team is led by coach Chris Burr who brings several years of experience to the team.  Coach Burr, a strong athlete through high school and college in other sports, found squash at the age of 30 and committed to the game.  Soon, he was the top player in his age group in Massachusetts.  In order to accomplish such a feat, Coach Burr learned from the best and applied his extraordinary drive to maximize and hone his skills.  He hopes to impart this wealth of knowledge about the intricacies of the game and the heart required to be a great player and person to his players.<br>
+	</td>
+</tr>
+</table>
+
+<!-- Layout 7 code ends -->
+
+
+<!--now we start the new tables for scores and schedules -->
+	<table width="95%" border="0" cellspacing="0" cellpadding="2" style="margin-left:12px">
+		<tr><td colspan="5" height="20"></td></tr>
+		<tr><td colspan="5" class="bodytext" align="right"><img src="../graphics/spacer.gif" border="0" width="50" height="1">
+			Show team page:&nbsp;
+			<select name="teampage_list" class="bodytext" style="background-color:#f0f0f0" onchange="window.location.href='content.asp?id=' + this.value + '&zzSec=athletics';">
+				
+					<option value="814" >Baseball Boys Varsity</option>
+				
+					<option value="751" >Basketball Boys Varsity</option>
+				
+					<option value="716" >Basketball Girls Varsity</option>
+				
+					<option value="538" >Boys Cross Country</option>
+				
+					<option value="794" >Crew Boys Varsity</option>
+				
+					<option value="1845" >Crew Girls Varsity</option>
+				
+					<option value="1855" >Cross Country Boys Varsity</option>
+				
+					<option value="853" >Cross Country Girls Varsity</option>
+				
+					<option value="852" >Field Hockey Girls Varsity</option>
+				
+					<option value="988" >Football Boys Varsity</option>
+				
+					<option value="1181" >Golf ISL Varsity</option>
+				
+					<option value="715" >Hockey Boys Varsity</option>
+				
+					<option value="714" >Hockey Girls Varsity</option>
+				
+					<option value="752" >Lacrosse Boys Varsity</option>
+				
+					<option value="1846" >Lacrosse Girls Varsity</option>
+				
+					<option value="2156" >Skiing Varsity</option>
+				
+					<option value="986" >Soccer Boys Varsity</option>
+				
+					<option value="541" >Soccer Girls Varsity</option>
+				
+					<option value="1159" >Softball Girls Varsity</option>
+				
+					<option value="757" selected>Squash Boys Varsity</option>
+				
+					<option value="1178" >Squash Girls Varsity</option>
+				
+					<option value="858" >Tennis Boys Varsity</option>
+				
+					<option value="1177" >Tennis Girls Varsity</option>
+				
+					<option value="1733" >Wrestling Boys Varsity</option>
+				
+			</select>
+		</td></tr>
+		
+			<tr><td class="head2_sans" colspan="5">Scores</td></tr>
+			<tr><td nowrap class='bodytext_gold'>DATE</td><td nowrap class='bodytext_gold'>OPPONENT</td><td nowrap class='bodytext_gold'>SITE</td><td nowrap class='bodytext_gold'>RESULT</td><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>12/02/05&nbsp;&nbsp;</td><td nowrap class='bodytext'>Middlesex-time change&nbsp;&nbsp;</td><td nowrap class='bodytext'>Middlesex&nbsp;&nbsp;</td><td nowrap class='bodytext'>W 4-3&nbsp;&nbsp;</td>
+						<td class="bodytext"><a href="recap_view.asp?id=11692">recap</a></td>
+					</tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>12/07/05&nbsp;&nbsp;</td><td nowrap class='bodytext'>Moses Brown&nbsp;&nbsp;</td><td nowrap class='bodytext'>Nobles&nbsp;&nbsp;</td><td nowrap class='bodytext'>W 7-0&nbsp;&nbsp;</td>
+						<td class="bodytext"><a href="recap_view.asp?id=12049">recap</a></td>
+					</tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>12/10/05&nbsp;&nbsp;</td><td nowrap class='bodytext'>Jackson Tournament&nbsp;&nbsp;</td><td nowrap class='bodytext'>Brooks&nbsp;&nbsp;</td><td nowrap class='bodytext'>&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>01/06/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Belmont Hill&nbsp;&nbsp;</td><td nowrap class='bodytext'>Belmont Hill&nbsp;&nbsp;</td><td nowrap class='bodytext'>L&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>01/11/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Tabor &nbsp;&nbsp;</td><td nowrap class='bodytext'>Tabor&nbsp;&nbsp;</td><td nowrap class='bodytext'>L 1-6&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>01/13/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Milton&nbsp;&nbsp;</td><td nowrap class='bodytext'>Nobles&nbsp;&nbsp;</td><td nowrap class='bodytext'>L&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>01/14/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Brooks&nbsp;&nbsp;</td><td nowrap class='bodytext'>Brooks&nbsp;&nbsp;</td><td nowrap class='bodytext'>L 1-6&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>01/21/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Portsmouth  Abbey&nbsp;&nbsp;</td><td nowrap class='bodytext'>Portsmouth Abbey&nbsp;&nbsp;</td><td nowrap class='bodytext'>&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>01/25/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>St. George's&nbsp;&nbsp;</td><td nowrap class='bodytext'>St. George's&nbsp;&nbsp;</td><td nowrap class='bodytext'>W 5-2&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>01/28/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Exeter&nbsp;&nbsp;</td><td nowrap class='bodytext'>Nobles&nbsp;&nbsp;</td><td nowrap class='bodytext'>L 1-6&nbsp;&nbsp;</td>
+						<td class="bodytext"><a href="recap_view.asp?id=11882">recap</a></td>
+					</tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>02/01/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>St. Paul's&nbsp;&nbsp;</td><td nowrap class='bodytext'>St. Paul's&nbsp;&nbsp;</td><td nowrap class='bodytext'>L 0-7&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>02/03/06&nbsp;&nbsp;</td><td nowrap class='bodytext'>Concord Academy&nbsp;&nbsp;</td><td nowrap class='bodytext'><font color=red>Canceled</font>&nbsp;&nbsp;</td><td nowrap class='bodytext'>&nbsp;&nbsp;</td><td><img src='../graphics/spacer.gif' border='0' width='1' height='1'></td></tr>
+      </table>
+      
+			<table width="95%" border="0" cellspacing="0" cellpadding="2" style="margin-left:12px">
+			<tr><td colspan="5"><img src="../graphics/spacer.gif" border="0" width="1" height="4"></td></tr>
+			<tr><td class="head2_sans" colspan="5">Upcoming Schedule</td></tr>
+			<tr><td nowrap class='bodytext_gold'>DATE&nbsp;</td><td nowrap class='bodytext_gold'>TIME&nbsp;</td><td nowrap class='bodytext_gold'>OPPONENT&nbsp;</td><td nowrap class='bodytext_gold'>SITE&nbsp;</td></tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>02/08/06&nbsp;</td><td nowrap class='bodytext'>3:00 PM&nbsp;</td><td nowrap class='bodytext'>St. Mark's&nbsp;</td><td nowrap class='bodytext'>
+			<a href="directions_view.asp?id=19" class="bodytext" onmouseover="window.status='Show directions';return true" title="Show directions" onmouseout="window.status=''">St. Mark's</a>
+	&nbsp;</td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>02/15/06&nbsp;</td><td nowrap class='bodytext'>3:00 PM&nbsp;</td><td nowrap class='bodytext'>Andover&nbsp;</td><td nowrap class='bodytext'>
+			<a href="javascript: void window.open('http://www.nobles.edu/home/content.asp?id=93','dirWnd','resizable=yes,scrollbars=yes,height=600,width=800');" class="bodytext" onmouseover="window.status='Show directions';return true" title="Show directions" onmouseout="window.status=''">Nobles</a>
+		&nbsp;</td></tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>02/16/06&nbsp;</td><td nowrap class='bodytext'>4:00 PM&nbsp;</td><td nowrap class='bodytext'>Wheeler&nbsp;</td><td nowrap class='bodytext'>
+			<a href="javascript: void window.open('http://www.nobles.edu/home/content.asp?id=93','dirWnd','resizable=yes,scrollbars=yes,height=600,width=800');" class="bodytext" onmouseover="window.status='Show directions';return true" title="Show directions" onmouseout="window.status=''">Nobles</a>
+		&nbsp;</td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>02/17/06&nbsp;</td><td nowrap class='bodytext'>5:00 PM&nbsp;</td><td nowrap class='bodytext'>Pomfret&nbsp;</td><td nowrap class='bodytext'>
+			<a href="javascript: void window.open('http://www.nobles.edu/home/content.asp?id=93','dirWnd','resizable=yes,scrollbars=yes,height=600,width=800');" class="bodytext" onmouseover="window.status='Show directions';return true" title="Show directions" onmouseout="window.status=''">Nobles</a>
+		&nbsp;</td></tr><tr bgcolor='#e4ebf3'><td nowrap class='bodytext'>02/22/06&nbsp;</td><td nowrap class='bodytext'>3:15 PM&nbsp;</td><td nowrap class='bodytext'>Groton&nbsp;</td><td nowrap class='bodytext'>
+			<a href="directions_view.asp?id=29" class="bodytext" onmouseover="window.status='Show directions';return true" title="Show directions" onmouseout="window.status=''">Groton</a>
+	&nbsp;</td></tr><tr bgcolor='#ffffff'><td nowrap class='bodytext'>02/25/06&nbsp;</td><td nowrap class='bodytext'>&nbsp;</td><td nowrap class='bodytext'>Interscholatics&nbsp;</td><td nowrap class='bodytext'>TBA&nbsp;</td></tr>
+			</table>
+				 <table width="635" border="0" cellspacing="0" cellpadding="0" vspace="0" hspace="0">
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="15"></td></tr>
+			<tr> 
+				<td valign="bottom" align="center" class="bodytext_gold">
+							
+					
+					<a class="bodytext" href="/home/content.asp?id=757&printVer=true" target="_blank" onmouseover="window.status='Display printer-friendly page';return true" title="Display printer-friendly page" onmouseout="window.status=''">
+					<img src="../graphics/icon_print.gif" border="0" WIDTH="24" HEIGHT="11">
+					Print version of page</a>
+					&nbsp;:&nbsp;
+					<a class="bodytext" href="email_friend.asp?id=757&amp;title=Squash Boys Varsity&amp;pxLoc=%2Fhome%2Fcontent%2Easp%3Fid%3D757" target="_blank" onmouseover="window.status='Send this page to a friend';return true" title="Send this page to a friend" onmouseout="window.status=''">
+					<img src="../graphics/icon_mail.gif" border="0" WIDTH="24" HEIGHT="11">
+					Email page to a friend</a>
+				</td>
+			</tr>
+			<tr><td><img src="../graphics/spacer.gif" border="0" width="1" height="15"></td></tr>
+		</table>
+		</td>
+	  </tr>
+	</table>
+	</td>
+  </tr>
+</table>
+
+
+</BODY>
+</HTML>

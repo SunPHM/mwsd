@@ -1,0 +1,193 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Thom Kraus - Bass Guitar</title>
+<style>
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:10pt;
+	font-family:Verdana;
+      font-weight:bold;
+	color:white;
+}
+</style>
+<script>
+
+/*
+Cursor Trailor Text- By Peter Gehrig (http://www.24fun.ch/)
+Permission given to Dynamicdrive.com to feature script in it's archive.
+For full source code, installation instructions, and 1000's more DHTML scripts,
+visit http://dynamicdrive.com
+*/
+
+var x,y
+var step=20
+var flag=0
+
+// Your snappy message. Important: the space at the end of the sentence!!!
+var message="Thom Krauss "
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+	
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+ 
+<STYLE TYPE="text/css">
+  <!-- /* $WEFT -- Created by: Mike DiStefano (mdistefano@adelphia.net) on 6/25/2005 -- */
+  @font-face {
+    font-family: ShoestringSSK;
+    font-style:  oblique;
+    font-weight: 700;
+    src: url(SHOESTR8.eot);
+  }
+  @font-face {
+    font-family: ShoestringSSK;
+    font-style:  normal;
+    font-weight: 700;
+    src: url(SHOESTR6.eot);
+  }
+  @font-face {
+    font-family: Tahoma;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(TAHOMA4.eot);
+  }
+  @font-face {
+    font-family: Arial;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(ARIAL5.eot);
+  }
+-->
+
+
+</STYLE>
+
+<meta name="Microsoft Border" content="b">
+</head>
+
+<body stylesrc="Mark.htm" style="width:100%;overflow-x:hidden;overflow-y:scroll" onLoad="makesnake()" bgcolor="#000000" text="#ffffff" vlink="#ff00ff"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+<p align="center"><strong><em><big><big><big><big><font color="#BE4161"><font face="shoestringssk"><img border="0" src="images/logos/logo1.png" width="105" height="58"></font></font><font color="#BE4161" face="ShoestringSSK">Thom
+Krauss</font></big></big></big></big></em><font face="ShoestringSSK"><font color="#ff8000"><big><big><big><br></big></big></big></font><big><big><big>Bass Guitar</big></big></big></font></strong></p>
+
+<p align="left"><font color="#ff8000" face="Tahoma"><img border="0" src="images/Jan2001Color/bv1-9-20.jpg" width="307" height="471" align="left">
+</font><font color="#BE4161" face="Tahoma">Thom likes to rock and he does it
+well.&nbsp; He also likes Elvis, horseback riding, long walks on the
+beach, candle-lit dinners, fine novels and $2 bottles of wine...if he thinks it
+will help him score.&nbsp;&nbsp; This dude
+can play and has really added something to the rhythm section.&nbsp; Thom is an all-around musician known most for being a
+guitar player. He can also sing, and play drums.&nbsp; He has an album recorded,
+which he played all the instruments.&nbsp; His quiet personality gets a kick in
+the crotch when he puts on the bass.&nbsp; You should check him out.!!</font>
+
+</p>
+
+<p align="left"><font face="Tahoma" color="#BE4161">Thom was one of the
+finalists in the WNY 2003 People's Choice awards for Best Rock Bass Player</font>
+
+</p>
+
+<p align="center"><font color="#BE4161" face="Tahoma">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;click
+<a href="mailto:thom@blindvisionband.com">here</a> to send Thom an email</font>
+
+</p>
+
+<p align="center"><img border="0" src="images/Jan2001Color/bv1-9-10.jpg" align="left" width="205" height="350">
+
+</p>
+
+<p align="center">&nbsp;
+
+</p>
+
+<table border="0" width="30">
+  <tr>
+    <td width="30%"></td>
+  </tr>
+  <tr>
+    <td width="30%"><img border="0" src="images/bv6-21-5.jpg" align="left" width="209" height="313">
+
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+<script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+
+</p>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

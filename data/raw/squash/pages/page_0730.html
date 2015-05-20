@@ -1,0 +1,468 @@
+
+
+<html>
+
+		<head>
+
+<title>sundaytimes.co.za :: Home of the Sunday Times :: South Africa's best selling newspaper :: </title>
+
+<meta name="description" content="South Africa's best selling newspaper">
+
+<meta name="keywords" content="South Africa,Sunday Times,Lifestyle,mandela,anc,Thabo Mbeki,aids,sport,motoring,music,Business Times,Barry Ronge,magazine,tv guide,movies,books,travel,politics,legal,debate,news,times media limited,sex,backpage,linda shaw,David Bullard,Gwen Gill,readright,education,Johannesburg,Cape Town,Durban,Kruger National Park">
+
+<!--this pulls in javascript and style sheets globally-->
+		<script>
+
+//********************************************************************************************************
+//Checkm8 Ad Coding
+//********************************************************************************************************
+function DisplayAds(cat, position, width, height)
+{
+
+	var CM8url = 'http://ads.checkm8.co.za/adam/detect?';
+	//var CM8cat = '&cat=st.testing';
+	var CM8cat = '&cat=st.';
+	if ( cat != "" )
+		CM8cat = CM8cat + cat;
+	else
+		CM8cat = CM8cat + ProcessCookie( "adstring" );
+	
+	//document.write ( "Add: " + position + ":" + CM8cat + "(" + height + "," + width + ")");
+	//return;
+	CM8ShowAd(CM8url +'req=bo'+'&pos=' + position + '&sz=' +  width + 'x' + height + CM8cat);
+}
+//********************************************************************************************************
+
+//********************************************************************************************************
+//Sundaytimes Popup Windows
+//********************************************************************************************************
+	function viewPop(filetoview)
+	{
+		
+		var fwidth = screen.width;
+		var fheight = screen.height;
+
+		var fleft = (fwidth - 500)/2;
+		var ftop = (fheight - 400)/2;
+
+		var desktop=window.open(filetoview,"floating","toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable,width=500,height=400,left=" + fleft + ",top=" + ftop);
+		
+	}
+//********************************************************************************************************
+
+
+//********************************************************************************************************
+//Go to a given url
+//********************************************************************************************************
+	function goUrl(Selected) 
+	{
+		/*	
+			change page location to option selected from navigation 
+			drop-down 
+		*/
+		var newURL = Selected.options[Selected.selectedIndex].value ;
+		if (newURL!=" ") {
+			document.location.href = newURL;
+		}
+	}
+//********************************************************************************************************
+
+
+//********************************************************************************************************
+//Random popups for Adservings - Open per session or per page.
+//********************************************************************************************************
+	
+	var URLS, WinParam, Impressions
+			
+	URLS = new Array();
+			
+	URLS[0] = "/home/welcome.html";
+	//URLS[1] = "HTMLPopup.htm";
+	//URLS[2] = "FlashPopup.htm";
+			
+	PerSession = 1;	
+			
+	function Initialise()
+	{
+		//Disabled for now...
+		
+		var Width, Height;
+		
+		Width = "550";
+		Height = "550";
+		WinParam = "scrollbars=yes,resizable=yes,toolbar=no,menubar=no,status=yes,location=no,left=100,top=30,height=" + Height + ",width=" + Width;
+		
+		if (PerSession == 0)
+			OpenPopup();
+		else
+		{
+			CheckLoad();
+		}
+		
+	}
+			
+	function ProcessCookie(Name)
+	{
+		var Search, ReturnVal, offSet, End;	
+		Search = Name + "=";
+		ReturnVal = "";
+		
+		if (document.cookie.length > 0)
+		{
+			offSet = document.cookie.indexOf(Search);
+			if (offSet != -1)
+			{
+				offSet += Search.length;
+				End = document.cookie.indexOf(";", offSet);
+				if (End == -1)
+				{
+					End = document.cookie.length;
+				}
+				ReturnVal = unescape(document.cookie.substring(offSet, End));
+			}
+		}
+		return ReturnVal;
+	}
+			
+	function CheckLoad()
+	{
+		if (ProcessCookie("Popup") == "")
+		{
+			OpenPopup();
+			document.cookie = "Popup=Yes";
+		}
+	}
+	
+	function OpenPopup()
+	{
+		var RandomNo, objWin;
+		RandomNo = Math.floor(Math.random()*(URLS.length))
+		
+		objWin = window.open(URLS[RandomNo], "Popup", WinParam);
+		
+		//objWin.blur();
+		//window.focus();
+	}
+//********************************************************************************************************
+
+//********************************************************************************************************
+//Relatedlinks - Create and populate relayted links.
+//********************************************************************************************************
+
+	function RaletedObject ( Title, URL )	{
+		this.Title = Title;
+		this.URL = URL;
+	}
+
+	function createRalaytedlinks(){
+	
+		//check for arrays
+		//populate string
+		//add string to innerHTML of div
+		var sContent = "";
+		var objDiv;
+		
+
+			sContent = '<table border="0" cellpadding="0" cellspacing="0" width=220 bgcolor=#999999><tr><td><table border="0" cellpadding="1" cellspacing="0" width="220" bgcolor="#999999"><tr><td><table width="220" border="0" cellpadding="3" cellspacing="0"><tr><td bgcolor="#cc0000" valign="top"><div class="communitystrap">RELATED LINKS</div></td></tr><tr><td valign="top" bgcolor="white"><div class="frontpageheadline">';
+			for (var i = 0; i < arRalatedlinks.length; i++){
+				sContent += '<a href="' + arRalatedlinks[i].URL + '">' + arRalatedlinks[i].Title + '</a><br>';
+			}
+			sContent += '</div></td></tr></table></td></tr></table></td></tr></table>';
+			objDiv = document.getElementById("divRelatedLinks");
+			objDiv.innerHTML = sContent;
+
+
+	}
+//********************************************************************************************************
+		
+		</Script>
+
+
+
+
+
+
+</head>
+
+<body bgcolor="#FFFFFF"  LINK="black" VLINK="black" ALINK="black"> 
+<!--livestat coding-->
+<SCRIPT><!--
+n=new Date();document.write('<IMG SRC="HTTP://LiveStat.com/'+Math.round(n.getTimezoneOffset()/60)+'^LSZ'+n.getTime()+'-'+Math.random()+'.cgi?S=www.sundaytimes.co.za/sport/&R='+document.referrer+'" BORDER=0 WIDTH=1 HEIGHT=1>')
+//--></SCRIPT><NOSCRIPT><IMG SRC="HTTP://LiveStat.com/^LSZ.cgi?S=www.sundaytimes.co.za/sport/" BORDER=0 WIDTH=1 HEIGHT=1></NOSCRIPT>
+
+<!--this pulls in the masthead and adcoding globally-->
+
+<SCRIPT language="JavaScript">
+var PageID = "sp-competition";
+</Script>
+
+<SCRIPT LANGUAGE="JavaScript">
+var AdZone = 'stimes.' + PageID
+</SCRIPT>
+
+<Script language="JavaScript">
+var CM8Server = "ad.adtoma.com";
+var CM8Cat = AdZone;
+</Script>
+<Script language="JavaScript" src="http://ad.adtoma.com/adam/cm8adam_1_call.js">
+</script>
+
+<link href="/SundayTimes.css" rel="stylesheet">
+<form action="/search/results.aspx" method="post">
+	<table cellSpacing="0" cellPadding="0" width="750" bgColor="white" border="0">
+		<tr>
+			<td>
+				<span id="Header1_mastheadascx_banneradverts_lblAddScripts">
+					<script> CM8ShowAd("leaderboard") </script>
+
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td vAlign="top">
+				<table cellSpacing="0" cellPadding="0" border="0" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid">
+					<tr>
+						<td rowspan="2" vAlign="bottom" align="right" width="273" height="62px" background="/images/logo.gif">
+							<font class="dateline">Tuesday, 7 Feb 2006</font>&nbsp;
+						</td>
+						<td align="right" width="477" bgColor="#cc0000" height="26"><img height="5" alt="" src="/images/invisible.gif" width="220" border="0"><br>
+							<IMG height="26" alt="" src="/images/search.gif" width="52" align="middle" border="0">&nbsp;
+							<INPUT type="text" maxLength="100" size="15" name="SearchString">&nbsp;
+							<Select Name="cboWhen">
+								<Option Value="2" selected>Past month</Option>
+								<Option Value="3">Past 6 months</Option>
+								<Option Value="4">Past year</Option>
+								<Option Value="5">Past 2 years</Option>
+							</Select>&nbsp;&nbsp;<INPUT type="submit" value="Go" name="Submit">&nbsp;
+							<input type="hidden" name="Display" value="H" />
+							<input type="hidden" name="PageSize" value="10" />
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#cfcfcf" style="BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid" align="right"><font class="somenews"><B>SOME 
+								NEWS WON'T WAIT TILL SUNDAY&nbsp;</B></font></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>
+
+
+<table cellpadding=0 cellspacing=0 border=0 width="750">
+<tr>
+<!--left navigation column starts here-->
+<td VALIGN="top" width="100" bgcolor="#E6E1E1">
+<!--global community section navigation in here-->
+
+
+<table cellpadding=0 cellspacing=0 border=0 width="100" bgcolor=white>
+
+<tr>
+
+<!--side naviagtion in here-->
+
+
+
+<td width="100" valign="top" bgcolo
+r="white"  alt="" border="0">
+
+<!--menu code in here-->
+<Script Language="Javascript" SRC="/jscripts/STScripts.js"></Script>
+<Script Language="Javascript" SRC="/jscripts/JohnnicStaticMenunew.js"></Script>
+<html> <TABLE style="border-top:1px solid black;border-left:1px solid black;border-right:1px solid black;background-color:#CCCCCC;" Width="120px" CellPadding="0" CellSpacing="0" ID="MainNavTable"> <tbody> <tr> <td> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P47');" ID="TDNavST6P47" URL="http://www.sundaytimes.co.za/home/index.aspx?Page=ST6P250&amp;MenuItem=ST6P250">Home</td> </tr> </tbody> </TABLE> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P250');" ID="TDNavST6P250" URL="http://www.sundaytimes.co.za/home/index.aspx?Page=ST6P250&amp;MenuItem=ST6P250">Daily sections</td> <td Height="21px" style="cursor: hand;" Class="navmenu" Align="Right" Width="12px" ID="STNavTDImgST6P250" onClick="ToggleItem('ST6P250');"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/Mrightarrow.gif" ID="STNavImgST6P250"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P250"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navsubActivemenu" onClick="ToggleItem('ST6P251'); return false;" ID="TDNavST6P251" URL="http://www.sundaytimes.co.za/news/index.aspx?Page=ST6P251&amp;MenuItem=ST6P251">News</td> <td Height="21px" style="cursor: hand;" Class="navsubmenu" Align="Right" Width="12px" ID="STNavTDImgST6P251" onClick="ToggleItem('ST6P251'); return false;"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/parentclosed.gif" ID="STNavImgST6P251"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P251"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2011'); return false;" ID="TDNavST6P2011" URL="http://www.sundaytimes.co.za/news/index-africa.aspx?Page=ST6P2011&amp;MenuItem=ST6P2011">Africa</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2012'); return false;" ID="TDNavST6P2012" URL="http://www.sundaytimes.co.za/news/index-world.aspx?Page=ST6P2012&amp;MenuItem=ST6P2012">World</td> </tr> </tbody> </TABLE> </DIV> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P252'); return false;" ID="TDNavST6P252" URL="http://www.sundaytimes.co.za/sport/index.aspx?Page=ST6P252&amp;MenuItem=ST6P252">Sport</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P253'); return false;" ID="TDNavST6P253" URL="http://www.sundaytimes.co.za/business/index.aspx?Page=ST6P253&amp;MenuItem=ST6P253">Business</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navsubActivemenu" onClick="ToggleItem('ST6P300'); return false;" ID="TDNavST6P300" URL="http://www.sundaytimes.co.za/entertainment/index.aspx?Page=ST6P300&amp;MenuItem=ST6P300">Entertainment</td> <td Height="21px" style="cursor: hand;" Class="navsubmenu" Align="Right" Width="12px" ID="STNavTDImgST6P300" onClick="ToggleItem('ST6P300'); return false;"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/parentclosed.gif" ID="STNavImgST6P300"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P300"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2548'); return false;" ID="TDNavST6P2548" URL="http://www.sundaytimes.co.za/tv/index.aspx?Page=ST6P2548&amp;MenuItem=ST6P2548">Television</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P3580'); return false;" ID="TDNavST6P3580" URL="http://www.sundaytimes.co.za/gwen/index.aspx?Page=ST6P3580&amp;MenuItem=ST6P3580">Gwen Gill</td> </tr> </tbody> </TABLE> </DIV> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P255'); return false;" ID="TDNavST6P255" URL="http://www.sundaytimes.co.za/careers/index.aspx?Page=ST6P255&amp;MenuItem=ST6P255">Careers</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P266'); return false;" ID="TDNavST6P266" URL="http://www.sundaytimes.co.za/motoring/index.aspx?Page=ST6P266&amp;MenuItem=ST6P266">Motoring</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P2549'); return false;" ID="TDNavST6P2549" URL="http://www.sundaytimes.co.za/education/index.aspx?Page=ST6P2549&amp;MenuItem=ST6P2549">Education</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P15955'); return false;" ID="TDNavST6P15955" URL="http://www.sundaytimes.co.za/mobilegames/index.aspx?Page=ST6P15955&amp;MenuItem=ST6P15955">Mobile Games</td> </tr> </tbody> </TABLE> </DIV> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P197');" ID="TDNavST6P197" URL="http://www.sundaytimes.co.za/home/indexsunday.aspx?Page=ST6P197&amp;MenuItem=ST6P197">Sunday's Paper</td> <td Height="21px" style="cursor: hand;" Class="navmenu" Align="Right" Width="12px" ID="STNavTDImgST6P197" onClick="ToggleItem('ST6P197');"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/Mrightarrow.gif" ID="STNavImgST6P197"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P197"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navsubActivemenu" onClick="ToggleItem('ST6P405'); return false;" ID="TDNavST6P405" URL="http://www.sundaytimes.co.za/sunday/sun-news-national.aspx?Page=ST6P405&amp;MenuItem=ST6P405">News</td> <td Height="21px" style="cursor: hand;" Class="navsubmenu" Align="Right" Width="12px" ID="STNavTDImgST6P405" onClick="ToggleItem('ST6P405'); return false;"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/parentclosed.gif" ID="STNavImgST6P405"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P405"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P406'); return false;" ID="TDNavST6P406" URL="http://www.sundaytimes.co.za/sunday/sun-news-gauteng.aspx?Page=ST6P406&amp;MenuItem=ST6P406">Gauteng</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P407'); return false;" ID="TDNavST6P407" URL="http://www.sundaytimes.co.za/sunday/sun-news-kzn.aspx?Page=ST6P407&amp;MenuItem=ST6P407">KZN</td> </tr> </tbody> </TABLE> </DIV> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navsubActivemenu" onClick="ToggleItem('ST6P233'); return false;" ID="TDNavST6P233" URL="http://www.sundaytimes.co.za/sunday/sun-opinion.aspx?Page=ST6P233&amp;MenuItem=ST6P233">Opinion &amp; Analysis</td> <td Height="21px" style="cursor: hand;" Class="navsubmenu" Align="Right" Width="12px" ID="STNavTDImgST6P233" onClick="ToggleItem('ST6P233'); return false;"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/parentclosed.gif" ID="STNavImgST6P233"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P233"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P409'); return false;" ID="TDNavST6P409" URL="http://www.sundaytimes.co.za/sunday/sun-letters.aspx?Page=ST6P409&amp;MenuItem=ST6P409">Letters</td> </tr> </tbody> </TABLE> </DIV> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P234'); return false;" ID="TDNavST6P234" URL="http://www.sundaytimes.co.za/sunday/sun-news-politics.aspx?Page=ST6P234&amp;MenuItem=ST6P234">Politics</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navsubActivemenu" onClick="ToggleItem('ST6P475'); return false;" ID="TDNavST6P475" URL="http://www.sundaytimes.co.za/sunday/sun-sport.aspx?Page=ST6P475&amp;MenuItem=ST6P475">Sport</td> <td Height="21px" style="cursor: hand;" Class="navsubmenu" Align="Right" Width="12px" ID="STNavTDImgST6P475" onClick="ToggleItem('ST6P475'); return false;"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/parentclosed.gif" ID="STNavImgST6P475"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P475"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2550'); return false;" ID="TDNavST6P2550" URL="http://www.sundaytimes.co.za/sunday/sun-sport-soccer.aspx?Page=ST6P2550&amp;MenuItem=ST6P2550">Soccer</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2551'); return false;" ID="TDNavST6P2551" URL="http://www.sundaytimes.co.za/sunday/sun-sport-cricket.aspx?Page=ST6P2551&amp;MenuItem=ST6P2551">Cricket</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2552'); return false;" ID="TDNavST6P2552" URL="http://www.sundaytimes.co.za/sunday/sun-sport-rugby.aspx?Page=ST6P2552&amp;MenuItem=ST6P2552">Rugby</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P2553'); return false;" ID="TDNavST6P2553" URL="http://www.sundaytimes.co.za/sunday/sun-sport-other.aspx?Page=ST6P2553&amp;MenuItem=ST6P2553">Other</td> </tr> </tbody> </TABLE> </DIV> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navsubActivemenu" onClick="ToggleItem('ST6P410'); return false;" ID="TDNavST6P410" URL="http://www.sundaytimes.co.za/sunday/sun-biz-news.aspx?Page=ST6P410&amp;MenuItem=ST6P410">Business</td> <td Height="21px" style="cursor: hand;" Class="navsubmenu" Align="Right" Width="12px" ID="STNavTDImgST6P410" onClick="ToggleItem('ST6P410'); return false;"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/parentclosed.gif" ID="STNavImgST6P410"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P410"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P411'); return false;" ID="TDNavST6P411" URL="http://www.sundaytimes.co.za/sunday/sun-biz-moneymarkets.aspx?Page=ST6P411&amp;MenuItem=ST6P411">Money &amp; markets</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:9px;" Class="navmenu" onClick="ToggleItem('ST6P413'); return false;" ID="TDNavST6P413" URL="http://www.sundaytimes.co.za/sunday/sun-biz-columns.aspx?Page=ST6P413&amp;MenuItem=ST6P413">Columns</td> </tr> </tbody> </TABLE> </DIV> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P237'); return false;" ID="TDNavST6P237" URL="http://www.sundaytimes.co.za/columnists/index.aspx?Page=ST6P237&amp;MenuItem=ST6P237">Columns</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P1756'); return false;" ID="TDNavST6P1756" URL="http://www.sundaytimes.co.za/sunday/sun-biz-careers.aspx?Page=ST6P1756&amp;MenuItem=ST6P1756">Careers</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P236'); return false;" ID="TDNavST6P236" URL="http://www.sundaytimes.co.za/sunday/sun-entertainment.aspx?Page=ST6P236&amp;MenuItem=ST6P236">Entertainment</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P238'); return false;" ID="TDNavST6P238" URL="http://www.sundaytimes.co.za/sunday/sun-lifestyle.aspx?Page=ST6P238&amp;MenuItem=ST6P238">Lifestyle</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P248'); return false;" ID="TDNavST6P248" URL="http://www.sundaytimes.co.za/ReadRight/index.aspx?Page=ST6P248&amp;MenuItem=ST6P248">Education</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P249'); return false;" ID="TDNavST6P249" URL="http://www.sundaytimes.co.za/sunday/sun-backpage.aspx?Page=ST6P249&amp;MenuItem=ST6P249">Back Page</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P15956'); return false;" ID="TDNavST6P15956" URL="http://www.sundaytimes.co.za/mobilegames/index.aspx?Page=ST6P15956&amp;MenuItem=ST6P15956">Mobile Games</td> </tr> </tbody> </TABLE> </DIV> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P320');" ID="TDNavST6P320" URL="http://www.sundaytimes.co.za/specialreports/index.aspx?Page=ST6P320&amp;MenuItem=ST6P320">Special reports</td> </tr> </tbody> </TABLE> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P14645');" ID="TDNavST6P14645" URL="http://www.sundaytimes.co.za/galleries/photogalleries-template.aspx?Page=ST6P14645&amp;MenuItem=ST6P14645">Photo Galleries</td> </tr> </tbody> </TABLE> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P196');" ID="TDNavST6P196" URL="http://www.sundaytimes.co.za/helpdesk/contacts.aspx?Page=ST6P196&amp;MenuItem=ST6P196">Help desk</td> <td Height="21px" style="cursor: hand;" Class="navmenu" Align="Right" Width="12px" ID="STNavTDImgST6P196" onClick="ToggleItem('ST6P196');"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/Mrightarrow.gif" ID="STNavImgST6P196"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P196"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P217'); return false;" ID="TDNavST6P217" URL="http://www.sundaytimes.co.za/helpdesk/subscribeindex.aspx?Page=ST6P217&amp;MenuItem=ST6P217">Subscriptions</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P218'); return false;" ID="TDNavST6P218" URL="http://www.sundaytimes.co.za/helpdesk/complainindex.aspx?Page=ST6P218&amp;MenuItem=ST6P218">Complain</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P308'); return false;" ID="TDNavST6P308" URL="http://www.sundaytimes.co.za/helpdesk/globalindex.aspx?Page=ST6P308&amp;MenuItem=ST6P308">Global edition</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P309'); return false;" ID="TDNavST6P309" URL="http://www.sundaytimes.co.za/helpdesk/syndicationindex.aspx?Page=ST6P309&amp;MenuItem=ST6P309">Buy our content</td> </tr> </tbody> </TABLE> </DIV> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P1553');" ID="TDNavST6P1553" URL="http://www.sundaytimes.co.za/usefultools/index.aspx?Page=ST6P1553&amp;MenuItem=ST6P1553">Useful tools</td> <td Height="21px" style="cursor: hand;" Class="navmenu" Align="Right" Width="12px" ID="STNavTDImgST6P1553" onClick="ToggleItem('ST6P1553');"> <Img Border="0" Src="http://www.sundaytimes.co.za/Images/Mrightarrow.gif" ID="STNavImgST6P1553"> </Img> </td> </tr> </tbody> </TABLE> <DIV style="display:none" ID="DivMenuItemST6P1553"> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P1554'); return false;" ID="TDNavST6P1554" URL="http://www.sundaytimes.co.za/lottery/index.aspx?Page=ST6P1554&amp;MenuItem=ST6P1554">Lottery</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P2545'); return false;" ID="TDNavST6P2545" URL="http://www.sundaytimes.co.za/newsletters/index.aspx?Page=ST6P2545&amp;MenuItem=ST6P2545">Newsletters</td> </tr> </tbody> </TABLE> <TABLE Width="100%" Border="0" bgcolor="#ffffff" CellPadding="0" CellSpacing="0" ID="Table1"> <tbody> <tr> <td Height="21px" Width="100%" style="padding-left:6px;" Class="navmenu" onClick="ToggleItem('ST6P2547'); return false;" ID="TDNavST6P2547" URL="http://www.sundaytimes.co.za/donate/index.aspx?Page=ST6P2547&amp;MenuItem=ST6P2547">Donate</td> </tr> </tbody> </TABLE> </DIV> <TABLE style="background-color:#CCCCCC;" Width="100%" CellPadding="0" CellSpacing="0"> <tbody> <tr> <td Height="21px" Width="100%" style="cursor: hand; padding-left:2px" Class="navmenu" onClick="ToggleItem('ST6P331');" ID="TDNavST6P331" URL="http://www.sundaytimes.co.za/search/index.aspx?Page=ST6P331&amp;MenuItem=ST6P331">Search</td> </tr> </tbody> </TABLE> </td> </tr> </tbody> </TABLE> <Script Language="Javascript" SRC="http://www.sundaytimes.co.za/jscripts/JohnnicStaticMenuNew.js"> </Script> <Script Language="Javascript"> var arMenu = new Array(); var sTopMenuCls = 'navmenu'; //MainMenu Table Cell Class var sTopMenuACls = 'navActivemenu'; //MainMenu Table Cell Class var sSubmenuCls = 'navsubmenu'; //SubMenu Table Cell Class var sSubmenuACls = 'navsubActivemenu'; //SubMenu Table Cell Class var sSubmenuOpenCls = 'navsubOpenMenu'; var sMenuWidth = '120px'; //Menu Width var sMenuColor = '#CCCCCC'; //Top Menu Color var iHeight = '21px'; //Menu Row Height var iClosePrevMenu = 1; //Close Previously Opened Parent var iCurrentPageIndex = -1; var sDefaultPageID = 'ST6P47'; //Default Page ID var sSectionImgPath = 'http://www.sundaytimes.co.za/Images/Mrightarrow.gif'; //Menu has Submenus Image var sSectionImgDownPath = 'http://www.sundaytimes.co.za/Images/Mdownarrow.gif'; //Menu has Submenus Image var sSubImgPath = 'http://www.sundaytimes.co.za/Images/parentclosed.gif'; //Menu has Submenus Image var sSubImgDownPath = 'http://www.sundaytimes.co.za/Images/parentopen.gif'; //Menu has Submenus Image var iLastOpenedItemID; function LoadMenus() { arMenu[0] = new MenuItem("ST6P47", "Home", ""); arMenu[1] = new MenuItem("ST6P250", "Daily sections", ""); arMenu[2] = new MenuItem("ST6P251", "News", "ST6P250"); arMenu[3] = new MenuItem("ST6P2011", "Africa", "ST6P251"); arMenu[4] = new MenuItem("ST6P2012", "World", "ST6P251"); arMenu[5] = new MenuItem("ST6P252", "Sport", "ST6P250"); arMenu[6] = new MenuItem("ST6P253", "Business", "ST6P250"); arMenu[7] = new MenuItem("ST6P300", "Entertainment", "ST6P250"); arMenu[8] = new MenuItem("ST6P2548", "Television", "ST6P300"); arMenu[9] = new MenuItem("ST6P3580", "Gwen Gill", "ST6P300"); arMenu[10] = new MenuItem("ST6P255", "Careers", "ST6P250"); arMenu[11] = new MenuItem("ST6P266", "Motoring", "ST6P250"); arMenu[12] = new MenuItem("ST6P2549", "Education", "ST6P250"); arMenu[13] = new MenuItem("ST6P15955", "Mobile Games", "ST6P250"); arMenu[14] = new MenuItem("ST6P197", "Sunday's Paper", ""); arMenu[15] = new MenuItem("ST6P405", "News", "ST6P197"); arMenu[16] = new MenuItem("ST6P406", "Gauteng", "ST6P405"); arMenu[17] = new MenuItem("ST6P407", "KZN", "ST6P405"); arMenu[18] = new MenuItem("ST6P233", "Opinion &amp; Analysis", "ST6P197"); arMenu[19] = new MenuItem("ST6P409", "Letters", "ST6P233"); arMenu[20] = new MenuItem("ST6P234", "Politics", "ST6P197"); arMenu[21] = new MenuItem("ST6P475", "Sport", "ST6P197"); arMenu[22] = new MenuItem("ST6P2550", "Soccer", "ST6P475"); arMenu[23] = new MenuItem("ST6P2551", "Cricket", "ST6P475"); arMenu[24] = new MenuItem("ST6P2552", "Rugby", "ST6P475"); arMenu[25] = new MenuItem("ST6P2553", "Other", "ST6P475"); arMenu[26] = new MenuItem("ST6P410", "Business", "ST6P197"); arMenu[27] = new MenuItem("ST6P411", "Money &amp; markets", "ST6P410"); arMenu[28] = new MenuItem("ST6P413", "Columns", "ST6P410"); arMenu[29] = new MenuItem("ST6P237", "Columns", "ST6P197"); arMenu[30] = new MenuItem("ST6P1756", "Careers", "ST6P197"); arMenu[31] = new MenuItem("ST6P236", "Entertainment", "ST6P197"); arMenu[32] = new MenuItem("ST6P238", "Lifestyle", "ST6P197"); arMenu[33] = new MenuItem("ST6P248", "Education", "ST6P197"); arMenu[34] = new MenuItem("ST6P249", "Back Page", "ST6P197"); arMenu[35] = new MenuItem("ST6P15956", "Mobile Games", "ST6P197"); arMenu[36] = new MenuItem("ST6P320", "Special reports", ""); arMenu[37] = new MenuItem("ST6P14645", "Photo Galleries", ""); arMenu[38] = new MenuItem("ST6P196", "Help desk", ""); arMenu[39] = new MenuItem("ST6P217", "Subscriptions", "ST6P196"); arMenu[40] = new MenuItem("ST6P218", "Complain", "ST6P196"); arMenu[41] = new MenuItem("ST6P308", "Global edition", "ST6P196"); arMenu[42] = new MenuItem("ST6P309", "Buy our content", "ST6P196"); arMenu[43] = new MenuItem("ST6P1553", "Useful tools", ""); arMenu[44] = new MenuItem("ST6P1554", "Lottery", "ST6P1553"); arMenu[45] = new MenuItem("ST6P2545", "Newsletters", "ST6P1553"); arMenu[46] = new MenuItem("ST6P2547", "Donate", "ST6P1553"); arMenu[47] = new MenuItem("ST6P331", "Search", ""); //CREATE THE MENU AND DISPLAY IT. CreateMenu(); //Clear the Array ClearMenuArray(); } LoadMenus(); </Script> </html>
+
+
+</td></tr>
+
+</table>
+
+</td>
+
+<td valign=top width="1"><img src="/gifs/style/spacer.gif" width="1" height=1 border=0></td>
+
+<TD valign=top>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="550">
+
+<tr>
+<td valign="top" colspan="3" >&nbsp;&nbsp;&nbsp;
+<img src="http://www.sundaytimes.co.za/sport/diary2001/pics/sportbanner.gif" border=0 alt="">
+</td></tr>
+<tr>
+<td valign="top" >
+
+<!--left cell-->
+<table cellpadding="2" cellspacing="2" border="0" width="465" >
+<tr>
+
+<td valign="top" width="150" bgcolor="white">
+<img src="http://www.sundaytimes.co.za/sport/diary2001/pics/squash.jpg" border=0 alt=""><br><br>
+</td>
+
+
+<td valign="top" width="315">
+<img src="http://www.sundaytimes.co.za/sport/diary2001/pics/squash.gif" border=0 alt=""><br>
+<br>
+
+
+
+<font size="-1" face="ms sans serif,arial" color="black">
+
+
+<font size="-1" face="ms sans serif,arial" color="#cc0000">Mar 25-31:</font> World GP finals <font size="-1" face="ms sans serif,arial" color="navy">(Hurghada, Egypt).</font> <br>
+<font size="-1" face="ms sans serif,arial" color="#cc0000">Oct 7-13:</font> World Masters <font size="-1" face="ms sans serif,arial" color="navy">(Melbourne).</font><br>
+<font size="-1" face="ms sans serif,arial" color="#cc0000"> Oct 9-14:</font> Women’s World Open <font size="-1" face="ms sans serif,arial" color="navy">(Melbourne).</font> <br>
+<font size="-1" face="ms sans serif,arial" color="#cc0000">Oct 15-20:</font> Men’s World Championships <font size="-1" face="ms sans serif,arial" color="navy">(Melbourne).</font><br>
+<font size="-1" face="ms sans serif,arial" color="#cc0000">Oct 22-27:</font> Men’s World Team Championships <font size="-1" face="ms sans serif,arial" color="navy">(Melbourne).</font><br>
+
+
+
+
+</font>
+</td></tr>
+</table>
+</td>
+
+<!--start right hand column-->
+<td valign="top" width="130">
+
+<table cellspacing="2" cellpadding="2" border="0" bgcolor="#cccccc" width="125">
+<tr>
+<td valign="top" bgcolor="#cc0000">
+<font size="-1" face="ms sans serif, arial" color="white"><b>All sports</b> </font>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<font size="-2" face="ms sans serif, arial" color="#000000">
+<a href="americanfootball.asp">American football</a><br>
+<a href="athletics.asp">Athletics</a><br>
+<a href="baseball.asp">Baseball</a><br>
+<a href="bowls.asp">Bowls</a><br>
+<a href="boxing.asp">Boxing</a><br>
+<a href="canoeing.asp">Canoeing</a><br>
+<a href="cricket.asp">Cricket</a><br>
+<a href="croquet.asp">Croquet</a><br>
+<a href="cycling.asp">Cycling</a><br>
+<a href="disabled.asp">Disabled sport</a><br>
+<a href="equestrianism.asp">Equestrian</a><br>
+<a href="fencing.asp">Fencing</a><br>
+<a href="gliding.asp">Gliding</a><br>
+<a href="golf.asp">Golf</a><br>
+<a href="gymnastics.asp">Gymnastics</a><br>
+<a href="hockey.asp">Hockey</a><br>
+<a href="horseracing.asp">Horseracing</a><br>
+<a href="iceskating.asp">Iceskating</a><br>
+<a href="judo.asp">Judo</a><br>
+<a href="modernpentathlon.asp">Modern pentathlon</a><br>
+<a href="motorcycling.asp">Motorcycling</a><br>
+<a href="motorsport.asp">Motorsport</a><br>
+<a href="polo.asp">Polo</a><br>
+<a href="rallying.asp">Rallying</a><br>
+<a href="rowing.asp">Rowing</a><br>
+<a href="rugby.asp">Rugby</a><br>
+<a href="shooting.asp">Shooting</a><br>
+<a href="skiing.asp">Skiing</a><br>
+<a href="snooker.asp">Snooker</a><br>
+<a href="soccer.asp">Soccer</a><br>
+<a href="speedway.asp">Speedway</a><br>
+<a href="squash.asp">Squash</a><br>
+<a href="swimming.asp">Swimming</a><br>
+<a href="tabletennis.asp">Table tennis</a><br>
+<a href="tennis.asp">Tennis</a><br>
+<a href="Triathlon.asp">Triathlon</a><br>
+<a href="volleyball.asp">Volleyball</a><br>
+<a href="yachting.asp">Yachting</a><br>
+</font>
+</td>
+</tr>
+<tr>
+<td valign="top" bgcolor="#cc0000">
+<font size="-1" face="ms sans serif, arial" color="white"><b>Sports resources</b> </font>
+</td>
+</tr>
+<tr>
+<td valign="top" bgcolor="#cccccc">
+<font size="-2" face="ms sans serif, arial" color="white">
+
+<a href="http://www.suntimes.co.za/sport/">Sports news</a><br>
+<a href="http://www3.suntimes.co.za/forums/sport/">Sports forum</a><br>
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<table width="100%">
+	<tr>
+		<td style="BORDER-TOP: black 1px solid" class="caption">
+		<center>
+			<br>
+			<a href="/helpdesk/contacts.aspx?Page=ST6P196&MenuItem=ST6P196">Contact us</a> &nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;<a href="/helpdesk/contact4.aspx">Advertise</a>&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;<a href="/helpdesk/subscribeindex.aspx?Page=ST6P217&MenuItem=ST6P217">Subscribe to the paper</a>&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;<a href="/newsletters/index.aspx?Page=ST6P1553&MenuItem=ST6P1553">Newsletters</a>&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;<a href="/helpdesk/terms.aspx?Page=ST6P217&MenuItem=ST6P217">Terms of use</a>
+			<br><br>
+        <img src="/gifs/footerpics.gif" width="192" height="42" border="0" usemap="#Map"> 
+        <br>
+        <br>
+			
+<A href="http://www.sundaytimes.co.za/helpdesk/syndicationindex.aspx?Page=ST6P309&MenuItem=ST6P309">All material copyright Sunday Times</A><br>© Johnnic Media Investments Limited 1996-2005. All Rights Reserved. <br><br>
+</center>
+
+		</td>
+	</tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="6,4,188,16" href="http://www.johnnic.co.za" target="_blank">
+  <area shape="rect" coords="6,15,82,38" href="http://www.proudlysa.co.za" target="_blank">
+  <area shape="rect" coords="83,16,188,38" href="http://www.opa.org.za" target="_blank">
+</map>
+
+<!-- START RedSheriff Measurement V5.01 -->
+<!-- COPYRIGHT 2002 RedSheriff Limited -->
+<script language="JavaScript" type="text/javascript"><!--
+  var _rsCI='za-sundaytimes';
+  var _rsCG='0';
+  var _rsDT=1;
+  var _rsSI=escape(window.location);
+  var _rsLP=location.protocol.indexOf('https')>-1?'https:':'http:';
+  var _rsRP=escape(document.referrer);
+  var _rsND=_rsLP+'//secure-za.imrworldwide.com/';
+
+  if (parseInt(navigator.appVersion)>=4) {
+    var _rsRD=(new Date()).getTime();
+    var _rsSE=0;
+    var _rsSV='';
+    var _rsSM=0.1;
+    _rsCL='<scr'+'ipt language="JavaScript" type="text/javascript" src="'+_rsND+'v5.js"><\/scr'+'ipt>';
+  } else {
+    _rsCL='<img src="'+_rsND+'cgi-bin/m?ci='+_rsCI+'&cg='+_rsCG+'&si='+_rsSI+'&rp='+_rsRP+'">';
+  }
+  document.write(_rsCL);
+//--></script>
+<noscript>
+	<img src="//secure-za.imrworldwide.com/cgi-bin/m?ci=za-sundaytimes&amp;cg=0" alt="">
+</noscript>
+<!-- END RedSheriff Measurement V5 -->
+
+
+
+
+
+</body>
+</html>
+

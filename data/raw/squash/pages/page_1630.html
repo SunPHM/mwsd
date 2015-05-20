@@ -1,0 +1,896 @@
+<root>
+  <html>
+    <head>
+      <title>Squash Magazine</title>
+      <!-- $Id: SM_Article_With_Inset.xml,v 1.3 2005/08/01 17:20:48 barryh Exp $ -->
+      <link href="/vcm/squashmagazine/scripts/stylesheet.css" rel="stylesheet"/>
+      <!-- The next line is examined by the web site monitor. -->
+      <meta Name="description" content="Squashmagazine.com is the website for the sport of squash. Magazine subscriptions, news, tournament calendar & results, rules, drills, tips, profiles of pro players,  summer camps, tourney entry forms, videos and more!"/>
+      <meta Name="keywords" content="squash, squash pros, drills, tips, squash magazine, Peter Nicol, Jonathon Power, Sarah Fitz-Gerald, Vicky Botwright, USSRA, PSA, WISPA, ISDA, WSF, Intercollegiate squash, doubles squash, hardball squash, softball squash, international game squash, tournament calendar, events, results, rules of squash, training room, boast, drive, squash match, united states squash, squash camps, squash store, gear, eyeguards, squash publications, racquets, squash leagues, squash equipment, racquetball, prince racquets, squash design, squash gear, black knight, holabird, squash plus, head, penn, wilson, ashaway, grasscourt, harrow, Khan, US Open, Tournament of Champions, Carol Owens, SRA, Yale, squash lessons, squash associations, squash championships, Nationals, squash history, squash pictures, squash catalogs, squash websites, squash schools, monkeysquash, prince squash, origins of squash, squash game, squash news, professional squash, amateur squash, US squash, squash canada, australian squash, squash england, scottish squash, british squash, european squash, squash malaysia, hong kong squash, asian squash, squash in pakistan, melbourne squash, squash america, talbott squash, ivy league, mark talbott, world squash, Princeton, Harvard, Trinity, Westchester, Chris Walker, us team. "/>
+      
+  <!-- $Id: SM_HeaderScripts.xml,v 1.7 2005/08/01 17:20:48 barryh Exp $ -->
+  <script language="javascript">
+    <!--
+    function MM_openBrWindow(theURL,winName,features) { //v2.0
+      window.open(theURL,winName,features);
+    }
+
+    function popUp(url) { // Verisign Secure Site script
+    sealWin=window.open(url,"win",'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=660,height=500');
+    self.name = "mainWin";
+    }
+    // -->
+  </script>
+
+    </head>
+    <body alink="#990000" bgcolor="#999966" leftmargin="0" link="#FFFFFF" marginheight="0" marginwidth="0" onLoad="pload()" text="#000000" topmargin="0" vlink="#FFFFFF">
+      
+  <!-- $Id: SM_CommonScripts.xml,v 1.8 2005/07/07 18:04:16 barryh Exp $ -->
+  <script language="javascript">
+    <!--
+    function mOvr(src,clrOver) {
+      if (!src.contains(event.fromElement)) {
+        src.style.cursor = 'hand'; src.bgColor = clrOver;
+      }
+    }
+    function mOut(src,clrIn) {
+      if (!src.contains(event.toElement)) {
+        src.style.cursor = 'default';
+        src.bgColor = clrIn;
+      }
+    }
+    function mClk(src) {
+      if(event.srcElement.tagName=='TD') {
+        src.children.tags('A')[0].click();
+      }
+    }
+    function changePage() {
+      if(window.navigator.appName == "Netscape"){
+        document.location=document.formMain.ViewElement.options[document.formMain.ViewElement.selectedIndex].value}
+      else
+        document.location=document.formMain.ViewElement.value
+    }
+  // -->
+  </script>
+  <script language="javascript">
+    <!--
+    var myDay = (new Date()).getDay();
+    var myMonth=(new Date()).getMonth();
+    var myMonthDay = (new Date()).getDate();
+
+    month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+
+    day = new Array();
+    day[0] = "Sunday";
+    day[1] = "Monday";
+    day[2] = "Tuesday";
+    day[3] = "Wednesday";
+    day[4] = "Thursday";
+    day[5] = "Friday";
+    day[6] = "Saturday";
+    var myWeekDay = day[myDay]
+    var myMonth=month[myMonth];
+
+    function isNetscape () {
+      if(window.navigator.appName == "Netscape")
+        return true;
+      else
+        return false;
+    }
+
+    function writeDate() {
+      var mydate = Date();
+      var length = mydate.length;
+      var year;
+      if (isNetscape())
+        year = mydate.substring (11,15);
+      else
+        year = mydate.substring(length-4, length);
+      var dateStr = dateStr = myMonth +" " + myMonthDay + ", "  + year;
+      document.write(dateStr);
+    } // end writeDate
+
+    function MM_openBrWindow(theURL,winName,features) { //v2.0
+      window.open(theURL,winName,features);
+    }
+
+    function DebugAlert(text) {
+      alert(text);
+    }
+    // -->
+  </script>
+  <script language="JavaScript">
+    <!--
+    // Some variables
+    var base= "/vcm/squashmagazine/images/"
+    var nrm = new Array();
+    var omo = new Array();
+    var docLinkName = new Array('links','dev_link','squash_live','video_library');
+    var docImageName = new Array('Squash_links','Dev_link','SquashLive','videos');
+
+    // Pre-load part.
+    function pload() {
+      if (document.images) {
+        for (i=0;i<docLinkName.length;i++) {
+          nrm[i] = new Image;
+          nrm[i].src = base + docLinkName[i] + "_up.gif"
+          omo[i] = new Image;
+          omo[i].src = base + docLinkName[i] + "_over.gif";
+        }
+      }
+    }
+
+    // The functions: first mouseover, then mouseout
+    function over(no) {
+      if (document.images) {
+        document.images[docImageName[no]].src = omo[no].src
+      }
+    }
+
+    function out(no) {
+      if (document.images) {
+        document.images[docImageName[no]].src = nrm[no].src
+      }
+    }
+
+    // -->
+  </script>
+  <script language="javascript">
+   var ppath = 'squashmagazine.FEATURES.State_of_Game';
+    <!--
+    function ul(s,p) {
+      var test = new String(s);
+      var uTest = new String("<u>"+s+"</u>");
+      if(p == ppath) {
+        document.write(uTest);
+      } else {
+        document.write(test);
+      }
+    }
+ -->
+  </script>
+
+  <script language="javascript">
+   var ppath = 'squashmagazine.FEATURES.State_of_Game';
+    <!--
+    function writeArchive() {
+      var path = new String();
+      var archiveTop = new String();
+
+      if (ppath == 'squashmagazine.FEATURES.State_of_Game') {
+        path = new String("state_of_game");
+      }
+      if (ppath == 'squashmagazine.FEATURES.Introducing') {
+        path = new String("introducing");
+      }
+      if (ppath == 'squashmagazine.FEATURES.Play') {
+        path = new String("play");
+      }
+      if (ppath == 'squashmagazine.RULES.Rules_of_Game') {
+        path = new String("rules");
+      }
+      if (ppath == 'squashmagazine.RULES.Tips_from_Pros') {
+        path = new String("tips");
+      }
+      if (ppath == 'squashmagazine.RULES.Training_Room') {
+        path = new String("training");
+      }
+      if (ppath == 'squashmagazine.RULES.Drills') {
+        path = new String("drills");
+      }
+      if (ppath == 'squashmagazine.RULES.Doubles_Boast') {
+        path = new String("doubles");
+      }
+      if (ppath == 'squashmagazine.COLUMNS') {
+        path = new String("columns");
+      }
+      if (ppath == 'squashmagazine.RESULTS') {
+        path = new String("results");
+      }
+      if (ppath == 'squashmagazine.STORE') {
+        path = new String("store");
+      }
+      if (ppath == 'squashmagazine.CONTACTS') {
+        path = new String("contact");
+      }
+      if (ppath == 'squashmagazine.SUBSCRIBE') {
+        path = new String("subscribe");
+      }
+      if (ppath == 'squashmagazine.LINKS') {
+        path = new String("links");
+      }
+      if (path.length != 0) {
+        archiveTop = new String("<td bgcolor=\"#CCCCCC\" width=\"88%\"><img src=\"/vcm/squashmagazine/images/"+path+"_title.gif\"/></td>");
+        document.write(archiveTop);
+        document.write("<td bgcolor=\"#CCCCCC\" valign=\"bottom\" width=\"12%\">");
+        document.write("<div align=\"right\"><img height=\"15\" src=\"/vcm/squashmagazine/images/section_corn.gif\" width=\"49\"/></div></td>");
+      }
+    }
+ -->
+  </script>
+
+      <!-- prevent caching in netscape. very important cause netscape tends to mangle cached code -->
+      <!-- START TAB NAV HEADER BAR -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        
+  <!-- $Id: SM_TopBar.xml,v 1.10 2005/07/18 18:55:37 barryh Exp $ -->
+  <tr>
+    <td rowspan="2" valign="top" width="139">
+      <div align="left">
+        <a href="https://www.squashmagazine.com/SUBSCRIBE/index.html">
+          <img border="0" height="60" src="/vcm/squashmagazine/images/logo_t_l.gif" width="140"/>
+        </a>
+      </div>
+    </td>
+    <td bgcolor="#000000" colspan="2">
+      <table border="0" cellpadding="0" cellspacing="0" width="588">
+        <tr>
+          <td bgcolor="#000000" width="10">
+            <div align="left">
+              <a href="#">
+                <img border="0" height="60" src="/vcm/squashmagazine/images/t_space.gif" width="5"/>
+              </a>
+            </div>
+          </td>
+          <td bgcolor="#000000" width="377">
+            <center>
+              <div align="center">
+                <a href="https://www.squashmagazine.com/SUBSCRIBE/index.html">
+                  <img border="0" height="40" src="/vcm/squashmagazine/images/subscribe_static.gif" width="200"/>
+                </a>
+              </div>
+              <!--
+                <script language="javascript">detectFlash();</script>
+              -->
+            </center>
+          </td>
+          <td align="right" bgcolor="#000000" width="201">
+            <!-- Link to ads in current directory -->
+            <div align="right">
+              
+                <a href="http://www.bksquash.com" target="_blank">
+                  <img border="0" src="/vcm/squashmagazine/FEATURES/State_of_Game/top_right_ad.gif"/>
+                </a>
+              
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <!-- <td bgcolor="White" colspan="2"><img height="1" src="/vcm/squashmagazine/images/spacer.gif" width="1"/></td>
+ -->
+  </tr>
+
+        
+  <!-- $Id: SM_Navigation.xml,v 1.13 2005/08/01 17:20:48 barryh Exp $ -->
+  <tr>
+    <td rowspan="2" valign="top" width="139">
+      <div align="left">
+        <table alink="#FFFFFF" link="#FFFFFF" width="140">
+          <tr align="left" bgcolor="#667FB2" valign="middle" width="170">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/index.html" style="text-decoration: none" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('HOME','squashmagazine')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="20">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                <b>FEATURES</b>
+              </font>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/FEATURES/Introducing/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Introducing...','squashmagazine.FEATURES.Introducing')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="14" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/FEATURES/State_of_Game/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('State of the Game','squashmagazine.FEATURES.State_of_Game')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/FEATURES/Play/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Play','squashmagazine.FEATURES.Play')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="25">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                <b>LESSON COURT</b>
+              </font>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b class="button">
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/RULES/Rules_of_Game/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Rules of the Game','squashmagazine.RULES.Rules_of_Game')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/RULES/Tips_from_Pros/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Tips from the Pros','squashmagazine.RULES.Tips_from_Pros')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/RULES/Training_Room/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Training Room','squashmagazine.RULES.Training_Room')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/RULES/Drills/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Drills','squashmagazine.RULES.Drills')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="10" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>&nbsp;
+                </b>
+              </font>
+              <a href="/vcm/squashmagazine/RULES/Doubles_Boast/index.html" style="text-decoration: none" target="_top">
+                <font color="#99CC66" face="Verdana,Arial,San-serif" size="-2">
+                  <b>
+                    <font color="#FFFFFF">&#149;
+                      <script language="javascript">ul('Doubles Boast','squashmagazine.RULES.Doubles_Boast')</script>
+                    </font>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/COLUMNS/index.html" style="text-decoration: none" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul("WILL'S WORLD",'squashmagazine.COLUMNS')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/CALENDAR/index.html" style="text-decoration: none" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('CALENDAR','squashmagazine/CALENDAR')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>&nbsp;
+                </b>
+              </font>
+              <a href="/vcm/squashmagazine/RESULTS/index.html" style="text-decoration: none" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('RESULTS','squashmagazine.RESULTS')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr VALIGN="middle" align="left" bgcolor="#667FB2">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a STYLE="text-decoration: none" href="https://www.squashmagazine.com/SUBSCRIBE/index.html" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('SUBSCRIBE','squashmagazine.SUBSCRIBE')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr VALIGN="middle" align="left" bgcolor="#667FB2">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>&nbsp;
+                </b>
+              </font>
+              <a STYLE="text-decoration: none" href="/vcm/squashmagazine/STORE/index.html" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('STORE','squashmagazine.STORE')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>&nbsp;
+                </b>
+              </font>
+              <a href="/vcm/squashmagazine/LINKS/index.html" style="text-decoration: none" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('LINKS','squashmagazine.LINKS')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+          <tr align="left" bgcolor="#667FB2" valign="middle">
+            <td bgcolor="#999966" height="25" onClick="mClk(this);" onMouseOut="mOut(this,'#999966');" onMouseOver="mOvr(this,'#990000');">
+              <font class="button" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                <b>
+                  &nbsp; </b>
+              </font>
+              <a href="/vcm/squashmagazine/CONTACTS/index.html" style="text-decoration: none" target="_top">
+                <font color="#FFFFFF" face="Verdana,Arial,San-serif" size="2">
+                  <b>
+                    <script language="javascript">ul('CONTACT US','squashmagazine.CONTACTS')</script>
+                  </b>
+                </font>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p align="center">
+          <a href="http://www.jameszug.com"><img border="0" height="189" src="/vcm/squashmagazine/images/james_zug_book.jpg" width="125"/></a>
+          <br/>
+          <font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="1">
+            <font size="+1">Exclusive!</font>
+          </font>
+      </p>
+      <center>
+        <table border="0" cellpadding="0" cellspacing="0" width="115">
+          <tr>
+            <td>
+              <font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="1">
+                <br/>
+                <a href="/vcm/squashmagazine/FEATURES/State_of_Game/index.html">Click here to read an excerpt</a> from the new book by James Zug,
+                <i>Squash: A History of the Game</i>
+                <p><a href="/vcm/squashmagazine/PDF/zugbookoffer.pdf">To order books click here</a></p>
+              </font>
+            </td>
+          </tr>
+        </table>
+      </center>
+      
+        <p align="center">
+          <a href="http://www.jameszug.com" target="_blank">
+            <img border="0" src="/vcm/squashmagazine/FEATURES/State_of_Game/bottom_left_ad.gif"/></a>
+        </p>
+      
+    </td>
+  </tr>
+
+        <tr valign="top">
+          <td bgcolor="#FFFFFF" colspan="2" valign="top">
+            
+  <!--   $Id: SM_BannerDate.xml,v 1.2 2005/07/20 17:55:19 barryh Exp $   -->
+  <table border="0" cellpadding="0" cellspacing="0" width="640">
+    <tr>
+      <td bgcolor="#990000" width="138">
+        <div align="center">
+          <font face="Verdana, Arial, Helvetica, sans-serif">
+            <font size="1">
+              <font color="#CCCCCC">
+                <script language="JavaScript">writeDate()</script>
+              </font>
+            </font>
+          </font>
+        </div>
+      </td>
+      <td bgcolor="#990000" width="370">
+        <a href="/vcm/squashmagazine/LINKS/index.html" onMouseOut="out(0)" onMouseOver="over(0)">
+          <img border="0" height="19" name="Squash_links" src="/vcm/squashmagazine/images/links_up.gif" width="99"/></a>
+      </td>
+      <td bgcolor="#990000" width="133">
+        <div align="right">
+          <img border="0" height="32" src="/vcm/squashmagazine/images/top_corner.gif" width="130"/>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+            <table border="0" cellpadding="0" cellspacing="0" width="640">
+              <!-- 1 row, 2 cols -->
+              <tr>
+                <td valign="top" width="510"> <!-- left column has body -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <script language="javascript">writeArchive()</script>
+                    </tr>
+                    <tr valign="top">
+                      <td colspan="2">
+                        <div align="right">
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td bgcolor="#CCCCCC" height="43" valign="top" width="76%">
+                                <center>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="95%">
+                                    <!-- Dynamic list of articles from current folder -->
+                                    
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/index.html"></a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/OlympicsUpdate.html">2012 Olympics </a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/All_the_Rage.html">All the Rage</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/CourtArchitecture.html">Court Architecture</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/doctordoctor.html">Doctor, Doctor, Give Me the News: Health of US Squash</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/intercollegiate_101.html">Intercollegiate Squash 101</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/zugbook.html">James Zug &quot;History&quot; Excerpt</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/Signing_Day.html">Signing Day: International Recruiting</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/Technology_Poor.html">The State of Squash: Debating on Technology</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/Hardball_Singles.html">The State of Squash: Future of Hardball Singles</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/Sex_sells.html">The State of Squash: Sex Sells?</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/MTmSelection.html">US Men's Team 2005 Selection Criteria</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/USMenSelection05.html">US Men's Team Selection</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/USSRAGoldSilver.html">USSRA Gold Silver Bronze</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/USSRATimeline.html">USSRA Timeline</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/VSsidebar.html">VirtualSpectator Technology</a></td></tr>
+                                    <tr><td class="archivelink">&#149; <a href="/vcm/squashmagazine/FEATURES/State_of_Game/WISPAPromoTour2005.html">WISPA Promo Tour 2005</a></td></tr>
+                                    <tr>
+                                      <td>
+                                        <div align="right">
+                                          <a href="/vcm/squashmagazine/archives.html">
+                                            <img border="0" height="12" src="/vcm/squashmagazine/images/archives_title.gif" width="56"/></a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </center>
+                              </td>
+                              <td height="43" width="24%">&#xa0;</td>
+                            </tr>
+                            <tr valign="top">
+                              <td colspan="2" height="241">
+                                <div align="right">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="98%">
+                                    <tr>
+                                      <span class="header">SquashPower</span><br/><span class="Subheader">Jonathon Power's new business endeavor to grow the game</span><br/><br/><span class="byline">by Kirsten Carlson</span>
+                                    </tr>
+                                    <tr>
+                                      <td width="5%">&#xa0;</td>
+                                    </tr>
+                                    <tr><td colspan="2"><table ALIGN="RIGHT" BORDER="0" CELLPADDING="5" CELLSPACING="5" WIDTH="200"><tr><td/></tr><tr><td><span class="default"><img border="0" src="/vcm?type=image&unid=859ee4afd23ad8912f8815b443ed610927cee0a09d997ca6343ce09e2da58cf5"/></span></td></tr></table><span class="bigheader">I</span><span class="default">magine you are hanging out on a warm spring day, happily going about your business and all of a sudden a big bus pulls up and who steps off it all full of energy and toting his squash racquet, but none other than Jonathon Power. That would make just about any squash fan&#8217;s day, and at the very least spark curiosity in someone who has never heard of the sport. Well, this scenario will soon be a reality for residents of several North American cities. A bus tour to spread the word about squash is just one of many initiatives comprising SquashPower, a squash marketing and development company chaired by Canadian World. No. 6 Jonathon Power.</span><br/><br/><span class="default">&#8220;SquashPower will expand the development of squash through education, promotion and grassroots programs,&#8221; said Power. &#8220;Our goal is to help squash players reach their goals.&#8221;</span><br/><br/><span class="default"><img border="0" src="/vcm?type=image&unid=fcdb6092d23ad8912f8815b443ed610927ce73fcac56d874db5c2ef2dbebcc71"/></span><br/><span class="smalltextbold">IT'S OFFICIAL</span><span class="default"> </span><span class="caption">(L-R) Rick Keating (Chief Marketing Officer),</span><br/><span class="caption">touring pro John White, Chairman Jonathon Power and</span><br/><span class="caption">CEO Segun Maku make up the braintrust behind SquashPower.</span><br/><br/><span class="default">The company, officially founded in November 2005, will embark on a range of tasks, with the main goal being to help squash grow. SquashPower has a comprehensive player representation program, and currently represents Power and Scotland&#8217;s John White, who recently relocated to the US. SquashPower will market these players and manage their careers, and also help them with the next step once their squash career is over. </span><br/><br/><span class="default">SquashPower&#8217;s focus is to develop the sport further. This includes working in areas where the sport is emerging, such as inner cities, and could include working with urban squash programs. This also means going outside North America to nations where the sport is new. SquashPower hopes to be able to identify young, talented players in some of these areas and support them and help them reach their potential.</span><br/><br/><span class="default">&#8220;If a sport can be launched in an organized way, it develops national pride, and takes national heroes within the sport and takes them into an international scene,&#8221; said Rick Keating, SquashPower&#8217;s Chief Marketing Officer. &#8220;If we can go into a country and identify an up and coming 13-year-old and develop them and help them reach a high level, wouldn&#8217;t that be great?&#8221;</span><br/><br/><span class="default">Keating and Power are two of the six senior executives heading up SquashPower, all with diverse business and squash backgrounds. Keating said Power is very involved, despite his hectic PSA Tour traveling schedule. According to Keating, when Power is traveling he is constantly working, including talking to other players about getting involved with SquashPower. Keating said that Power&#8217;s insight as a top player is vital to the company.</span><br/><br/><span class="default">Power will have a very hands on role in SquashPower in the coming months, including in the bus tours, which are tentatively set for spring, with cities yet to be determined. Initially the bus tours will be in North American cities and will feature exhibitions with the squash superstar. So be prepared, because squash&#8217;s most unpredictable player may be showing up at your doorstep sometime this year.</span></td></tr>
+                                    <tr><td colspan="2">&nbsp;</td></tr>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <!-- right column has RightSide links -->
+                
+  <!-- $Id: SM_RightSide.xml,v 1.12 2005/07/07 18:09:21 barryh Exp $ -->
+    <!-- td bgcolor="#FFFFFF" background="/vcm/squashmagazine/images/side_back.gif" valign="top" style="border: 2px dotted green" -->
+    <td background="/vcm/squashmagazine/images/side_back.gif" valign="top">
+      <p style="background-color: white">&nbsp;</p>
+      <p><center>
+        <font face="Arial, Helvetica, sans-serif" size="2">
+          <b>
+              
+                  February 2006
+              
+          </b>
+        </font>
+        <br/>
+        <a href="/vcm/squashmagazine/contents.html">
+          <img border="1" height="135" src="/vcm/squashmagazine/Images05/cover_current.jpg" width="99"/></a>
+        <br/>
+        <font face="Arial, Helvetica, sans-serif" size="1">(click for contents)</font>
+        <br/>
+        <br/>
+        <img height="1" src="/vcm/squashmagazine/images/left_spacer.gif" width="130"/>
+        </center>
+      </p>
+      <center>
+        <!-- center -->
+          <p>
+            <a href="http://www.squashlive.com" onMouseOut="out(2)" onMouseOver="over(2)" target="_blank">
+              <img border="0" height="16" name="SquashLive" src="/vcm/squashmagazine/images/squash_live_up.gif" width="91"/></a>
+              <br/>
+            <a href="http://www.squashlive.com/videos.cgi" onMouseOut="out(3)" onMouseOver="over(3)" target="_blank">
+              <img border="0" height="26" name="videos" src="/vcm/squashmagazine/images/video_library_up.gif" width="69"/></a>
+              <br/>
+            <a height="240" href="/vcm/squashmagazine/movies/CurrentClip.mpeg" target="_blank" width="305">
+              <img border="1" height="85" src="/vcm/squashmagazine/images/squash_live_sm.jpg" width="100"/></a>
+            <br/>
+            <a height="240" href="/vcm/squashmagazine/movies/CurrentClip.mpeg" target="_blank" width="305">
+              <img border="0" height="16" src="/vcm/squashmagazine/images/clip_of_month.gif" width="91"/></a>
+          </p>
+          <p>
+            <img height="1" src="/vcm/squashmagazine/images/left_spacer.gif" width="130"/>
+          </p>
+          <p>
+            <a href="/vcm/squashmagazine/camps.html">
+              <img border="1" src="/vcm/squashmagazine/images/camp_logo.jpg"/></a>
+            <br/>
+            <font face="Arial, Helvetica, sans-serif" size="1">
+              <a href="/vcm/squashmagazine/camps.html">
+                <img border="0" src="/vcm/squashmagazine/images/camps_title.gif"/></a>
+            </font>
+            <br/>
+            <br/>
+            <img height="1" src="/vcm/squashmagazine/images/left_spacer.gif" width="130"/>
+            <br/>
+            <font face="Arial, Helvetica, sans-serif" size="1">
+              <br/>
+              <a href="/vcm/squashmagazine/entry_forms.html">
+                <img border="0" src="/vcm/squashmagazine/images/entry_forms.gif"/></a>
+            </font>
+          </p>
+        <!-- /center -->
+        <center>
+          <p>
+            <img height="1" src="/vcm/squashmagazine/images/left_spacer.gif" width="130"/>
+            <br/>
+          </p>
+          <center>
+            <center>
+                <p>
+                  <font face="Arial, Helvetica, sans-serif" size="1">
+                    <a href="/vcm/squashmagazine/PDF/Oct_Classifieds.pdf">
+                      <img border="0" height="18" src="/vcm/squashmagazine/images/classifieds_front.gif" width="83"/></a>
+                  </font>
+                  <br/>
+                  <br/>
+                  <a href="/vcm/squashmagazine/PDF/How_Classified.pdf">
+                    <img border="0" height="33" src="/vcm/squashmagazine/images/how_class.gif" width="100"/></a>
+                </p>
+                <p>
+                  <img height="1" src="/vcm/squashmagazine/images/left_spacer.gif" width="130"/>
+                </p>
+                <p>
+                  <font face="Arial, Helvetica, sans-serif" size="1">
+                    <img border="0" height="17" src="/vcm/squashmagazine/images/ussra_link.gif" width="53"/>
+                    <br/>
+                    <br/>
+                    <a href="http://www.us-squash.org" target="_blank">
+                      <img border="0" height="94" src="/vcm/squashmagazine/images/ussra_logo_left.gif" width="100"/></a>
+                  </font>
+                </p>
+            </center>
+          </center>
+          <center>
+            <p>&#xa0;</p>
+            <p>
+              <a href="http://www.squash.org" target="_blank">
+                <img border="0" src="/vcm/squashmagazine/images/wsf_logo_f.gif"/></a>
+              <br/>
+              <br/>
+              <br/>
+              <a href="http://www.psa-squash.com" target="_blank">
+                <img border="0" height="60" src="/vcm/squashmagazine/images/psa_logo_f.gif" width="99"/></a>
+              <br/>
+              <br/>
+              <br/>
+              <a href="http://www.wispa.net" target="_blank">
+                <img border="0" height="42" src="/vcm/squashmagazine/images/wispa_logo_f.gif" width="100"/></a>
+              <br/>
+              <br/>
+              <br/>
+              <a href="http://www.isdasquash.com" target="_blank">
+                <img border="0" height="100" src="/vcm/squashmagazine/images/isda_logo_f.gif" width="100"/></a>
+            </p>
+          </center>
+        </center>
+      </center>
+  </td>
+
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td rowspan="2" width="139">
+            <img height="1" src="/vcm/squashmagazine/images/spacer.gif" width="1"/>
+          </td>
+          <td bgcolor="#000000" colspan="2">
+            <img height="2" src="/vcm/squashmagazine/images/base_line2.gif" width="15"/>
+          </td>
+        </tr>
+        <tr valign="top">
+          
+  <!-- $Id: SM_NavBottom.xml,v 1.9 2005/07/07 18:06:29 barryh Exp $ -->
+  <td bgcolor="#999966" valign="top" width="1120">
+    <div align="left">
+      <font face="Arial, Helvetica, sans-serif" size="2">
+        <br/>
+      </font>
+    </div>
+    <table border="0" cellpadding="0" cellspacing="0" width="594">
+      <tr>
+        <td>
+          <center>
+            <font face="Arial, Helvetica, sans-serif" size="1">
+              <a href="/vcm/squashmagazine/index.html" target="_top">
+                <font color="#FFFFFF">Home</font>
+              </a>
+              <font color="#FFFFFF"> |
+                <a href="/vcm/squashmagazine/FEATURES/Introducing/index.html" target="_top">Introducing</a> |
+                <a href="/vcm/squashmagazine/FEATURES/State_of_Game/index.html" target="_top">State of the Game</a> |
+                <a href="/vcm/squashmagazine/FEATURES/Play/index.html" target="_top">Play</a> |
+                <a href="/vcm/squashmagazine/RULES/Rules_of_Game/index.html" target="_top">Lesson Court</a> |
+                <a href="/vcm/squashmagazine/RULES/Tips_from_Pros/index.html" target="_top">Tips from the Pros</a> |
+                <a href="/vcm/squashmagazine/RULES/Training_Room/index.html" target="_top">Training Room</a> |
+                <a href="/vcm/squashmagazine/RULES/Drills/index.html" target="_top">Drills</a> |
+                <a href="/vcm/squashmagazine/RULES/Doubles_Boast/index.html" target="_top"><br/>Doubles Boast</a> |
+                <a href="/vcm/squashmagazine/COLUMNS/index.html" target="_top">Will's World</a> |
+                <a href="/vcm/squashmagazine/CALENDAR/index.html" target="_top">Calendar</a> |
+                <a href="/vcm/squashmagazine/RESULTS/index.html" target="_top">Results</a> |
+                <a href="https://www.squashmagazine.com/SUBSCRIBE/index.html" target="_top">Subscribe</a> |
+                <a href="/vcm/squashmagazine/STORE/index.html" target="_top">Store</a> |
+                <a href="/vcm/squashmagazine/LINKS/index.html" target="_top">Links</a> |
+                <a href="/vcm/squashmagazine/CONTACTS/index.html" target="_top">Contact Us</a>
+              </font>
+            </font>
+          </center>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td bgcolor="#999966" width="175">&#xa0;</td>
+
+        </tr>
+        <tr valign="top">
+          <td width="139">
+            <img height="1" src="/vcm/squashmagazine/images/spacer.gif" width="1"/>
+          </td>
+          <td colspan="2">
+            <table width="587">
+              <tr>
+                <td class="smallText" valign="bottom" width="194">
+                  <div align="center">
+                    <br/>
+                    (c) 2005 Squash Magazine
+                    <br/>
+                  </div>
+                </td>
+                <td class="smallText" valign="top" width="127">
+                  <div align="right"/>
+                </td>
+                <td valign="bottom" width="283">
+                  <div align="right">
+                    <a href="http://www.content-solutions-inc.com" onMouseOut="out(1)" onMouseOver="over(1)" target="_blank">
+                      <img border="0" height="22" name="Dev_link" src="/vcm/squashmagazine/images/dev_link_up.gif" width="283"/></a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </body>
+  </html>
+</root>

@@ -1,0 +1,174 @@
+
+<!--\/ MAIN SITE HEADER \/-->
+
+<html>
+<head>
+<title>Williams College | Sports Information</title>
+<link rel="stylesheet" type="text/css" href="/athletics/sports_styles.css" title="Sports Information">
+</head>
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="12">
+<script type="text/javascript" src="/athletics/common/milonic_src.js"></script>	
+<script	type="text/javascript">
+<!--
+if(ns4)_d.write("<script language=JavaScript src=common/mmenuns4.js><\/script>");
+  else _d.write("<script language=JavaScript src=common/mmenudom.js><\/script>");
+ -->
+</script>
+<script type="text/javascript" src="common/_main_menu_data.js"></script>
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+<tr>
+<td valign="bottom" bgcolor="#330066" width="73"><img src="http://www.williams.edu/athletics/images/main_header_left.gif" width="73" height="20" hspace="0" vspace="0" border="0" alt="Williams College Sports Information"></td>
+<td bgcolor="#330066" valign="middle" width="614"><div class="ticki"><a href="news.php" class="tickls">NEWS &amp; RESULTS:</a>&nbsp;&nbsp;<a id="tickerAnchor" href="#" target="_top" class="tickl"></a></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Ticker startup
+function startTicker()
+{
+   // Define run time values
+   theCurrentStory     = -1;
+   theCurrentLength    = 0;
+
+   // Locate base objects
+   if (document.getElementById)
+   {
+      theAnchorObject = document.getElementById("tickerAnchor");
+      runTheTicker();
+   }
+   else
+   {
+      document.write("<style>.ticki{display:none;}.ticko{border:0px; padding:0px;}</style>");
+      return true;
+   }
+}
+
+// Ticker main run loop
+function runTheTicker()
+{
+   var myTimeout;
+   // Go for the next story data block
+   if(theCurrentLength == 0)
+   {
+      theCurrentStory++;
+      theCurrentStory      = theCurrentStory % theItemCount;
+      theStorySummary      = theSummaries[theCurrentStory].replace(/&quot;/g,'"');
+      theTargetLink        = theSiteLinks[theCurrentStory];
+      theAnchorObject.href = theTargetLink;
+   }
+
+   // Stuff the current ticker text into the anchor
+   theAnchorObject.innerHTML = theStorySummary.substring(0,theCurrentLength) + whatWidget();
+
+   // Modify the length for the substring and define the timer
+   if(theCurrentLength != theStorySummary.length)
+   {
+      theCurrentLength++;
+      myTimeout = theCharacterTimeout;
+   }
+   else
+   {
+      theCurrentLength = 0;
+      myTimeout = theStoryTimeout;
+   }
+
+   // Call up the next cycle of the ticker
+   setTimeout("runTheTicker()", myTimeout);
+}
+
+// Widget generator
+function whatWidget()
+{
+   if(theCurrentLength == theStorySummary.length)
+   {
+      return theWidgetNone;
+   }
+
+   if((theCurrentLength % 2) == 1)
+   {
+      return theWidgetOne;
+   }
+   else
+   {
+      return theWidgetTwo;
+   }
+}
+// -->
+</script>
+</td>
+<td valign="bottom" bgcolor="#330066" width="73"><img src="http://www.williams.edu/athletics/images/main_header_right.gif" width="73" height="20" hspace="0" vspace="0" border="0"></td>
+</tr>
+<tr>
+<td colspan="5"><img src="http://www.williams.edu/athletics/images/main_header_bottom.gif" width="760" height="80" hspace="0" vspace="0" border="0"></td>
+</tr>
+<tr>
+<td colspan="5" height="42"><img src="http://www.williams.edu/athletics/images/spacer.gif" width="760" height="42" hspace="0" vspace="0" border="0"></td>
+</tr>
+</table>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+   var theCharacterTimeout = 50;
+   var theStoryTimeout     = 5000;
+   var theWidgetOne        = "_";
+   var theWidgetTwo        = "-";
+   var theWidgetNone       = "";
+
+   var theSummaries = new Array();
+   var theSiteLinks = new Array();
+
+   var theItemCount = 1;
+
+   theSummaries[0] = "Click here for the most recent news and results";
+   theSiteLinks[0] = "http://www.williams.edu/athletics/news.php";
+
+   startTicker();
+
+-->
+</script>
+
+<!--/\ MAIN SITE HEADER /\-->
+
+   <table border="0" width="760" cellpadding="0" cellspacing="0">
+   <tr><td><img src="images/spacer.gif" width="760" height="30" hspace="0" vspace="0" border="0"></td></tr>
+   <tr><td align="center"><img src="images/breaking_news.gif" width="760" height="30" hspace=0 vspace=0 border=0 alt="Breaking News"></td></tr>
+   <tr><td><img src="images/spacer.gif" width="760" height="20" hspace="0" vspace="0" border="0"></td></tr>
+
+   <!--\/ SEARCH BOX \/-->
+   <tr>
+      <td align="center"><table border="0" cellpadding="0" cellspacing="5"><tr>
+      <form method="post" action="news.php">
+         <input type="hidden" name="sport" value="">
+         <input type="hidden" name="year" value="2006">
+         <td class="news-form">Search Sports News:</td>
+         <td class="news-form"><input type="text" name="keywords" value="" size="20"></td>
+         <td class="news-form"><input type="submit" name="submit" value="Go"></td>
+      </form>
+      </tr></table></td>
+   </tr>
+   <!--/\ SEARCH BOX /\-->
+
+   <tr><td><img src="images/spacer.gif" width="760" height="10" hspace="0" vspace="0" border="0"></td></tr>
+         <!--\/ NEWS ARTICLE PRESENTATION \/-->
+         <tr><td class="news-title">Dave Johnson '71 Receives Lifetime Achievement Award at NISRAs</td></tr>
+         <tr><td><img src="images/spacer.gif" width="1" height="10" hspace="0" vspace="0" border="0"></td></tr>
+         <tr><td class="news-date">March 3, 2003</td></tr>
+         <tr><td><img src="images/spacer.gif" width="1" height="10" hspace="0" vspace="0" border="0"></td></tr>
+         <tr><td class="news-body"><table width="176" cellspacing="3" cellpadding="10" border="0" align="right">
+<tr>
+<td class="main-caption"><img src="http://www.williams.edu/athletics/sports/m_squash/2002/photos/dcjohnso.jpg" width="156" height="200" border="0"><br clear="all"><br clear="all">David Johnson '71</td>
+</tr>
+</table>
+<P>HARTFORD, CT -- Former Williams men's squash coach and current Eph head men's tennis coach Dave Johnson was officially recognized for his contributions to the game of squash at the annual player's banquet at the national individuals tournament hosted by Trinity College.</P>
+<P>The National Intercollegiate Squash Racquets Association honored Johnson with its Lifetime Achievement Award at the players' banquet Friday night.  Johnson, a two-time All-American as a player for Williams, coached the Ephs on an interim basis from 1975-77 and then full-time from 1989-2002.  Under Johnson's tutelage the Ephs were consistently at the top of the national team and individual rankings and he also provided many novices a chance to experience the game.</P>
+<P>Johnson compiled a record of 162-70 (.698) in 15 years as the Ephs' head coach and frequently guided Williams to top eight finishes in the nation despite playing against a predominantly Division-I schedule.  The Ephs finished fifth at the NISRA Championships in 2001, their best finish under the new format.</P>
+<P>Currently Johnson serves as the Ephs' head coach of men's tennis, an assistant Dean and a part-time lecturer in Art History.</P></td></tr>
+         <!--/\ NEWS ARTICLE PRESENTATION /\-->
+         <tr><td><img src="images/spacer.gif" width="1" height="30" hspace="0" vspace="0" border="0"></td></tr>
+
+   </table>
+
+<!--\/ MAIN SITE FOOTER \/-->
+</body>
+</html>
+<!--/\ MAIN SITE FOOTER /\-->

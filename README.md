@@ -1,5 +1,5 @@
-#wSD
-Word Sense Disambiguation
+#MWSD
+Multimodal Word Sense Disambiguation
 
 1. install pip, numpy, scipy, scikit-learn, opencv(nonfree), nltk and wordnet
 

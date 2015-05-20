@@ -1,0 +1,250 @@
+
+
+<script type="text/javascript" language="javascript">
+	<!-- Hide script from older browsers
+	if (document.all) {
+		docObj = "document.all."
+		styleObj = ".style"
+	}
+	else {
+		docObj = "document."
+		styleObj = ""
+	}
+	
+	//function to confirm action
+	function confirmaction(ptext) {
+		if (confirm(ptext)) {
+	      return true;
+		}
+	    else {
+	      return false;
+		}
+	}
+	
+	//function to prompt for information
+	function getinfo(ptext, pdest) {
+		info = prompt(ptext, "");
+		if (info && info != null && info != "null" && info != "") { 
+			pdest.value = info;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	//Show/hide help text
+	function toggleMenu(currMenu) {
+		if (document.all) {
+			thisMenu = eval("parent.mainmenu_footer.document.all."+currMenu+".style")
+			if (thisMenu.display == "block") {
+				thisMenu.display = "none"
+			}
+			else {
+				thisMenu.display = "block"
+			}
+			return false
+		}
+		else {
+			return true
+		}
+	}
+		
+	function mOvr(src, clrOver) { 
+		if (!src.contains(event.fromElement)) { 
+			src.style.cursor = 'hand'; 
+			src.bgColor = clrOver; 
+			src.children.tags('A')[0].style.color = 'red';
+		}
+	}
+	
+	function mOut(src, clrIn) { 
+		if (!src.contains(event.toElement)) { 
+			src.style.cursor = 'default'; 
+			src.bgColor = clrIn;  
+			src.children.tags('A')[0].style.color = 'blue';
+		}
+	}
+	
+	function mClk(src) { 
+		if(event.srcElement.tagName=='TD'){
+			src.children.tags('A')[0].click();
+		} 
+	}
+
+	// End hiding script -->	  
+</script>
+
+<style type="text/css" title="panorama">
+a { text-decoration: none }
+a.hover { color:none; text-decoration: none }
+a:hover.MainNav { color: red; text-decoration : underline;  }
+a:hover.LeftNav { color:white; text-decoration : none; }
+</style>
+
+<script language="JavaScript"> 
+function mOvr(src,clrOver)
+	{ if (!src.contains(event.fromElement)) { src.style.cursor = 'hand'; src.bgColor = clrOver; src.children.tags('A')[0].style.color = '#000000';}}
+function mOut(src,clrIn) 
+	{ if (!src.contains(event.toElement)) { src.style.cursor = 'default'; src.bgColor = clrIn;  src.children.tags('A')[0].style.color = '#FFFFFF';}}
+function mOvrTop(src,clrOver)
+	{ if (!src.contains(event.fromElement)) { src.style.cursor = 'hand'; src.bgColor = clrOver;}}
+function mOutTop(src,clrIn) 
+	{ if (!src.contains(event.toElement)) { src.style.cursor = 'default'; src.bgColor = clrIn;}}
+function mClk(src) 
+	{ if(event.srcElement.tagName=='TD'){src.children.tags('A')[0].click();} }
+
+</script>
+<html>
+
+<head>
+	<title>Panorama Magazine : The Official Guide to Boston and Boston Guide - Star Power</title>
+	<meta name="description" content="Panorama Magazine is the Official Guide to Boston.">
+	<meta name="keywords" content="official boston guide, guide to boston, boston guide, boston tourist information, panorama magazine">
+	<META NAME="MSSmartTagsPreventParsing" CONTENT="True">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="language" content="en-us">
+	<meta name="robots" content="all">
+	<meta name="author" content="Christopher Wallenberg, Suzanne Scribner">
+	<meta name="copyright" content="2004, Panorama Magazine.">
+	<meta name="distribution" content="Global">
+	<meta name="revisit-after" content="10 Days">
+	<meta name="classification" content="Panorama Boston Guide Magazine">
+	<meta http-equiv="imagetoolbar" CONTENT="no">
+	<meta name="GENERATOR" Content="Microsoft FrontPage 5.0">
+	<meta name="CODE_LANGUAGE" Content="C#">
+	<meta name="vs_defaultClientScript" content="JavaScript">
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+</head>
+
+<body bgcolor="#ffffff" text="#000000" style="font-family: Verdana, Arial; font-size:10pt" leftmargin="0" topmargin="0">
+
+	<img src="../images/panorama_logo.jpg" WIDTH="250" HEIGHT="90">
+	<br>
+
+	<table border="0" width="700" style="font-family: Verdana, Arial; font-size:10pt">
+		<tr>
+			<td valign="top">	<table border="0" width="138" cellspacing="1" cellpadding="0">
+		<tr><td width="100%" valign="bottom"><img height="16" src="/panoramamagazine/images/top_toolbar_border.gif" width="138"></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Home</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Advertising Info</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Archives</b></font></small></a> <font color=red size=2><b>NEW!</b></font></td></tr>		
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Beyond Boston</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Boston Confidential</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="12"><a href="/panoramamagazine"><small><font face="Arial"><b>Comments</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="12"><a href="/panoramamagazine"><small><font face="Arial"><b>Contest</b></font></small></a> <font color=red size=2><b>NEW!</b></font></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="12"><a href="/panoramamagazine"><small><font face="Arial"><b>Current Events</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Latest Issue</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Map of Boston</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>MBTA Map</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Museums/Sightseeing</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Neighborhoods</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Restaurants</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Shopping</b></font></small></a></td></tr>
+		<tr><td class="LeftNav" width="100%" bgcolor="#f8eecb" onmouseover="mOvrTop(this,'#F1E09E');" onmouseout="mOutTop(this,'#F8EECB');" onclick="mClk(this);" height="18"><a href="/panoramamagazine"><small><font face="Arial"><b>Subscribe</b></font></small></a></td></tr>
+		<tr><td width="100%" height="21" valign="top"><img height="16" src="/panoramamagazine/images/bottom_toolbar_border.gif" width="138"></td></tr>
+		<tr><td width="100%" valign="top"></td></tr>
+		<tr><td width="100%" height="21"></td></tr>
+		<tr>
+			<td width="100%" height="21">
+				<center>
+				<a href="http://www.showofthemonth.com" target="_top"><img src="/images/somc_logo_bw.gif" border="0" alt="Show of the Month Club"></a>
+				</center>
+			</td>
+		</tr>
+		<tr>
+			<td width="100%" height="21">
+				<center>
+				<a href="http://www.boston.com" target="_top"><img src="/panoramamagazine/images/artspart.gif" border="0"></a>
+				</center>
+			</td>
+		</tr>
+		<tr>
+			<td width="100%" height="21">
+				<center>
+				<a href="http://www.amazon.com/exec/obidos/external-search?tag=panoramaevents&amp;keyword=boston&amp;mode=books"><img border="0" src="/panoramamagazine/images/amaz.gif"></a>
+				</center>
+			</td>
+		</tr>
+    </table></td>
+			<td width="100%" valign="top"><b><font color="#FF0000" face="Arial" size="6">Star
+      Power<br>
+      </font></b><font face="Arial" size="4">Boston’s Newest Generation of Celebrity Chefs Steals the Spotlight</font><b><font face="Arial" size="3"><br>
+      by Christopher Wallenberg and Suzanne Scribner</font></b>
+      <p><font face="Arial"><img border="0" src="images/radius_dish2.jpg" align="left" hspace="5" vspace="2" alt="DUCK, DUCK, GOOSE - Chef Michael Schlow’s foie gras infused pheasant is indicative of the impeccable fare dished up at the Boston " width="338" height="567">Andy Warhol’s famous ’60s prophecy that everyone in the future will be famous for at least 15 minutes could certainly apply to Boston’s stable of celebrity chefs. An explosion in the city’s restaurant scene over the past decade has brought their faces out from behind the stovetop to bask in the limelight. The spotlight on chefs now shines brighter than the famed Citgo sign atop Kenmore Square. In fact, Beantown chefs have gotten so much attention recently, their 15 minutes of fame is quickly turning into a three-hour Steven Speilberg epic.&nbsp;</font></p>
+      <p><font face="Arial">	Nationally, <i> wunderchefs</i> like L.A.’s Wolfgang Puck and New Orleans’ Emeril Lagasse have elevated the chef-as-celebrity Zeitgeist to a new level. The Hub’s own star-powered chef culture began in the late ‘80s and early ‘90s, led by such luminaries as Lydia Shire (Biba, Pignoli), Jasper White (Jaspers, Legal Sea Foods), Todd English (Olives, Figs), Chris Schlesinger (East Coast Grill) and Gordon Hamersley (Hamersley’s Bistro).&nbsp;</font></p>
+      <p><font face="Arial">	Thanks to the aforementioned trailblazers, a new wave of culinary mavericks has risen to the fore in Boston during the past several years. Some, like Michael Schlow and Rene Michelena, cut their teeth at famed eateries in big restaurant towns like New York and L.A. before landing in Beantown. Others, like Barbara Lynch, Jody Adams and Anthony Ambrose, worked under the tutelage of local food pioneers like Shire, English and Michela Larson (Michela’s, Rialto) before striking out on their own.&nbsp;</font></p>
+      <p><font face="Arial"><img border="0" src="images/radius_dish1.jpg" alt="Radius’ Michael Schlow serves up an elegant array of food including Maine lobster with ginger, snap peas, baby carrots, zucchini and artichokes" align="right" hspace="5" vspace="2" width="162" height="212">	Schlow, who first made his name in Boston at Café Louis, opened one of the hottest restaurants on the East Coast last year, Radius. In 1998, Lynch was the talk of the town after launching the fabulous Beacon Hill hotspot No. 9 Park, while Anthony Ambrose’s Ambrosia on Huntington captured the hearts of Boston diners when it swung open its doors in 1994. This year, foodies are hedging their bets on Robert Fathman’s long-awaited jewel,
+      The Federalist, as the Next Big Thing in the local restaurant sweepstakes.&nbsp;</font></p>
+      <p><font face="Arial">	Boston’s chefs now receive more attention by national media than Hillary Clinton’s hairstyles. Their restaurants have garnered accolades in industry bibles like the
+      <i> Zagat Survey</i> and <i> Food and Wine</i> magazine. Radius was recently named one of the Best New Restaurants in the country by
+      <i>Esquire</i>. Rene Michelena at La Bettola was anointed one of the Top Ten New Chefs in America by
+      <i> Food and Wine</i> in 1998. Lynch’s No. 9 Park earned raves as one of the Best New Restaurants in America by
+      <i> Bon Appétit, Travel and Leisure</i> and <i> Food and Wine</i> magazines.
+      <i> Gourmet</i> readers recently voted Ambrosia one of the Top Tables in Boston, while Ambrose was dubbed “USA Chef of the Year” by the American Tasting Institute. In suburban Wellesley, Ming Tsai has parlayed the success of his acclaimed Asian/ American fusion cuisine at Blue Ginger into “East Meets West,” the hottest show on the Food Network.&nbsp;</font></p>
+      <p><font face="Arial"><img border="0" src="images/stuffed_squash_blossom.jpg" alt="Rene Michelena at La Bettola is known for his simplicity with dishes like lobster, scallop and oyster with potato confit and stuffed squash blossom." align="left" hspace="5" vspace="2" width="160" height="161">	The city’s new culinary vanguard, embodied by chefs like Lynch, Schlow, Michelena and other starlights like Stan Frankenthaler (Salamander), Ken Oringer (Clio), Steve Johnson (The Blue Room) and Michael Leviton (Lumiere), embrace the old tricks of the masters under whom they studied, in addition to blazing their own culinary trails. And in the finike restaurant world, where today’s hotspot is tomorrow’s has-been, we can predict that these chefs’ 15 minutes will last longer than Bill Belichick’s stint as coach of the New York Jets.</font></p>
+      <p>&nbsp;</p>
+      <p><font face="Arial" size="4"><b><font color="#008080">Robert Fathman,</font>
+      </b> The Federalist<img border="0" src="images/robert_fathman.jpg" align="left" hspace="5" vspace="5" width="159" height="213"></font></p>
+      <p><font face="Arial">The highly-anticipated, oft-delayed launch of The Federalist in the posh new Fifteen Beacon Hotel finally came to pass this month. Local foodies have waited with bated breath for its opening since developer/svengali Paul Roiff and chef Robert Fathman announced their new venture two years ago. The restaurant was touted as the Next Big Thing in the Hub’s hot restaurant scene before it even dished up its first cut of Chateaubriand. Talk about pressure. However, Fathman, former chef at Brahmin bastion Grill 23, insists he has taken all the brouhaha in stride. “There has been a lot of hype. I’m nervous and anxious. But if I weren’t, that would be a bad sign.”&nbsp;</font></p>
+      <p><font face="Arial">	The restaurant, designed by Celeste Cooper, melds the classic elegance of old towne Boston with a 21st-century edge. The food does the same. The Federalist’s focus is, of course, on seafood. It’s no wonder Roiff lassoed in Fathman. Seafood, says the chef, is “his passion” and he was given carte blanche with the menu. “We want the food to be contemporary and modern, yet not confusing and freakish....many of the things that pop up on our menu you’re not going to find at Legal Sea Foods.” Those dishes include “updated classics” like beef Wellington and lobster clambake. After more than a year of delays in its opening, Fathman wants customers to walk out completely satisfied on their first visit. “I don’t want them to say, ‘Well, they’re new, they’ve got a few bugs to work out.’ I want them to say, ‘Wow, I can’t believe this restaurant just opened and everything runs as smoothly as it does.’”&nbsp;</font></p>
+      <p><font face="Arial"><i> 	The Federalist, 15 Beacon St., (617) 670-2515<br>
+      </i>—C.W.</font></p>
+      <p>&nbsp;</p>
+      <p><font face="Arial" size="4"><img border="0" src="images/michael_schlow.jpg" align="right" hspace="5" vspace="5" width="161" height="203"><b><font color="#008080">Michael
+      Schlow,</font></b> Radius</font><font face="Arial"><br>
+      Often referred to as Boston’s trendy new hotspot, Michael Schlow is here to attest that Radius is more than a flash in the pan, run by a chef who’s not just basking in his 15 minutes of fame.“Trends come and go,” says Schlow, co-owner and executive chef of Radius. “Trendy is of the moment. I don’t want to be of the moment. I want to be here for a long
+      time.”</font></p>
+      <p><font face="Arial">And there is no reason to doubt him. Opened in December 1998 by Schlow and co-owner Christopher Myers, Radius has quickly ascended to the top of Boston’s food chain. It has stylish interior almost reminiscent of New York City’s chicest restaurants. Radius has enticed Bostonians, young and old, to try something new by offering modern French cuisine like foie gras and skate (slightly different fare than your average lobster or Boston baked
+      beans).</font></p>
+      <p><font face="Arial">“I want Radius to be known for its service, for the food and for the ambiance. From start to finish, I want it to be a great restaurant,” explains Schlow. And, judging by the people’s response, Radius is on the right track. Sold out almost every night, you’re lucky to get one of the walk-in seats at the tasting table, but it’s always worth a
+      shot.</font></p>
+      <p><font face="Arial">So forget trendy and don’t forget the name Michael Schlow. It appears as though he intends to stay in Boston for a while. He hopes to look back on his success years from now and “find out that we are the standard for everyone else’s measure.”&nbsp;</font></p>
+      <p><font face="Arial"><i>  Radius, 8 High Street, (617) 426-1234.<br>
+      </i>—S.S.</font></p>
+      <p>&nbsp;</p>
+      <p><font size="4" face="Arial"><b><font color="#008080">Barbara Lynch,</font></b> No. 9 Park</font><img border="0" src="images/barbara_lynch.jpg" align="left" hspace="5" vspace="5" width="152" height="204"></p>
+      <p><font face="Arial">It’s not often that one has time to reflect upon success. For Barbara Lynch, executive chef and owner of Beacon Hill’s No. 9 Park, when she does have time to contemplate her fortune, it can be overwhelming.  Anointed one of the Ten Best New Chefs in America by Food and Wine magazine during her previous stint at Galleria Italiana, Lynch struck out on her own in 1998 by launching No. 9 Park. Food scribes from across the country have showered praise on both Lynch and her swanky eatery.&nbsp;</font></p>
+      <p><font face="Arial"> 	Raised in the projects of South Boston, Lynch’s interest in cooking was first spurred in a high school home economics class. “My goal when I was 18 years old was to open a restaurant by the time I was 30. The fact that I achieved it when I was 32 kind of makes me think, ‘Wow. You can put your mind to something and just do it!’” she recalls.&nbsp;</font></p>
+      <p><font face="Arial">	Lynch honed her cooking skills under Boston’s own food kingpins Todd English and Michela Larson. “Todd created a very good energy. Anything he put in a blender was just miraculous. He’d put all these ingredients together and ‘Bang!’, he’d come up with something really wonderful. And Michela was an incredible influence in terms of business. She had lots of energy on the floor.”&nbsp;</font></p>
+      <p><font face="Arial"> 	Lynch’s fashionable European-style eatery fuses the homespun feeling of Italian country cooking with the refinement and simplicity of French cuisine. “I’m not cutting edge and I’m not reinventing the wheel. I’m not some brilliant scientist in the kitchen, but we are putting out original, good food.”&nbsp;</font></p>
+      <p><i><font face="Arial">	        	No. 9 Park, 9 Park Street, (617) 742</font></i><font face="Arial"><i>-9991<br>
+      </i>—C.W.</font></p>
+      <p>&nbsp;</p>
+      <p><font face="Arial" size="4"><img border="0" src="images/rene_michelena.jpg" align="right" hspace="5" vspace="5" width="159" height="183"></font><font face="Arial" size="4"><b><font color="#008080">Rene Michelena,</font></b> La Bettola<br>
+      </font><font face="Arial">Simplicity reigns on chef Rene Michelena’s menu at the intimate, South End bistro La Bettola. Despite its size, the restaurant and its star chef have earned kudos from food critics across the country since debuting in 1997. Restraint is the name of the game at La Bettola. Michelena utilizes just three or four ingredients in each dish to create distinct flavors that sing. “It might look really boring, but a lot of work goes into each dish,” he says. From Japanese and Vietnamese to French and Italian, Michelena’s menu is like a veritable trek around the world. However, all this traipsing can cause confusion. So minimalism remains his mantra. “We try to use the foodstuff in its purest state. We don’t try to adulterate it. If you have a perfect carrot, you don’t need to boil it, roast it, mash it, puree it and make a mousse out of it,” he mocks. “It’s a beautiful carrot. Peel it and roast it and that’s it.”</font></p>
+      <p><font face="Arial">Michelena learned the ropes of the cooking business at several high-profile restaurants across the country, including the landmark Charlie Trotter’s in Chicago, Patina in L.A. and Sign of the Dove in New York, before being plucked by Rita D’Angelo and Marisa Iocco in 1997 to helm La Bettola. Michelena wants people to experience different flavors, especially in his popular tasting menus. “The one thing we do very well in this restaurant is spontaneity,” he explains. “We keep a lot of stuff on hand that we can play with. The tasting menus are a lot more fun for us than just producing the same dish over and over.”&nbsp;</font></p>
+      <p><font face="Arial"><i> 	La Bettola, 480A Columbus Ave., (617) 236-5252<br>
+      </i>—C.W.</font><font face="Arial" size="4">&nbsp;</font></p>
+      <p>&nbsp;</p>
+      <p><font size="4" face="Arial"><font color="#008080"><b>Ming Tsai,</b></font> Blue Ginger<img border="0" src="images/ming_tsai.jpg" align="left" hspace="5" vspace="5" width="157" height="211"></font></p>
+      <p><font face="Arial">You could say that Ming Tsai, executive chef and owner of Blue Ginger, is the epitome of the celebrity chef. He’s got his own television show on the Food Network; he’s got his own cookbook, Blue Ginger: East Meets West Cooking with Ming Tsai; and his restaurant has fallen into the category of Asian-inspired fusion cuisine, which is becoming increasingly popular with Bostonians. However, Tsai says his heart remains in the
+      kitchen.</font></p>
+      <p><font face="Arial">“My heart is still as a chef. To be around great food all the time is still my love and always will be. I consider the book and the TV a great bonus extracurricular to being a
+      chef.”</font></p>
+      <p><font face="Arial">A bit off the beaten path, yet regarded just as highly as the rest,  Tsai’s restaurant, Blue Ginger, stands proudly in the “burbs,” better known as Wellesley. Serving up East meets West fusion cuisine like foie gras-shiitake shumai, tempura Maine lobster pho with rice vermicelli and Asian lacquered Long Island duck, Blue Ginger is visited and revisited more than once a week by many neighborhood
+      customers.“</font></p>
+      <p><font face="Arial">My style of food is somewhat unique to this area. We have lobster. We just have lobster my style. All my ingredients are identifiable, it’s just the technique that is different,” assures
+      Tsai.</font></p>
+      <p><font face="Arial">This casual yet chic and very moderately priced bistro has rightfully joined the spotlight with owner Tsai and won the hearts (or at least the stomachs) of its suburbanite and city-bound customers
+      alike.</font></p>
+      <p><font face="Arial"><i>Blue Ginger, 583 Washington St., Wellesley, (781) 283-5790<br>
+      </i>—S.S.</font></p>
+      <p>&nbsp;</p>
+      <p><font size="4" face="Arial"><img border="0" src="images/tony_ambrose.jpg" align="right" hspace="5" vspace="5" width="157" height="189"><b><font color="#008080">Anthony Ambrose,</font></b> Ambrosia<br>
+      </font><font face="Arial">“You are only as good as the last dish you create,” says Tony Ambrose who was named USA Chef of the Year by the American Tasting Institute in 1999. Judging him by this statement, I’d say that each of his dishes is better than the
+      last.</font></p>
+      <p><font face="Arial">For the past ten years, Ambrose has mastered the art of combining provincial French styles with Asian influences. Opened in 1994, his restaurant Ambrosia on Huntington serves high-end, high flavor foods such as the St. Pierre filet steamed in bamboo with 14 Asian spices, black pearl risotto with caviar and stewed leeks, and pink peppercorn crusted New Zealand venison. Each dish is a masterpiece in its own
+      right.</font></p>
+      <p><font face="Arial">Perfected behind the scenes by a trained staff and Ambrose himself, the dishes you first try will soon be the dishes you crave. By changing only 50 percent of his menu year-round, Ambrose is able to offer that same dish over and over upon subsequent visits.&nbsp;</font></p>
+      <p><font face="Arial"> “Because of this, our business has been stronger than ever,” says Ambrose. “People have applauded us because they have come back for the same execution of, for example, the halibut, and were able to order it. I think more Bostonians are seeing that as a sign of an established
+      property.”</font></p>
+      <p><font face="Arial">One of very few East meets West fusion restaurants that does it right in the Boston area, Ambrosia has been heartily welcomed into the growing Boston dining scene. It has earned awards from Gourmet, Bon Appétit, Esquire and Boston
+      magazines.</font></p>
+      <p><font face="Arial"><i>Ambrosia on Huntington, 116 Huntington Ave., (617) 247-2400<br>
+      </i>—S.S.</font>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,333 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>DJC.COM: Thursday, February 16, 2006, provided by Seattle Daily Journal of Commerce</title>
+<META name="Copyright" content="Copyright 2000, Seattle Daily Journal of Commerce, DJC.COM. Redistribution prohibited.">
+<link rel="stylesheet" href="/styles/beta.css" type="text/css">
+<script language=javascript type="text/javascript">
+<!--
+function OpenWindow(url, name){ 
+	popupWin = window.open(url, name, 'scrollbars=1,resizable=1,toolbar=0,status=0,width=400,height=315'); 
+}
+
+
+function eu(page2) {
+	brand = "http://www.djc.com/cust/brand.phtml";
+if(navigator.appName == "Microsoft Internet Explorer"){
+	framecode = "<frameset rows='77,*'>" + "<frame src='" + brand + "' scrolling=no NORESIZE>" + "<frame src='" + page2 + "'>" + "</frameset>";
+	}
+	else{
+	framecode = "<frameset rows='85,*'>" + "<frame src='" + brand + "' scrolling=no NORESIZE>" + "<frame src='" + page2 + "'>" + "</frameset>";
+	}
+page = window.open('','extwind','toolbar=1,menubar=1,status=1,location=1,resizable=1,scrolling=auto,width=640,height=420') ;
+page.document.open();
+page.document.write(framecode);
+page.document.close();
+page.focus();
+}
+function CP_openWin(url, name,height,width){ 
+	if(arguments.length < 3){
+		height=300;
+		width=300;
+	}//end if arguments length
+	popWin = window.open(url, name, "scrollbars=1 ,resizable=1,toolbar=0,status=0,width="+width+",height="+height+""); 
+}//end function cp_openwin
+
+function doCursor(obj,state){
+		obj.style.cursor=state;
+		return true;
+}//end functiondocursor
+
+
+function doQ(val){
+	theForm = document.order;
+	len = document.order.length;
+	for(var i=0; i<len; i++){
+		if(theForm.elements[i].name.substring(0,8) == "quantity"){
+			if(val == "n"){
+				if(parseInt(theForm.elements[i].value) > 1){
+					theForm.elements[i].value = parseInt(theForm.elements[i].value)-1;
+				}
+			}
+			else{
+				theForm.elements[i].value = parseInt(theForm.elements[i].value)+1;
+			}
+		}	
+	}//end for loop
+}//end function doQ
+
+
+// -->
+</script>
+
+
+<script language='javascript' src='/js/email.js'></script>
+<script language="javascript">
+
+function rotatePCenter(){
+	if(pCenterIsPresent){
+		changecontent();
+	}
+}
+
+function handleKeyStrokes(e){
+	var whichCode = (window.Event) ? e.which : e.keyCode;
+	if(whichCode == 13){
+		document.toplogin.submit();
+		return;
+	}
+}//end handle key strokes
+
+function setLoginFocus(){
+
+var topLog = (document.toplogin);
+var standardLog = (document.login);
+	if(topLog){
+		if(document.toplogin.uid){	
+			document.toplogin.uid.focus();
+		}
+	}
+	else{
+		if(standardLog){
+			if(document.login.uid){
+				document.login.uid.focus();
+			}
+		}
+	}
+
+}//end set login focus
+
+var preLoadImages=new Array();
+var images=new Array();
+preLoadImages[0]="/gifs/loginup.gif";
+preLoadImages[1]="/gifs/logindown.gif";
+preLoadImages[2]="/gifs/loginover.gif";
+preLoadImages[3]="/gifs/white.gif";
+preLoadImages[4]="/gifs/DJC.COMlogo.gif";
+preLoadImages[5]="/gifs/black.gif";
+preLoadImages[6]="/i/warrow.gif";
+preLoadImages[7]="/i/downarrow.gif";
+preLoadImages[8]="/gifs/roundbox.gif";
+preLoadImages[9]="/gifs/sdjc.gif";
+preLoadImages[10]="/gifs/pixel.gif";
+
+for(i=0;i<preLoadImages.length;i++){
+	images[i]=new Image();
+	images[i].src=preLoadImages[i];
+}
+
+function swapImage(obj,swapIndex){
+
+	obj.src = preLoadImages[swapIndex];
+
+}
+
+</script>
+
+</head>
+<body onload="setLoginFocus();" topmargin=0 bottommargin=0 marginheight=0 marginwidth=15>
+<TABLE border=0 CELLPADDING="0" CELLSPACING="0" WIDTH="750" ><form method=post action="/cgi/login/zz43f4e43c13b2f" name=toplogin>
+	<tr>
+	   <td width=130 height=45><a href="http://www.djc.com"><img src="/gifs/DJC.COMlogo.gif" border=0 hspace=0 vspace=0  alt='DJC.COM' width=130 height=68></a></td>
+	   <td align=right width=620>
+	      <table border=0 cellpadding=0 cellspacing=0>
+	      	<tr>
+	      	<td width=400 align=right valign=bottom  cellpadding=0 cellspacing=0 >
+	      	   	</td>
+	   	<input type=hidden name=goto value="www.djc.com/special/safeco/10053876.htm">
+		<script language=javascript>
+			var ns6=(document.getElementById&&!document.all)
+			if(navigator.appName == "Microsoft Internet Explorer"){
+		 		document.write("<td nowrap class='topLogText' align=right  valign=middle  height=45 width=414><nobr>Login Name:<input type=text name=uid size=10 class=topLog> Password:<input type=password name=pass size=10   class=topLog onKeyUp='handleKeyStrokes(event)'></nobr></font><img src='/gifs/loginup.gif' alt='Login' height=20 width=40 align=absmiddle vspace=0 hspace=0 onClick='document.toplogin.submit();' style='cursor:hand' onMouseOver='swapImage(this,2)' onMouseOut='swapImage(this,0)' onMouseDown='swapImage(this,1)'></td>");
+			}
+			else{ 
+				if(ns6){
+					document.write("<td nowrap class='topLogTextNS'   align=right valign=middle  height=45 width=414><nobr>Login Name:<input type=text name=uid size=5  class=topLogNS> Password:<input type=password name=pass size=5   class=topLogNS onKeyUp='handleKeyStrokes(event)'></nobr></font><a href='javascript:document.toplogin.submit();'><img src='/gifs/loginup.gif'  alt='Login' height=20 width=40 align=absmiddle vspace=0 hspace=0 border=0 onMouseOver='swapImage(this,2)' onMouseOut='swapImage(this,0)' onMouseDown='swapImage(this,1)'></a></td>");
+				}
+				else{
+					document.write("<td nowrap class='topLogTextNS'  align=right valign=middle  height=45 width=414><nobr>Login Name:<input type=text name=uid size=5  class=topLogNS> Password:<input type=password name=pass size=5   class=topLogNS onKeyUp='handleKeyStrokes(event)'></nobr></font><a href='javascript:document.toplogin.submit();' onMouseOver='swapImage(document.images.toplog,2)' onMouseOut='swapImage(document.images.toplog,0)' onMouseDown='swapImage(document.images.toplog,1)'><img name=toplog  alt='Login' height=20 width=40 src='/gifs/loginup.gif' align=absmiddle vspace=0 hspace=0 border=0></a></td>");
+				}
+			}
+		</script>  
+		</tr>
+		</table>
+		</td></tr></form>
+	<tr>
+	   <td  width=750 height=22 colspan=2 background="/gifs/roundbox.gif" align=right valign=bottom class=topnav><a href="http://www.djc.com/" class="topnav">Home</a>&nbsp; | &nbsp;<a href="/rg/" class="topnav">Subscriptions</a> | &nbsp;<a href="http://www.djc.com/sitemap.html" class="topnav">Site Map</a>&nbsp;&nbsp;</td>
+	</tr>	<tr>
+	   <td  width=750 height=22 colspan=2 bgcolor=maroon><img src=/gifs/sdjc.gif width=365 height=24 alt="Seattle Daily Journal Of Commerce online edition"></td>
+	</tr>	<tr>
+	   <td  width=750 height=1 colspan=2 bgcolor=black><img src=/gifs/black.gif></td>
+	</tr>
+	<tr>
+	   
+
+
+	
+	<td valign=top colspan=2>
+		<table border=0 cellpadding=0 cellspacing=0 width="750">
+
+			<tr><td bgcolor=white width=12>&nbsp;</td><td valign=top width=618><br><center>
+<table width=580 align=center>
+<TR><TD>
+<CENTER>
+<FONT FACE="Arial,Helvetica,Monaco" SIZE="3">
+<A HREF="welcome.htm#10053876">back</a>
+</FONT>
+<P>
+
+<IMG SRC="safeco.jpg" ALT="Safeco Field" ><BR>
+<FONT FACE="Arial,Helvetica,Monaco" SIZE="2">
+June 17, 1999
+</FONT>
+</CENTER>
+</TD></TR>
+</TABLE>
+
+<TABLE WIDTH=580>
+<TR>
+<TD>
+<H2>All-star team was fielded for construction</H2><P>
+
+<B><A HREF="mailto:marc@djc.com">By MARC STILES</A></B><BR>Journal Real Estate editor
+<P>
+So you're building a $517 million Major League Baseball ballpark which would normally take 50 months to complete. But this is Seattle and to save baseball in the Emerald City, the Mariners say you have to finish Safeco Field in just 34 months.
+<P>
+What to do?
+<P>
+For the Hunt-Kiewit Joint Venture, much of the answer was found in two words: tower cranes.
+<P>
+Unlike conventional cranes, tower cranes operate more quickly, efficiently and safely, said J.C. Brummond, stadium project manager. Brummond is with Kiewit; his counterpart from Huber, Hunt & Nichols is Dennis Gilbert, the Safeco Field project director.
+<P>
+There were, of course, other factors besides tower cranes that helped the partnership meet the deadline.
+<P>
+Teamwork was one. "Everybody had to do superhuman stuff," said Brummond, who praised the speed at which the architects at NBBJ labored.
+<P>
+<table align="left" CELLSPACING="8" BORDER="0" vspace="8" hspace="8">
+<TR><TD>
+<IMG width="300" height="238" alt="Tower cranes" BORDER="1" SRC="14.jpg">
+</TD></TR>
+<TR><TD width="300" ALIGN="CENTER">
+<FONT SIZE="-1"><B>Using four tower cranes allowed the project to move along more quickly and safely.</B><BR><I>PFD photo</I></FONT><HR>
+</TD></TR></table>Working smart contributed to the cause, too. Some contractors were ahead of the curve and ready to proceed when it was their turn to get into the ballpark.
+<P>
+The joint venture W.A. Botting/Poole & Kent, for instance, worked on the plumbing, which was prefabricated off site so crews could just roll systems into place.  Brummond said many contractors came up with time-saving ideas.
+<P>
+Experience helped meet the deadline as well. Huber, Hunt & Nichols specializes in stadium and long-span roof design and construction. Huber Hunt and Kiewit have built 22 stadiums, including seven baseball stadiums, two retractable roof stadiums and six domed stadiums.
+<P>
+But the smartest, most experienced team in the world could not meet the deadline without tower cranes.
+<P>
+<TABLE BGCOLOR="#EEEEEE" ALIGN="right" BORDER="4" CELLPADDING="6"
+WIDTH="320">
+<TR align="left">
+<TD align="left" colspan="3">
+<CENTER><B>Production Team</B><BR><I>"Everybody had to do superhuman stuff"</I></CENTER>
+<P><FONT SIZE="-1"><P>
+<B>Architect:</B>
+<P>
+NBBJ Sports & Entertainment, a division of NBBJ, focuses on design of sports and entertainment venues. In addition to Safeco Field, NBBJ is designing Miller Park, a retractable roof ballpark in Milwaukee, and also led renovation design of KeyArena, home of the Seattle Sonics.
+<P>
+<B>General contractor:</B>
+<P>
+A joint venture of Huber, Hunt & Nichols and Kiewit Construction. Huber, Hunt & Nichols specializes in stadium and long-span roof design and construction. Both companies have combined to build 22 stadiums, including seven baseball stadiums, two retractable roof stadiums and six domed stadiums.
+<P>
+<B>Design subcontractors:</B>
+<P>
+Skilling Ward Magnusson Barkshire, a Seattle-based consulting engineering firm that provides structural and civil engineering services worldwide. Its portfolio is made up of more than 95 facilities, including Husky Stadium, KeyArena and the Washington State Convention and Trade Center.
+<P>
+Weinstein Copeland Architects, another Seattle-based firm with experience in design and urban planning.
+<P>
+<B>Other design subcontractors:</B>
+<P>
+ Flack & Kurtz Consulting Engineers and Shannon & Wilson.
+<P>
+<B>Prime subcontractors:</B>
+<P>
+Ederer Inc., crane supplier founded in Seattle in 1901 and located just a few blocks from the stadium on First Avenue South. The company is the largest manufacturer of cranes in the country, and is a primary supplier of hoists and cranes for the Air Force and NASA, including ground equipment used to move the space shuttle.
+<P>
+The Erection Co., based in Redmond, responsible for the erection of all structural steel, including the retractable roof.
+<P>
+Hoffman Construction of Washington, building the stadium's parking garage.
+<P>
+<B>Other prime subcontractors:</B>
+<P>
+Allstate Elevator; Audio Acoustics; W.A. Botting/Poole & Kent; Capital Communications; Frank Coluccio Construction; Concrete Technology; Cosco Fire Protection; Expert Drywall; Fairweather Masonry; Federal Sign; GTE Northwest; Haight Roofing; Hawk Mechanical; The Herrick Corp.; Hussey Seating; Insulation Contractors; ISEC; Kenco Construction; Max J. Kuney; Leewens; Long Painting; Gary Merlino Construction; Montgomery-Kone; Northwest Construction; Northwest Door; PCL; D.S. Purcell Painting; Queen City Sheet Metal; R.W. Rhine; Rocket Construction; Rubensteins; Skagit Architectural; George Sollitt Corp.; Sound Elevator; Stephens Enterprises; George Third & Son; Tift & Young; Valley Electric; Walter Construction; and Zesbaugh.
+
+</FONT>
+</TD></TR></TABLE>
+<P>
+Unlike conventional or mobile cranes, tower cranes offer several advantages, according to Brummond. Tower cranes have faster swing speed and line speed. Plus the heights of the towers varied so the lines overlapped without colliding. And tower cranes take up less room and don't have to be moved as do conventional cranes, so their use was less disruptive, both on site and just outside the ballpark.
+<P>
+"We covered the entire job site with these four cranes," Brummond said. "Probably the biggest factor is you can build inside and outside at the same time. I was able to build the whole thing all the way to the top" without moving cranes.
+<P>
+The cranes made the work site safer. Conventional crane operators do not have the bird's eye-view that tower cranes do. Tower crane operators can see who and what is around what they're picking up and setting down.
+<P>
+It was not merely the short production budget that necessitated the use of the Liebherr tower cranes. The unstable soils of the construction site nixed driving heavy cranes back and forth across the field.
+<P>
+Traffic on surrounding streets was another issue. The Safeco site, like all construction sites, was constrained by its surroundings. Two sides of the new stadium are bordered by major streets: First Avenue South and South Royal Brougham Way. On the other two sides are railroad tracks and South Atlantic Street, which is less busy than the arterials but nonetheless a link in the busy industrial neighborhood's traffic grid.
+<P>
+"I would have had to close streets to have conventional rigs build the back half of the stadium," Brummond said.
+<P>
+All the advantages of tower cranes naturally cost more money. Brummond wouldn't say how much more.
+<P>
+Tower cranes were not the only mechanical factor at work in the speedy construction of Safeco Field. Crews were able to combine the most efficient construction methods to get the job done on time. In some instances, cast-in-place concrete worked best; in others, pre-cast concrete made the job go faster.
+<P>
+Using structural steel, which goes up quickly, not only helped crews stay on track. The steel also was left exposed to lend an air of old-time ballparks to the project, another key directive from the Mariners.
+<P>
+The true mark of the project construction success was measured by meeting the all-important July 15 deadline. The contractors did that; Safeco Field is set to open on time.
+<P>
+<P>
+<CENTER>
+<A HREF="welcome.htm#10053876">
+<IMG SRC="/gifs/return.gif" ALT="Return"></A><BR>
+
+
+<P><HR SIZE="1" width="80%">
+<FONT FACE="Arial,Helvetica,Monaco" SIZE="3">
+<A HREF="/">djc home</A> | <A HREF="/special/safeco/">top</A> | <A HREF="/special/">special issues index</A>
+</FONT>
+<P>
+</CENTER>
+</TD></TR></TABLE></center>
+
+
+
+<table border=0  cellspacing=0 cellpadding=0 align=center>
+	<tr><td>	
+	</td></tr>
+	
+	<tr>
+	
+	   <td align=center valign=top><br>
+	   	<span class=copy>
+			<font face="helvetica, arial" size=1 color=gray>
+			<b><a href="/service/copyright.html" class=copy>Copyright</a> &#169;2006 Seattle Daily Journal and djc.com.  <br>
+			Comments? Questions? <a href="/cu/" class=copy>Contact us.</a>
+			</b></font>
+		</span>
+	   </td>
+	</tr>
+</table>
+<br>
+	   </td><td valign=top bgcolor=white width=120><img src=/gifs/white.gif></td>		   
+		</tr>
+	</table>
+	   
+	   </td>
+	</tr>
+	<tr>
+	   <td  width=750 colspan=2 align=center>
+	   &nbsp;<br>
+	   </td>
+	</tr>
+</table>
+<form target=_blank method=post action='/cust/email_spitter.php' name=emailSpitter>
+<input type=hidden name=id value=''>
+</form>
+</body>
+</html>
+

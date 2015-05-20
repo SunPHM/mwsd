@@ -1,0 +1,213 @@
+<html>
+
+<head>
+<title>Overhead crane</title>
+<LINK REL="stylesheet" TYPE="text/css" HREF="laz.css">
+</head>
+
+<body>
+<script language="javascript" type="text/javascript"> 
+<!-- 
+document.write("<"+"script type='text/javascript' src='http://wrapper.gamespy.com/a?pagetype=pnh_content&amp;size=prestitial'>"); 
+document.write("<"+"/script>"); 
+//--> 
+</script>
+
+	<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%><TR><TD CLASS="body">
+
+<P><h2><a name="crane">Overhead (X-Y) crane</a></h2>
+
+<p align="center"><img src="crane.jpg" alt="crane" width="480" height="360">
+
+<P>Lazarus' overhead crane consists of 4 separate entities plus 1
+optional entity - crane_beam is the supporting mechanism that
+spans across a room. It typically moves along the length of a
+warehouse, supported by a beam/column system. crane_hoist does
+the lifting (in the real world), and moves back and forth along
+crane_beam. crane_hook is the lifting device; it moves vertically
+with horizontal movement relative to crane_hoist. crane_control
+provides the controls for the crane. It may be located in a
+separate area, or may move along with crane_beam. A crane can
+have multiple crane_controls. The optional crane_reset, if used,
+calls a crane to the crane_beam extent closest to the
+crane_reset. Before moving the crane, it checks to ensure that
+the crane_control is enabled.
+
+<P>For all but crane_control, each entity must have a pathtarget
+(NOTE: NOT target) path_corner. There should be 2 and only 2
+path_corners in the sequence. These path_corners are only used to
+describe the direction of travel for the entity and the extents
+of the entity's movement&#133; they are <b>not</b> used as
+waypoints. The crane orientation is limited to N-S or E-W, and
+the direction is determined by the relative magnitudes of the
+deltas between path_corners for crane_beam.
+
+<P>Target keys: Crane_control must target crane_beam, crane_beam
+targets crane_hoist, and crane_hoist targets crane_hook.
+
+<P>The entity will start in the same position it is drawn in the
+game. To move crane_control along with crane_beam, use the
+&quot;team&quot; key for these two entities. No other entity
+should use this team name. You can have multiple crane_controls
+for the same crane, but only one crane_control that moves along
+with the crane.
+
+<P>Sounds: Crane_hook plays a sound constantly if the associated
+crane_control is on (an electromagnet hum is nice). Use the noise
+field of the crane_hook to set the sound. The crane_beam noise
+moves along with crane_control (assuming it moves). The
+crane_hoist noise moves with crane_hoist.
+
+<P>Crane_control starts off unless spawnflags=1. If targeted,
+crane_control toggles on/off. If the player attempts to use
+crane_control while off, a message &quot;No power&quot; (or the
+message specified by crane_control's message key) is displayed.
+
+<P>Lights: Set the &quot;spotlight&quot; (=1) spawnflag for
+crane_hook to include a simulated spotlight that shines as the
+crane moves. The spotlight will help the player line the
+crane_hook up with the desired target. This isn't realistic, but
+the loss of perspective with a PC monitor (as opposed to the real
+world) makes this feature a practical necessity.
+
+<P>Crane_control controls all movement of the crane. Crane_control
+should use a single brush with one face that uses the
+crane/panel.wal texture or similar texture. The style key tells
+the game which direction is faced when looking out over the top
+of the control (0=east, 1=north, 2=west, 3=south)&#133; and yeah
+we know there's an angle key, but it doesn't work properly in this
+case&#133;. trust us on this. Controls are activated by looking
+at one of the pseudo-buttons and pressing the +use key. These
+controls then target the appropriate crane entity, <b>if</b> the 
+crane_control is 1) in front of the player, 2) visible to the
+player, 3) within 64 units of the player. Whether the panel.wal 
+texture is used or not, the face of the control panel that faces 
+the player is divided up (in the game's brain) into a matrix of 2 
+rows by 4 columns of pseudo buttons.
+
+<P><b>NOTE:</b> Once a crane_control button is activated, the
+associated action continues as long as the player presses the
++use key, <b>regardless of what the player is looking at</b>.
+This helps quite a bit when trying to move the crane hook to a
+desired location, when the hook would be out of the player's view
+if he were forced to look at the control panel.
+
+<P>When the pickup button is activated, the code checks underneath
+crane_hook for a <a href="func_pushable.htm">func_pushable</a>. If the distance to
+the func_pushable is less than X units (X is currently 64), the
+object &quot;falls up&quot; and will then move along with the
+crane until dropped.
+
+<P><h3>Limitations:</h3>
+
+<blockquote>
+    <P>The crane will only pick up one func_pushable at a time,
+    and will not pick up a func_pushable with one or more other
+    func_pushables stacked on top.
+
+</blockquote>
+
+<P><h3>crane_control parameters</h3>
+<blockquote>
+	<dl>
+	<dt><b>targetname</b></dt>
+		<dd>Name of the crane_control. Not optional if "Start On" spawnflag is not set. It
+        is not strictly necessary, but to avoid confusion all crane_controls for a crane 
+        should have the same targetname.</dd>
+	<dt><b>target</b></dt>
+		<dd>Name of the crane_beam.</dd>
+	<dt><b>team</b></dt>
+		<dd>Name shared by crane_beam for onboard controls.</dd>
+	<dt><b>style</b></dt>
+		<dd>Direction faced by player when facing crane_control<br>
+		0=East, 1=North, 2=West, 3=South</dd>
+	<dt><b>Spawnflags</b></dt>
+		<dd>Start On (=1). If set, crane is initially powered up. If not set, crane_control must
+        be targeted. Crane power is toggled each time crane_control is triggered.</dd>
+    </dl>
+</blockquote>
+
+<h3>crane_beam parameters</h3>
+<blockquote>
+	<dl>
+	<dt><b>targetname</b></dt>
+		<dd>Name of the crane_beam. This field should be used as the target of crane_control.</dd>
+	<dt><b>target</b></dt>
+		<dd>Name of the crane_hoist.</dd>
+	<dt><b>team</b></dt>
+		<dd>Name shared by crane_control for onboard controls.</dd>
+	<dt><b>speed</b></dt>
+		<dd>Speed of crane_beam in units/sec</dd>
+	<dt><b>dmg</b></dt>
+		<dd>Damage to blocking entity</dd>
+	<dt><b>noise</b></dt>
+		<dd>Sound played when moving. Sound will emanate from a position near crane_control 
+        for onboard controls, and from end of crane beam closest to crane_control for
+        crane_controls with fixed position.</dd>
+	<dt><b>pathtarget</b></dt>
+		<dd>First in a sequence of 2 path_corners describing extents of travel.</dd>
+	</dl>
+</blockquote>
+
+<h3>crane_hoist parameters</h3>
+<blockquote>
+	<dl>
+	<dt><b>targetname</b></dt>
+		<dd>Name of the crane_hoist. This field should be used as the target of crane_beam.</dd>
+	<dt><b>target</b></dt>
+		<dd>Name of the crane_hook.</dd>
+	<dt><b>speed</b></dt>
+		<dd>Speed of crane_hoist in units/sec</dd>
+	<dt><b>dmg</b></dt>
+		<dd>Damage to blocking entity</dd>
+	<dt><b>noise</b></dt>
+		<dd>Sound played when moving.</dd>
+	<dt><b>pathtarget</b></dt>
+		<dd>First in a sequence of 2 path_corners describing extents of travel.</dd>
+	</dl>
+</blockquote>
+
+<h3>crane_hook parameters</h3>
+<blockquote>
+	<dl>
+	<dt><b>targetname</b></dt>
+		<dd>Name of the crane_hook. This field should be used as the target of crane_hoist.</dd>
+	<dt><b>speed</b></dt>
+		<dd>Speed of crane_hook in units/sec</dd>
+	<dt><b>dmg</b></dt>
+		<dd>Damage to blocking entity</dd>
+    <dt><b>noise</b></dt>
+		<dd>Sound played when crane_control is powered up.</dd>
+	<dt><b>pathtarget</b></dt>
+		<dd>First in a sequence of 2 path_corners describing extents of travel.</dd>
+	<dt><b>Spawnflags</b></dt>
+		<dd>Spotlight (=1). If set, an invisible light-emanating sprite is projected below the 
+        crane_hook when any part of the crane is moving. This provides the player with
+        visual cues missing because of the loss of perspective you get with a 2D monitor.</dd>
+	</dl>
+</blockquote>
+
+<h3>crane_reset parameters</h3>
+<blockquote>
+	<dl>
+	<dt><b>targetname</b></dt>
+		<dd>Name of the crane_reset. Crane_reset must be targeted to function.</dd>
+	<dt><b>target</b></dt>
+		<dd>Name of crane_beam. When triggered, crane_reset calls the crane_beam to move to
+        the extent closest to the crane_reset. In practice the crane_reset will normally
+        be triggered by a func_button.</dd>
+	<dt><b>count</b></dt>
+		<dd>If non-zero, the value of <A HREF="count.htm">count</A> specifies the number of times the
+	crane_reset can be used before it is auto-killtargeted.</dd>
+	</dl>
+</blockquote>
+
+	<P>&nbsp;
+	<P>&nbsp;
+	<P><CENTER><B><I><A HREF="index.htm" TARGET="_top">Lazarus Main Page</A></I></B></CENTER>
+	<P>&nbsp;
+	<P>&nbsp;
+
+	</TD></TR></TABLE>
+</body>
+</html>

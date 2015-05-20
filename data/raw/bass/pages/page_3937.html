@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Marine Electric</title>
+<META NAME="Author" CONTENT="Nancy Hite">
+<META NAME="Description" CONTENT="Capt JT's web site describes the various wreck diving sites off the coast of Virginia and North Carolina.">
+<META NAME="Keywords" CONTENT="wreck diving, scuba diving, technical diving, diving, scuba, wrecks, deep diving, deep, photos">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_timelineStop(tmLnName) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  if (tmLnName == null)  //stop all
+    for (var i=0; i<document.MM_Time.length; i++) document.MM_Time[i].ID = null;
+  else document.MM_Time[tmLnName].ID = null; //stop one
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_showHideLayers() { //v2.0
+  var i, visStr, args, theObj;
+  args = MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) { //with arg triples (objNS,objIE,visStr)
+    visStr   = args[i+2];
+    if (navigator.appName == 'Netscape' && document.layers != null) {
+      theObj = eval(args[i]);
+      if (theObj) theObj.visibility = visStr;
+    } else if (document.all != null) { //IE
+      if (visStr == 'show') visStr = 'visible'; //convert vals
+      if (visStr == 'hide') visStr = 'hidden';
+      theObj = eval(args[i+1]);
+      if (theObj) theObj.style.visibility = visStr;
+  } }
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(8);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 4;
+    document.MM_Time[0][0].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0][1] = new String("behavior");
+    document.MM_Time[0][1].frame = 6;
+    document.MM_Time[0][1].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0][2] = new String("behavior");
+    document.MM_Time[0][2].frame = 8;
+    document.MM_Time[0][2].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0][3] = new String("behavior");
+    document.MM_Time[0][3].frame = 10;
+    document.MM_Time[0][3].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0][4] = new String("behavior");
+    document.MM_Time[0][4].frame = 12;
+    document.MM_Time[0][4].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0][5] = new String("behavior");
+    document.MM_Time[0][5].frame = 15;
+    document.MM_Time[0][5].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0][6] = new String("behavior");
+    document.MM_Time[0][6].frame = 16;
+    document.MM_Time[0][6].value = "MM_timelineGoto('Timeline1','1');MM_timelinePlay('Timeline1')";
+    document.MM_Time[0][7] = new String("behavior");
+    document.MM_Time[0][7].frame = 14;
+    document.MM_Time[0][7].value = "MM_timelineStop('Timeline1')";
+    document.MM_Time[0].lastFrame = 16;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#000000" onLoad="MM_showHideLayers('document.layers[\'Loading\']','document.all[\'Loading\']','hide','document.layers[\'Slide1\']','document.all[\'Slide1\']','show')">
+<div id="Layer1" style="position:absolute; width:603px; height:64px; z-index:20; left: 25px; top: 20px"> 
+  <p><font color="#8080FF" face="Arial, Helvetica, sans-serif">The photos below 
+    are from my trip to the Marine Electric and the Monroe which occurred on Sept 
+    11th, 1999. I dived on the Miss Lindsey, leaving out of Rudee Inlet in Virginia 
+    Beach.</font></p>
+</div>
+<div id="Layer2" style="position:absolute; width:200px; height:115px; z-index:62; left: 16px; top: 99px"><img src="assets/me_m01.jpg" width="300" height="198"></div>
+<div id="Layer3" style="position:absolute; width:296px; height:45px; z-index:22; left: 13px; top: 317px"> 
+  <p><font face="Arial, Helvetica, sans-serif" color="#8080FF">Hey John , I know 
+    you had a Dry suit on, don't you know what a pee valve is!</font></p>
+  </div>
+<div id="Layer4" style="position:absolute; width:200px; height:115px; z-index:23; left: 336px; top: 97px"><img src="assets/me_m02.jpg" width="300" height="206"></div>
+<div id="Layer5" style="position:absolute; width:296px; height:45px; z-index:24; left: 336px; top: 317px"><font face="Arial, Helvetica, sans-serif" color="#8080FF">Lobsters, 
+  a porthole, a toliet , and even a sink were gotten off the Marine Electric.</font></div>
+<div id="Layer6" style="position:absolute; width:200px; height:115px; z-index:25; left: 10px; top: 379px"><img src="assets/me_m03.jpg" width="300" height="198"></div>
+<div id="Layer7" style="position:absolute; width:300px; height:48px; z-index:26; left: 11px; top: 595px"><font face="Arial, Helvetica, sans-serif" color="#8080FF"> 
+  Ike the man of the hour, hey George, check out the way he's rigged and tell 
+  me how my way doesn't work again.</font></div>
+<div id="Layer8" style="position:absolute; width:200px; height:115px; z-index:27; left: 341px; top: 382px"><img src="assets/me_m04.jpg" width="300" height="198"></div>
+<div id="Layer9" style="position:absolute; width:297px; height:45px; z-index:28; left: 342px; top: 600px"><font face="Arial, Helvetica, sans-serif" color="#8080FF"> 
+  The Bow of the Monroe.</font></div>
+<div id="Layer10" style="position:absolute; width:253px; height:115px; z-index:29; left: 13px; top: 663px"><img src="assets/me_m05.jpg" width="300" height="198"></div>
+<div id="Layer11" style="position:absolute; width:298px; height:48px; z-index:30; left: 15px; top: 878px"><font face="Arial, Helvetica, sans-serif" color="#8080FF"> 
+  A porthole on the Monroe with a sea bass looking out.</font></div>
+<div id="Layer12" style="position:absolute; width:200px; height:115px; z-index:31; left: 346px; top: 665px"><img src="assets/me_m06.jpg" width="300" height="184"></div>
+<div id="Layer14" style="position:absolute; width:200px; height:115px; z-index:33; left: 13px; top: 950px"><img src="assets/me_m07.jpg" width="300" height="199"></div>
+<div id="Layer15" style="position:absolute; width:304px; height:48px; z-index:34; left: 9px; top: 1166px; visibility: visible"><font face="Arial, Helvetica, sans-serif" color="#8080FF">The 
+  anchor windlass on the Monroe.</font></div>
+<div id="Layer16" style="position:absolute; width:200px; height:115px; z-index:35; left: 12px; top: 1233px"><img src="assets/me_m08.jpg" width="300" height="199"></div>
+<div id="Layer17" style="position:absolute; width:200px; height:115px; z-index:36; left: 345px; top: 1231px"><img src="assets/me_m09.jpg" width="300" height="189"></div>
+<div id="Layer18" style="position:absolute; width:299px; height:197px; z-index:37; left: 339px; top: 953px"><img src="assets/me_m10.jpg" width="300" height="198"></div>
+<div id="Layer25" style="position:absolute; width:298px; height:57px; z-index:44; left: 346px; top: 1440px"><font face="Arial, Helvetica, sans-serif" color="#8080FF">A 
+  diver does his stops on the hang bar on the Miss Lindsey.</font></div>
+<div id="Layer26" style="position:absolute; width:297px; height:51px; z-index:45; left: 13px; top: 1445px"><font face="Arial, Helvetica, sans-serif" color="#8080FF">Becky, 
+  the mate sneaks in a dive on the Marine Electric.</font></div>
+<div id="Layer21" style="position:absolute; width:296px; height:54px; z-index:40; left: 348px; top: 878px"><font face="Arial, Helvetica, sans-serif" color="#8080FF">I 
+  don't know what it is, but someone has been digging it out.</font></div>
+<div id="Layer13" style="position:absolute; width:301px; height:47px; z-index:32; left: 343px; top: 1167px"><font face="Arial, Helvetica, sans-serif" color="#8080FF">One 
+  of many portholes that are on the Marine Electric</font></div>
+<div id="Layer35" style="position:absolute; width:228px; height:267px; z-index:61; left: 897px; top: 2449px"></div>
+</body>
+</html>

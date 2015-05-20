@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>HET343 - Mechatronics Project - Gantry Crane</TITLE>
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+<!--
+function displayDate() {
+   var DayOfWeek = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+   var MonthName = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+   var theDate = new Date();
+   return("<NOBR>" + DayOfWeek[theDate.getDay()] + ", " + theDate.getDate() + " " + MonthName[theDate.getMonth()] + ", " +	( theDate.getYear() < 1000 ? theDate.getYear() + 1900 : theDate.getYear()) + "</NOBR>");
+}
+// -->
+</SCRIPT>
+<LINK HREF="styles.css" REL="stylesheet">
+</HEAD>
+<BODY BACKGROUND="img/background.gif" BGCOLOR="#FFFFFF" MARGINWIDTH="0" MARGINHEIGHT="0" LEFTMARGIN="0" TOPMARGIN="0">
+<A NAME="top"></A><TABLE BORDER="0" CELLPADDING="1" CELLSPACING="0" WIDTH="100%">
+<TR><TD><IMG ALT="" SRC="img/pixel.gif"></TD>
+</TR></TABLE>
+
+<TABLE BGCOLOR="#cecece" BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR VALIGN="top"><TD BACKGROUND="img/stripes.gif" COLSPAN="2"><IMG ALT="" HEIGHT="4" SRC="img/pixel.gif" WIDTH="1"></TD>
+</TR></TABLE>
+
+<TABLE ALIGN="center" BACKGROUND="img/stripes2.gif" BGCOLOR="#223878" BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR VALIGN="top" NOWRAP>
+<TD ALIGN="left" WIDTH="50%">&nbsp;<FONT CLASS="header">HET 343 - Mechatronics Project - Gantry Crane</FONT></TD>
+<TD ALIGN="right" WIDTH="50%"><FONT CLASS="header">
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+<!-- 
+document.write (displayDate()); 
+// -->
+</SCRIPT>&nbsp;</FONT></TD>
+</TR></TABLE>
+
+<TABLE BGCOLOR="#cecece" BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR VALIGN="top"><TD BACKGROUND="img/stripes.gif" COLSPAN="2"><IMG ALT="" HEIGHT="4" SRC="img/pixel.gif" WIDTH="1"></TD>
+</TR></TABLE>
+
+<TABLE BORDER="0" CELLPADDING="8" CELLSPACING="0" WIDTH="100%">
+<TR ALIGN="left" VALIGN="top"><TD WIDTH="100%">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR><TD ALIGN="left" VALIGN="top">
+<!--                           -->
+<!-- Insert Heading Here       -->
+<!--                           -->
+<FONT CLASS="majorheading"><B>Design Process</B></FONT></TD>
+<!--                             -->
+<!-- Stop Inserting Heading Here -->
+<!--                             -->
+<TD ALIGN="RIGHT" VALIGN="TOP">
+<FORM>
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+<!--
+function goOption(x)  {
+ var site = x.options[x.selectedIndex].value;
+ if (x.selectedIndex > 0)  { 
+  window.self.location.href = site;
+ }
+ return false;
+}
+//  -->
+</SCRIPT>
+
+<SELECT NAME="selector" ONCHANGE="goOption(this);">
+<OPTION SELECTED>[Menu]</OPTION>
+<OPTION VALUE="index.html">Home</OPTION>
+<OPTION VALUE="intro.html">Introduction</OPTION>
+<OPTION VALUE="design.html">Design Process</OPTION>
+<OPTION VALUE="final.html">Final Design</OPTION>
+<OPTION VALUE="projectlog.html">Project Log</OPTION>
+<OPTION VALUE="code.html">The Code</OPTION>
+<OPTION VALUE="photos.html">Photo Gallery</OPTION>
+</SELECT></TD></FORM></TR></TABLE></TD>
+</TR><TR><TD COLSPAN="2"><BR>
+<!--                           -->
+<!-- Insert Stuff Here         -->
+<!--                           --> 
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD><B>1. Frame Construction</B><P><IMG SRC="img/crane-frame.jpg" WIDTH="200" HEIGHT="166" ALIGN="Right" BORDER="1" ALT="The Frame">As can be seen in the sketch in the introduction, our intention was to use aluminium 'L' section to construct the whole of the frame, which was to be built on a wooden base. This would have worked fine if we were able to get long enough to fit the length and width of the crane, enabling us to drive the gantry with a stepper motor and pinion directly on the rack. When this proved to be a little to hard, we decided to try and find some old printer assemblies, just to get an idea on how they were constructed<BR>It turned out that we were able to salvage some steel rods on which the printer cartridges ran (as well as a few other things), and decided to model our gantry on two printer assemblies, joined together and raised a certain height off the ground. We had the rods turned up to suit our conditions, and some large aluminium 'L' sections were used to house the steel rods. See the picture on the right for more of an idea.</TD>
+</TR><TR><TD>&nbsp;</TD></TR><TR>
+<TD><B>2. X-Y Motion Control</B>
+<P><IMG SRC="img/crane-y-motor.jpg" WIDTH="250" HEIGHT="178" ALIGN="Left" BORDER="1" ALT="Our Y-Axis Stepper Motor">Since we had these printer assemblies, we decided to use the stepper motors to run a toothed belt (the length of the rods) which was connected to a modified printer cartridge. These stepper motors proved to be useful, as well as accurate. We originally though that we might run into some problems trying to run the Y Axis stepper motor, as this motor had to drive the modified printer cartridge which had to carry the whole x direction assembly as a load (including rods, end sections and the crane itself).<BR>After a fair amount of testing and re-coding the stepper motor routines, we were able to run both really smoothly and accurately, about 4 steps per mm, which was more than adequate for us. Because the stepper motors could be controlled by software alone, no feedback was required, however, we decided to include at the 0-0 position (home position) so when turned on it could reset itself and remember its position for the life of the program currently running.</TD>
+</TR><TR><TD>&nbsp;</TD></TR><TR>
+<TD><B>3. Electromagnet Height Control</B><P><IMG SRC="img/crane-z-motor-height.jpg" WIDTH="300" HEIGHT="379" ALIGN="Right" BORDER="1" ALT="The Crane's Insides">It was controlling the Z (up and down) direction, which proved to be the most difficult. The ideal situation would have been to have a stepper motor with a pulley attached to lift the electromagnet. This meant that no feedback would be required and it would be a lot more accurate than a dc or servo-motor. This system can be seen in the drawing to the right (top). We ended up using a geared down dc motor (right, bottom), where the dc motor drove a worm gear, which in turn drove a spur gear. This enabled us to raise and lower a heavier magnet and slowed the process down. By having a notch or two taken out of the base of the gear, and by adding in a micro-switch, we were able to count the revolutions of the gear.<BR>However, we needed a way to raise and lower the actual magnet. The most obvious solution was to use a pulley, with one end of a piece of string fixed to the pulley, and the other to the electromagnet. This was fine for a small amount of vertical movement, but there were some major problems. There was no way for this system to remember where it was when it got turned on, so like the X and Y directions, it required a microswitch. To do this, we built a pressure plate, which when pressed would close the microswitch. This worked, but being a worm gear, there was no tolerance in the gear when resetting the electromagnet height. This would have ended up resulting in a broken gear or pulley. It was later when we thought to use springs, and change the design of the pulley a little. Instead of having one end of the string fixed to the electromagnet, we fixed a spring to the electromagnet, with an eye for the string to pass through. Then the other end of the string was fixed to a spring, which was fixed to the inside of the crane, just next to the pulley. This resulted in a reduction in speed, which was actually needed, as well as reducing the force applied to the pulley and gear when the electromagnet was reset.<BR>This little set up still proved to have some problems, however, were we to re-design it we would have gone with the stepper motor idea.</TD>
+</TR><TR><TD>&nbsp;</TD></TR><TR>
+<TD><B>4. The Ball Dispenser</B>
+<P>Since we intended to test a single ball bearing for colour, then move it to the specified bucket, we needed a device that would dispense a single ball from a ball race.<IMG SRC="img/ball-dispenser-design.jpg" WIDTH="631" HEIGHT="200" ALIGN="RIGHT" BORDER="1" ALT="Ball Dispenser Design Drawings and Photo" VSPACE="3"> Some of the options considered were a servo controlled, dual plate ball dispenser. This involved two plates with holes in strategic positions moving radially, allowing us to control the release of a single ball. This concept can be seen in figure 1. to the right. This design was dismissed due to the fact that we had poor quality servo-motors, and precise machining was required.<BR>The second option, seen in figure 2. was a solenoid controlled ball dispenser. This device operated linearly to hold and release a ball bearing on command. The finished product can be seen in the photo to the right of the design sketches. This design still required some fine tuning due to the fact that it chipped the paint off the balls, making the colour testing more difficult.</TD>
+</TR><TR><TD>&nbsp;</TD></TR><TR>
+<TD><B>5. Colour Testing</B>
+<P><IMG SRC="img/coloured-balls.jpg" WIDTH="200" HEIGHT="117" ALIGN="Left" BORDER="1" ALT="Coloured Ball Bearings" >Our initial choice for colour detection was a Light Dependant Resistor. To enable us to use an LDR we firstly needed to "channel" the light into the viewing hole in the ball dispenser. This was done placing a polished piece of aluminium at an angle of 45&#186;. To achieve successful colour recognition, the three colours need to be of varying luminescence. A major problem encountered was colouring the balls themselves. We tried numerous methods of trying to get the paint to successfully stick to the balls. As mentioned above, the ball dispenser chipped the balls. The problem resulted in inconsistent colour readings, making it difficult to distinguish the different colours.  The "problem" balls can be seen in the photo to the left.  Past experiences have shown that the ambient light can contribute the inconsistent colour readings. In a successful attempt to overcome the problematic ambient conditions, a substantially large halogen lamp was used. </TD>
+</TR><TR><TD>&nbsp;</TD></TR><TR>
+<TD><B>6. Ball Race</B>
+<P>One of our desired requirements was a return ball race. A simple solution was a piece of 'C' section between two points. To ensure the ball rolled properly, the heights were found through the process of 'trial and error' with the aid of some mathamatical calculations. We had to ensure that there would be an adequate drop without the buckets being too high. In order to change direction, we forced the ball to drop though one 'C' section onto the next. We found this worked effectively.</TD>
+</TR></TABLE>
+<P>
+<!--                           -->
+<!-- Stop Inserting Stuff Here -->
+<!--                           -->
+<DIV ALIGN="RIGHT"><B>|&nbsp;<A HREF="intro.html">Prev</A>&nbsp;|&nbsp;<A HREF="#top">Top</A>&nbsp;|&nbsp;<A HREF="final.html">Next</A>&nbsp;|</B></DIV></TD>
+</TR></TABLE>
+
+<TABLE BGCOLOR="#cecece" BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR VALIGN="top"><TD BACKGROUND="img/stripes.gif"><IMG ALT="" HEIGHT="4" SRC="img/pixel.gif" WIDTH="1"></TD>
+</TR></TABLE>
+
+<TABLE ALIGN="center" BACKGROUND="img/stripes2.gif" BGCOLOR="#486591" BORDER="0" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR VALIGN="top"><TD ALIGN="center" WIDTH="100%" NOWRAP><B><FONT COLOR="#FFFFFF" CLASS="footer">&nbsp;|&nbsp;<A HREF="index.html" CLASS="footer">Home</A>&nbsp;|&nbsp;<A HREF="intro.html" CLASS= 
+"footer">Introduction</A>&nbsp;|&nbsp;<A HREF="design.html" CLASS="footer">Design Process</A>&nbsp;|&nbsp;<A HREF="final.html" CLASS="footer">Final Design</A>&nbsp;|&nbsp;<A HREF= 
+"projectlog.html" CLASS="footer">Project Log</A>&nbsp;|&nbsp;<A HREF="code.html" CLASS="footer">The Code</A>&nbsp;|&nbsp;<A HREF="photos.html" CLASS="footer">
+Photos</A>&nbsp;|&nbsp;</FONT></B></TD>
+</TR></TABLE>
+
+<TABLE BGCOLOR="#cecece" BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR VALIGN="top"><TD BACKGROUND="img/stripes.gif"><IMG ALT="" HEIGHT="4" SRC="img/pixel.gif" WIDTH="1"></TD>
+</TR></TABLE>
+</BODY>
+</HTML>
+

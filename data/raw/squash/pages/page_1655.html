@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title> Mürren Eiger, Mönch & Jungfrau Tiscover Images  Eiger Mönch hiking trails sports centre KISSswiss
+</title><!-- tis.machineId: 1356-->
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="TISTimeOfYear" content="at2" />
+<meta name="Keywords" content="Mürren, Eiger, Mönch & Jungfrau, Eiger, Mönch, hiking trails, sports centre, KISSswiss" />
+<meta name="Description" content="TIScover presents Mürren: the car-free holiday resort in the Bernese Oberland. View on Eiger, Mönch and Jungfrau. 200 kilometres of hiking trails and 53 kilometres of tended skiing slopes keep you busy in summer as well as in winter. Alpine sports centre." />
+<meta name="ROBOTS" content="FOLLOW,INDEX" />
+<meta name="TISRegion" content="RGN30ch,RGN32ch,RGN5505ch,RGN144ch" />
+<meta name="TISObjectId" content="RGN144ch" />
+<meta name="TISPackageId" content="RGN144ch" />
+<meta name="Region" content="Mürren, Eiger, Mönch & Jungfrau, Bernese Oberland, Switzerland" />
+<meta name="Content-Language" content="en" />
+<meta name="TISTitle" content="Mürren - Images" />
+<meta name="TISOrder" content="1000" />
+<meta name="TISLayout" content="5ch" />
+<script type="text/javascript"><!--
+
+function checkDuration(frm) {
+  var dur = parseInt(frm.value);
+  if (dur > 50) {
+    frm.focus();
+    frm.select();
+    alert("Length of Stay may not be more than 50 Days");
+    return false;
+  }
+  return true;
+}
+
+function checkDateRange(frm) {
+  var sday = parseInt(frm.sd_D.options[frm.sd_D.selectedIndex].value);
+  var smon = frm.sd_M.options[frm.sd_M.selectedIndex].value;
+  var syea = parseInt(frm.sd_Y.options[frm.sd_Y.selectedIndex].value);
+  var eday = parseInt(frm.ed_D.options[frm.ed_D.selectedIndex].value);
+  var emon = frm.ed_M.options[frm.ed_M.selectedIndex].value;
+  var eyea = parseInt(frm.ed_Y.options[frm.ed_Y.selectedIndex].value);
+  if (!compareDate(sday, smon, syea, eday, emon, eyea, 1)) {
+    frm.ed_D.focus();
+    alert("Please check the date you have entered");
+    return false;
+  }
+  return true;
+}
+
+function checkValueRange(entry, min, max, empty) {
+  if (entry.value.length==0 && empty) { return true; }
+  var value=parseFloat(convertLocaleSpecificNumberToFloat(entry.value));
+  if (value>parseFloat(max)) {
+    alert("Maximum entry permitted: " + max );
+    entry.focus();
+    return false;
+  } else if (value<parseFloat(min)) {
+    alert("Minimum entry permitted: " + min );
+    entry.focus();
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function setOnChangeDur(frm) {
+  if (frm.d.value < 1) {
+    frm.d.focus();
+    frm.d.select();
+    alert("Length of Stay must be more than 0 Days");
+    return false;
+  }
+  return true;
+}
+function checkNumber(entry) {
+  var val = entry.value + "";         
+  var maxDecimalPlaces; 
+  if (entry.form[entry.name+"_decimalPlaces"] == null) { 
+    maxDecimalPlaces = 0; 
+  } else { 
+    maxDecimalPlaces = parseInt(eval(entry.form[entry.name+"_decimalPlaces"].value));
+  }
+  var newVal = ""; 
+  var decimalPoint=false;
+  var decimalPlaces=0;
+  var thousandFoundIndex = -1;
+  var dotFoundIndex = -1;
+  var invalidNumber = false;
+  if (val.length == 1 && val.substring(0,1) =="-") {      
+    invalidNumber = true;
+  }
+  for (var i=0;i<val.length;i++)   {      
+    letter=val.substring(i,i+1);          
+    if ( ((letter<"0" || "9"<letter)&&(letter!=".")&&(letter!="-") && (letter!=","))
+         || ((letter==".")&&(decimalPoint==true)) ) {
+      entry.focus();
+      entry.select();
+      alert("You must enter Numbers only");
+      return false;
+    }
+    if ((decimalPoint==true)&&(letter!="-")) { decimalPlaces++; }
+    if (decimalPlaces>maxDecimalPlaces && letter!="0") {
+      entry.focus();
+      entry.select();
+      alert("Maximum decimal places permitted: " +maxDecimalPlaces);
+      return false;
+    }
+    if ((letter=="-") && i!=0) {
+      entry.focus();
+      entry.select();
+      alert("Invalid Number");
+      return false;
+    }
+    if (letter==".") { decimalPoint=true; }
+    if (letter==",") {
+      if (dotFoundIndex >= 0) {
+        invalidNumber = true;
+      } else {
+        thousandFoundIndex = i;
+      }
+    }
+    if (letter==".") {
+      dotFoundIndex = i;
+    }
+    if (dotFoundIndex == i && i == (val.length - 1))  {
+      invalidNumber = true;
+    }
+    if (thousandFoundIndex >= 0 && dotFoundIndex == i && ((dotFoundIndex - thousandFoundIndex) != 4))  {
+      invalidNumber = true;
+    }
+    if (thousandFoundIndex >= 0 && dotFoundIndex < 0 && (i == val.length - 1) && (i - thousandFoundIndex != 3 )){
+      invalidNumber = true;
+    }
+    newVal = newVal + letter;
+  }
+  entry.value = newVal;
+  if (invalidNumber) {
+    alert("Invalid Number");
+    entry.focus();
+    entry.select();
+    return false;
+  }
+  return true;
+}
+function checkText(entry) {
+  var val = entry.value + "";
+  val = val.replace(/ */, "");
+  if (val.length > 0)  { return true; }
+  entry.focus();
+  entry.select();
+  alert("Required field");
+  return false;
+}
+function doCheckFormscout(frm) {
+if(!checkDuration(frm.d)) { return false; }
+if(!checkNumber(frm.d)) { return false; }
+if(!checkValueRange(frm.d, "-999999.0", "999999.0", "true")) { return false; }
+if(!checkNumber(frm.a0)) { return false; }
+if(!checkValueRange(frm.a0, "-999999.0", "999999.0", "true")) { return false; }
+if(!checkNumber(frm.r0)) { return false; }
+if(!checkValueRange(frm.r0, "-999999.0", "999999.0", "true")) { return false; }
+if(!checkStartDate(frm)) { return false; }
+if(!setOnChangeDur(frm)) { return false; }
+if(!roomCheck(frm)) { return false; }
+if(!ceckJS(frm)) { return false; }
+
+return true;
+}
+
+function compareDate(dayf, monthf, yearf, dayt, montht, yeart, equal) {
+  if (parseInt(yeart) < parseInt(yearf)) {  return 0; }
+  if (parseInt(yeart) > parseInt(yearf)) {  return 1; }
+  if (parseInt(montht) < parseInt(monthf)) {  return 0; }
+  if (parseInt(montht) > parseInt(monthf)) { return 1; }
+  if (equal)   {
+    if (parseInt(dayt) < parseInt(dayf))   {  return 0; }
+  } else {
+    if (parseInt(dayt) <= parseInt(dayf))   {  return 0; }
+  }
+  return 1;
+}
+function convertLocaleSpecificNumberToFloat(val) {
+  var tempVal = ""; 
+  for (var i=0;i<val.length;i++)   {      
+   letter=val.substring(i,i+1);          
+   if (letter != ",") {
+     if (letter == ".") {
+       tempVal = tempVal + "."; 
+     } else {
+       tempVal = tempVal + letter; 
+     }
+    }
+  }
+  return tempVal*1;
+}
+
+    function ceckJS(frm) {
+    	if (frm != null && frm.jse != null) {
+				frm.jse.value = 1;
+    	}
+      return true;
+    }
+  
+  function openExtranet(linkObjekt) {
+    var isOp = (navigator.userAgent.toLowerCase().indexOf("opera") != -1) ? true : false;
+    var linkHref= "";
+    if (linkObjekt.getAttribute) linkHref = linkObjekt.getAttribute("href");
+    if (linkHref == "") return true;
+    var fensterName = "_blank";
+    var externesLinkFenster = window.open(linkHref, "intranet", "resizable=1,location=0,directories=0,status=1,menubar=1,scrollbars=1,toolbar=0,width=800,height=600");
+    if (externesLinkFenster && !isOp) externesLinkFenster.focus();
+    return (externesLinkFenster) ? false : true;
+  }
+
+function roomCheck(frm) {
+  if (parseInt(frm.r0.value) == 0) {
+    alert("Please enter the Number of Rooms");
+    frm.r0.focus();
+    return false;
+  }
+  return true;
+}
+function doCheckFormsearchCMP(frm) {
+
+return true;
+}
+
+function checkStartDate(frm) {
+  var day = parseInt(frm.sd_D.options[frm.sd_D.selectedIndex].value);
+  var mon = frm.sd_M.options[frm.sd_M.selectedIndex].value;
+  var yea = parseInt(frm.sd_Y.options[frm.sd_Y.selectedIndex].value);
+  today = new Date();
+  var daynow = today.getDate();
+  var monthnow = today.getMonth();
+  var yearnow = today.getYear();
+  if (!compareDate(daynow, monthnow, yearnow, day, mon, yea, 1)) {
+    frm.sd_D.focus();
+    alert("Check In Date cannot be earlier than today");
+    return false;
+  }
+  return true;
+}
+
+function doOnLoad() {
+
+return true;
+}
+
+function doOnUnLoad() {
+
+return true;
+}
+//--></script>
+<link rel="stylesheet" type="text/css" href="http://www.tiscover.ch/ch/uptodate/static/5ch,xx,SCH1/modulId,guide,season,at2/global.css" />
+
+<script type="text/javascript" src="http://www.tiscover.ch/ch/uptodate/static/5ch,en,SCH1/_/local.js" ></script>
+<script type="text/javascript" src="/ch/script/global.js" ></script>
+</head>
+<body onload="doOnLoad()">
+      <div id="sysContent">
+      <a id="top" name="top" accesskey="1"></a>
+    <div class="hidden">
+      <ul>
+        <li><a href="#content" accesskey="2">jump to content</a></li>
+        <li><a href="#hnav" accesskey="3">main navigation</a></li>
+        <li><a href="#lnav" accesskey="4">to the left menu</a></li>
+        <li><a href="#right" accesskey="5">to the left column</a></li>
+        <li><a href="#copyright" accesskey="6">to page footer</a></li>
+        <li><a href="#ftsearch" accesskey="s">full text search</a></li>
+      </ul>
+    </div>
+      
+<div id="tisHeader">
+<div class="smallnav" style="text-align: right">
+    <a href="https://secure.tiscover.com/ch/mytiscover/data/5ch,en,SCH1/season,at2/login.html" target="_top">mytiscover</a>
+  <a target="_top" href="http://www.tiscover.com">tiscover.com</a>
+      <a href="http://www.tiscover.ch/ch/guide/5ch,de,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,pict/pict.html" target="_top">Deutsch</a>
+      <a href="http://www.tiscover.ch/ch/guide/5ch,fr,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,pict/pict.html" target="_top" class="smallnavEnd">Francais</a>
+</div>
+  <a href="http://www.tiscover.at/home/index_ch.html?_lan=en" target="_top"><img src="/ch/layoutimg/group/std/logo/en/logo.gif" alt="Tiscover" border="0" /></a>
+  <p class="space10px"></p>
+  
+<div class="search">
+  <a id="ftsearch" name="ftsearch"></a>
+  <h5><a href="#hnav">skip full text search</a></h5>
+  <form style="display: inline" name="searchCMP" action="http://www.tiscover.ch/ch/scout/text/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,modulId,guide,s,0,season,at2,selectedEntry,pict/result.html" target="_top" method="get" >
+    <label for="fulltextsearch" class="lblfulltxtsearch">Search<img src="/ch/layoutimg/t05/header/lens.gif" alt=" " /></label>
+    <br />    
+    <input type="text" name="scope" class="txtinput" id="fulltextsearch" size="10" value=""/>    
+    <p class="space5px"></p>
+    
+    <select style="width: 89px; font-size: 9px; vertical-align: middle" name="rgnCMP">
+          <option value="RGN144ch">Mürren</option>
+          <option value="RGN5505ch">Eiger, Mö...</option>
+          <option value="RGN32ch">Bernese O...</option>
+          <option value="RGN30ch">Switzerland</option>
+    </select>
+    <input class="goButton" type="submit" style="width:37px; vertical-align: middle" value="" id="Go" name="Go" accesskey="s" title="Go" />
+  </form>
+</div>
+  <img src="/ch/layoutimg/group/std/header/moddep/guide/en/head1.gif" alt="" class="headerpicspace" /><img src="/ch/layoutimg/group/std/header/moddep/guide/en/head2.jpg" alt="" />
+  <p class="space12px"></p>
+</div><h5>main navigation - <a href="#snav">skip main navigation</a></h5>
+<a id="hnav" name="hnav"></a>
+<div id="tisReiter">
+  <ul style="white-space: nowrap">
+    <li><a href="http://www.tiscover.ch/home/index_ch.html?_lan=en" target="_top">Home</a></li>
+    <li id="guideSel"><a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN30ch,season,at2,selectedEntry,home/home.html" target="_top">Guide</a></li>
+    <li><a href="http://book.tiscover.ch/ch/scout/tpevts/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,r,RGN30ch,season,at2/evcrit.html" target="_top">Events</a></li>
+    <li><a href="http://book.tiscover.ch/ch/scout/stps/5ch,en,SCH1/curr,CHF,lm,false,r,RGN30ch,season,at2/rscrit.html" target="_top">Accommodation</a></li>
+    <li><a href="http://www.tiscover.ch/ch/scout/hdps/5ch,en,SCH1/curr,CHF,lm,false,r,RGN30ch,season,at2/index.html" target="_top">Packages</a></li>
+    <li><a href="http://www.tiscover.ch/ch/scout/arrive/5ch,en,SCH1/curr,CHF,r,RGN30ch,season,at2,urllang,AARR01SERVERLNK/indexf.html" target="_top">Route Planner/Getting There</a></li>
+    <li><a href="http://www.tiscover.ch/ch/uptodate/report/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,folder,WEATHER,parentId,RGN30ch,season,at2,selBlk,CURRWEATHERBLOCK,selElem,0,selectedEntry,wtrov/wtrov.html" target="_top">Weather/Reports</a></li>
+    <li><a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,season,at2,selectedEntry,shops/shops.html" target="_top">Shop</a></li>    
+  </ul>
+  <a id="snav" name="snav"></a>
+  <h5>sub navigation - <a href="#geo">skip sub navigation</a></h5>
+  <div class="subreiter">
+    <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,season,at2,selectedEntry,home/home.html" target="_top">Switzerland</a>
+    <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,folder,FEDSTATE,season,at2,selectedEntry,fedstate/fedstate.html" target="_top">Touristic Regions</a>
+    <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,season,at2,selectedEntry,pict/pict.html" class="subreiterLast" target="_top">Impressionen</a>
+  </div>
+</div>
+  <div class="space8px"></div>
+  <div class="geopfad">
+    <a id="geo" name="geo"></a>
+    <h5>
+      geo path 
+      - 
+      <a href="#lnav">
+        skip geo path
+      </a>
+    </h5>    
+    you are now in:
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN30ch,curr,CHF,season,at2,selectedEntry,home/home.html"  class="geo"> Switzerland</a> / 
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN32ch,curr,CHF,season,at2,selectedEntry,home/home.html"  class="geo"> Bernese Oberland</a> / 
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN5505ch,curr,CHF,season,at2,selectedEntry,home/home.html"  class="geo"> Eiger, Mönch & Jungfrau</a> / 
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,home/home.html"  class="geo"> Mürren</a>
+  </div>
+<p class="space12px"></p>
+    <div style="clear: both; width: 100%">
+<div id="tisLeft">
+  <h5>
+    left navigation 
+    - 
+    <a href="#content">
+      skip
+    </a>
+  </h5>
+  <a id="lnav" name="lnav"></a>      
+      <div class="topright"></div>
+      <div class="topleft"></div>
+      <div class="bottommiddle"></div>
+      <div class="border">
+        <div class="mnuTop">
+            Homepage
+        </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,home/home.html" target="_top">
+              Welcome
+              </a>
+          </div>
+          <div class="mnuSel">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,pict/pict.html" target="_top">
+              Images
+              </a>
+          </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,map/map.html" target="_top">
+              Location/Map
+              </a>
+          </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,arrival/arrival.html" target="_top">
+              Getting there
+              </a>
+          </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,season/season.html" target="_top">
+              Seasonal Activities
+              </a>
+          </div>
+      </div>
+      <div class="bottomleft"></div>
+      <div class="bottommiddle"></div>
+      <div class="bottomright"></div>
+      <div class="space10px"></div>      
+      <div class="topright"></div>
+      <div class="topleft"></div>
+      <div class="bottommiddle"></div>
+      <div class="border">
+        <div class="mnuTop">
+            Lodging
+        </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,folder,ACCOMMODATION,season,at2,selectedEntry,acco/acco.html" target="_top">
+              Hotels/Accommodations
+              </a>
+          </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,folder,HOTELCOOP,season,at2,selectedEntry,accocoop/accocoop.html" target="_top">
+              Hotel Chains/ Property Agents
+              </a>
+          </div>
+      </div>
+      <div class="bottomleft"></div>
+      <div class="bottommiddle"></div>
+      <div class="bottomright"></div>
+      <div class="space10px"></div>      
+      <div class="topright"></div>
+      <div class="topleft"></div>
+      <div class="bottommiddle"></div>
+      <div class="border">
+        <div class="mnuTop">
+            Further Information
+        </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,folder,ATTRACTION,season,at2,selectedEntry,sights/sights.html" target="_top">
+              Attractions
+              </a>
+          </div>
+          <div class="mnu">
+              <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,folder,SPORTS,season,at2,selectedEntry,sport/sport.html" target="_top">
+              Recreation & Sports
+              </a>
+          </div>
+      </div>
+      <div class="bottomleft"></div>
+      <div class="bottommiddle"></div>
+      <div class="bottomright"></div>
+      <div class="space10px"></div>
+  <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at1,selectedEntry,pict/pict.html">
+    <img src="/ch/layoutimg/group/std/button/en/sommer.gif" alt="this page in Summer" border="0" />
+  </a>
+  <br />
+  <br />
+    <div class="topright"></div>
+    <div class="topleft"></div>
+    <div class="advert">
+          <script type="text/javascript" language="JavaScript" src="http://as1.falkag.de/sel?cmd=jsc&amp;dat=117043&amp;xl=120&amp;yl=60&amp;opt=0"></script>
+          <noscript>
+            <a href="http://as1.falkag.de/sel?cmd=lnk&amp;dat=117043&amp;opt=0" target="_blank">
+              <img src="http://as1.falkag.de/sel?cmd=ban&amp;dat=117043&amp;opt=0" align="middle" width="120" height="60" alt="Entf." border="0" />
+            </a>
+          </noscript>
+     </div>
+    <div class="bottomleft"></div>
+    <div class="bottommiddle"></div>
+    <div class="bottomright"></div>
+    <div class="space10px"></div>
+</div><div id="tisMiddle">
+         <!-- contentarea -->
+          <div id="tisContent">
+<a id="content" name="content"></a>
+<h5>
+  Content
+  - 
+  <a href="#endContent">
+    skip
+  </a>
+</h5>
+<div style="clear: both; width: 100%">
+      <div class="topright"></div>
+      <div class="topleft"></div>
+      <div class="mnuTop">Mürren - PICTURES</div>
+</div>
+  <div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/panorama_emj-175x200.jpg" width="200" height="130" alt=" " border="0" align="left" hspace="5" />
+      <div style="clear:both"></div>
+    <a id="afterpar0" name="afterpar0"></a>
+  </div><div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/pferdeschlitten-175x200.jpg" width="200" height="156" alt=" " border="0" align="right" hspace="5" /> 
+      <div style="clear:both"></div>
+    <a id="afterpar1" name="afterpar1"></a>
+  </div>
+  <div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/abenddammerung-175x200.jpg" width="200" height="133" alt=" " border="0" align="left" hspace="5" />
+      <div style="clear:both"></div>
+    <a id="afterpar2" name="afterpar2"></a>
+  </div><div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/c_sportzentrum-175x200.jpg" width="200" height="160" alt=" " border="0" align="right" hspace="5" /> 
+      <div style="clear:both"></div>
+    <a id="afterpar3" name="afterpar3"></a>
+  </div>
+  <div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/infernorennen-175x200.jpg" width="200" height="144" alt=" " border="0" align="left" hspace="5" />
+      <div style="clear:both"></div>
+    <a id="afterpar4" name="afterpar4"></a>
+  </div><div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/skifahrer2-175x200.jpg" width="200" height="140" alt=" " border="0" align="right" hspace="5" /> 
+      <div style="clear:both"></div>
+    <a id="afterpar5" name="afterpar5"></a>
+  </div>
+  <div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/bergterrasse-175x200.jpg" width="135" height="175" alt=" " border="0" align="left" hspace="5" />
+      <div style="clear:both"></div>
+    <a id="afterpar6" name="afterpar6"></a>
+  </div><div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/jungfraubahn-175x200.jpg" width="128" height="175" alt=" " border="0" align="right" hspace="5" /> 
+      <div style="clear:both"></div>
+    <a id="afterpar7" name="afterpar7"></a>
+  </div>
+  <div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/piz_gloria-175x200.jpg" width="200" height="141" alt=" " border="0" align="left" hspace="5" />
+      <div style="clear:both"></div>
+    <a id="afterpar8" name="afterpar8"></a>
+  </div><div class="defaultSpace"></div>
+  <div style="width:100%; overflow:hidden">
+          <img src="/ch/images/RGN/144/RGN144ch/berghaus_mannlichen-175x200.jpg" width="200" height="126" alt=" " border="0" align="right" hspace="5" /> 
+      <div style="clear:both"></div>
+    <a id="afterpar9" name="afterpar9"></a>
+  </div>
+    <div class="smallSpace"></div>
+          <a href="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,home/mailfl.html"><img border="0" src="/ch/onlineck/book/Button/EMAIL?objectId=RGN144ch&amp;layoutId=5ch&amp;moduleId=guide&amp;url=%2Fch%2Flayoutimg%2Ft05%2Fonlinebook%2Fen%2Fanfrage.gif&amp;vac=0" alt="Information enquiry" /></a>
+        <a href="http://www.tiscover.ch/ch/scout/stps/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,lm,false,modulId,guide,r,RGN144ch,season,at2,selectedEntry,pict/online.html"><img border="0" src="/ch/onlineck/book/Button/RS?objectId=RGN144ch&amp;layoutId=5ch&amp;moduleId=guide&amp;url=%2Fch%2Flayoutimg%2Ft05%2Fonlinebook%2Fen%2Fzimmer_ferienwohnung.gif&amp;vac=0&amp;hdmslf=true" alt="Booking" /></a>
+          <a href="http://www.tiscover.ch/ch/scout/hdps/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,lm,false,modulId,guide,season,at2,selectedEntry,pict/online.html"><img border="0" src="/ch/onlineck/book/Button/HP?objectId=RGN144ch&amp;layoutId=5ch&amp;moduleId=guide&amp;url=%2Fch%2Flayoutimg%2Ft05%2Fonlinebook%2Fen%2Fpauschalangebot.gif&amp;hdmslf=true&amp;onyTr=true&amp;langId=en" alt="book package" /></a>
+  <img src="/cgi-bin/ivw/CP/service/ch/guide/1139335774310" width="1" height="1" alt="" />
+<!-- OEWA VERSION="1.2" -->
+<script type="text/javascript"> <!--
+ var OEWA="http://tiscover.oewabox.at/cgi-bin/ivw/CP/service/ch/guide;1139335774310";
+document.write("<IMG SRC=\""+OEWA+"?r="+escape(document.referrer)+"\" WIDTH=\"1\" HEIGHT=\"1\">");
+// -->
+</script>
+<noscript>
+ <IMG SRC="http://tiscover.oewabox.at/cgi-bin/ivw/CP/service/ch/guide;1139335774310" WIDTH="1" HEIGHT="1">
+</noscript>
+<!-- /OEWA -->
+
+  <script type="text/javascript">
+<!--
+  document.write("<img src=\"http://secure.tiscover.com/yy/statistic/abc?/ch/5ch,en,SCH1,CHF,at2/10.2.2.135,1356/www.tiscover.ch%2Fch%2Fguide%2F5ch%2Cen%2CSCH1%2FobjectId%2CRGN144ch%2Ccurr%2CCHF%2Cseason%2Cat2%2CselectedEntry%2Cpict%2Fpict.html/RGN144ch,RGN144ch,,guide,/r=" + escape(document.referrer) + "/t=" + new Date().getTime() + "\" width=\"1\" height=\"1\" />");
+-->
+</script>
+<noscript>
+  <div><img src="http://secure.tiscover.com/yy/statistic/abc?/ch/5ch,en,SCH1,CHF,at2/10.2.2.135,1356/www.tiscover.ch%2Fch%2Fguide%2F5ch%2Cen%2CSCH1%2FobjectId%2CRGN144ch%2Ccurr%2CCHF%2Cseason%2Cat2%2CselectedEntry%2Cpict%2Fpict.html/RGN144ch,RGN144ch,,guide,/" width="1" height="1" alt="" /></div>
+</noscript>
+    
+<a id="endContent" name="endContent"></a>
+          </div>
+        </div>
+        <!-- contentarea --><div id="tisRight">
+<h5>
+  right column
+  - 
+  <a href="#endRightCol">
+    skip
+  </a>
+</h5>
+  <div class="topright"></div>
+  <div class="topleft"></div>
+  <div class="bottommiddle"></div>
+  <div class="border">
+    <div class="mnuTop">
+      Location on the Map
+    </div>
+    <img src="/ch/images/positionpic/44/RGN144ch_pos.png" width="147" height="104" alt="current position on the map" border="0" />
+  </div>
+  <div class="bottomleft"></div>
+  <div class="bottommiddle"></div>
+  <div class="bottomright"></div>    
+  <div class="space10px"></div>
+<h5>
+  Quick Reservation
+  - 
+  <a href="#endQuickBookBlock">
+    skip
+  </a>
+</h5>
+<form style="display: inline" name="scout" action="http://www.tiscover.ch/ch/scout/stps/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,pict/result.html" method="get" onsubmit="return doCheckFormscout(this);">
+<input type="hidden" name="on" value="RGN144ch" />
+  <input type="hidden" name="season" value="at2" />
+<input type="hidden" name="jse" value="0" />
+<input type="hidden" name="s" value="0" />
+<input type="hidden" name="ref" value="0" />
+<input type="hidden" name="lm" value="false" />
+<input type="hidden" name="ap" value="1" />
+<input type="hidden" name="curr" value="CHF" />
+<input type="hidden" name="modulId" value="guide" />
+<input type="hidden" name="c0" value="0" />
+<input type="hidden" name="DESTLINK" value="search" /> 
+  <input type="hidden" name="SPECIALHOTEL" value="0" />
+<input type="hidden" name="HOTELCOOP" value="0" />
+<input type="hidden" name="clk" value="http://www.tiscover.ch/ch/guide/5ch,en,SCH1/objectId,RGN144ch,curr,CHF,season,at2,selectedEntry,pict/pict.html" />
+<div class="quickbooktitle" style="background: url(/ch/layoutimg/group/std/misc/en/onlinebook.gif) top no-repeat;"></div>
+<div class="quickbookbg">
+  <div class="space6px"></div>
+  <label for="r">Region</label><br /><div class="space2px"></div>
+    <input type="hidden" name="objectId" value="RGN144ch" />
+  <select name="r" id="r" style="padding-left: 8px">
+    <option selected="selected" value="RGN144ch">Mürren...</option>
+  </select>
+  <div class="space6px"></div>
+  <label for="sd_D">Check In Date:</label><br /><div class="space2px"></div>
+  <input type="hidden" name="sd_YN" value="2006"/>
+  <select class="text" name="sd_D" id="sd_D">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option selected="selected" value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+  </select><select  class="text" name="sd_M">
+    <option value="0">1</option>
+    <option selected="selected" value="1">2</option>
+    <option value="2">3</option>
+    <option value="3">4</option>
+    <option value="4">5</option>
+    <option value="5">6</option>
+    <option value="6">7</option>
+    <option value="7">8</option>
+    <option value="8">9</option>
+    <option value="9">10</option>
+    <option value="10">11</option>
+    <option value="11">12</option>
+  </select><select class="text" name="sd_Y">
+    <option value="2005">2005</option>
+    <option selected="selected" value="2006">2006</option>
+    <option value="2007">2007</option>
+  </select>
+  <div class="space6px"></div>Stay:&nbsp;&nbsp;per:<br />
+  <input type="text" name="d" id="d" class="text" size="2" value="7" onchange='checkNumber(document.scout.d); setOnChangeDur(document.scout);'/>
+  <label for="d">Nights</label>
+  <input type="text" name="a0" id="a0" class="text" size="2" value="2" onchange='checkNumber(a0)'/>
+  <label for="a0">Pers.</label>
+  <div class="space6px"></div>
+  <label for="sr0">number/room type:</label><br />
+  <input type="text" name="r0" id="r0" class="text" size="2" value="1" onchange='checkNumber(r0)'/>
+    <select class="text" name="sr0" id="sr0">
+      <option class="text" selected="selected" value="STPROOM">Room</option>
+    </select>
+  <div class="space6px"></div>
+  <label for="ac">Accommodation Type:</label><br /><div class="space2px"></div>
+  <select name="ac" id="ac" class="text"><option class="text" selected="selected" value="">(All)</option></select>
+  <div class="space3px"></div>
+  <input type="submit" class="searchButton" style="width: 80px; height:20px; border: none; background: url(/ch/layoutimg/group/std/clkbtnact/en/suchen_btn.gif) left no-repeat" value="" id="GoQBB" name="GoQBB" title="Search" />
+</div>
+</form>
+<div class="bottomleftgreen"></div>
+<div class="bottommiddlegreen"></div>
+<div class="bottomrightgreen"></div>
+<div class="space10px"></div>
+<a id="endQuickBookBlock" name="endQuickBookBlock"></a>
+
+      <a href="http://homes.tiscover.com/project/tiscover01/callcenter_popup_en.html" onclick="return openCCBanner(this);">
+    <img src="/ch/layoutimg/group/std/misc/en/CCBanner.gif" alt="" border="0" />
+      </a>
+    <div class="space10px"></div>
+<a id="endRightCol" name="endRightCol"></a>
+            </div>
+    </div>
+      
+<div class="defaulttSpace" style="clear:both; height:12px;"></div>
+<div id="tisCopyright">
+  <h5>Copyright - <a href="#endCopyright">skip</a></h5>
+  <a id="copyright" name="copyright"></a>
+  <div class="topright"></div>
+  <div class="topleft"></div>
+  <div class="copytext" style="padding: 10px">
+    <div class="tclinks">
+      <a href="http://www.abouttiscover.com/index...2.html" class="top" target="_blank">about tiscover</a>
+      <a href="http://homes.tiscover.com/sixcms/list.php?page=tis_presse_ch" class="top" target="_blank">press</a>
+      <a href="http://www.tiscover.ch/links_en" class="top">links</a>
+      <a href="http://www.tiscover.ch/home/index_ch.html?_det=partner&amp;_lan=en" class="top">Partner Network</a>
+      <a href="https://secure.tiscover.com/ch/extranet/login/6,en,SCH1/season,at2/login.html" onclick="return openExtranet(this);" class="top1">extranet</a>
+      <p class="space15px"></p>
+      <div><br>© 2006 by  <A HREF="http://www.abouttiscover.com">Tiscover</A> AG, © Tiscover <A HREF="http://www.tiscover.ch">Schweiz</A> and all its suppliers.
+All rights reserved. Tiscover terms and conditions. Privacy policy.
+Tiscover AG is not responsible for content on external Web sites.</div>
+    </div>
+    <div class="tclogo">
+      <img src="/ch/layoutimg/group/std/logo/en/tislogo_kl.gif" alt="tiscover logo"  width="61" height="9" />
+    </div>
+    <p style="clear: both"></p>
+  </div>
+</div>
+      </div>
+</body>
+</html>    

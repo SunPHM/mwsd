@@ -1,0 +1,246 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>About Allan Bruce</title>
+</head>
+
+<body>
+
+
+<SCRIPT language=JavaScript>
+dCol='000000';//date colour.
+fCol='0000FF';//face colour.
+sCol='00FF00';//seconds colour.
+mCol='FF0000';//minutes colour.
+hCol='FF00FF';//hours colour.
+ClockHeight=40;
+ClockWidth=40;
+ClockFromMouseY=0;
+ClockFromMouseX=100;
+
+//Alter nothing below! Alignments will be lost!
+
+d=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY");
+m=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER");
+date=new Date();
+day=date.getDate();
+year=date.getYear();
+if (year < 2000) year=year+1900;
+TodaysDate=" "+d[date.getDay()]+" "+day+" "+m[date.getMonth()]+" "+year;
+D=TodaysDate.split('');
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+Face='I II III IV V VI VII VIII IX X XI XII';
+font='Arial';
+size=1;
+speed=0.85;
+ns=(document.layers);
+ie=(document.all);
+Face=Face.split(' ');
+n=Face.length;
+a=size*10;
+ymouse=0;
+xmouse=0;
+scrll=0;
+props="<font face="+font+" size="+size+" color="+fCol+"><B>";
+props2="<font face="+font+" size="+size+" color="+dCol+"><B>";
+Split=360/n;
+Dsplit=360/D.length;
+HandHeight=ClockHeight/4.5
+HandWidth=ClockWidth/4.5
+HandY=-7;
+HandX=-2.5;
+scrll=0;
+step=0.02;
+currStep=0;
+y=new Array();x=new Array();Y=new Array();X=new Array();
+for (i=0; i < n; i++){y[i]=0;x[i]=0;Y[i]=0;X[i]=0}
+Dy=new Array();Dx=new Array();DY=new Array();DX=new Array();
+for (i=0; i < D.length; i++){Dy[i]=0;Dx[i]=0;DY[i]=0;DX[i]=0}
+if (ns){
+for (i=0; i < D.length; i++)
+document.write('<layer name="nsDate'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props2+D[i]+'</font></center></layer>');
+for (i=0; i < n; i++)
+document.write('<layer name="nsFace'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+Face[i]+'</font></center></layer>');
+for (i=0; i < S.length; i++)
+document.write('<layer name=nsSeconds'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+sCol+'><center><b>'+S[i]+'</b></center></font></layer>');
+for (i=0; i < M.length; i++)
+document.write('<layer name=nsMinutes'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+mCol+'><center><b>'+M[i]+'</b></center></font></layer>');
+for (i=0; i < H.length; i++)
+document.write('<layer name=nsHours'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+hCol+'><center><b>'+H[i]+'</b></center></font></layer>');
+}
+if (ie){
+document.write('<div id="Od" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < D.length; i++)
+document.write('<div id="ieDate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props2+D[i]+'</B></font></div>');
+document.write('</div></div>');
+document.write('<div id="Of" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="ieFace" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+Face[i]+'</B></font></div>');
+document.write('</div></div>');
+document.write('<div id="Oh" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < H.length; i++)
+document.write('<div id="ieHours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+hCol+';text-align:center;font-weight:bold">'+H[i]+'</div>');
+document.write('</div></div>');
+document.write('<div id="Om" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < M.length; i++)
+document.write('<div id="ieMinutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+mCol+';text-align:center;font-weight:bold">'+M[i]+'</div>');
+document.write('</div></div>')
+document.write('<div id="Os" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < S.length; i++)
+document.write('<div id="ieSeconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+sCol+';text-align:center;font-weight:bold">'+S[i]+'</div>');
+document.write('</div></div>')
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+function Mouse(evnt){
+ymouse = (ns)?evnt.pageY+ClockFromMouseY-(window.pageYOffset):event.y+ClockFromMouseY;
+xmouse = (ns)?evnt.pageX+ClockFromMouseX:event.x+ClockFromMouseX;
+}
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+function ClockAndAssign(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.575 + Math.PI * hr/6+Math.PI*parseInt(time.getMinutes())/360;
+if (ie){
+Od.style.top=window.document.body.scrollTop;
+Of.style.top=window.document.body.scrollTop;
+Oh.style.top=window.document.body.scrollTop;
+Om.style.top=window.document.body.scrollTop;
+Os.style.top=window.document.body.scrollTop;
+}
+for (i=0; i < n; i++){
+var F=(ns)?document.layers['nsFace'+i]:ieFace[i].style;
+F.top=y[i] + ClockHeight*Math.sin(-1.0471 + i*Split*Math.PI/180)+scrll;
+F.left=x[i] + ClockWidth*Math.cos(-1.0471 + i*Split*Math.PI/180);
+}
+for (i=0; i < H.length; i++){
+var HL=(ns)?document.layers['nsHours'+i]:ieHours[i].style;
+HL.top=y[i]+HandY+(i*HandHeight)*Math.sin(hrs)+scrll;
+HL.left=x[i]+HandX+(i*HandWidth)*Math.cos(hrs);
+}
+for (i=0; i < M.length; i++){
+var ML=(ns)?document.layers['nsMinutes'+i]:ieMinutes[i].style;
+ML.top=y[i]+HandY+(i*HandHeight)*Math.sin(min)+scrll;
+ML.left=x[i]+HandX+(i*HandWidth)*Math.cos(min);
+}
+for (i=0; i < S.length; i++){
+var SL=(ns)?document.layers['nsSeconds'+i]:ieSeconds[i].style;
+SL.top=y[i]+HandY+(i*HandHeight)*Math.sin(sec)+scrll;
+SL.left=x[i]+HandX+(i*HandWidth)*Math.cos(sec);
+}
+for (i=0; i < D.length; i++){
+var DL=(ns)?document.layers['nsDate'+i]:ieDate[i].style;
+DL.top=Dy[i] + ClockHeight*1.5*Math.sin(currStep+i*Dsplit*Math.PI/180)+scrll;
+DL.left=Dx[i] + ClockWidth*1.5*Math.cos(currStep+i*Dsplit*Math.PI/180);
+}
+currStep-=step;
+}
+function Delay(){
+scrll=(ns)?window.pageYOffset:0;
+Dy[0]=Math.round(DY[0]+=((ymouse)-DY[0])*speed);
+Dx[0]=Math.round(DX[0]+=((xmouse)-DX[0])*speed);
+for (i=1; i < D.length; i++){
+Dy[i]=Math.round(DY[i]+=(Dy[i-1]-DY[i])*speed);
+Dx[i]=Math.round(DX[i]+=(Dx[i-1]-DX[i])*speed);
+}
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+}
+ClockAndAssign();
+setTimeout('Delay()',20);
+}
+if (ns||ie)window.onload=Delay;
+</SCRIPT>
+
+<p align="center"><b><font size="4">Hello and welcome to my web page.&nbsp; Here 
+you will find a little more information about me and what I like.</font></b></p>
+<p align="center">I am a postgraduate student at The University of Aberdeen.&nbsp; 
+I graduated in July 2002 with a Master in Electronic/Computing Engineering.&nbsp; 
+I used to live in Elgin and went to Elgin Academy.</p>
+<p align="center">I am currently engaged to Catherine Taylor and am due to marry 
+in April 2004.&nbsp; Below is a picture of us.</p>
+<p align="center"><img border="0" src="images/About/allancath.jpg" width="432" height="384"></p>
+<p align="center">I enjoy many sports including squash, badminton, tennis, 
+skiing, mountain biking and martial arts.&nbsp; Below are a few pictures from my 
+skiing in Winter 2001/2002 at Glenshee.&nbsp; (Click on the pictures to enlarge)</p>
+<p align="center"><a href="images/About/cairnwell.jpg">
+<img border="0" src="images/About/cairnwell_thumb.jpg" width="150" height="113"></a>&nbsp;&nbsp;
+<a href="images/About/cairnwell2.jpg">
+<img border="0" src="images/About/cairnwell2_thumb.jpg" width="150" height="113"></a></p>
+<p align="center"><img border="0" src="images/George.jpg" width="465" height="302"></p>
+<p align="center">This is one of my 4 budgies lying down?? ( he was maybe 
+tired!)</p>
+<p align="center">As with most students I enjoy partying a lot, below are a few 
+pictures of some of my Friends and I enjoying ourselves.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="33%" align="center"><a href="images/About/cath-dorothy.jpg">
+    <img border="0" src="images/About/cath-dorothy_thumb.jpg" width="150" height="113"></a><p>Linzi and 
+    Cath at the torcher</td>
+    <td width="33%" align="center">&nbsp;</td>
+    <td width="34%" align="center"><a href="images/About/fred-twisted.jpg">
+    <img border="0" src="images/About/fred-twisted_thumb.jpg" width="150" height="113"></a><p>Fred 
+    stupidly fell asleep!</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><a href="images/About/helen-cath.jpg">
+    <img border="0" src="images/About/helen-cath_thumb.jpg" width="150" height="113"></a><p>Cath and 
+    Helen before the Graduation ball</td>
+    <td width="33%" align="center"><a href="images/About/helen-scarecrow.jpg">
+    <img border="0" src="images/About/helen-scarecrow_thumb.jpg" width="150" height="113"></a><p>Helen as 
+    the scarecrow from Wizard of Oz</td>
+    <td width="34%" align="center"><a href="images/About/helen-scary.jpg">
+    <img border="0" src="images/About/helen-scary_thumb.jpg" width="150" height="113"></a><p>Helen being 
+    generally scary</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><a href="images/About/mark-normal.jpg">
+    <img border="0" src="images/About/mark-normal_thumb.jpg" width="150" height="113"></a><p>Mark being 
+    himself</td>
+    <td width="33%" align="center"><a href="images/About/michael-snow.jpg">
+    <img border="0" src="images/About/michael-snow_thumb.jpg" width="85" height="113"></a><p>Michael 
+    lazing in the snow</td>
+    <td width="34%" align="center"><a href="images/About/nakis-relaxed.jpg">
+    <img border="0" src="images/About/nakis-relaxed_thumb.jpg" width="150" height="113"></a><p>Nakis 
+    looking relaxed</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><a href="images/About/paul-wes.jpg">
+    <img border="0" src="images/About/paul-wes_thumb.jpg" width="150" height="113"></a><p>Paul being...&nbsp; 
+    well&nbsp; ...Paul, really</td>
+    <td width="33%" align="center"><a href="images/wes-funny.jpg">
+    <img border="0" src="images/wes-funny-thumb.jpg" width="84" height="113"></a><p>
+    Wes, Need I say more?</td>
+    <td width="34%" align="center"><a href="images/About/wissam-pounce.jpg">
+    <img border="0" src="images/About/wissam-pounce_thumb.jpg" width="150" height="113"></a><p>Wissam 
+    away to pounce!</td>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><a href="images/About/zed-charmin.jpg">
+    <img border="0" src="images/About/zed-charmin_thumb.jpg" width="150" height="113"></a><p>Zed feeding 
+    alcohol to Charmin!</td>
+    <td width="33%" align="center">&nbsp;</td>
+    <td width="34%" align="center"><a href="images/About/michael-salmon.jpg">
+    <img border="0" src="images/About/michael-salmon_thumb.jpg" width="150" height="113"></a><p>Michael 
+    well pleased with his catch</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

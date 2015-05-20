@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function checkEmail(emField){ //reference to email field passed as argument
+
+var fieldValue = emField.value // store field's entire value in variable
+// Begin Valid Email Address Tests
+
+//if field is not empty
+if(fieldValue != ""){ 
+var atSymbol = 0
+
+//loop through field value string
+for(var a = 0; a < fieldValue.length; a++){ 
+
+//look for @ symbol and for each @ found, increment atSymbol variable by 1
+if(fieldValue.charAt(a) == "@"){ 
+atSymbol++
+}
+
+}
+
+// if more than 1 @ symbol exists
+if(atSymbol > 1){ 
+// then cancel and don't submit form
+alert("Please Enter A Valid Email Address") 
+return false
+}
+
+// if 1 @ symbol was found, and it is not the 1st character in string
+if(atSymbol == 1 && fieldValue.charAt(0) != "@"){ 
+//look for period at 2nd character after @ symbol 
+var period = fieldValue.indexOf(".",fieldValue.indexOf("@")+2) 
+
+// "." immediately following 1st "." ? 
+var twoPeriods = (fieldValue.charAt((period+1)) == ".") ? true : false 
+
+//if period was not found OR 2 periods together OR field contains less than 5 characters OR period is in last position
+if(period == -1 || twoPeriods || fieldValue.length < period + 2 || fieldValue.charAt(fieldValue.length-1)=="."){
+// then cancel and don't submit form
+alert("Please Enter A Valid Email Address") 
+return false
+}
+
+}
+// no @ symbol exists or it is in position 0 (the first character of the field)
+else{ 
+// then cancel and don't submit form
+alert("Please Enter A Valid Email Address")
+return false 
+}
+}
+// if field is empty
+else{ 
+// then cancel and don't submit form
+alert("Please Enter A Valid Email Address")
+return false 
+}
+
+//all tests passed, submit form
+//alert("VALID EMAIL ADDRESS!")
+return true
+}
+
+// The below function is needed only when using an image to invoke the function
+function submitForm(){
+var myForm = document.mailinglist
+var emField = document.mailinglist.email
+if(checkEmail(emField) != false){
+myForm.submit()
+}
+
+}
+
+function mlistWindow(url) {        
+		window.open(url+'?email=' + document.mailinglist.email.value, 'order', 'width=350,height=200,menubar=no,directories=no,toolbar=no,resizable=no,scrollbars=no');
+	}
+</script>
+
+<TITLE>Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks</TITLE>
+<META name="keywords" CONTENT="Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks">
+<META name="description" CONTENT="Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../include/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="760" border="0" align="center" cellpadding="3" cellspacing="0">
+  <tr> 
+    <td width="760" colspan="2"><table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+              <tr> 
+                <td width="51%" bgcolor="#000088"><a
+				href="../index.asp"><img src="../pics/logo_top.gif" alt="Flightcase Warehouse - flightcases new and used - lowest flightcase prices in the UK!!" width="378" height="32" hspace="5" vspace="5" border=0></a></td>
+                <td width="49%" bgcolor="#000088" class="linkhead"> <div align="right"><a
+				href="../info/index.htm">About Us</a>&nbsp;&nbsp;&nbsp;<a
+				href="../info/fax.htm">Fax Orders</a>&nbsp;&nbsp;&nbsp;<a
+				href="mailto:sales@flightcasewarehouse.co.uk">Email</a>&nbsp;&nbsp;&nbsp;<a
+				href="../info/links.htm">Links</a>&nbsp;&nbsp;&nbsp;<a
+				href="../sitemap/index.htm">Site Map</a>&nbsp;&nbsp;&nbsp;<a
+				href="../cart/basket.asp">View Cart</a>&nbsp;&nbsp;&nbsp;</div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr><tr> 
+    <td colspan=2><table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#ccccff">
+              <tr> 
+                <td valign="top" bgcolor="#ffffff"><br>
+				<a
+			href="../acatalog/findCases.asp?typeID=38"><img align=right
+			src="pics/guitarcasemontage.jpg" alt="Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks" width="366" height="200" border="0"></a> 
+			<h4><font color="#000066">Guitar Cases</font></h4>
+			
+			<p><a href="../acatalog/findCases.asp?groupID=38"><font color="#ff0000">
+			CLICK HERE to view and buy on-line:</a></font>
+				<ul>
+				<li><a href="../acatalog/findCases.asp?groupID=38"><font color="#ff0000">Guitar</font> cases</b></a>
+				<li><a href="../acatalog/findCases.asp?groupID=43"><font color="#ff0000">Gator Guitar</font> cases</b></a>
+				<li><a href="../acatalog/findCases.asp?groupID=102"><font color="#ff0000">SKB Guitar</font> cases</b></a>				
+				<li><a href="../acatalog/findCases.asp?groupID=64"><font color="#ff0000">Flightcase Guitar</font> cases</b></a>
+			</ul>
+			<br clear=all>
+			<p><b>We will not be beaten on price anywhere in the UK. Guaranteed!!</b>
+			Massive savings on all Guitar cases.
+			<br>&nbsp;
+			<p><table cellpadding=0 cellspacing=0 border=0 width=600>
+					<tr>
+					<td valign=top width=300>
+					<ul>
+			   		<li><strong>Guitar Flightcases</strong></li>
+					<li><strong>Electric Guitar cases</strong></li>
+					<li><strong>Plastic Guitar cases</strong></li>
+					<li><strong>Classic Dread Guitar cases</strong></li>
+					<li><strong>ABS Guitar cases</strong></li>
+					</ul></td>    
+					<td valign=top width=300>
+					<ul>
+			   		<li><strong>Bass Guitar cases</strong></li>
+					<li><strong>Molded Guitar cases</strong></li>
+					<li><strong>Les paul Guitar cases</strong></li>
+					<li><strong>Guitar Roadtrunks</strong></li>
+					</ul></td> 
+				</tr>
+				</table>
+				<p> <b><font color="#000066" face="Arial, Helvetica, sans-serif">All our Guitar cases are ex-stock and ready for delivery<br><br><a
+				href="../acatalog/findCases.asp?typeID=7"><font color="#FF3300">Check out our Pedal Board cases. Great prices</font></a></font></b></p>
+      
+      			<p align=center><a
+				  href="../acatalog/findCases.asp?typeID=38"><img
+				  src="pics/g2.jpg" alt="Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks" width="200" height="188" border="0"></a><a
+				  href="../acatalog/findCases.asp?typeID=38"><img hspace=20
+				  src="pics/g1.jpg" alt="Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks" width="200" height="188" border="0"></a><a
+				  href="../acatalog/findCases.asp?typeID=38"><img
+				  src="pics/g3.jpg" alt="Guitar Cases, Electric Guitar cases, Plastic Guitar cases, Classic Dread Guitar cases, ABS Guitar cases, Bass Guitar cases, Molded Guitar cases, Les paul Guitar cases, Guitar Roadtrunks" width="200" height="188" border="0"></a></p>
+            </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr><tr> 
+    <td valign="top">
+		<table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000">
+			<tr> 
+			<td valign=middle>
+				<table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#cccccc">              
+					<tr> 
+					<form action="../scripts/search.asp" maxlength=255 method="POST" NAME="search">
+						<td bgcolor="#ffffff"><input type="text" size="35" maxlength=255 name="searchvalue" value="flight case search"></td>
+					</form>
+						<td height="50" bgcolor="#FFFFFF" valign=middle><a href="javascript:document.search.submit()"><img
+						src="../pics/submit_button.gif" width="58" height="23" border="0"></a></td>
+					</tr><tr>
+						<td colspan="2" bgcolor="#FFFFFF">Looking for a case for something specific? - enter the make and model of your kit here.</td>
+					</tr>
+					</table></td>
+		</tr>
+		</table></td>
+   <td valign="top">
+   		<table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000">
+        	<tr> 
+			<td valign=top>
+				<table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#BFBABA">              
+					<tr> 
+                	<form action="Javascript:mlistWindow('../scripts/addtomailinglist.asp');" method="POST" NAME="mailinglist">
+					<td bgcolor="#BFBABA"><input type="text" size="30" name="email" value="join our mailing list" maxlength="60"></td>
+                	</form>
+                	<td height="50" bgcolor="#BFBABA"><a href="javascript:submitForm()"><img
+					src="../pics/submit_button.gif" width="58" height="23" border="0"></a></td>
+	              </tr><tr>
+			    	<td colspan="2" bgcolor="#BFBABA">
+					Enter your email address here to be notified of any news and special offers.</td>
+				  </tr>
+				 </table></td>
+        </tr>
+      </table></td>
+  </tr><tr> 
+    <td colspan="2"><table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#ccccff">
+              <tr> 
+                <td bgcolor="#E5E5FA" class="linkfoot"> <div align="center"><a
+				href="../audiovisual/cases.htm">AV Cases</a> | <a
+				href="../mixercases/index.asp">Mixers</a> | <a
+				href="../rackcases/index.asp">Rack Cases</a> | <a
+				href="../touring/accessories.htm">Touring Accessories</a> | <a
+				href="../flightcases/utilitycases.htm">Utility Cases</a> | <a
+				href="../music/cases.htm">Music</a> | <a
+				href="../plastic/cases.htm">Plastic Cases</a> | <a
+				href="../roadtrunks/index.asp">Roadtrunks</a> | <a
+				href="../toolboxes/index.htm">Toolboxes</a> | <a
+				href="../usedcases/index.asp">Used Cases</a>
+				
+				
+				</div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign=top><table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td valign=top><table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tr> 
+                <td bgcolor="#000088" valign=middle><font color="#ffffff"><b>
+				T: 01827 60009<br>F: 01827 313877<br>E: <a
+				href="mailto:sales@flightcasewarehouse.co.uk"><font color="#ffffff">sales@flightcasewarehouse.co.uk</font></a></b></td>
+				<td bgcolor="#000088" valign=top><!--<img src="pics/bott_blue.gif">--><img align=right
+				src="../pics/bott_blueanim.gif" width=220 height=48 alt="flightcases new and used"></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center"><a href="http://www.spiderscope.co.uk" target="_blank"><img src="../pics/ss_footer.gif" alt="Created by Spiderscope New Media" width="294" height="30" hspace="3" vspace="3" border="0"></a></div></td>
+  </tr>
+</table>
+<div align="center"><br>
+</div>
+</body>
+</html>

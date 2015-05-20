@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Vegetables - Summer Squash</TITLE>
+	
+					<SCRIPT LANGUAGE="JavaScript">
+<!-- hide this script from non-javascript-enabled browsers
+<!------------------------------BEGIN ROLLOVER SCRIPTS---------------------->
+if (document.images) {
+LNB_fruits = new Image(147,39); LNB_fruits.src ="/images/nav_fruits_off_a.gif";
+LNB_fruits_on = new Image(147,39); LNB_fruits_on.src ="/images/nav_fruits_on_a.gif";
+LNB_vegetables = new Image(147,39); LNB_vegetables.src ="/images/nav_vegetables_off_a.gif";
+LNB_vegetables_on = new Image(147,39); LNB_vegetables_on.src ="/images/nav_vegetables_on_a.gif";
+LNB_herbs = new Image(147,39); LNB_herbs.src ="/images/nav_herbs_off_a.gif";
+LNB_herbs_on = new Image(147,39); LNB_herbs_on.src ="/images/nav_herbs_on_a.gif";
+LNB_recipes = new Image(147,39); LNB_recipes.src ="/images/nav_recipes_off_a.gif";
+LNB_recipes_on = new Image(147,39); LNB_recipes_on.src ="/images/nav_recipes_on_a.gif";
+LNB_findtony = new Image(147,39); LNB_findtony.src ="/images/nav_findtony_off_a.gif";
+LNB_findtony_on = new Image(147,39); LNB_findtony_on.src ="/images/nav_findtony_on_a.gif";
+LNB_referenceshelf = new Image(147,39); LNB_referenceshelf.src ="/images/nav_referenceshelf_off_a.gif";
+LNB_referenceshelf_on = new Image(147,39); LNB_referenceshelf_on.src ="/images/nav_referenceshelf_on_a.gif";
+LNB_search = new Image(147,39); LNB_search.src ="/images/nav_search_off_a.gif";
+LNB_search_on = new Image(147,39); LNB_search_on.src ="/images/nav_search_on_a.gif";
+LNB_home = new Image(147,39); LNB_home.src ="/images/nav_home_off_a.gif";
+LNB_home_on = new Image(147,39); LNB_home_on.src ="/images/nav_home_on_a.gif";
+}
+
+/* This function swaps images. */
+
+function swapImage(id, newSrc) {
+    var theImage = FWFindImage(document, id, 0);
+    if (theImage) {
+        theImage.src = newSrc;
+    }
+}
+				   
+/* These functions track and set toggle group button states. */
+
+function FWFindImage(doc, name, j) {
+    var theImage = false;
+    if (doc.images) {
+        theImage = doc.images[name];
+    }
+    if (theImage) {
+        return theImage;
+    }
+    if (doc.layers) {
+        for (j = 0; j < doc.layers.length; j++) {
+            theImage = FWFindImage(doc.layers[j].document, name, 0);
+            if (theImage) {
+                return (theImage);
+            }
+        }
+    }
+    return (false);
+}
+
+// stop hiding -->
+<!------------------------------END ROLLOVER SCRIPTS---------------------->
+</SCRIPT>
+
+<style>
+
+
+.menuskin{
+position:absolute;
+width:160px;
+background-color:#336633;
+border:2px solid green;
+font:normal 12px Arial;
+line-height:12px;
+z-index:100;
+visibility:hidden;
+}
+
+.menuskin a{
+text-decoration:none;
+color:white;
+padding-left:10px;
+padding-right:10px;
+}
+
+#mouseoverstyle{
+background-color:#669966;
+}
+
+#mouseoverstyle a{
+color:white;
+}
+-->
+</style>
+
+<script language="JavaScript1.2">
+
+//Pop-it menu- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[0]='<div class="menuitems"><strong><font color="#FFFFFF">Safeway</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/seattle_news.html">-Washington</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/portland_news.html">-Oregon</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/colorado_news.html">-Colorado</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/ncal_news.html">-Northern California</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/ncal_news.html">-Hawaii</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/phoenix_news.html">-Arizona</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/east_news.html">-East Coast/Maryland</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Vons</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/vons_news.html">-Southern California</a></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/vons_news.html">-Las Vegas</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Genuardis</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/gen_news.html">-Philadelphia</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Dominicks</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/dom_news.html">-Illinios</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Randalls</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/randalls_news.html">-Texas</a></div>'
+linkset[0]+='<div class="menuitems"><strong><font color="#FFFFFF">Tom Thumb</font></strong></div>'
+linkset[0]+='<div class="menuitems"><a href="/reference/tomthumb_news.html">-Texas</a></div>'
+
+linkset[1]='<div class="menuitems"><a href="http://www.tonytantillo.com/find_tony/">Television</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.tonytantillo.com/find_tony/">Radio</a></div>'
+
+////No need to edit beyond here
+
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+var ns6=document.getElementById&&!document.all
+var ns4=document.layers
+
+function showmenu(e,which){
+
+if (!document.all&&!document.getElementById&&!document.layers)
+return
+
+clearhidemenu()
+
+menuobj=ie4? document.all.popmenu : ns6? document.getElementById("popmenu") : ns4? document.popmenu : ""
+menuobj.thestyle=(ie4||ns6)? menuobj.style : menuobj
+
+if (ie4||ns6)
+menuobj.innerHTML=which
+else{
+menuobj.document.write('<layer name=gui bgColor=#E6E6E6 width=165 onmouseover="clearhidemenu()" onmouseout="hidemenu()">'+which+'</layer>')
+menuobj.document.close()
+}
+
+menuobj.contentwidth=(ie4||ns6)? menuobj.offsetWidth : menuobj.document.gui.document.width
+menuobj.contentheight=(ie4||ns6)? menuobj.offsetHeight : menuobj.document.gui.document.height
+eventX=ie4? event.clientX : ns6? e.clientX : e.x
+eventY=ie4? event.clientY : ns6? e.clientY : e.y
+
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie4? document.body.clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie4? document.body.clientHeight-eventY : window.innerHeight-eventY
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX-menuobj.contentwidth : ns6? window.pageXOffset+eventX-menuobj.contentwidth : eventX-menuobj.contentwidth
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX : ns6? window.pageXOffset+eventX : eventX
+
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.thestyle.top=ie4? document.body.scrollTop+eventY-menuobj.contentheight : ns6? window.pageYOffset+eventY-menuobj.contentheight : eventY-menuobj.contentheight
+else
+menuobj.thestyle.top=ie4? document.body.scrollTop+event.clientY : ns6? window.pageYOffset+eventY : eventY
+menuobj.thestyle.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.thestyle.visibility=(ie4||ns6)? "hidden" : "hide"
+}
+
+function dynamichide(e){
+if (ie4&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+if (ie4||ns6||ns4)
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function highlightmenu(e,state){
+if (document.all)
+source_el=event.srcElement
+else if (document.getElementById)
+source_el=e.target
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+else{
+while(source_el.id!="popmenu"){
+source_el=document.getElementById? source_el.parentNode : source_el.parentElement
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+}
+}
+}
+
+if (ie4||ns6)
+document.onclick=hidemenu
+
+</script>
+
+<!-- Start Superstats code version 3.0b. http://v2.superstats.com -->
+     <script language="JavaScript">
+     /* You may give each page an identifying name, server, and channel
+     on the next lines. */
+     var pageName = "SummerSquash";
+     /**** DO NOT ALTER ANYTHING BELOW THIS LINE! ****/
+     var code = ' ';
+	 </script>
+     <script src="http://code.superstats.com/code/ss/jbfarrell/0/30b">
+     </script><script language="JavaScript">
+     br = navigator.appName + parseInt(navigator.appVersion);
+     if (code != ' ' || br == 'Netscape2') document.write(code);
+     else document.write('<a' + ' href="http://stats.superstats.com/c/ss/jbfarrell" target="_top"><img' + ' src="http://stats.superstats.com/b/ss/jbfarrell/1' + '?pageName=' + escape(pageName) + '" border=0></a>');
+     document.write('<'); document.write('!-- ');
+     </script>
+	 <noscript><img src="http://stats.superstats.com/b/ss/jbfarrell/1" border=0>
+	 </noscript>
+     <script language="JavaScript">
+     document.write(' --'); document.write('>');
+     </script>
+	 <!-- End Superstats tracking code. -->
+</HEAD>
+
+<BODY background="/images/background_strip.gif" link="#336633" vlink="#669966">
+
+<table width="640" border="0" cellpadding="0" cellspacing="0">
+
+<tr><td>
+
+<table width="157" border="0" cellpadding="0" cellspacing="0" align="LEFT">
+
+<tr><td>
+<br><br>
+
+<!-------------------- begin nav ------------------------>
+<a href="/index.html" onMouseOut="swapImage('LNB_home','/images/nav_home_off_a.gif');"  onMouseOver="swapImage('LNB_home','/images/nav_home_on_a.gif');"  target="_top"><img src="/images/nav_home_off_a.gif" name="LNB_home" width=147 height=31 border=0></a><br>
+
+<a href="/fruits/index.html" onMouseOut="swapImage('LNB_fruits','/images/nav_fruits_off_a.gif');"  onMouseOver="swapImage('LNB_fruits','/images/nav_fruits_on_a.gif');"  target="_top"><img src="/images/nav_fruits_off_a.gif" name="LNB_fruits" width=147 height=24 border=0></a><br>
+
+<a href="/vegetables/index.html" target="_top"><img src="/images/nav_vegetables_on_a.gif" name="LNB_vegetables" width=147 height=24 border=0></a><br>
+
+
+<a href="/herbs/index.html" onMouseOut="swapImage('LNB_herbs','/images/nav_herbs_off_a.gif');"  onMouseOver="swapImage('LNB_herbs','/images/nav_herbs_on_a.gif');"  target="_top"><img src="/images/nav_herbs_off_a.gif" name="LNB_herbs" width=147 height=24 border=0></a><br>
+
+<a href="/recipes/index.html" onMouseOut="swapImage('LNB_recipes','/images/nav_recipes_off_a.gif');"  onMouseOver="swapImage('LNB_recipes','/images/nav_recipes_on_a.gif');"  target="_top"><img src="/images/nav_recipes_off_a.gif" name="LNB_recipes" width=147 height=24 border=0 alt=""></a><br>
+
+<a href="/find_tony/index.html" onMouseOut="swapImage('LNB_findtony','/images/nav_findtony_off_a.gif');"  onMouseOver="swapImage('LNB_findtony','/images/nav_findtony_on_a.gif');"  target="_top"><img src="/images/nav_findtony_off_a.gif" name="LNB_findtony" width=147 height=24 border=0 alt=""></a><br>
+
+<a href="/reference/index.html" onMouseOut="swapImage('LNB_referenceshelf','/images/nav_referenceshelf_off_a.gif');"  onMouseOver="swapImage('LNB_referenceshelf','/images/nav_referenceshelf_on_a.gif');"  target="_top"><img src="/images/nav_referenceshelf_off_a.gif" name="LNB_referenceshelf" width=147 height=24 border=0 alt=""></a><br>
+
+<div id="popmenu" class="menuskin" onMouseover="clearhidemenu();highlightmenu(event,'on')" onMouseout="highlightmenu(event,'off');dynamichide(event)">
+</div>
+
+
+<a href="#" onMouseover="showmenu(event,linkset[0]); swapImage('LNB_newsletter','/images/nav_newsletter_on_a.gif');" onMouseout="delayhidemenu(); swapImage('LNB_newsletter','/images/nav_newsletter_off_a.gif');"><img src="/images/nav_newsletter_off_a.gif" name="LNB_newsletter" width=147 height=24 border=0></a><br>
+
+<a href="/search/index.html" onMouseOut="swapImage('LNB_search','/images/nav_search_off_a.gif');"  onMouseOver="swapImage('LNB_search','/images/nav_search_on_a.gif');"  target="_top"><img src="/images/nav_search_off_a.gif" name="LNB_search" width=147 height=86 border=0 alt=""></a><br><br>
+
+<!------------------------ end nav ------------------------>
+</td></tr>
+
+</table>
+
+<table width="480" border="0" cellspacing="0" cellpadding="0" valign="top">
+<br>
+<tr>
+
+<td align="right"><img src="/images/header_veg_summersquash.gif" width=480 height=28 border=0 alt="" align="right"></td></tr>
+
+</table>
+
+<table width="480" border="0" cellpadding="10" cellspacing="0" align="center">
+<tr><td>
+
+
+<img src="/images/pic_spaghettisquash.jpg" width=155 height=155 border=0 align="right" alt="Spaghetti Squash" hspace="7" vspace="5">
+
+<font face="Arial" size="2">
+Most of us have grown up with a pretty limited view of squash. Zucchini from our garden in the summer,
+and Halloween jack-o'-lanterns and holiday pumpkin pie in the fall and winter Oh, we might have an acorn
+squash here and there, but that's about it. One of the reasons we might not appreciate squash comes from
+not knowing how to cook it, which usually means we overcook it. <p></p>
+
+Squash is a gourd, (a fleshy vegetable protected by a rind,) and some grow on a vine and others on a
+bush. Squash is normally divided into winter and summer varieties, but since both types are now
+available almost year round, it makes more sense to divide them into soft and hard-shelled varieties.
+Did you know that both summer and winter squash have edible flowers? Find out more about these delicate
+and delicious squash blossoms under selection, storage, and varieties. 
+
+Summer or soft-shelled squash is harvested before it becomes fully mature, and its seeds and skin become
+hard. The whole squash except the stem end can be eaten either raw or cooked. It is used in a variety of
+recipes because of its mild refreshing flavor and satisfying texture. Summer squash is more that 95
+percent water, so while it only has a moderate amount of nutrients, it is very low in calories. <p></p>
+
+Florida is the largest producer of squash, followed closely by California. Georgia and New Jersey are
+also large squash-producing states. <p></p>
+
+
+<img src="/images/nutritional_squash_summer.gif" width=155 height=325 border=0 align="right" alt="Spaghetti Squash Nutrition" hspace="7" vspace="5">
+
+
+<a name="select"><font face="Arial" color="#336633" size="2"><b>Selection &amp; Storage</b></font><br></a>
+Pick summer squash that is the smallest you can find, unless you are going to stuff it, because large
+sized squash will have coarse, stringy flesh, and large seeds. It should have a bright, smooth skin,
+(dull skin is a sign of old age,) with stem ends that are fresh and green. Squash should also be firm
+and plump without any soft spots or pitting, and fairly heavy for its size or it may be dry and cottony
+inside. Varieties that are supposed to have dark green skin shouldn't show any sign of yellowing. Summer
+squash should be kept cool but not cold, about 41° F to 50° F with good humidity. Uncut melons in
+plastic bags will last several days in the refrigerator.<p></p>
+
+Squash Blossoms are naturally soft and somewhat limp, but select those with closed buds, that look
+fresh. They are usually found from late spring through early fall in specialty produce markets. They
+should only be stored in the refrigerator one day, as they are very perishable.<p></p>
+
+ 
+<a name="prepz"><p><font face="Arial" color="#336633" size="2"><b>Preparation</b></font><br></a>
+Wash summer squash well to remove the grit, and then trim the ends. Once the ends are trimmed, it can be
+sliced, or shredded, as summer squash does not need to be peeled or seeded unless it is oversized and
+has a thick skin or large seeds. Chayote, unless it is very small, is an exception.<p></p>
+
+Stir-frying or sautéing is the best method for cooking summer squash because steaming and microwaving
+will emphasize its high water content. Remove a lot of the undesired moisture before cooking by cutting
+into thin slices, or dice, (depending on the recipe,) and sprinkling the cut surfaces with salt,
+(½ teaspoon per pound.) Let stand in a colander about half an hour, rinse, and pat dry with paper
+towels.  To shred zucchini or summer squash, use the second-largest holes of a four-sided grater or
+the shredding attachment of a food processor. <p></p>
+
+Squash blossoms are prepared most often coated with a light batter, and sautéed. They can also be
+stuffed with ingredients such as soft cheese and then baked, or dipped in batter and fried.  <p></p>
+
+
+<font face="Arial" color="#d14719" size="2"><b>Tony's Tip</b></font><br>
+<font face="Arial" size="2" color="#d14719">Generally, we're not fond of summer squash raw. However, try a salad of small and sweet sliced zucchini
+with roasted red bell pepper strips, olive oil, vinegar, and herbs.</font></p> 
+
+<font face="Arial" color="#336633" size="2"><b>Tony's Favorite Recipe </b></font><br>
+<a href="/recipes/vegsides_rec.html#summer" target="_new">Roasted Summer Squash with Fresh Herbs</a><p></p>
+<img src="/images/seasonal_summersquash.gif" width=155 height=305 border=0 align="right" alt="Spaghetti Squash Seasons">
+
+<a name="zucc"><font face="Arial" color="#336633" size="2"><b>Varieties</b></font><br></a>
+<font face="Arial" color="#336633" size="2"><b>Zucchini</b></font>, or Italian (Courgette in French,) is
+generally cucumber-sized, but can range from a few inches to over a foot. The flesh is white or pale
+green, the skin green, subtly streaked with white, and the stem end has somewhat of a square shape. <p></p>
+
+<a name="gold" id="gold"><font face="Arial" color="#336633" size="2"><b>Golden zucchini</b></a></font> is exactly the same except the
+skin is yellow, although the stem remains green.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>English zucchini</b></font> is somewhat more bulbous with
+a skin that is almost evenly streaked with white and green. <p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Cocozelle or Italian marrow squash</b></font> is very
+ much like zucchini but with more pronounced dark green and white strips and a thicker, more tubular
+ shape.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Yellow crookneck squash</b></font> has a medium to bright
+yellow exterior accented by a slightly bumpy texture. It has a bottle shape with a narrow, gently curved
+neck. The flesh is similar to that of a zucchini, but with more obvious seeds.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Yellow Straightneck</b></font> is similar to the
+crookneck, except that its neck does not curve. The flesh is similar to that of a zucchini, but with
+more obvious seeds.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Scaloppini squash </b></font>looks like a zucchini that
+has been compressed into the shape of a top, or perhaps a small turban with a scalloped edge. Its flesh
+is similar to a zucchini. <p></p>
+
+<a name="patty"><font face="Arial" color="#336633" size="2"><b>Pattypan squash </b></font></a>is somewhat flatter and pale
+green or white than the Scaloppini. <p></p>
+
+<a name="sun"><font face="Arial" color="#336633" size="2"><b>Sunburst </b></font></a>is a bright yellow pattypan with a
+green stem.<p></p>
+
+<font face="Arial" color="#336633" size="2"><b>Squash Blossoms </b></font>are the flowers from both soft
+and hard-shelled squash. They come in varying shades of yellow and orange, with a flavor similar to the
+squash itself. Use as a garnish, either slivered or whole, for almost everything from soup to main
+dishes, or use them to add color and flavor to salads. <p></p><br><br>
+
+
+
+
+
+</font>
+</td></tr>
+
+</table>
+
+<table width="630" border="0" cellpadding="0" cellspacing="0">
+
+<tr><td width="157">&nbsp;</td>
+
+<td valign="bottom"><font face="Arial" size="1">website owned &amp; syndicated by Farm Fresh, LLC all rights reserved</font></td>
+
+<td valign="top" rowspan="1"><a href="/index.html"><img src="../images/farmfresh_logo.gif" width=145 height=39 border=0 align="top" alt="Logo"></a></td></tr>
+
+<tr><td colspan="8" align="right" valign="top"><img src="/images/bottom_bar.gif" width=579 height=5 border=0 alt="bar"></td></tr>
+
+</Table>
+
+<table width="600" border="0" cellpadding="0" cellspacing="0" align="right">
+
+<tr>
+
+<td width="6%" align="center"><font face="Arial" size="1" color="#336600"><a href="/index.html">Home</a></font></td>
+
+<td width="8%" align="center"><font face="Arial" size="1" color="#336600"><a href="/fruits/index.html">Fruits</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/vegetables/index.html">Vegetables</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/herbs/index.html">Herbs</a></font></td>
+
+<td width="8%" align="center"><font face="Arial" size="1" color="#336600"><a href="/recipes/index.html">Recipes</a></font></td>
+
+<td width="11%" align="center"><font face="Arial" size="1" color="#336600"><a href="/find_tony/index.html">Find Tony</a></font></td>
+
+<td width="15%" align="center"><font face="Arial" size="1" color="#336600"><a href="/reference/index.html">Reference Shelf</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/reference/ncal_news.html">Newsletters</a></font></td>
+
+<td width="9%" align="center"><font face="Arial" size="1" color="#336600"><a href="/search/index.html">Search</a></font></td></tr>
+</table>
+
+</td></tr>
+
+</table>
+
+</BODY>
+</HTML>
