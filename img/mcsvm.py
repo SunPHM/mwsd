@@ -7,15 +7,15 @@ import sys
 #string  = f.readline()
 #print string
 
-folder = "/home/yp/projects/data/uiuc/"
+folder = "/home/yp/projects/mwsd/data/cv/"
 if len(sys.argv) >= 2:
 	folder += sys.argv[1]
 else:
 	folder += "bass"
 
-train = folder + "/img/training.txt"
-test = folder + "/img/testing.txt"
-results = folder + "/img/results.txt"
+train = folder + "/img_training.txt"
+test = folder + "/img_testing.txt"
+results = folder + "/img_results.txt"
 
 #get the class labels from training set
 target =[];
@@ -33,9 +33,11 @@ with open(train,"r+") as f:
 #reading testing features			
 testing_features = []
 testing_truth  = []
+files = []
 with open(test,"r+") as f:
 	for line in f:
-		testing_truth.append(int(line.split("\t")[0]))
+		testing_truth.append(int(line[0]))
+		files.append(line.split("\t")[0][:-4])
 		ls = line.split("\t")[1].split()
 		feature = []
 		for value in ls:
@@ -43,7 +45,7 @@ with open(test,"r+") as f:
 		testing_features.append(feature)
 			
 print "samples length " + str(len(samples))
-print "feature size" + str(len(samples[0]))
+print "feature size " + str(len(samples[0]))
 print "target length " + str(len(target))
 print "testing_features length " + str(len(testing_features))
 print "testing_truth length " + str(len(testing_truth))
@@ -61,6 +63,7 @@ print "ans length " + str(len(ans))
 
 f = open(results,"w")
 for i in range(len(testing_features)):
+	f.write(files[i] + " ")
 	f.write(str(ans[i]) + " ")
 	f.write(str(probs[i][0]) + " ")
 	f.write(str(probs[i][1]) + " ")

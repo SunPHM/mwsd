@@ -5,13 +5,15 @@ import sys
 def output(word, folder):
 	truth = folder + "/" + word + ".test"
 	res = folder + "/" + word + ".disambiguated"
-	out = folder + "/" + word + ".txt"
+	out = folder + "/txt_results.txt"
 	print truth, res, out		
 	target = []
+	files = []
 	t = open(truth, "r+")
 	for line in t:
 		#print line
 		target.append(int(line[0]))
+		files.append(line.split("\t")[0])
 	print len(target)
 	prob = []
 	labels = []
@@ -43,6 +45,7 @@ def output(word, folder):
 	# write the results
 	o = open(out, "w")
 	for i in range(len(target)):
+		o.write(files[i] + " ")
 		o.write(str(labels[i]) + " ")
 		o.write(str(prob[i][0]) + " ")
 		o.write(str(prob[i][1]) + " ")
