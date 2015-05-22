@@ -2,67 +2,96 @@ import os
 import sys
 from sklearn import linear_model
 
+a = 0.8
+
 def readResults(filename):
-    	ls = []
+    	res_map = {}
+	ls = []
 	ps = []
 	ts = []
     	f = open(filename,"r+")
         for line in f:
-        	es = line.split();
-	       	ls.append(int(es[0]))
-		p = []
-		p.append(float(es[1]))
-		p.append(float(es[2]))
-		ps.append(p)
-		ts.append(int(es[3]))
+        	tup = []
+		es = line.split();
+	       	tup.append(int(es[1]))
+		tup.append(float(es[2]))
+		tup.append(float(es[3]))
+		tup.append(int(es[4]))
+		res_map[es[0]] = tup
 	f.close()
-	return ls, ps, ts
+	return res_map
 	
-def getCMatrix(ls, ts):
+def getCMatrix(rmap):
 	m00, m01, m10, m11 = 0, 0, 0, 0
-	for i in range(len(ls)):
-		if ts[i] == 1:
-			if ls[i] == ts[i]:
+	for k in rmap:
+		tup = rmap[k]
+		if tup[3] == 1:
+			if tup[0] == tup[3]:
 				m00 += 1
 			else:
 				m01 += 1
 		else:
-			if ls[i] == ts[i]:
+			if tup[0] == tup[3]:
 				m11 += 1
 			else:
 				m10 += 1
 	print m00, m01, m10, m11
 	return m00, m01, m10, m11
 
-def maxfusion(il, ip, it, tl, tp, tt):
-	fl, fp, ft = [], [], tt
-	for i in range(len(il)):
-		p1 = ip[i][il[i] - 1]
+def maxfusion(imap, tmap):
+	mmap = {}
+	for k in imap:
+		if k not in tmap:
+			continue
+		it = imap[k]
+		tt = tmap[k]
+		p1 = it[it[0]]
 		p2 = 0.0
-		if tl[i] != 0:
-			p2 = tp[i][tl[i] - 1]
+		if tt[0] != 0:
+			p2 = tt[tt[0]]
 		if p1 > p2:
-			fl.append(il[i])
-			fp.append(ip[i])
+			mmap[k] = it
 		else:
-			fl.append(tl[i])
-			fp.append(tp[i])
-	return fl, fp, ft
+			mmap[k] = tt
+	return mmap
 
-def linearfusion():
-	print ""
+def linearfusion(imap, tmap):
+	lmap = {}
+        for k in imap:
+                if k not in tmap:
+                        continue
+                it = imap[k]
+                tt = tmap[k]
+                s1 = a * it[1] + (1 - a) * tt[1]
+                s2 = a * it[2] + (1 - a) * tt[2]
+		p1 = s1 / (s1 + s2)
+		p2 = 1 - p1
+		#print it[1], it[2], tt[1], tt[2], p1, p2
+                lt = []
+		if p1 > p2:
+			lt.append(1)
+		else:
+			lt.append(2)
+		lt.append(p1)
+		lt.append(p2)
+		lt.append(it[3])
+		lmap[k] = lt
+        return lmap
 
 
 def logfusion():
 	print ""
 
 
-#il, ip, it = readResults(sys.argv[1])
 print "image"
-#getCMatrix(il, it)
-#tl, tp, tt = readResults(sys.argv[2])
+imap = readResults(sys.argv[1])
+getCMatrix(imap)
 print "text"
-#getCMatrix(tl, tt)
-#fl, fp, ft = fusion(il, ip, it, tl, tp, tt)
-print "fusion"
-#getCMatrix(fl, ft)
+tmap = readResults(sys.argv[2])
+getCMatrix(tmap)
+print "max-rule fusion"
+mmap = maxfusion(imap, tmap)
+getCMatrix(mmap)
+print "linear-rule fusion"
+lmap = linearfusion(imap, tmap)
+getCMatrix(lmap)
