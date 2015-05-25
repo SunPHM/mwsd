@@ -173,11 +173,33 @@ def evensplit(word, fd):
 
 	print "evenplit processing", word, "ends"
 
+def clean(word, fd):
+	# folder initialization
+        print "clean processing", word
+        ed = fd + "/ed"
+        out = ed + "/" + word
+        train = out + "/train"
+        valid = out + "/valid"
+        test = out + "/test"
+	x = [train, valid, test]
+	for s in x:
+		txt = open(s + "/info.txt", "r")
+		txt_out = open(s + "/info_new.txt", "w")
+		images = s + "/images"
+		for line in txt:
+			filename = line.split("\t")[0]
+			if os.path.exists(images + "/" + filename + ".jpg"):
+				txt_out.write(line)
+	print "data clean is down"	
+
+
+
 def main(argv):
 	fd = argv[1]
 	for w in words:
 		#transform(w, fd)	
-		evensplit(w, fd)
+		#evensplit(w, fd)
+		clean(w, fd)
 if __name__ == "__main__":
 	#if len(sys.argv)  != 3:
         #        print 'Not enough arguments.';

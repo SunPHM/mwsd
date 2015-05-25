@@ -215,7 +215,6 @@
 1_1124	5 a day: fruit and vegetable of the month: exotic vegetables | dnpa | cdc
 1_1126	spirit: the army goes rolling along - official song of the us army - hooah4health.com
 1_1128	recent accomplishments - north willamette research and extension center, oregon state university
-1_1129	vegetable seeds : pumpkin and winter squash seed
 1_1142	production, fruit quality, and nutritional value of spaghetti squash
 1_1143	vegetables @ georgia ipm
 1_1144	d-lib featured collection may 2002: vegetable md online
@@ -223,12 +222,10 @@
 1_1148	watch your garden grow - winter squash
 1_1152	three pumpkins > agriculture > pumpkin, pumpkins, gourds, squash, harvest, autumn, vegetable, vegetables, halloween, thanksgiving | michael ziegler photography
 1_1153	blueshoe nashville travel guide: farmers market
-1_1156	vegetable seeds : pumpkin and winter squash seed
 1_1161	november 97 gold directions:
 1_1171	production, fruit quality, and nutritional value of spaghetti squash
 1_1172	vegetable seeds : pumpkin and winter squash seed
 1_1173	ipm : illinois fruit and vegetable news : volume 9 : issue 11
-1_1175	vegetable seeds : pumpkin and winter squash seed
 1_1183	5 a day garden stars
 1_1186	chayote squash - big y® world class market™
 1_1189	wegmans fresh products produce chayote
@@ -237,14 +234,12 @@
 1_1204	vegetable seed : courgettes & summer squash
 1_1221	ers/usda briefing room - vegetables and melons: trade
 1_1223	save your own garden-grown vegetable seed
-1_1225	vegetable seeds : pumpkin and winter squash seed
 1_1226	table 3 - production and pest management practices of minnesota organic fresh market vegetable growers in 1995
 1_1232	jardin puzzles - vegetable still life set of 4 by diane ulmer pedersen
 1_1239	cookbook, appeal magazine - the great pumpkin
 1_1241	squash seed acorn type at new england seed company
 1_1245	squash
 1_1247	foodshapes fall-winter seasonal foods computer art cd-rom
-1_1248	vegetable seeds : pumpkin and winter squash seed
 1_1252	5 a day: fruit and vegetable of the month: exotic vegetables | dnpa | cdc
 1_1257	spaghetti
 1_1265	ginny's herbs - heirloom herb and vegetable catalogues, potager design service
@@ -258,7 +253,6 @@
 1_1304	squash plant and seed varieties from rich farm garden
 1_1318	gourd plant and seed varieties from rich farm garden
 1_1319	plant diary
-1_1320	vegetable seed : courgettes & summer squash
 1_1322	plant diary
 1_1323	grow hartford : 07/04/2004 - 07/10/2004
 1_1325	affordable gardening products for gardeners and growers.

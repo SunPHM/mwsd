@@ -8,20 +8,20 @@ import os
 import sys
 
 
-folder = "/home/yp/projects/mwsd/data/cv/bass";
-#if len(sys.argv) >= 2:
-#	folder += sys.argv[1] + "/img"
-#else:
-#	folder += "bass/img"
+folder = "/home/yp/projects/mwsd/data/ed/";
+if len(sys.argv) >= 2:
+	folder += sys.argv[1]
+else:
+	folder += "bass"
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
 baseimages = folder + "";
 basefeatfile = folder + "/basefeat.txt"
-trainimages = []
-for i in range(9):
-	trainimages.append(folder + "/" + str(i + 1))
-testimages = [folder + "/0/images"];
-trainingData = folder + "/img_training.txt";
-testingData = folder + "/img_testing.txt";
+trainimages = folder + "/train/images"
+validimages = folder + "/valid/images"
+testimages = folder + "/test/images"
+validData = folder + "/img_valid.txt"
+trainingData = folder + "/img_training.txt"
+testingData = folder + "/img_testing.txt"
 features = []
 
 # sift and k_means
@@ -137,12 +137,14 @@ def readFeatures(featfile):
 	print "file reading is complete"
 	return features
 	
-#features, a = getSiftfeatures(baseimages,basefeatfile);
-features = readFeatures(basefeatfile)
-makeVisualWords(features,k_means)
-print "And we have words!"
+features, a = getSiftfeatures(baseimages,basefeatfile);
+#features = readFeatures(basefeatfile)
+#makeVisualWords(features,k_means)
+#print "And we have words!"
 #quantinzeimages(trainimages,k_means,trainingData,n_clusters);
 #print "train images quantized\n\n" 
-quantinzeimages(testimages,k_means,testingData,n_clusters);
-print "testing images quantized\n\n"
+#quantinzedimages(validimages,k_means,validData,n_clusters);
+#print "valid images quantized\n\n"
+#quantinzeimages(testimages,k_means,testingData,n_clusters);
+#print "testing images quantized\n\n"
 print "program ends"
