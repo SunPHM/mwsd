@@ -81,11 +81,103 @@ def crosssplit(word, fd):
 			
 	print "crosssplit processing", word, "ends"	
 
+def checkcreate(folder):
+	if os.path.exists(folder) == False:
+		os.mkdir(folder)
+
+def evensplit(word, fd):
+	# folder initialization
+	print "evensplit processing", word
+	ed = fd + "/ed"
+	checkcreate(ed)
+	proc = fd + "/processed/" + word
+	out = ed + "/" + word
+	train = out + "/train"
+	valid = out + "/valid"
+	test = out + "/test"
+	checkcreate(out)
+	checkcreate(train)
+	checkcreate(valid)
+	checkcreate(test)
+	checkcreate(train + "/images")
+	checkcreate(valid + "/images")
+	checkcreate(test + "/images")
+	
+	# split the data into 3 parts, training, validation and testing
+	info = open(proc + "/" + word + ".info", "r")
+	files_1 = []
+	files_2 = []
+	sens_1 = []
+	sens_2 = []
+	for line in info:
+		lab = int(line[0])
+		filename = line.split("\t")[0]
+		sen = line.split("\t")[1]
+		if lab == 1:
+			files_1.append(filename)
+			sens_1.append(sen)
+		else:
+			files_2.append(filename)
+			sens_2.append(sen)	
+	
+	# write to train/ folder
+	train_out = open(train + "/info.txt", "w")
+	
+	for i in range(int(0.8 * len(files_1))):
+		train_out.write(files_1[i] + "\t" + sens_1[i])
+		ori_image = proc + "/images/" + files_1[i] + ".jpg"
+		tar_image = train + "/images/" + files_1[i] + ".jpg"
+		shutil.copy2(ori_image, tar_image)
+	
+	for i in range(int(0.8 * len(files_2))):
+		train_out.write(files_2[i] + "\t" + sens_2[i])
+		ori_image = proc + "/images/" + files_2[i] + ".jpg"
+		tar_image = train + "/images/" + files_2[i] + ".jpg"
+		shutil.copy2(ori_image, tar_image)
+
+	train_out.close()	
+	
+	# write to valid/ folder
+	valid_out = open(valid + "/info.txt", "w")
+
+	for i in range(int(0.8 * len(files_1)), int(0.9 * len(files_1))):
+		valid_out.write(files_1[i] + "\t" + sens_1[i])
+		ori_image = proc + "/images/" + files_1[i] + ".jpg"
+		tar_image = valid + "/images/" + files_1[i] + ".jpg"
+		shutil.copy2(ori_image, tar_image)
+	
+	for i in range(int(0.8 * len(files_2)), int(0.9 * len(files_2))):
+		valid_out.write(files_2[i] + "\t" + sens_2[i])
+		ori_image = proc + "/images/" + files_2[i] + ".jpg"
+		tar_image = valid + "/images/" + files_2[i] + ".jpg"
+		shutil.copy2(ori_image, tar_image)
+	
+	valid_out.close()
+	
+	# write to test/ folder
+	test_out = open(test + "/info.txt", "w")
+	
+	for i in range(int(0.9 * len(files_1)), len(files_1)):
+		test_out.write(files_1[i] + "\t" + sens_1[i])
+		ori_image = proc + "/images/" + files_1[i] + ".jpg"
+		tar_image = test + "/images/" + files_1[i] + ".jpg"
+		shutil.copy2(ori_image, tar_image)
+	
+	for i in range(int(0.9 * len(files_2)), len(files_2)):
+		test_out.write(files_2[i] + "\t" + sens_2[i])
+		ori_image = proc + "/images/" + files_2[i] + ".jpg"
+		tar_image = test + "/images/" + files_2[i] + ".jpg"
+		shutil.copy2(ori_image, tar_image)
+	
+	test_out.close()
+
+	print "evenplit processing", word, "ends"
+
 def main(argv):
 	fd = argv[1]
 	for w in words:
 		#transform(w, fd)	
-		crosssplit(w, fd)
+		evensplit(w, fd)
 if __name__ == "__main__":
 	#if len(sys.argv)  != 3:
         #        print 'Not enough arguments.';
