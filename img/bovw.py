@@ -7,6 +7,7 @@ import numpy as np
 import os
 import sys
 
+num_features = 500000
 
 folder = "/home/yp/projects/mwsd/data/ed/";
 if len(sys.argv) >= 2:
@@ -74,28 +75,27 @@ def makeVisualWords(features,k_means):
 
 
 
-def quantinzeimages(folders,k_means,data,n_clusters):
-	print "k-means "
+def quantinzeimages(folder,k_means,data,n_clusters):
+	print "quantinzeimage", folder
 	f = open(data,"w");
-	for folder in folders:
-		for root, dirs, files in os.walk(folder):
-			for fi in files:
-				img_features = []	
-				filename = os.path.join(root,fi);
-				if filename.endswith(".jpg") == False:
-					continue
-				print filename
-				img = cv2.imread(filename);
-				gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-				#sift = cv2.xfeatures2d.SIFT_create()
-				kp, des = sift.detectAndCompute(gray,None);
-				for y in des:
-					feature = []
-					for z in y:
-						feature.append(z)
-					img_features.append(feature)
-				p =  k_means.predict(img_features);
-				writeHistogramtoFile(p,f, fi, data,n_clusters);
+	for root, dirs, files in os.walk(folder):
+		for fi in files:
+			img_features = []	
+			filename = os.path.join(root,fi);
+			if filename.endswith(".jpg") == False:
+				continue
+			print filename
+			img = cv2.imread(filename);
+			gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+			#sift = cv2.xfeatures2d.SIFT_create()
+			kp, des = sift.detectAndCompute(gray,None);
+			for y in des:
+				feature = []
+				for z in y:
+					feature.append(z)
+				img_features.append(feature)
+			p =  k_means.predict(img_features);
+			writeHistogramtoFile(p,f, fi, data,n_clusters);
 	f.close();	
 		
 def writeHistogramtoFile(p,f,fi,data,n_clusters):
@@ -125,7 +125,7 @@ def readFeatures(featfile):
 	x = 0
 	features = []
 	for line in f:
-		if x > 500000: break
+		if x > num_features: break
 		ns = line.split()
 		feature = []
 		for i in xrange(0, len(ns)):
@@ -137,14 +137,14 @@ def readFeatures(featfile):
 	print "file reading is complete"
 	return features
 	
-features, a = getSiftfeatures(baseimages,basefeatfile);
-#features = readFeatures(basefeatfile)
-#makeVisualWords(features,k_means)
-#print "And we have words!"
-#quantinzeimages(trainimages,k_means,trainingData,n_clusters);
-#print "train images quantized\n\n" 
-#quantinzedimages(validimages,k_means,validData,n_clusters);
-#print "valid images quantized\n\n"
-#quantinzeimages(testimages,k_means,testingData,n_clusters);
-#print "testing images quantized\n\n"
+#features, a = getSiftfeatures(baseimages,basefeatfile);
+features = readFeatures(basefeatfile)
+makeVisualWords(features,k_means)
+print "And we have words!"
+quantinzeimages(trainimages,k_means,trainingData,n_clusters);
+print "train images quantized\n\n" 
+quantinzeimages(validimages,k_means,validData,n_clusters);
+print "valid images quantized\n\n"
+quantinzeimages(testimages,k_means,testingData,n_clusters);
+print "testing images quantized\n\n"
 print "program ends"
