@@ -2,10 +2,17 @@
 import os
 import sys
 
-def output(word, folder):
-	truth = folder + "/" + word + ".test"
-	res = folder + "/" + word + ".disambiguated"
-	out = folder + "/txt_results.txt"
+def main(word, folder):
+	test_truth = folder + "/test/info.txt"
+	test_res = folder + "/" + word + ".txt.test"
+	test_out = folder + "/txt_test_results.txt"
+	valid_truth = folder + "/valid/info.txt"
+	valid_res = folder + "/" + word + ".txt.valid"
+	valid_out = folder + "/txt_valid_results.txt"
+	output(test_truth, test_res, test_out)
+	output(valid_truth, valid_res, valid_out)
+
+def output(truth, res, out):		
 	print truth, res, out		
 	target = []
 	files = []
@@ -52,5 +59,7 @@ def output(word, folder):
 		o.write(str(target[i]) + "\n")
 	o.close()	
 
-output(sys.argv[1], sys.argv[2])
+
+
+main(sys.argv[1], sys.argv[2])
 	
