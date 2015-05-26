@@ -36,7 +36,8 @@ def getCMatrix(rmap):
 				m11 += 1
 			else:
 				m10 += 1
-	print m00, m01, m10, m11
+	print m00, m01
+	print m10, m11
 	return m00, m01, m10, m11
 
 def compute_weight(vimap, vtmap):
