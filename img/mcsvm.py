@@ -1,5 +1,4 @@
 import sklearn
-from sklearn import datasets
 from sklearn import svm
 import sys
 
@@ -29,6 +28,11 @@ def store_results(files, ans, probs, truth, filename):
 		f.write(str(truth[i]) + "\n")
 	f.close()
 
+def dis2conf(ds):
+	cs = []
+	for i in range(len(ds)):
+		x = ds[i]
+		p = x + 2	
 
 folder = "/home/yp/projects/mwsd/data/ed/"
 if len(sys.argv) >= 2:
@@ -45,35 +49,38 @@ valid_results = folder + "/img_valid_results.txt"
 #get the class labels from training set
 samples, targets, train_files = getft(train)
 testing_features, testing_truth, testing_files = getft(test)
-valid_features, valid_truth, valid_files = getft(valid)
+#valid_features, valid_truth, valid_files = getft(valid)
 			
 print "samples length " + str(len(samples))
 print "feature size " + str(len(samples[0]))
 print "target length " + str(len(targets))
 print "testing_features length " + str(len(testing_features))
 print "testing_truth length " + str(len(testing_truth))
-print "valid_features length " + str(len(valid_features))
-print "valid_truth length " + str(len(valid_truth))
+#print "valid_features length " + str(len(valid_features))
+#print "valid_truth length " + str(len(valid_truth))
 
 # training
-boston = datasets.load_boston()
-X, y = boston.data[:-1] , boston.target[:-1]
-clf = svm.SVC(probability=True)
+#clf = svm.SVC(probability=True)
+#clf = svm.LinearSVC()
+clf = svm.SVC()
 clf.fit(samples,targets)
 
 # validation
-vprobs = clf.predict_proba(valid_features)
-print "validation probs length " + str(len(vprobs))
-vans = clf.predict(valid_features)
-print "validation ans length " + str(len(vans))
-store_results(valid_files, vans, vprobs, valid_truth, valid_results)
+#vans = clf.predict(valid_features)
+#print "validation ans length " + str(len(vans))
+#vprobs = clf.predict_proba(valid_features)
+#print "validation probs length " + str(len(vprobs))
+#store_results(valid_files, vans, vprobs, valid_truth, valid_results)
 
 # testing
-tprobs = clf.predict_proba(testing_features)
-print "testing probs length " + str(len(tprobs))
 tans = clf.predict(testing_features)
 print "testing ans length " + str(len(tans))
-store_results(testing_files, tans, tprobs, testing_truth, testing_results)
+tprobs = clf.decision_function(testing_features)
+print "testing probs length " + str(len(tprobs))
+#store_results(testing_files, tans, tprobs, testing_truth, testing_results)
+
+for i in range(len(testing_truth)):
+	print testing_files[i], testing_truth[i], tans[i], tprobs[i]
 
 print "Image: SVM training, validation and testing is done"
 	

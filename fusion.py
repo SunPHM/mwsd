@@ -2,7 +2,7 @@ import os
 import sys
 from sklearn import linear_model
 
-a = 0.8
+a = 0.9
 
 def readResults(filename):
     	res_map = {}
@@ -66,7 +66,6 @@ def linearfusion(imap, tmap):
                 s2 = a * it[2] + (1 - a) * tt[2]
 		p1 = s1 / (s1 + s2)
 		p2 = 1 - p1
-		#print it[1], it[2], tt[1], tt[2], p1, p2
                 lt = []
 		if p1 > p2:
 			lt.append(1)
@@ -76,6 +75,7 @@ def linearfusion(imap, tmap):
 		lt.append(p2)
 		lt.append(it[3])
 		lmap[k] = lt
+		print it[3], it[0], tt[0], lt[0], it[1], it[2], tt[1], tt[2]
         return lmap
 
 
