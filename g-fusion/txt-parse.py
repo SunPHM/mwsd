@@ -32,7 +32,8 @@ def extract(docs):# extract named entities and noun phrases
 		ns = nltk.ne_chunk(ps, binary=True)
 		# extract noun phrases and entities
 		nps = extNP(ps)
-		ents = extNE(ns)
+		ents = []
+		# ents = extNE(ns)
 		al = nps + ents
 		#print ps 
 		#print nps
