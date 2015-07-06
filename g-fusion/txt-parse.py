@@ -7,8 +7,8 @@ from nltk import PorterStemmer
 
 concepts_1 = {}
 concepts_2 = {}
-x = 0.0
-y = 0.0
+n1 = 0.0
+n2 = 0.0
 wnl = WordNetLemmatizer() # lemmatizer
 st = PorterStemmer()
 
@@ -16,15 +16,17 @@ def read_file(filename):
 	print "reading file"
 	f = open(filename,'r')
 	docs = []
+	global n1
+	global n2
 	# i = 0
 	for line in f:
 		# if i > 100: break
 		#print line
 		if line[0] == '1':
 			#print n1
-			x += 1.0
+			n1 += 1.0
 		else:
-			y += 1.0
+			n2 += 1.0
 		docs.append(unicode(line, errors="ignore"))
 		# i += 1
 	return docs	
@@ -104,13 +106,13 @@ def output():
 			#print k, concepts_1[k], concepts_2[k]
 			cc1[k] = concepts_1[k] / concepts_2[k]
 		else:
-			cc1[k] = concepts_1[k]
+			cc1[k] = concepts_1[k] * n2
 	for k in concepts_2.keys():
 		if k in concepts_1.keys():
 			#print k, concepts_1[k], concepts_2[k]
 			cc2[k] = concepts_2[k] / concepts_1[k]	
 		else:
-			cc2[k] = concepts_2[k]
+			cc2[k] = concepts_2[k] * n1
 	c1 = sorted(cc1.items(), key = lambda t : t[1])
 	c2 = sorted(cc2.items(), key = lambda t : t[1])
 	#print c1
@@ -128,7 +130,7 @@ def main(filename):
 	output()	
 
 if __name__ == "__main__":
-	main("../data/ed/squash/train/info.txt")
+	main("../data/ed/bass/train/info.txt")
 	# docs = []
 	# docs.append("big turtle lake - a premier minnesota smallmouth bass fishery - John Green")
 	# extract(docs)
