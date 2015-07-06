@@ -23,7 +23,7 @@ def read_file(filename):
 	return docs	
 
 def extract(docs):# extract named entities and noun phrases
-	print "extracting ne and np"
+	print "extracting noun phrases"
 	for s in docs:
 		# tokenization, pos tagging, named entity extraction
 		ws = nltk.word_tokenize(s)
@@ -57,13 +57,15 @@ def extNP(ps): # extract NP
 	while i < len(ps):
 		x = ps[i]
 		if x[1] == 'NN' or x[1] == 'NNS':
-			y = wnl.lemmatize(x[0])
-			nps.append(y)
+			# y = wnl.lemmatize(x[0])
+			# nps.append(y)
+			nps.append(x[0])
 			i += 1
 		elif x[1] == 'NNP' or x[1] == 'NNPS':	
 			np = ''
 			while i < len(ps) and (ps[i][1] == 'NNP' or ps[i][1] == 'NNPS'):
-				np += wnl.lemmatize(ps[i][0]) + " "
+				#np += wnl.lemmatize(ps[i][0]) + " "
+				np += ps[i][0] + " "
 				i += 1
 			nps.append(np[:len(np) - 1])
 
@@ -84,13 +86,15 @@ def extNE(ns): # extract Named Entity
 
 def output():
 	print "output"
-	c1 = sorted(concepts_1, concepts_1.get)
-	c2 = sorted(concepts_2, concepts_2.get)
+	c1 = sorted(concepts_1.items(), key = lambda t : t[1])
+	c2 = sorted(concepts_2.items(), key = lambda t : t[1])
+	#print c1
+	#print c2
 	for i in range(min(10, len(c1))):
-		print c1[i], 
+		print c1[len(c1) - 1 - i], 
 	print ""
 	for i in range(min(10, len(c2))):
-		print c2[i],
+		print c2[len(c2) - 1 - i],
 	print ""
 
 def main(filename):
@@ -99,7 +103,7 @@ def main(filename):
 	output()	
 
 if __name__ == "__main__":
-	main("../data/ed/squash/train/info.txt")
+	main("../data/ed/bass/train/info.txt")
 	# docs = []
 	# docs.append("big turtle lake - a premier minnesota smallmouth bass fishery - John Green")
 	# extract(docs)
