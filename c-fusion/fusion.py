@@ -151,10 +151,10 @@ if len(sys.argv) > 1:
 if len(sys.argv) > 2:
 	a = float(sys.argv[2])
 print "processing word", word
-img_test = "data/ed/" + word + "/img_test_results.txt"
-txt_test = "data/ed/" + word + "/txt_test_results.txt"
-img_valid = "data/ed/" + word + "/img_valid_results.txt"
-txt_valid = "data/ed/" + word + "/txt_valid_results.txt"
+img_test = "../fgdata/ed/" + word + "/img_test_results.txt"
+txt_test = "../fgdata/ed/" + word + "/txt_test_results.txt"
+img_valid = "../fgdata/ed/" + word + "/img_valid_results.txt"
+txt_valid = "../fgdata/ed/" + word + "/txt_valid_results.txt"
 
 print "loading files"
 vimap = readResults(img_valid)

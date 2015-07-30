@@ -39,7 +39,7 @@ def dist2conf(ds):
 
 folder = "/home/yp/projects/mwsd/data/ed/"
 if len(sys.argv) >= 2:
-	folder += sys.argv[1]
+	folder = sys.argv[1]
 else:
 	folder += "bass"
 

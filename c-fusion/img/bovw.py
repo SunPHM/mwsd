@@ -11,7 +11,7 @@ num_features = 500000
 
 folder = "/home/yp/projects/mwsd/data/ed/";
 if len(sys.argv) >= 2:
-	folder += sys.argv[1]
+	folder = sys.argv[1]
 else:
 	folder += "bass"
 #baseimages = "/home/hduser/Documents/WSD-evaluation data/UIUCsampled/bass/BaseImages";
@@ -137,7 +137,7 @@ def readFeatures(featfile):
 	print "file reading is complete"
 	return features
 	
-#features, a = getSiftfeatures(baseimages,basefeatfile);
+features, a = getSiftfeatures(baseimages,basefeatfile);
 features = readFeatures(basefeatfile)
 makeVisualWords(features,k_means)
 print "And we have words!"

@@ -204,8 +204,8 @@ if __name__ == "__main__":
 	#if len(sys.argv)  != 3:
         #        print 'Not enough arguments.';
         #        sys.exit(2);
-        main(sys.argv)
-
+       	#main(sys.argv)
+	evensplit('apple', '../apple/')
 
 
 
