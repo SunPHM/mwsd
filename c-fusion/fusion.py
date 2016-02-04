@@ -23,7 +23,7 @@ def readResults(filename):
 	return res_map
 	
 def getCMatrix(rmap):
-	m00, m01, m10, m11 = 0, 0, 0, 0
+	m00, m01, m10, m11, m02, m03, m12, m13 = 0, 0, 0, 0, 0, 0, 0, 0
 	for k in rmap:
 		tup = rmap[k]
 		if tup[3] == 1:
@@ -31,13 +31,24 @@ def getCMatrix(rmap):
 				m00 += 1
 			else:
 				m01 += 1
+				if tup[0] == 0:
+					m02 += 1
+				else:
+					m03 += 1
 		else:
 			if tup[0] == tup[3]:
 				m11 += 1
 			else:
 				m10 += 1
-	print m00, m01
-	print m10, m11
+				if tup[0] == 0:
+					m12 += 1
+				else:
+					m13 += 1
+	#print m00, m01, m02, m03
+	#print m10, m11, m12, m13
+	print 'coverage = ' + str(1 - float(m12 + m02) / (m00 + m01 + m10 + m11)) 
+	print 'average precision = ' + str((float(m00) / (m00 + m03) + float(m11) / (m11 + m13)) / 2)
+	print 'average recall = ' + str((float(m00) / (m00 + m01) + float(m11) / (m11 + m10)) / 2)
 	return m00, m01, m10, m11
 
 def compute_weight(vimap, vtmap):
@@ -146,15 +157,30 @@ def logfusion(vimap, vtmap, imap, tmap):
 	#print "logistic regression is done"
 	return rmap 
 
+def printResults(word, imap, tmap, lmap, mmap, rmap):
+	txtfile = open(word + "-raw-results.txt", 'w')
+	txtfile.write('results for each method are shown as [sense label, confidence score for sense 1, confidence score for sense 2]\n')
+	txtfile.write('1 for sense 1, 2 for sense 2, 0 for the undetermined sense\n')
+	txtfile.write('true-sense\timage\ttext\tlinear\tmax\tlog-reg\n')
+	for k in imap:
+		txtfile.write(str(imap[k][3]) + '\t')
+		txtfile.write(str(imap[k][0:3]) + '\t')
+		txtfile.write(str(tmap[k][0:3]) + '\t')
+		txtfile.write(str(lmap[k][0:3]) + '\t')
+		txtfile.write(str(mmap[k][0:3]) + '\t')
+		txtfile.write(str(rmap[k][0:3]) + '\t')
+		txtfile.write('\n')
+	txtfile.close()
+
 if len(sys.argv) > 1:
 	word = sys.argv[1]
 if len(sys.argv) > 2:
 	a = float(sys.argv[2])
 print "processing word", word
-img_test = "../fgdata/ed/" + word + "/img_test_results.txt"
-txt_test = "../fgdata/ed/" + word + "/txt_test_results.txt"
-img_valid = "../fgdata/ed/" + word + "/img_valid_results.txt"
-txt_valid = "../fgdata/ed/" + word + "/txt_valid_results.txt"
+img_test = "../data/ed/" + word + "/img_test_results.txt"
+txt_test = "../data/ed/" + word + "/txt_test_results.txt"
+img_valid = "../data/ed/" + word + "/img_valid_results.txt"
+txt_valid = "../data/ed/" + word + "/txt_valid_results.txt"
 
 print "loading files"
 vimap = readResults(img_valid)
@@ -178,3 +204,4 @@ getCMatrix(lmap)
 print "logistice regression fusion"
 lrmap = logfusion(vimap, vtmap, imap, tmap)
 getCMatrix(lrmap)
+printResults(word, imap, tmap, lmap, mmap, lrmap)
