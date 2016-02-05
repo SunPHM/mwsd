@@ -48,7 +48,7 @@ def getCMatrix(rmap):
 	#print m10, m11, m12, m13
 	print 'coverage = ' + str(1 - float(m12 + m02) / (m00 + m01 + m10 + m11)) 
 	print 'average precision = ' + str((float(m00) / (m00 + m03) + float(m11) / (m11 + m13)) / 2)
-	print 'average recall = ' + str((float(m00) / (m00 + m01) + float(m11) / (m11 + m10)) / 2)
+	print 'average recall = ' + str((float(m00) / (m00 + m10) + float(m11) / (m11 + m01)) / 2)
 	return m00, m01, m10, m11
 
 def compute_weight(vimap, vtmap):
