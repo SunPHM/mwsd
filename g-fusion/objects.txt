@@ -1,4 +1,0 @@
-priors -- images object detection
-bass: bass(fish), water; guitar, instrument
-crane: crane(machine), building ; crane(bird), water, grass
-squash: squash(fruit), vegetable, fruit; squash court, ball, racket 
